@@ -15,7 +15,7 @@
  */
 
 import { spawn } from "node:child_process";
-import { readdirSync, readFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
 
 const target = process.argv[2];
 const STDIO = target === "--stdio";
@@ -217,24 +217,20 @@ console.log("instructions:", init.instructions.slice(0, 80) + "...");
 
 await rpc("notifications/initialized", {}, true).catch(() => {});
 
-// A contagem esperada NÃO é um literal: vem do baseline de superfície mais
-// recente (baselines/surface-stdio-<versão>.json, ver baselines/README.md).
-// Mudou a superfície sem recapturar o baseline → o smoke fica vermelho, que é
-// o combinado; um "21" pinado aqui ficou para trás na 4.3.0 e derrubou o
-// deploy com a produção certa.
-const versaoDe = (nome) => nome.match(/(\d+)\.(\d+)\.(\d+)/).slice(1).map(Number);
-const baselineMaisRecente = readdirSync("baselines")
-  .filter((f) => /^surface-stdio-\d+\.\d+\.\d+\.json$/.test(f))
-  .sort((a, b) => {
-    const [va, vb] = [versaoDe(a), versaoDe(b)];
-    return va[0] - vb[0] || va[1] - vb[1] || va[2] - vb[2];
-  })
-  .at(-1);
-if (!baselineMaisRecente) fail("nenhum baselines/surface-stdio-*.json para derivar a contagem");
-const esperado = JSON.parse(readFileSync(`baselines/${baselineMaisRecente}`, "utf8")).toolCount;
+// A contagem esperada vem do baseline da versão PUBLICADA no package.json.
+// Não escolhemos o maior número histórico: a linha pública 0.x preserva
+// baselines 4.x/5.x/6.x apenas para rastreabilidade do laboratório.
+const versaoAtual = JSON.parse(readFileSync("package.json", "utf8")).version;
+const baselineAtual = `surface-stdio-${versaoAtual}.json`;
+let esperado;
+try {
+  esperado = JSON.parse(readFileSync(`baselines/${baselineAtual}`, "utf8")).toolCount;
+} catch {
+  fail(`baseline da versão atual ausente ou inválido: baselines/${baselineAtual}`);
+}
 
 const { tools } = await rpc("tools/list", {});
-console.log(`tools/list: ${tools.length} tools (baseline ${baselineMaisRecente}: ${esperado})`);
+console.log(`tools/list: ${tools.length} tools (baseline ${baselineAtual}: ${esperado})`);
 if (tools.length !== esperado) fail(`esperava ${esperado} tools, veio ${tools.length}`);
 const semTitle = tools.filter((t) => !t.title);
 if (semTitle.length > 0) fail(`tools sem title: ${semTitle.map((t) => t.name).join(", ")}`);
@@ -304,7 +300,10 @@ const objetoBusca = JSON.parse(busca.content[0].text);
 if (!Array.isArray(objetoBusca.results) || objetoBusca.results.length === 0) fail("search: results vazio");
 if (JSON.stringify(objetoBusca.results) !== JSON.stringify(busca.structuredContent?.results))
   fail("search: content[0].text e structuredContent.results divergem");
-if (!busca.structuredContent?.provenance) fail("search: proveniência ausente em structuredContent");
+const searchMetaProv = busca._meta?.["io.github.hilaliskandar.censosenso/provenance"];
+const searchMetaAttr = busca._meta?.["io.github.hilaliskandar.censosenso/attribution"];
+if (!searchMetaProv) fail("search: proveniência ausente em _meta");
+if (!Array.isArray(searchMetaAttr) || searchMetaAttr.length === 0) fail("search: attribution ausente em _meta");
 const primeiro = objetoBusca.results[0];
 if (!primeiro.id || !primeiro.title || !primeiro.url) fail(`search: resultado fora do contrato: ${JSON.stringify(primeiro)}`);
 console.log(`search: ${objetoBusca.results.length} resultados | [0] = ${primeiro.id} — ${primeiro.title}`);
@@ -316,7 +315,10 @@ for (const chave of ["id", "title", "text", "url"]) {
   if (typeof objetoDoc[chave] !== "string" || !objetoDoc[chave]) fail(`fetch: campo ${chave} ausente ou vazio`);
 }
 if (objetoDoc.id !== primeiro.id) fail("fetch: id devolvido difere do pedido");
-if (!doc.structuredContent?.provenance) fail("fetch: proveniência ausente em structuredContent");
+const fetchMetaProv = doc._meta?.["io.github.hilaliskandar.censosenso/provenance"];
+const fetchMetaAttr = doc._meta?.["io.github.hilaliskandar.censosenso/attribution"];
+if (!fetchMetaProv) fail("fetch: proveniência ausente em _meta");
+if (!Array.isArray(fetchMetaAttr) || fetchMetaAttr.length === 0) fail("fetch: attribution ausente em _meta");
 console.log(`fetch: ${objetoDoc.id} | text ${objetoDoc.text.length} chars | url ${objetoDoc.url}`);
 
 if (STDIO) child.kill();
