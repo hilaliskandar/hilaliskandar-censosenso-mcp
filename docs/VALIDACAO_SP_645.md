@@ -31,7 +31,7 @@ Fonte declarada: **IBGE — API de Localidades**.
   "amostra_total": 21,
   "amostra_ok": 21,
   "amostra_falhas": [],
-  "sha256": "dc6e4eebffb4d755d8899eadae4ce876e565506b0cce5657f08a2835e290acc7",
+  "sha256": "a215de0ed21d5538db07a35e65c8dcd9fb1c201491c1ee1f4d0aaaa757810d86",
   "promote": false
 }
 ```
@@ -105,7 +105,7 @@ O script `scripts/gate-sp-645.mjs` produz:
 O snapshot da execução validada recebeu:
 
 ```text
-dc6e4eebffb4d755d8899eadae4ce876e565506b0cce5657f08a2835e290acc7
+a215de0ed21d5538db07a35e65c8dcd9fb1c201491c1ee1f4d0aaaa757810d86
 ```
 
 Esse hash permite verificar que uma cópia do snapshot corresponde exatamente ao artefato validado.
@@ -120,3 +120,8 @@ O gate demonstra que, na execução registrada:
 4. não houve divergência de código, nome ou UF na amostra.
 
 A validação não afirma que todas as 23 ferramentas foram executadas contra todos os 645 municípios. O gate combina validação estrutural integral do universo com execução real das ferramentas territoriais sobre uma amostra determinística, complementada pelos demais testes e gates do projeto.
+
+
+## Evidência pública permanente
+
+A execução 0.6.0 foi promovida para [`validation/sp/0.6.0/`](../validation/sp/0.6.0/), com CSV dos 645 municípios, metadados, resumo e resultados da amostra real.
