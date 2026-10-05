@@ -58,6 +58,18 @@ O princípio central é simples: uma resposta útil não deve trazer apenas um n
 
 A superfície 6.0.0 possui **23 ferramentas**: 21 ferramentas `ibge_*` e duas ferramentas genéricas de pesquisa assistida, `search` e `fetch`.
 
+
+### Documentação técnica
+
+- [Referência das 23 ferramentas](docs/FERRAMENTAS.md)
+- [Matriz de fontes, cache, derivação e limitações](docs/MATRIZ_FONTES_E_PROCESSOS.md)
+- [Evidência da validação dos 645 municípios paulistas](docs/VALIDACAO_SP_645.md)
+- [Segurança](SECURITY.md)
+- [Privacidade](PRIVACY.md)
+- [Contribuição](CONTRIBUTING.md)
+- [Linhagem e atribuições](NOTICE.md)
+- [Licenças de terceiros](THIRD_PARTY_LICENSES.md)
+
 O deploy remoto foi homologado com a sequência MCP real:
 
 1. `initialize`;
@@ -72,6 +84,9 @@ O deploy remoto foi homologado com a sequência MCP real:
 
 <a id="validacao-dos-645-municipios-paulistas"></a>
 ## Validação dos 645 municípios paulistas
+
+A evidência completa desta execução está em [docs/VALIDACAO_SP_645.md](docs/VALIDACAO_SP_645.md).
+
 
 A versão 6.0.0 possui um gate reproduzível específico para o universo municipal do Estado de São Paulo.
 
@@ -235,6 +250,9 @@ docs/                       arquitetura, auditorias e metodologia
 
 <a id="ferramentas-disponiveis"></a>
 ## Ferramentas disponíveis
+
+Para schemas, parâmetros, decisões, fontes e limitações ferramenta por ferramenta, consulte [docs/FERRAMENTAS.md](docs/FERRAMENTAS.md). Para a visão consolidada de origem, cache e derivação, consulte [docs/MATRIZ_FONTES_E_PROCESSOS.md](docs/MATRIZ_FONTES_E_PROCESSOS.md).
+
 
 | Domínio | Ferramentas |
 |---|---|
