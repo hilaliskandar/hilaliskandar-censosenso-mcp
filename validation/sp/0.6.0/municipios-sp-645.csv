@@ -1,0 +1,646 @@
+codigo_ibge,municipio,status
+3500105,Adamantina,OK
+3500204,Adolfo,OK
+3500303,Aguaí,OK
+3500402,Águas da Prata,OK
+3500501,Águas de Lindóia,OK
+3500550,Águas de Santa Bárbara,OK
+3500600,Águas de São Pedro,OK
+3500709,Agudos,OK
+3500758,Alambari,OK
+3500808,Alfredo Marcondes,OK
+3500907,Altair,OK
+3501004,Altinópolis,OK
+3501103,Alto Alegre,OK
+3501152,Alumínio,OK
+3501202,Álvares Florence,OK
+3501301,Álvares Machado,OK
+3501400,Álvaro de Carvalho,OK
+3501509,Alvinlândia,OK
+3501608,Americana,OK
+3501707,Américo Brasiliense,OK
+3501806,Américo de Campos,OK
+3501905,Amparo,OK
+3502002,Analândia,OK
+3502101,Andradina,OK
+3502200,Angatuba,OK
+3502309,Anhembi,OK
+3502408,Anhumas,OK
+3502507,Aparecida,OK
+3502606,Aparecida d'Oeste,OK
+3502705,Apiaí,OK
+3502754,Araçariguama,OK
+3502804,Araçatuba,OK
+3502903,Araçoiaba da Serra,OK
+3503000,Aramina,OK
+3503109,Arandu,OK
+3503158,Arapeí,OK
+3503208,Araraquara,OK
+3503307,Araras,OK
+3503356,Arco-Íris,OK
+3503406,Arealva,OK
+3503505,Areias,OK
+3503604,Areiópolis,OK
+3503703,Ariranha,OK
+3503802,Artur Nogueira,OK
+3503901,Arujá,OK
+3503950,Aspásia,OK
+3504008,Assis,OK
+3504107,Atibaia,OK
+3504206,Auriflama,OK
+3504305,Avaí,OK
+3504404,Avanhandava,OK
+3504503,Avaré,OK
+3504602,Bady Bassitt,OK
+3504701,Balbinos,OK
+3504800,Bálsamo,OK
+3504909,Bananal,OK
+3505005,Barão de Antonina,OK
+3505104,Barbosa,OK
+3505203,Bariri,OK
+3505302,Barra Bonita,OK
+3505351,Barra do Chapéu,OK
+3505401,Barra do Turvo,OK
+3505500,Barretos,OK
+3505609,Barrinha,OK
+3505708,Barueri,OK
+3505807,Bastos,OK
+3505906,Batatais,OK
+3506003,Bauru,OK
+3506102,Bebedouro,OK
+3506201,Bento de Abreu,OK
+3506300,Bernardino de Campos,OK
+3506359,Bertioga,OK
+3506409,Bilac,OK
+3506508,Birigui,OK
+3506607,Biritiba Mirim,OK
+3506706,Boa Esperança do Sul,OK
+3506805,Bocaina,OK
+3506904,Bofete,OK
+3507001,Boituva,OK
+3507100,Bom Jesus dos Perdões,OK
+3507159,Bom Sucesso de Itararé,OK
+3507209,Borá,OK
+3507308,Boracéia,OK
+3507407,Borborema,OK
+3507456,Borebi,OK
+3507506,Botucatu,OK
+3507605,Bragança Paulista,OK
+3507704,Braúna,OK
+3507753,Brejo Alegre,OK
+3507803,Brodowski,OK
+3507902,Brotas,OK
+3508009,Buri,OK
+3508108,Buritama,OK
+3508207,Buritizal,OK
+3508306,Cabrália Paulista,OK
+3508405,Cabreúva,OK
+3508504,Caçapava,OK
+3508603,Cachoeira Paulista,OK
+3508702,Caconde,OK
+3508801,Cafelândia,OK
+3508900,Caiabu,OK
+3509007,Caieiras,OK
+3509106,Caiuá,OK
+3509205,Cajamar,OK
+3509254,Cajati,OK
+3509304,Cajobi,OK
+3509403,Cajuru,OK
+3509452,Campina do Monte Alegre,OK
+3509502,Campinas,OK
+3509601,Campo Limpo Paulista,OK
+3509700,Campos do Jordão,OK
+3509809,Campos Novos Paulista,OK
+3509908,Cananéia,OK
+3509957,Canas,OK
+3510005,Cândido Mota,OK
+3510104,Cândido Rodrigues,OK
+3510153,Canitar,OK
+3510203,Capão Bonito,OK
+3510302,Capela do Alto,OK
+3510401,Capivari,OK
+3510500,Caraguatatuba,OK
+3510609,Carapicuíba,OK
+3510708,Cardoso,OK
+3510807,Casa Branca,OK
+3510906,Cássia dos Coqueiros,OK
+3511003,Castilho,OK
+3511102,Catanduva,OK
+3511201,Catiguá,OK
+3511300,Cedral,OK
+3511409,Cerqueira César,OK
+3511508,Cerquilho,OK
+3511607,Cesário Lange,OK
+3511706,Charqueada,OK
+3511904,Clementina,OK
+3512001,Colina,OK
+3512100,Colômbia,OK
+3512209,Conchal,OK
+3512308,Conchas,OK
+3512407,Cordeirópolis,OK
+3512506,Coroados,OK
+3512605,Coronel Macedo,OK
+3512704,Corumbataí,OK
+3512803,Cosmópolis,OK
+3512902,Cosmorama,OK
+3513009,Cotia,OK
+3513108,Cravinhos,OK
+3513207,Cristais Paulista,OK
+3513306,Cruzália,OK
+3513405,Cruzeiro,OK
+3513504,Cubatão,OK
+3513603,Cunha,OK
+3513702,Descalvado,OK
+3513801,Diadema,OK
+3513850,Dirce Reis,OK
+3513900,Divinolândia,OK
+3514007,Dobrada,OK
+3514106,Dois Córregos,OK
+3514205,Dolcinópolis,OK
+3514304,Dourado,OK
+3514403,Dracena,OK
+3514502,Duartina,OK
+3514601,Dumont,OK
+3514700,Echaporã,OK
+3514809,Eldorado,OK
+3514908,Elias Fausto,OK
+3514924,Elisiário,OK
+3514957,Embaúba,OK
+3515004,Embu das Artes,OK
+3515103,Embu-Guaçu,OK
+3515129,Emilianópolis,OK
+3515152,Engenheiro Coelho,OK
+3515186,Espírito Santo do Pinhal,OK
+3515194,Espírito Santo do Turvo,OK
+3515202,Estrela d'Oeste,OK
+3515301,Estrela do Norte,OK
+3515350,Euclides da Cunha Paulista,OK
+3515400,Fartura,OK
+3515509,Fernandópolis,OK
+3515608,Fernando Prestes,OK
+3515657,Fernão,OK
+3515707,Ferraz de Vasconcelos,OK
+3515806,Flora Rica,OK
+3515905,Floreal,OK
+3516002,Flórida Paulista,OK
+3516101,Florínea,OK
+3516200,Franca,OK
+3516309,Francisco Morato,OK
+3516408,Franco da Rocha,OK
+3516507,Gabriel Monteiro,OK
+3516606,Gália,OK
+3516705,Garça,OK
+3516804,Gastão Vidigal,OK
+3516853,Gavião Peixoto,OK
+3516903,General Salgado,OK
+3517000,Getulina,OK
+3517109,Glicério,OK
+3517208,Guaiçara,OK
+3517307,Guaimbê,OK
+3517406,Guaíra,OK
+3517505,Guapiaçu,OK
+3517604,Guapiara,OK
+3517703,Guará,OK
+3517802,Guaraçaí,OK
+3517901,Guaraci,OK
+3518008,Guarani d'Oeste,OK
+3518107,Guarantã,OK
+3518206,Guararapes,OK
+3518305,Guararema,OK
+3518404,Guaratinguetá,OK
+3518503,Guareí,OK
+3518602,Guariba,OK
+3518701,Guarujá,OK
+3518800,Guarulhos,OK
+3518859,Guatapará,OK
+3518909,Guzolândia,OK
+3519006,Herculândia,OK
+3519055,Holambra,OK
+3519071,Hortolândia,OK
+3519105,Iacanga,OK
+3519204,Iacri,OK
+3519253,Iaras,OK
+3519303,Ibaté,OK
+3519402,Ibirá,OK
+3519501,Ibirarema,OK
+3519600,Ibitinga,OK
+3519709,Ibiúna,OK
+3519808,Icém,OK
+3519907,Iepê,OK
+3520004,Igaraçu do Tietê,OK
+3520103,Igarapava,OK
+3520202,Igaratá,OK
+3520301,Iguape,OK
+3520400,Ilhabela,OK
+3520426,Ilha Comprida,OK
+3520442,Ilha Solteira,OK
+3520509,Indaiatuba,OK
+3520608,Indiana,OK
+3520707,Indiaporã,OK
+3520806,Inúbia Paulista,OK
+3520905,Ipaussu,OK
+3521002,Iperó,OK
+3521101,Ipeúna,OK
+3521150,Ipiguá,OK
+3521200,Iporanga,OK
+3521309,Ipuã,OK
+3521408,Iracemápolis,OK
+3521507,Irapuã,OK
+3521606,Irapuru,OK
+3521705,Itaberá,OK
+3521804,Itaí,OK
+3521903,Itajobi,OK
+3522000,Itaju,OK
+3522109,Itanhaém,OK
+3522158,Itaoca,OK
+3522208,Itapecerica da Serra,OK
+3522307,Itapetininga,OK
+3522406,Itapeva,OK
+3522505,Itapevi,OK
+3522604,Itapira,OK
+3522653,Itapirapuã Paulista,OK
+3522703,Itápolis,OK
+3522802,Itaporanga,OK
+3522901,Itapuí,OK
+3523008,Itapura,OK
+3523107,Itaquaquecetuba,OK
+3523206,Itararé,OK
+3523305,Itariri,OK
+3523404,Itatiba,OK
+3523503,Itatinga,OK
+3523602,Itirapina,OK
+3523701,Itirapuã,OK
+3523800,Itobi,OK
+3523909,Itu,OK
+3524006,Itupeva,OK
+3524105,Ituverava,OK
+3524204,Jaborandi,OK
+3524303,Jaboticabal,OK
+3524402,Jacareí,OK
+3524501,Jaci,OK
+3524600,Jacupiranga,OK
+3524709,Jaguariúna,OK
+3524808,Jales,OK
+3524907,Jambeiro,OK
+3525003,Jandira,OK
+3525102,Jardinópolis,OK
+3525201,Jarinu,OK
+3525300,Jaú,OK
+3525409,Jeriquara,OK
+3525508,Joanópolis,OK
+3525607,João Ramalho,OK
+3525706,José Bonifácio,OK
+3525805,Júlio Mesquita,OK
+3525854,Jumirim,OK
+3525904,Jundiaí,OK
+3526001,Junqueirópolis,OK
+3526100,Juquiá,OK
+3526209,Juquitiba,OK
+3526308,Lagoinha,OK
+3526407,Laranjal Paulista,OK
+3526506,Lavínia,OK
+3526605,Lavrinhas,OK
+3526704,Leme,OK
+3526803,Lençóis Paulista,OK
+3526902,Limeira,OK
+3527009,Lindóia,OK
+3527108,Lins,OK
+3527207,Lorena,OK
+3527256,Lourdes,OK
+3527306,Louveira,OK
+3527405,Lucélia,OK
+3527504,Lucianópolis,OK
+3527603,Luís Antônio,OK
+3527702,Luiziânia,OK
+3527801,Lupércio,OK
+3527900,Lutécia,OK
+3528007,Macatuba,OK
+3528106,Macaubal,OK
+3528205,Macedônia,OK
+3528304,Magda,OK
+3528403,Mairinque,OK
+3528502,Mairiporã,OK
+3528601,Manduri,OK
+3528700,Marabá Paulista,OK
+3528809,Maracaí,OK
+3528858,Marapoama,OK
+3528908,Mariápolis,OK
+3529005,Marília,OK
+3529104,Marinópolis,OK
+3529203,Martinópolis,OK
+3529302,Matão,OK
+3529401,Mauá,OK
+3529500,Mendonça,OK
+3529609,Meridiano,OK
+3529658,Mesópolis,OK
+3529708,Miguelópolis,OK
+3529807,Mineiros do Tietê,OK
+3529906,Miracatu,OK
+3530003,Mira Estrela,OK
+3530102,Mirandópolis,OK
+3530201,Mirante do Paranapanema,OK
+3530300,Mirassol,OK
+3530409,Mirassolândia,OK
+3530508,Mococa,OK
+3530607,Mogi das Cruzes,OK
+3530706,Mogi Guaçu,OK
+3530805,Mogi Mirim,OK
+3530904,Mombuca,OK
+3531001,Monções,OK
+3531100,Mongaguá,OK
+3531209,Monte Alegre do Sul,OK
+3531308,Monte Alto,OK
+3531407,Monte Aprazível,OK
+3531506,Monte Azul Paulista,OK
+3531605,Monte Castelo,OK
+3531704,Monteiro Lobato,OK
+3531803,Monte Mor,OK
+3531902,Morro Agudo,OK
+3532009,Morungaba,OK
+3532058,Motuca,OK
+3532108,Murutinga do Sul,OK
+3532157,Nantes,OK
+3532207,Narandiba,OK
+3532306,Natividade da Serra,OK
+3532405,Nazaré Paulista,OK
+3532504,Neves Paulista,OK
+3532603,Nhandeara,OK
+3532702,Nipoã,OK
+3532801,Nova Aliança,OK
+3532827,Nova Campina,OK
+3532843,Nova Canaã Paulista,OK
+3532868,Nova Castilho,OK
+3532900,Nova Europa,OK
+3533007,Nova Granada,OK
+3533106,Nova Guataporanga,OK
+3533205,Nova Independência,OK
+3533254,Novais,OK
+3533304,Nova Luzitânia,OK
+3533403,Nova Odessa,OK
+3533502,Novo Horizonte,OK
+3533601,Nuporanga,OK
+3533700,Ocauçu,OK
+3533809,Óleo,OK
+3533908,Olímpia,OK
+3534005,Onda Verde,OK
+3534104,Oriente,OK
+3534203,Orindiúva,OK
+3534302,Orlândia,OK
+3534401,Osasco,OK
+3534500,Oscar Bressane,OK
+3534609,Osvaldo Cruz,OK
+3534708,Ourinhos,OK
+3534757,Ouroeste,OK
+3534807,Ouro Verde,OK
+3534906,Pacaembu,OK
+3535002,Palestina,OK
+3535101,Palmares Paulista,OK
+3535200,Palmeira d'Oeste,OK
+3535309,Palmital,OK
+3535408,Panorama,OK
+3535507,Paraguaçu Paulista,OK
+3535606,Paraibuna,OK
+3535705,Paraíso,OK
+3535804,Paranapanema,OK
+3535903,Paranapuã,OK
+3536000,Parapuã,OK
+3536109,Pardinho,OK
+3536208,Pariquera-Açu,OK
+3536257,Parisi,OK
+3536307,Patrocínio Paulista,OK
+3536406,Paulicéia,OK
+3536505,Paulínia,OK
+3536570,Paulistânia,OK
+3536604,Paulo de Faria,OK
+3536703,Pederneiras,OK
+3536802,Pedra Bela,OK
+3536901,Pedranópolis,OK
+3537008,Pedregulho,OK
+3537107,Pedreira,OK
+3537156,Pedrinhas Paulista,OK
+3537206,Pedro de Toledo,OK
+3537305,Penápolis,OK
+3537404,Pereira Barreto,OK
+3537503,Pereiras,OK
+3537602,Peruíbe,OK
+3537701,Piacatu,OK
+3537800,Piedade,OK
+3537909,Pilar do Sul,OK
+3538006,Pindamonhangaba,OK
+3538105,Pindorama,OK
+3538204,Pinhalzinho,OK
+3538303,Piquerobi,OK
+3538501,Piquete,OK
+3538600,Piracaia,OK
+3538709,Piracicaba,OK
+3538808,Piraju,OK
+3538907,Pirajuí,OK
+3539004,Pirangi,OK
+3539103,Pirapora do Bom Jesus,OK
+3539202,Pirapozinho,OK
+3539301,Pirassununga,OK
+3539400,Piratininga,OK
+3539509,Pitangueiras,OK
+3539608,Planalto,OK
+3539707,Platina,OK
+3539806,Poá,OK
+3539905,Poloni,OK
+3540002,Pompéia,OK
+3540101,Pongaí,OK
+3540200,Pontal,OK
+3540259,Pontalinda,OK
+3540309,Pontes Gestal,OK
+3540408,Populina,OK
+3540507,Porangaba,OK
+3540606,Porto Feliz,OK
+3540705,Porto Ferreira,OK
+3540754,Potim,OK
+3540804,Potirendaba,OK
+3540853,Pracinha,OK
+3540903,Pradópolis,OK
+3541000,Praia Grande,OK
+3541059,Pratânia,OK
+3541109,Presidente Alves,OK
+3541208,Presidente Bernardes,OK
+3541307,Presidente Epitácio,OK
+3541406,Presidente Prudente,OK
+3541505,Presidente Venceslau,OK
+3541604,Promissão,OK
+3541653,Quadra,OK
+3541703,Quatá,OK
+3541802,Queiroz,OK
+3541901,Queluz,OK
+3542008,Quintana,OK
+3542107,Rafard,OK
+3542206,Rancharia,OK
+3542305,Redenção da Serra,OK
+3542404,Regente Feijó,OK
+3542503,Reginópolis,OK
+3542602,Registro,OK
+3542701,Restinga,OK
+3542800,Ribeira,OK
+3542909,Ribeirão Bonito,OK
+3543006,Ribeirão Branco,OK
+3543105,Ribeirão Corrente,OK
+3543204,Ribeirão do Sul,OK
+3543238,Ribeirão dos Índios,OK
+3543253,Ribeirão Grande,OK
+3543303,Ribeirão Pires,OK
+3543402,Ribeirão Preto,OK
+3543501,Riversul,OK
+3543600,Rifaina,OK
+3543709,Rincão,OK
+3543808,Rinópolis,OK
+3543907,Rio Claro,OK
+3544004,Rio das Pedras,OK
+3544103,Rio Grande da Serra,OK
+3544202,Riolândia,OK
+3544251,Rosana,OK
+3544301,Roseira,OK
+3544400,Rubiácea,OK
+3544509,Rubinéia,OK
+3544608,Sabino,OK
+3544707,Sagres,OK
+3544806,Sales,OK
+3544905,Sales Oliveira,OK
+3545001,Salesópolis,OK
+3545100,Salmourão,OK
+3545159,Saltinho,OK
+3545209,Salto,OK
+3545308,Salto de Pirapora,OK
+3545407,Salto Grande,OK
+3545506,Sandovalina,OK
+3545605,Santa Adélia,OK
+3545704,Santa Albertina,OK
+3545803,Santa Bárbara d'Oeste,OK
+3546009,Santa Branca,OK
+3546108,Santa Clara d'Oeste,OK
+3546207,Santa Cruz da Conceição,OK
+3546256,Santa Cruz da Esperança,OK
+3546306,Santa Cruz das Palmeiras,OK
+3546405,Santa Cruz do Rio Pardo,OK
+3546504,Santa Ernestina,OK
+3546603,Santa Fé do Sul,OK
+3546702,Santa Gertrudes,OK
+3546801,Santa Isabel,OK
+3546900,Santa Lúcia,OK
+3547007,Santa Maria da Serra,OK
+3547106,Santa Mercedes,OK
+3547205,Santana da Ponte Pensa,OK
+3547304,Santana de Parnaíba,OK
+3547403,Santa Rita d'Oeste,OK
+3547502,Santa Rita do Passa Quatro,OK
+3547601,Santa Rosa de Viterbo,OK
+3547650,Santa Salete,OK
+3547700,Santo Anastácio,OK
+3547809,Santo André,OK
+3547908,Santo Antônio da Alegria,OK
+3548005,Santo Antônio de Posse,OK
+3548054,Santo Antônio do Aracanguá,OK
+3548104,Santo Antônio do Jardim,OK
+3548203,Santo Antônio do Pinhal,OK
+3548302,Santo Expedito,OK
+3548401,Santópolis do Aguapeí,OK
+3548500,Santos,OK
+3548609,São Bento do Sapucaí,OK
+3548708,São Bernardo do Campo,OK
+3548807,São Caetano do Sul,OK
+3548906,São Carlos,OK
+3549003,São Francisco,OK
+3549102,São João da Boa Vista,OK
+3549201,São João das Duas Pontes,OK
+3549250,São João de Iracema,OK
+3549300,São João do Pau d'Alho,OK
+3549409,São Joaquim da Barra,OK
+3549508,São José da Bela Vista,OK
+3549607,São José do Barreiro,OK
+3549706,São José do Rio Pardo,OK
+3549805,São José do Rio Preto,OK
+3549904,São José dos Campos,OK
+3549953,São Lourenço da Serra,OK
+3550001,São Luiz do Paraitinga,OK
+3550100,São Manuel,OK
+3550209,São Miguel Arcanjo,OK
+3550308,São Paulo,OK
+3550407,São Pedro,OK
+3550506,São Pedro do Turvo,OK
+3550605,São Roque,OK
+3550704,São Sebastião,OK
+3550803,São Sebastião da Grama,OK
+3550902,São Simão,OK
+3551009,São Vicente,OK
+3551108,Sarapuí,OK
+3551207,Sarutaiá,OK
+3551306,Sebastianópolis do Sul,OK
+3551405,Serra Azul,OK
+3551504,Serrana,OK
+3551603,Serra Negra,OK
+3551702,Sertãozinho,OK
+3551801,Sete Barras,OK
+3551900,Severínia,OK
+3552007,Silveiras,OK
+3552106,Socorro,OK
+3552205,Sorocaba,OK
+3552304,Sud Mennucci,OK
+3552403,Sumaré,OK
+3552502,Suzano,OK
+3552551,Suzanápolis,OK
+3552601,Tabapuã,OK
+3552700,Tabatinga,OK
+3552809,Taboão da Serra,OK
+3552908,Taciba,OK
+3553005,Taguaí,OK
+3553104,Taiaçu,OK
+3553203,Taiúva,OK
+3553302,Tambaú,OK
+3553401,Tanabi,OK
+3553500,Tapiraí,OK
+3553609,Tapiratiba,OK
+3553658,Taquaral,OK
+3553708,Taquaritinga,OK
+3553807,Taquarituba,OK
+3553856,Taquarivaí,OK
+3553906,Tarabai,OK
+3553955,Tarumã,OK
+3554003,Tatuí,OK
+3554102,Taubaté,OK
+3554201,Tejupá,OK
+3554300,Teodoro Sampaio,OK
+3554409,Terra Roxa,OK
+3554508,Tietê,OK
+3554607,Timburi,OK
+3554656,Torre de Pedra,OK
+3554706,Torrinha,OK
+3554755,Trabiju,OK
+3554805,Tremembé,OK
+3554904,Três Fronteiras,OK
+3554953,Tuiuti,OK
+3555000,Tupã,OK
+3555109,Tupi Paulista,OK
+3555208,Turiúba,OK
+3555307,Turmalina,OK
+3555356,Ubarana,OK
+3555406,Ubatuba,OK
+3555505,Ubirajara,OK
+3555604,Uchoa,OK
+3555703,União Paulista,OK
+3555802,Urânia,OK
+3555901,Uru,OK
+3556008,Urupês,OK
+3556107,Valentim Gentil,OK
+3556206,Valinhos,OK
+3556305,Valparaíso,OK
+3556354,Vargem,OK
+3556404,Vargem Grande do Sul,OK
+3556453,Vargem Grande Paulista,OK
+3556503,Várzea Paulista,OK
+3556602,Vera Cruz,OK
+3556701,Vinhedo,OK
+3556800,Viradouro,OK
+3556909,Vista Alegre do Alto,OK
+3556958,Vitória Brasil,OK
+3557006,Votorantim,OK
+3557105,Votuporanga,OK
+3557154,Zacarias,OK
+3557204,Chavantes,OK
+3557303,Estiva Gerbi,OK
