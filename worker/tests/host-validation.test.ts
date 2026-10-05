@@ -13,12 +13,12 @@ describe("hostnamePermitido", () => {
     ).toBe(true);
   });
 
-  it("mantém workers.dev como fallback operacional", () => {
+  it("rejeita o hostname workers.dev desativado", () => {
     expect(
       hostnamePermitido(
         new Request("https://censosenso-mcp.radar-urbano-hilaliskandar.workers.dev/mcp"),
       ),
-    ).toBe(true);
+    ).toBe(false);
   });
 
   it("rejeita hostname arbitrário", () => {
