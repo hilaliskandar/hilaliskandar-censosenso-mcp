@@ -71,6 +71,7 @@ A superfície 0.6.0 possui **23 ferramentas**: 21 ferramentas `ibge_*` e duas fe
 - [Política de versionamento](docs/VERSIONAMENTO.md)
 - [Notas da versão 0.6.0](docs/RELEASE_0_6_0.md)
 - [Evidência da validação dos 645 municípios paulistas](docs/VALIDACAO_SP_645.md)
+- [Como acessar os artefatos dos 645 municípios](docs/ACESSO_RESULTADOS_SP_645.md)
 - [Segurança](SECURITY.md)
 - [Privacidade](PRIVACY.md)
 - [Contribuição](CONTRIBUTING.md)
