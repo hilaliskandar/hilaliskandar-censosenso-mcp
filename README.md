@@ -93,7 +93,7 @@ O deploy remoto foi homologado com a sequência MCP real:
 <a id="validacao-dos-645-municipios-paulistas"></a>
 ## Validação dos 645 municípios paulistas
 
-A evidência completa desta execução está em [docs/VALIDACAO_SP_645.md](docs/VALIDACAO_SP_645.md).
+A evidência completa desta execução está em [docs/VALIDACAO_SP_645.md](docs/VALIDACAO_SP_645.md). O resultado municipal público pode ser consultado em [validation/sp/0.6.0/municipios-sp-645.csv](validation/sp/0.6.0/municipios-sp-645.csv).
 
 
 A versão 0.6.0 possui um gate reproduzível específico para o universo municipal do Estado de São Paulo.
@@ -109,7 +109,7 @@ Execução validada em **5 de outubro de 2026**:
 | Amostra determinística de chamadas reais | **21** |
 | Amostra aprovada | **21/21** |
 | Falhas na amostra | **0** |
-| SHA-256 do snapshot validado | `dc6e4eebffb4d755d8899eadae4ce876e565506b0cce5657f08a2835e290acc7` |
+| SHA-256 do snapshot validado | `a215de0ed21d5538db07a35e65c8dcd9fb1c201491c1ee1f4d0aaaa757810d86` |
 
 O gate consulta:
 
