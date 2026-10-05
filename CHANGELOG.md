@@ -31,6 +31,7 @@ The public project uses the pre-1.0 policy in [docs/VERSIONAMENTO.md](docs/VERSI
 ### Validated
 - 645/645 São Paulo municipalities passed structural validation.
 - 21/21 deterministic sample municipalities passed live `ibge_geocodigo` and `ibge_localidade` checks.
-- Snapshot SHA-256: `dc6e4eebffb4d755d8899eadae4ce876e565506b0cce5657f08a2835e290acc7`.
+- Snapshot SHA-256: `a215de0ed21d5538db07a35e65c8dcd9fb1c201491c1ee1f4d0aaaa757810d86`.
+- Public validation evidence: `validation/sp/0.6.0/`.
 
 See [docs/RELEASE_0_6_0.md](docs/RELEASE_0_6_0.md) for release notes.
