@@ -1,6 +1,6 @@
 # CensoSenso MCP
 
-[![Version](https://img.shields.io/badge/version-6.0.0-blue.svg)](#versao-e-estado)
+[![Version](https://img.shields.io/badge/version-0.6.0-blue.svg)](#versao-e-estado)
 [![Node](https://img.shields.io/badge/node-%3E%3D22-brightgreen.svg)](#instalacao-local)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -8,7 +8,7 @@
 
 **Endpoint MCP remoto:** `https://censosenso.poderdapalavra.org/mcp`
 
-> **Protótipo público 1.** A versão 6.0.0 é experimental, somente leitura e disponibilizada sem SLA. O canal oficial inicial é o endpoint remoto acima. O pacote npm ainda não integra este lançamento.
+> **Protótipo público 1.** A versão 0.6.0 é experimental, somente leitura e disponibilizada sem SLA. O canal oficial inicial é o endpoint remoto acima. O pacote npm ainda não integra este lançamento.
 
 O **CensoSenso MCP** é uma implementação de [Model Context Protocol](https://modelcontextprotocol.io/) voltada ao uso analítico de dados públicos brasileiros. A superfície atual reúne ferramentas de localidades, Censo Demográfico, SIDRA, indicadores, Cidades@, saúde, saneamento, economia, classificações, malhas administrativas, vizinhança municipal, recortes territoriais, notícias e calendário.
 
@@ -40,9 +40,13 @@ O princípio central é simples: uma resposta útil não deve trazer apenas um n
 ---
 
 <a id="versao-e-estado"></a>
+## Política de versionamento
+
+A sequência pública usa versões pré-1.0: `0.x.0` para acréscimo funcional e `0.x.y` para correções ou melhorias de funcionalidades existentes. A família `0.9.x` é reservada ao beta e `1.0.0` ao primeiro lançamento estável. Consulte [docs/VERSIONAMENTO.md](docs/VERSIONAMENTO.md).
+
 ## Versão e estado
 
-- versão do servidor: **6.0.0**;
+- versão do servidor: **0.6.0**;
 - linguagem principal: **TypeScript**;
 - runtime: **Node.js 22+**;
 - protocolo: **Model Context Protocol**;
@@ -56,7 +60,7 @@ O princípio central é simples: uma resposta útil não deve trazer apenas um n
 - fonte principal dos dados: **IBGE**;
 - natureza deste lançamento: **protótipo público experimental, sem SLA**.
 
-A superfície 6.0.0 possui **23 ferramentas**: 21 ferramentas `ibge_*` e duas ferramentas genéricas de pesquisa assistida, `search` e `fetch`.
+A superfície 0.6.0 possui **23 ferramentas**: 21 ferramentas `ibge_*` e duas ferramentas genéricas de pesquisa assistida, `search` e `fetch`.
 
 
 ### Documentação técnica
@@ -88,7 +92,7 @@ O deploy remoto foi homologado com a sequência MCP real:
 A evidência completa desta execução está em [docs/VALIDACAO_SP_645.md](docs/VALIDACAO_SP_645.md).
 
 
-A versão 6.0.0 possui um gate reproduzível específico para o universo municipal do Estado de São Paulo.
+A versão 0.6.0 possui um gate reproduzível específico para o universo municipal do Estado de São Paulo.
 
 Execução validada em **5 de outubro de 2026**:
 
@@ -802,7 +806,7 @@ node scripts/dump-surface.mjs --stdio
 Baseline atual:
 
 ```text
-baselines/surface-stdio-6.0.0.json
+baselines/surface-stdio-0.6.0.json
 ```
 
 Mudança de ferramentas, schemas, resources ou prompts deve produzir diff explícito no baseline.
@@ -1054,7 +1058,7 @@ O CensoSenso:
 
 Concluído:
 
-- versão 6.0.0;
+- versão 0.6.0;
 - 23 ferramentas;
 - transporte STDIO;
 - Streamable HTTP;
