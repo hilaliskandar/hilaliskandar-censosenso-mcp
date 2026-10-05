@@ -3,6 +3,7 @@
 [![Version](https://img.shields.io/badge/version-0.6.0-blue.svg)](#versao-e-estado)
 [![Node](https://img.shields.io/badge/node-%3E%3D22-brightgreen.svg)](#instalacao-local)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![CI](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/actions/workflows/ci.yml)
 
 **Servidor MCP independente para consulta, comparação e análise de dados oficiais do IBGE, com 23 ferramentas, procedência reproduzível, validação de contratos e transporte remoto via Cloudflare Workers.**
 
@@ -820,7 +821,7 @@ Mudança de ferramentas, schemas, resources ou prompts deve produzir diff explí
 <a id="instalacao-local"></a>
 ## Instalação local
 
-> A árvore completa do protótipo será publicada neste repositório após o gate final do release candidate.
+A árvore homologada do protótipo **0.6.0** está publicada neste repositório. O CI público usa apenas runners hospedados pelo GitHub e não realiza deploy de produção.
 
 Pré-requisitos:
 
