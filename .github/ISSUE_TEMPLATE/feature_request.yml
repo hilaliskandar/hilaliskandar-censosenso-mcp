@@ -1,0 +1,29 @@
+name: Feature request
+description: Proponha nova funcionalidade, fonte ou melhoria relevante
+title: "[Feature] "
+labels: []
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema ou necessidade
+      description: Qual necessidade concreta a proposta resolve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposta
+      description: Descreva a funcionalidade desejada.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Fonte oficial relacionada
+      description: URL do IBGE ou outra fonte pública oficial, quando aplicável.
+  - type: textarea
+    id: contract
+    attributes:
+      label: Contrato esperado
+      description: Entradas, saídas, granularidade territorial e limitações esperadas.

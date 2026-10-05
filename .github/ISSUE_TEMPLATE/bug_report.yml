@@ -1,0 +1,46 @@
+name: Bug report
+description: Relate comportamento incorreto ou regressão reproduzível
+title: "[Bug] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por relatar um problema no CensoSenso. Não inclua tokens, credenciais ou dados pessoais.
+  - type: input
+    id: version
+    attributes:
+      label: Versão
+      description: Exemplo: 0.6.0
+      placeholder: 0.6.0
+    validations:
+      required: true
+  - type: input
+    id: tool
+    attributes:
+      label: Ferramenta ou rota
+      description: Exemplo: ibge_sidra, search, /mcp, /status
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para reproduzir
+      description: Informe a chamada, parâmetros e sequência.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Resultado esperado
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Resultado observado
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidências
+      description: Logs sem segredos, links para fonte oficial ou exemplos mínimos.
