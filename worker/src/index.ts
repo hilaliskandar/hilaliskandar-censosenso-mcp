@@ -203,9 +203,9 @@ export default {
 
     const handler = createMcpHandler(() => buildServer(recordWithAnalytics), {
       route: rotaMcp,
-      // Sem a opção, o handler aceita localhost e *.workers.dev. Ao definir
-      // extraAllowedHostnames (domínio próprio), a lista SUBSTITUI os defaults —
-      // por isso config.ts inclui nela também o hostname workers.dev.
+      // A lista explícita de extraAllowedHostnames substitui os defaults do
+      // handler. Produção aceita apenas o domínio canônico; localhost/127.0.0.1
+      // permanecem para desenvolvimento local. workers.dev está desativado.
       ...(SERVER_CONFIG.extraAllowedHostnames.length
         ? { allowedHostnames: [...SERVER_CONFIG.extraAllowedHostnames] }
         : {}),
