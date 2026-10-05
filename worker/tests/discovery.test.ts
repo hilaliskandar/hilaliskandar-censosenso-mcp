@@ -4,11 +4,11 @@ import { discoveryResponseForPath, robotsTxt, sitemapXml } from "../src/discover
 import { SERVER_CONFIG } from "../src/config.js";
 
 describe("descoberta pública do endpoint CensoSenso", () => {
-  it("declara a base pública de produção e mantém IndexNow desativado", () => {
+  it("declara exclusivamente a base pública de produção e mantém IndexNow desativado", () => {
     expect(SERVER_CONFIG.publicBaseUrl).toBe("https://censosenso.poderdapalavra.org");
     expect(SERVER_CONFIG.indexNowKey).toBeNull();
     expect(SERVER_CONFIG.extraAllowedHostnames).toContain("censosenso.poderdapalavra.org");
-    expect(SERVER_CONFIG.extraAllowedHostnames).toContain(
+    expect(SERVER_CONFIG.extraAllowedHostnames).not.toContain(
       "censosenso-mcp.radar-urbano-hilaliskandar.workers.dev",
     );
   });
