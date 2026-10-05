@@ -1,0 +1,29 @@
+name: SP 645 validation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - name: Validate 645 municipalities against live IBGE APIs
+        run: npm run gate:sp-645
+      - name: Publish validation artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sp-645-validation-${{ github.run_number }}
+          path: artifacts/sp-645/**
+          if-no-files-found: warn
+          retention-days: 30

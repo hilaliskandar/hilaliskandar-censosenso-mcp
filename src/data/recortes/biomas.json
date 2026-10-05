@@ -1,0 +1,36 @@
+{
+  "tema": "biomas",
+  "versao": "2025",
+  "fonte_url": "https://geoftp.ibge.gov.br/informacoes_ambientais/estudos_ambientais/biomas/vetores/2025_Biomas-e-Sistema-Costeiro-Marinho-do-Brasil-1-250000_shp.zip",
+  "produto_url": "https://www.ibge.gov.br/geociencias/informacoes-ambientais/vegetacao/15842-biomas.html?edicao=45164",
+  "sha256_fonte": "247b15c427070805044ebe02012f15552850d535fbfecaddb359875cdda1ea8f",
+  "total_registros": 6,
+  "crs": "SIRGAS 2000",
+  "prj": "GEOGCS[\"GCS_SIRGAS_2000\",DATUM[\"D_SIRGAS_2000\",SPHEROID[\"GRS_1980\",6378137.0,298.257222101]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]]",
+  "registros": [
+    {
+      "codigo_bioma": "1",
+      "bioma": "Amazônia"
+    },
+    {
+      "codigo_bioma": "2",
+      "bioma": "Caatinga"
+    },
+    {
+      "codigo_bioma": "3",
+      "bioma": "Cerrado"
+    },
+    {
+      "codigo_bioma": "4",
+      "bioma": "Mata Atlântica"
+    },
+    {
+      "codigo_bioma": "5",
+      "bioma": "Pampa"
+    },
+    {
+      "codigo_bioma": "6",
+      "bioma": "Pantanal"
+    }
+  ]
+}

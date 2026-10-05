@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Testing
+coverage/
+
+# Package manager locks (optional - you may want to keep one)
+# package-lock.json
+# yarn.lock
+
+# MCP Registry
+mcp-publisher.exe
+
+# Internal planning docs (kept local, not published)
+ROADMAP.md
+ROADMAP.html
+
+# R history
+.Rhistory
+
+# Local audit artifacts — laboratory only
+baseline_coverage.txt
+baseline_tests.txt
+malha_sp_municipios.geojson
+src/tools/vizinhos.ts.baseline
+wfs_capabilities.xml
+fontes_recortes_inspecao*.txt
+scripts/.cache_recortes/
+categorias_metropolitanas.txt
+scripts/__pycache__/
+categorias_metropolitanas_utf8.txt
+categorias_metropolitanas_utf8.json

@@ -1,0 +1,72 @@
+# Baselines de superfície
+
+Dumps NORMALIZADOS de `tools/list` + resources + prompts, gerados por
+`node scripts/dump-surface.mjs` (chaves ordenadas recursivamente, tools por
+name / resources por uri / prompts por name, versão do servidor omitida de
+propósito — mudaria a cada release e sujaria todo diff). Prática transplantada
+do bcb-br-mcp, onde o dump revelou que stdio e worker haviam divergido de
+verdade (contrato HTTP sem `minItems`, resources com nomes diferentes,
+descrições 12× menores em produção). Nenhum teste unitário pega essa classe.
+
+| Arquivo | Como foi capturado | O que representa |
+|:--|:--|:--|
+| `surface-stdio-5.1.0.json` | `--stdio` sobre `dist/index.js` do fonte atual | o que o canal npm publica desde a 5.1.0 |
+| `surface-http-prod-5.1.0.json` | `--url https://ibge.sidneybissoli.com/mcp` | o que o endpoint hospedado serve desde 16/09/2026 (5.1.0) — byte-idêntico ao stdio 5.1.0 |
+| `surface-stdio-4.3.0.json` | `--stdio` sobre `dist/index.js` do fonte atual | o que o canal npm publica |
+| `surface-http-prod-4.3.0.json` | `--url https://ibge.sidneybissoli.com/mcp` | o que o endpoint hospedado serve DE FATO |
+| `surface-*-4.2.0.json` | idem, na 4.2.0 | histórico: a superfície antes de `search`/`fetch` |
+
+## Recaptura 5.1.0 (2026-09-16)
+
+Diff stdio 5.0.0 → 5.1.0: duas tools alteradas, nenhuma nova. `ibge_sidra_tabelas`
+— descrição de `busca` e da tool (AND por palavra, sem acento, vocabulário
+traduzido) e `notas_vocabulario` opcional no `outputSchema`; `ibge_sidra` — a
+descrição deixa de citar o teto antigo de 100 mil valores (mudança da 5.0.1
+levada sem publicar). Resources e prompts iguais. Deliberado e listado no
+CHANGELOG.
+
+## Recaptura 4.3.0 (2026-09-02)
+
+Diff stdio 4.2.0 → 4.3.0: exatamente duas tools novas (`search`, `fetch` — o
+contrato Deep Research do ChatGPT), nenhuma tool existente alterada, resources
+e prompts iguais. `toolCount` 21 → 23. Deliberado e listado no CHANGELOG.
+
+## Medição da captura inicial (2026-09-01)
+
+**As duas superfícies são IDÊNTICAS byte a byte** — 21 tools, 5 resources,
+2 prompts, mesmo `serverName`. Não é sorte: o worker reutiliza o `registerAll`
+do build do pacote pai (`worker/src/server.ts`), então stdio e worker partilham
+a superfície por construção, e a produção estava recém-deployada (4.2.0,
+31/08). As divergências possíveis aqui são de DEPLOY (fonte à frente da
+produção), não de definição dupla como era no bcb pré-fundação — por isso o
+script não tem modo `--source`.
+
+## Como usar no gate
+
+Depois de qualquer mudança que possa mexer na superfície:
+
+```bash
+npm run build
+node scripts/dump-surface.mjs --stdio > depois.json
+# diff contra o baseline vigente (surface-stdio-4.3.0.json)
+```
+
+Toda diferença precisa ser deliberada e listada no CHANGELOG. Depois de um
+deploy do worker, recapturar `--url` e conferir que voltou a bater com o stdio
+(a propagação da Cloudflare serve isolates mistos por alguns segundos — se
+divergir logo após o deploy, re-sondar antes de concluir deriva).
+
+
+## Transição para a linha pública 0.x
+
+A sequência pública do CensoSenso começa em `0.6.0`.
+
+O baseline vigente para o primeiro protótipo público é:
+
+```text
+surface-stdio-0.6.0.json
+```
+
+O arquivo `surface-stdio-6.0.0.json` é preservado apenas como artefato histórico do marco interno anterior à política pública de versionamento. Ele representa a mesma superfície funcional de transição e não deve ser usado como identificador de release público.
+
+Novos baselines devem seguir a versão pública vigente.

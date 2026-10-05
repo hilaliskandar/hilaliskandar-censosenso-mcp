@@ -1,0 +1,4 @@
+# Keep repository text deterministic across Windows, macOS and Linux.
+# Prettier is configured with endOfLine=lf; without this rule, Git for Windows
+# may check out every source file as CRLF and make format:check fail globally.
+* text=auto eol=lf

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.hilaliskandar/censosenso-mcp",
+  "title": "CensoSenso MCP",
+  "description": "CensoSenso: dados oficiais do IBGE para análises territoriais, sociais, econômicas e de saúde.",
+  "websiteUrl": "https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp",
+  "repository": {
+    "url": "https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp",
+    "source": "github"
+  },
+  "version": "0.6.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://censosenso.poderdapalavra.org/mcp"
+    }
+  ]
+}

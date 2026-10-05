@@ -1,0 +1,6195 @@
+{
+  "tema": "amazonia_legal",
+  "versao": "2024",
+  "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/amazonia_legal/2024/Municipios_da_Amazonia_Legal_2024.ods",
+  "produto_url": "https://www.ibge.gov.br/geociencias/cartas-e-mapas/mapas-regionais/15819-amazonia-legal.html?lang=pt-BR",
+  "planilha": "Amazonia Legal - Municípios 2024",
+  "sha256_fonte": "0282c8d5788dd78f083eb9886d3e99a675f5e745a318afa5bdfbe5d712bd7927",
+  "total_registros": 773,
+  "registros": [
+    {
+      "codigo_municipio": "1100015",
+      "municipio": "Alta Floresta D'Oeste",
+      "uf": "RO",
+      "area_total_km2": "7067,127",
+      "area_no_recorte_km2": "7067,127",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100023",
+      "municipio": "Ariquemes",
+      "uf": "RO",
+      "area_total_km2": "4426,143",
+      "area_no_recorte_km2": "4426,143",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100031",
+      "municipio": "Cabixi",
+      "uf": "RO",
+      "area_total_km2": "1314,352",
+      "area_no_recorte_km2": "1314,352",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100049",
+      "municipio": "Cacoal",
+      "uf": "RO",
+      "area_total_km2": "3793,000",
+      "area_no_recorte_km2": "3793,000",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100056",
+      "municipio": "Cerejeiras",
+      "uf": "RO",
+      "area_total_km2": "2783,297",
+      "area_no_recorte_km2": "2783,297",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100064",
+      "municipio": "Colorado do Oeste",
+      "uf": "RO",
+      "area_total_km2": "1451,063",
+      "area_no_recorte_km2": "1451,063",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100072",
+      "municipio": "Corumbiara",
+      "uf": "RO",
+      "area_total_km2": "3060,321",
+      "area_no_recorte_km2": "3060,321",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100080",
+      "municipio": "Costa Marques",
+      "uf": "RO",
+      "area_total_km2": "4987,177",
+      "area_no_recorte_km2": "4987,177",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100098",
+      "municipio": "Espigão D'Oeste",
+      "uf": "RO",
+      "area_total_km2": "4518,038",
+      "area_no_recorte_km2": "4518,038",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100106",
+      "municipio": "Guajará-Mirim",
+      "uf": "RO",
+      "area_total_km2": "24856,877",
+      "area_no_recorte_km2": "24856,877",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100114",
+      "municipio": "Jaru",
+      "uf": "RO",
+      "area_total_km2": "2944,140",
+      "area_no_recorte_km2": "2944,140",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100122",
+      "municipio": "Ji-Paraná",
+      "uf": "RO",
+      "area_total_km2": "6896,649",
+      "area_no_recorte_km2": "6896,649",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100130",
+      "municipio": "Machadinho D'Oeste",
+      "uf": "RO",
+      "area_total_km2": "8509,270",
+      "area_no_recorte_km2": "8509,270",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100148",
+      "municipio": "Nova Brasilândia D'Oeste",
+      "uf": "RO",
+      "area_total_km2": "1703,008",
+      "area_no_recorte_km2": "1703,008",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100155",
+      "municipio": "Ouro Preto do Oeste",
+      "uf": "RO",
+      "area_total_km2": "1969,879",
+      "area_no_recorte_km2": "1969,879",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100189",
+      "municipio": "Pimenta Bueno",
+      "uf": "RO",
+      "area_total_km2": "6241,019",
+      "area_no_recorte_km2": "6241,019",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100205",
+      "municipio": "Porto Velho",
+      "uf": "RO",
+      "area_total_km2": "34091,146",
+      "area_no_recorte_km2": "34091,146",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100254",
+      "municipio": "Presidente Médici",
+      "uf": "RO",
+      "area_total_km2": "1758,464",
+      "area_no_recorte_km2": "1758,464",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100262",
+      "municipio": "Rio Crespo",
+      "uf": "RO",
+      "area_total_km2": "1717,640",
+      "area_no_recorte_km2": "1717,640",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100288",
+      "municipio": "Rolim de Moura",
+      "uf": "RO",
+      "area_total_km2": "1457,812",
+      "area_no_recorte_km2": "1457,812",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100296",
+      "municipio": "Santa Luzia D'Oeste",
+      "uf": "RO",
+      "area_total_km2": "1197,796",
+      "area_no_recorte_km2": "1197,796",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100304",
+      "municipio": "Vilhena",
+      "uf": "RO",
+      "area_total_km2": "11708,579",
+      "area_no_recorte_km2": "11708,579",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100320",
+      "municipio": "São Miguel do Guaporé",
+      "uf": "RO",
+      "area_total_km2": "6789,605",
+      "area_no_recorte_km2": "6789,605",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100338",
+      "municipio": "Nova Mamoré",
+      "uf": "RO",
+      "area_total_km2": "10070,490",
+      "area_no_recorte_km2": "10070,490",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100346",
+      "municipio": "Alvorada D'Oeste",
+      "uf": "RO",
+      "area_total_km2": "3029,189",
+      "area_no_recorte_km2": "3029,189",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100379",
+      "municipio": "Alto Alegre dos Parecis",
+      "uf": "RO",
+      "area_total_km2": "3958,273",
+      "area_no_recorte_km2": "3958,273",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100403",
+      "municipio": "Alto Paraíso",
+      "uf": "RO",
+      "area_total_km2": "2651,991",
+      "area_no_recorte_km2": "2651,991",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100452",
+      "municipio": "Buritis",
+      "uf": "RO",
+      "area_total_km2": "3265,810",
+      "area_no_recorte_km2": "3265,810",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100502",
+      "municipio": "Novo Horizonte do Oeste",
+      "uf": "RO",
+      "area_total_km2": "843,446",
+      "area_no_recorte_km2": "843,446",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100601",
+      "municipio": "Cacaulândia",
+      "uf": "RO",
+      "area_total_km2": "1962,026",
+      "area_no_recorte_km2": "1962,026",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100700",
+      "municipio": "Campo Novo de Rondônia",
+      "uf": "RO",
+      "area_total_km2": "3442,005",
+      "area_no_recorte_km2": "3442,005",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100809",
+      "municipio": "Candeias do Jamari",
+      "uf": "RO",
+      "area_total_km2": "6843,673",
+      "area_no_recorte_km2": "6843,673",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100908",
+      "municipio": "Castanheiras",
+      "uf": "RO",
+      "area_total_km2": "892,841",
+      "area_no_recorte_km2": "892,841",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100924",
+      "municipio": "Chupinguaia",
+      "uf": "RO",
+      "area_total_km2": "5117,290",
+      "area_no_recorte_km2": "5117,290",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1100940",
+      "municipio": "Cujubim",
+      "uf": "RO",
+      "area_total_km2": "3863,946",
+      "area_no_recorte_km2": "3863,946",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1101005",
+      "municipio": "Governador Jorge Teixeira",
+      "uf": "RO",
+      "area_total_km2": "5067,384",
+      "area_no_recorte_km2": "5067,384",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1101104",
+      "municipio": "Itapuã do Oeste",
+      "uf": "RO",
+      "area_total_km2": "4081,581",
+      "area_no_recorte_km2": "4081,581",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1101203",
+      "municipio": "Ministro Andreazza",
+      "uf": "RO",
+      "area_total_km2": "798,083",
+      "area_no_recorte_km2": "798,083",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1101302",
+      "municipio": "Mirante da Serra",
+      "uf": "RO",
+      "area_total_km2": "1191,875",
+      "area_no_recorte_km2": "1191,875",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1101401",
+      "municipio": "Monte Negro",
+      "uf": "RO",
+      "area_total_km2": "1931,378",
+      "area_no_recorte_km2": "1931,378",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1101435",
+      "municipio": "Nova União",
+      "uf": "RO",
+      "area_total_km2": "807,140",
+      "area_no_recorte_km2": "807,140",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1101450",
+      "municipio": "Parecis",
+      "uf": "RO",
+      "area_total_km2": "2548,683",
+      "area_no_recorte_km2": "2548,683",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1101468",
+      "municipio": "Pimenteiras do Oeste",
+      "uf": "RO",
+      "area_total_km2": "6014,733",
+      "area_no_recorte_km2": "6014,733",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1101476",
+      "municipio": "Primavera de Rondônia",
+      "uf": "RO",
+      "area_total_km2": "605,692",
+      "area_no_recorte_km2": "605,692",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1101484",
+      "municipio": "São Felipe D'Oeste",
+      "uf": "RO",
+      "area_total_km2": "541,647",
+      "area_no_recorte_km2": "541,647",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1101492",
+      "municipio": "São Francisco do Guaporé",
+      "uf": "RO",
+      "area_total_km2": "10948,593",
+      "area_no_recorte_km2": "10948,593",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1101500",
+      "municipio": "Seringueiras",
+      "uf": "RO",
+      "area_total_km2": "4444,017",
+      "area_no_recorte_km2": "4444,017",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1101559",
+      "municipio": "Teixeirópolis",
+      "uf": "RO",
+      "area_total_km2": "459,935",
+      "area_no_recorte_km2": "459,935",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1101609",
+      "municipio": "Theobroma",
+      "uf": "RO",
+      "area_total_km2": "2197,413",
+      "area_no_recorte_km2": "2197,413",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1101708",
+      "municipio": "Urupá",
+      "uf": "RO",
+      "area_total_km2": "831,857",
+      "area_no_recorte_km2": "831,857",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1101757",
+      "municipio": "Vale do Anari",
+      "uf": "RO",
+      "area_total_km2": "3135,106",
+      "area_no_recorte_km2": "3135,106",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1101807",
+      "municipio": "Vale do Paraíso",
+      "uf": "RO",
+      "area_total_km2": "965,676",
+      "area_no_recorte_km2": "965,676",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200013",
+      "municipio": "Acrelândia",
+      "uf": "AC",
+      "area_total_km2": "1811,621",
+      "area_no_recorte_km2": "1811,621",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200054",
+      "municipio": "Assis Brasil",
+      "uf": "AC",
+      "area_total_km2": "4962,946",
+      "area_no_recorte_km2": "4962,946",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200104",
+      "municipio": "Brasiléia",
+      "uf": "AC",
+      "area_total_km2": "3928,820",
+      "area_no_recorte_km2": "3928,820",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200138",
+      "municipio": "Bujari",
+      "uf": "AC",
+      "area_total_km2": "3035,547",
+      "area_no_recorte_km2": "3035,547",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200179",
+      "municipio": "Capixaba",
+      "uf": "AC",
+      "area_total_km2": "1705,236",
+      "area_no_recorte_km2": "1705,236",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200203",
+      "municipio": "Cruzeiro do Sul",
+      "uf": "AC",
+      "area_total_km2": "8793,341",
+      "area_no_recorte_km2": "8793,341",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200252",
+      "municipio": "Epitaciolândia",
+      "uf": "AC",
+      "area_total_km2": "1652,715",
+      "area_no_recorte_km2": "1652,715",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200302",
+      "municipio": "Feijó",
+      "uf": "AC",
+      "area_total_km2": "27946,605",
+      "area_no_recorte_km2": "27946,605",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200328",
+      "municipio": "Jordão",
+      "uf": "AC",
+      "area_total_km2": "5346,443",
+      "area_no_recorte_km2": "5346,443",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200336",
+      "municipio": "Mâncio Lima",
+      "uf": "AC",
+      "area_total_km2": "5414,070",
+      "area_no_recorte_km2": "5414,070",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200344",
+      "municipio": "Manoel Urbano",
+      "uf": "AC",
+      "area_total_km2": "10578,248",
+      "area_no_recorte_km2": "10578,248",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200351",
+      "municipio": "Marechal Thaumaturgo",
+      "uf": "AC",
+      "area_total_km2": "8185,635",
+      "area_no_recorte_km2": "8185,635",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200385",
+      "municipio": "Plácido de Castro",
+      "uf": "AC",
+      "area_total_km2": "1952,531",
+      "area_no_recorte_km2": "1952,531",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200393",
+      "municipio": "Porto Walter",
+      "uf": "AC",
+      "area_total_km2": "6452,756",
+      "area_no_recorte_km2": "6452,756",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200401",
+      "municipio": "Rio Branco",
+      "uf": "AC",
+      "area_total_km2": "8834,831",
+      "area_no_recorte_km2": "8834,831",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200427",
+      "municipio": "Rodrigues Alves",
+      "uf": "AC",
+      "area_total_km2": "3082,398",
+      "area_no_recorte_km2": "3082,398",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200435",
+      "municipio": "Santa Rosa do Purus",
+      "uf": "AC",
+      "area_total_km2": "6222,340",
+      "area_no_recorte_km2": "6222,340",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200450",
+      "municipio": "Senador Guiomard",
+      "uf": "AC",
+      "area_total_km2": "2320,946",
+      "area_no_recorte_km2": "2320,946",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200500",
+      "municipio": "Sena Madureira",
+      "uf": "AC",
+      "area_total_km2": "23732,205",
+      "area_no_recorte_km2": "23732,205",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200609",
+      "municipio": "Tarauacá",
+      "uf": "AC",
+      "area_total_km2": "20169,485",
+      "area_no_recorte_km2": "20169,485",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200708",
+      "municipio": "Xapuri",
+      "uf": "AC",
+      "area_total_km2": "5350,300",
+      "area_no_recorte_km2": "5350,300",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1200807",
+      "municipio": "Porto Acre",
+      "uf": "AC",
+      "area_total_km2": "2603,942",
+      "area_no_recorte_km2": "2603,942",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1300029",
+      "municipio": "Alvarães",
+      "uf": "AM",
+      "area_total_km2": "5922,884",
+      "area_no_recorte_km2": "5922,884",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1300060",
+      "municipio": "Amaturá",
+      "uf": "AM",
+      "area_total_km2": "4754,109",
+      "area_no_recorte_km2": "4754,109",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1300086",
+      "municipio": "Anamã",
+      "uf": "AM",
+      "area_total_km2": "2446,121",
+      "area_no_recorte_km2": "2446,121",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1300102",
+      "municipio": "Anori",
+      "uf": "AM",
+      "area_total_km2": "6036,019",
+      "area_no_recorte_km2": "6036,019",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1300144",
+      "municipio": "Apuí",
+      "uf": "AM",
+      "area_total_km2": "54240,544",
+      "area_no_recorte_km2": "54240,544",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1300201",
+      "municipio": "Atalaia do Norte",
+      "uf": "AM",
+      "area_total_km2": "76504,215",
+      "area_no_recorte_km2": "76504,215",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1300300",
+      "municipio": "Autazes",
+      "uf": "AM",
+      "area_total_km2": "7652,852",
+      "area_no_recorte_km2": "7652,852",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1300409",
+      "municipio": "Barcelos",
+      "uf": "AM",
+      "area_total_km2": "122445,039",
+      "area_no_recorte_km2": "122445,039",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1300508",
+      "municipio": "Barreirinha",
+      "uf": "AM",
+      "area_total_km2": "5751,765",
+      "area_no_recorte_km2": "5751,765",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1300607",
+      "municipio": "Benjamin Constant",
+      "uf": "AM",
+      "area_total_km2": "8692,751",
+      "area_no_recorte_km2": "8692,751",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1300631",
+      "municipio": "Beruri",
+      "uf": "AM",
+      "area_total_km2": "17472,780",
+      "area_no_recorte_km2": "17472,779",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1300680",
+      "municipio": "Boa Vista do Ramos",
+      "uf": "AM",
+      "area_total_km2": "2589,407",
+      "area_no_recorte_km2": "2589,407",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1300706",
+      "municipio": "Boca do Acre",
+      "uf": "AM",
+      "area_total_km2": "21938,583",
+      "area_no_recorte_km2": "21938,583",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1300805",
+      "municipio": "Borba",
+      "uf": "AM",
+      "area_total_km2": "44236,184",
+      "area_no_recorte_km2": "44236,184",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1300839",
+      "municipio": "Caapiranga",
+      "uf": "AM",
+      "area_total_km2": "9455,539",
+      "area_no_recorte_km2": "9455,539",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1300904",
+      "municipio": "Canutama",
+      "uf": "AM",
+      "area_total_km2": "33642,732",
+      "area_no_recorte_km2": "33642,732",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1301001",
+      "municipio": "Carauari",
+      "uf": "AM",
+      "area_total_km2": "25778,658",
+      "area_no_recorte_km2": "25778,658",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1301100",
+      "municipio": "Careiro",
+      "uf": "AM",
+      "area_total_km2": "6096,212",
+      "area_no_recorte_km2": "6096,212",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1301159",
+      "municipio": "Careiro da Várzea",
+      "uf": "AM",
+      "area_total_km2": "2627,474",
+      "area_no_recorte_km2": "2627,474",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1301209",
+      "municipio": "Coari",
+      "uf": "AM",
+      "area_total_km2": "57970,785",
+      "area_no_recorte_km2": "57970,785",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1301308",
+      "municipio": "Codajás",
+      "uf": "AM",
+      "area_total_km2": "18701,074",
+      "area_no_recorte_km2": "18701,074",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1301407",
+      "municipio": "Eirunepé",
+      "uf": "AM",
+      "area_total_km2": "14966,241",
+      "area_no_recorte_km2": "14966,241",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1301506",
+      "municipio": "Envira",
+      "uf": "AM",
+      "area_total_km2": "7505,794",
+      "area_no_recorte_km2": "7505,794",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1301605",
+      "municipio": "Fonte Boa",
+      "uf": "AM",
+      "area_total_km2": "12156,034",
+      "area_no_recorte_km2": "12156,034",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1301654",
+      "municipio": "Guajará",
+      "uf": "AM",
+      "area_total_km2": "7583,534",
+      "area_no_recorte_km2": "7583,534",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1301704",
+      "municipio": "Humaitá",
+      "uf": "AM",
+      "area_total_km2": "33111,129",
+      "area_no_recorte_km2": "33111,129",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1301803",
+      "municipio": "Ipixuna",
+      "uf": "AM",
+      "area_total_km2": "12109,779",
+      "area_no_recorte_km2": "12109,779",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1301852",
+      "municipio": "Iranduba",
+      "uf": "AM",
+      "area_total_km2": "2216,817",
+      "area_no_recorte_km2": "2216,817",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1301902",
+      "municipio": "Itacoatiara",
+      "uf": "AM",
+      "area_total_km2": "8891,979",
+      "area_no_recorte_km2": "8891,979",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1301951",
+      "municipio": "Itamarati",
+      "uf": "AM",
+      "area_total_km2": "25260,429",
+      "area_no_recorte_km2": "25260,429",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1302009",
+      "municipio": "Itapiranga",
+      "uf": "AM",
+      "area_total_km2": "4335,075",
+      "area_no_recorte_km2": "4335,075",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1302108",
+      "municipio": "Japurá",
+      "uf": "AM",
+      "area_total_km2": "55770,475",
+      "area_no_recorte_km2": "55770,475",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1302207",
+      "municipio": "Juruá",
+      "uf": "AM",
+      "area_total_km2": "19438,805",
+      "area_no_recorte_km2": "19438,805",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1302306",
+      "municipio": "Jutaí",
+      "uf": "AM",
+      "area_total_km2": "69459,501",
+      "area_no_recorte_km2": "69459,501",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1302405",
+      "municipio": "Lábrea",
+      "uf": "AM",
+      "area_total_km2": "68262,680",
+      "area_no_recorte_km2": "68262,680",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1302504",
+      "municipio": "Manacapuru",
+      "uf": "AM",
+      "area_total_km2": "7336,578",
+      "area_no_recorte_km2": "7336,578",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1302553",
+      "municipio": "Manaquiri",
+      "uf": "AM",
+      "area_total_km2": "3973,258",
+      "area_no_recorte_km2": "3973,258",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1302603",
+      "municipio": "Manaus",
+      "uf": "AM",
+      "area_total_km2": "11401,002",
+      "area_no_recorte_km2": "11401,002",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1302702",
+      "municipio": "Manicoré",
+      "uf": "AM",
+      "area_total_km2": "48315,038",
+      "area_no_recorte_km2": "48315,038",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1302801",
+      "municipio": "Maraã",
+      "uf": "AM",
+      "area_total_km2": "16830,826",
+      "area_no_recorte_km2": "16830,826",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1302900",
+      "municipio": "Maués",
+      "uf": "AM",
+      "area_total_km2": "39991,067",
+      "area_no_recorte_km2": "39991,067",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1303007",
+      "municipio": "Nhamundá",
+      "uf": "AM",
+      "area_total_km2": "14107,501",
+      "area_no_recorte_km2": "14107,502",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1303106",
+      "municipio": "Nova Olinda do Norte",
+      "uf": "AM",
+      "area_total_km2": "5578,132",
+      "area_no_recorte_km2": "5578,132",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1303205",
+      "municipio": "Novo Airão",
+      "uf": "AM",
+      "area_total_km2": "37776,664",
+      "area_no_recorte_km2": "37776,664",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1303304",
+      "municipio": "Novo Aripuanã",
+      "uf": "AM",
+      "area_total_km2": "41179,656",
+      "area_no_recorte_km2": "41179,656",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1303403",
+      "municipio": "Parintins",
+      "uf": "AM",
+      "area_total_km2": "5956,048",
+      "area_no_recorte_km2": "5956,048",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1303502",
+      "municipio": "Pauini",
+      "uf": "AM",
+      "area_total_km2": "41624,664",
+      "area_no_recorte_km2": "41624,664",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1303536",
+      "municipio": "Presidente Figueiredo",
+      "uf": "AM",
+      "area_total_km2": "25459,099",
+      "area_no_recorte_km2": "25459,099",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1303569",
+      "municipio": "Rio Preto da Eva",
+      "uf": "AM",
+      "area_total_km2": "5815,622",
+      "area_no_recorte_km2": "5815,622",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1303601",
+      "municipio": "Santa Isabel do Rio Negro",
+      "uf": "AM",
+      "area_total_km2": "62803,113",
+      "area_no_recorte_km2": "62803,113",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1303700",
+      "municipio": "Santo Antônio do Içá",
+      "uf": "AM",
+      "area_total_km2": "12382,380",
+      "area_no_recorte_km2": "12382,380",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1303809",
+      "municipio": "São Gabriel da Cachoeira",
+      "uf": "AM",
+      "area_total_km2": "108712,655",
+      "area_no_recorte_km2": "108712,655",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1303908",
+      "municipio": "São Paulo de Olivença",
+      "uf": "AM",
+      "area_total_km2": "19658,536",
+      "area_no_recorte_km2": "19658,536",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1303957",
+      "municipio": "São Sebastião do Uatumã",
+      "uf": "AM",
+      "area_total_km2": "10647,463",
+      "area_no_recorte_km2": "10647,463",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1304005",
+      "municipio": "Silves",
+      "uf": "AM",
+      "area_total_km2": "3723,382",
+      "area_no_recorte_km2": "3723,382",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1304062",
+      "municipio": "Tabatinga",
+      "uf": "AM",
+      "area_total_km2": "3259,543",
+      "area_no_recorte_km2": "3259,543",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1304104",
+      "municipio": "Tapauá",
+      "uf": "AM",
+      "area_total_km2": "84946,035",
+      "area_no_recorte_km2": "84946,035",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1304203",
+      "municipio": "Tefé",
+      "uf": "AM",
+      "area_total_km2": "23692,621",
+      "area_no_recorte_km2": "23693,058",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1304237",
+      "municipio": "Tonantins",
+      "uf": "AM",
+      "area_total_km2": "6447,227",
+      "area_no_recorte_km2": "6447,227",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1304260",
+      "municipio": "Uarini",
+      "uf": "AM",
+      "area_total_km2": "10275,559",
+      "area_no_recorte_km2": "10275,559",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1304302",
+      "municipio": "Urucará",
+      "uf": "AM",
+      "area_total_km2": "27924,574",
+      "area_no_recorte_km2": "27924,566",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1304401",
+      "municipio": "Urucurituba",
+      "uf": "AM",
+      "area_total_km2": "2863,889",
+      "area_no_recorte_km2": "2863,889",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1400027",
+      "municipio": "Amajari",
+      "uf": "RR",
+      "area_total_km2": "28370,592",
+      "area_no_recorte_km2": "28370,592",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1400050",
+      "municipio": "Alto Alegre",
+      "uf": "RR",
+      "area_total_km2": "25424,287",
+      "area_no_recorte_km2": "25424,287",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1400100",
+      "municipio": "Boa Vista",
+      "uf": "RR",
+      "area_total_km2": "5687,037",
+      "area_no_recorte_km2": "5687,037",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1400159",
+      "municipio": "Bonfim",
+      "uf": "RR",
+      "area_total_km2": "8079,840",
+      "area_no_recorte_km2": "8079,840",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1400175",
+      "municipio": "Cantá",
+      "uf": "RR",
+      "area_total_km2": "7664,831",
+      "area_no_recorte_km2": "7664,831",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1400209",
+      "municipio": "Caracaraí",
+      "uf": "RR",
+      "area_total_km2": "47385,317",
+      "area_no_recorte_km2": "47385,317",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1400233",
+      "municipio": "Caroebe",
+      "uf": "RR",
+      "area_total_km2": "12064,432",
+      "area_no_recorte_km2": "12064,439",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1400282",
+      "municipio": "Iracema",
+      "uf": "RR",
+      "area_total_km2": "14018,766",
+      "area_no_recorte_km2": "14018,766",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1400308",
+      "municipio": "Mucajaí",
+      "uf": "RR",
+      "area_total_km2": "12337,851",
+      "area_no_recorte_km2": "12337,851",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1400407",
+      "municipio": "Normandia",
+      "uf": "RR",
+      "area_total_km2": "6959,982",
+      "area_no_recorte_km2": "6959,982",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1400456",
+      "municipio": "Pacaraima",
+      "uf": "RR",
+      "area_total_km2": "8019,088",
+      "area_no_recorte_km2": "8019,088",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1400472",
+      "municipio": "Rorainópolis",
+      "uf": "RR",
+      "area_total_km2": "33579,739",
+      "area_no_recorte_km2": "33579,739",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1400506",
+      "municipio": "São João da Baliza",
+      "uf": "RR",
+      "area_total_km2": "4284,505",
+      "area_no_recorte_km2": "4284,505",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1400605",
+      "municipio": "São Luiz",
+      "uf": "RR",
+      "area_total_km2": "1526,898",
+      "area_no_recorte_km2": "1526,898",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1400704",
+      "municipio": "Uiramutã",
+      "uf": "RR",
+      "area_total_km2": "8102,219",
+      "area_no_recorte_km2": "8102,219",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1500107",
+      "municipio": "Abaetetuba",
+      "uf": "PA",
+      "area_total_km2": "1610,646",
+      "area_no_recorte_km2": "1610,646",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1500131",
+      "municipio": "Abel Figueiredo",
+      "uf": "PA",
+      "area_total_km2": "614,131",
+      "area_no_recorte_km2": "614,131",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1500206",
+      "municipio": "Acará",
+      "uf": "PA",
+      "area_total_km2": "4344,387",
+      "area_no_recorte_km2": "4344,387",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1500305",
+      "municipio": "Afuá",
+      "uf": "PA",
+      "area_total_km2": "8338,438",
+      "area_no_recorte_km2": "8338,438",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1500347",
+      "municipio": "Água Azul do Norte",
+      "uf": "PA",
+      "area_total_km2": "7113,956",
+      "area_no_recorte_km2": "7113,956",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1500404",
+      "municipio": "Alenquer",
+      "uf": "PA",
+      "area_total_km2": "23644,385",
+      "area_no_recorte_km2": "23644,385",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1500503",
+      "municipio": "Almeirim",
+      "uf": "PA",
+      "area_total_km2": "72968,578",
+      "area_no_recorte_km2": "72968,578",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1500602",
+      "municipio": "Altamira",
+      "uf": "PA",
+      "area_total_km2": "159533,306",
+      "area_no_recorte_km2": "159533,306",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1500701",
+      "municipio": "Anajás",
+      "uf": "PA",
+      "area_total_km2": "6913,640",
+      "area_no_recorte_km2": "6913,640",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1500800",
+      "municipio": "Ananindeua",
+      "uf": "PA",
+      "area_total_km2": "190,590",
+      "area_no_recorte_km2": "190,590",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1500859",
+      "municipio": "Anapu",
+      "uf": "PA",
+      "area_total_km2": "11895,270",
+      "area_no_recorte_km2": "11895,270",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1500909",
+      "municipio": "Augusto Corrêa",
+      "uf": "PA",
+      "area_total_km2": "1099,580",
+      "area_no_recorte_km2": "1099,580",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1500958",
+      "municipio": "Aurora do Pará",
+      "uf": "PA",
+      "area_total_km2": "1811,840",
+      "area_no_recorte_km2": "1811,840",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1501006",
+      "municipio": "Aveiro",
+      "uf": "PA",
+      "area_total_km2": "17074,053",
+      "area_no_recorte_km2": "17074,053",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1501105",
+      "municipio": "Bagre",
+      "uf": "PA",
+      "area_total_km2": "4397,321",
+      "area_no_recorte_km2": "4397,321",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1501204",
+      "municipio": "Baião",
+      "uf": "PA",
+      "area_total_km2": "3760,000",
+      "area_no_recorte_km2": "3760,000",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1501253",
+      "municipio": "Bannach",
+      "uf": "PA",
+      "area_total_km2": "2956,649",
+      "area_no_recorte_km2": "2956,649",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1501303",
+      "municipio": "Barcarena",
+      "uf": "PA",
+      "area_total_km2": "1310,338",
+      "area_no_recorte_km2": "1310,338",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1501402",
+      "municipio": "Belém",
+      "uf": "PA",
+      "area_total_km2": "1059,458",
+      "area_no_recorte_km2": "1059,458",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1501451",
+      "municipio": "Belterra",
+      "uf": "PA",
+      "area_total_km2": "4398,418",
+      "area_no_recorte_km2": "4398,418",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1501501",
+      "municipio": "Benevides",
+      "uf": "PA",
+      "area_total_km2": "187,826",
+      "area_no_recorte_km2": "187,826",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1501576",
+      "municipio": "Bom Jesus do Tocantins",
+      "uf": "PA",
+      "area_total_km2": "2816,604",
+      "area_no_recorte_km2": "2816,604",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1501600",
+      "municipio": "Bonito",
+      "uf": "PA",
+      "area_total_km2": "586,977",
+      "area_no_recorte_km2": "586,977",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1501709",
+      "municipio": "Bragança",
+      "uf": "PA",
+      "area_total_km2": "2124,735",
+      "area_no_recorte_km2": "2124,735",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1501725",
+      "municipio": "Brasil Novo",
+      "uf": "PA",
+      "area_total_km2": "6362,575",
+      "area_no_recorte_km2": "6362,575",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1501758",
+      "municipio": "Brejo Grande do Araguaia",
+      "uf": "PA",
+      "area_total_km2": "1288,473",
+      "area_no_recorte_km2": "1288,473",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1501782",
+      "municipio": "Breu Branco",
+      "uf": "PA",
+      "area_total_km2": "3941,736",
+      "area_no_recorte_km2": "3941,736",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1501808",
+      "municipio": "Breves",
+      "uf": "PA",
+      "area_total_km2": "9566,499",
+      "area_no_recorte_km2": "9566,499",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1501907",
+      "municipio": "Bujaru",
+      "uf": "PA",
+      "area_total_km2": "994,662",
+      "area_no_recorte_km2": "994,662",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1501956",
+      "municipio": "Cachoeira do Piriá",
+      "uf": "PA",
+      "area_total_km2": "2419,600",
+      "area_no_recorte_km2": "2419,600",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1502004",
+      "municipio": "Cachoeira do Arari",
+      "uf": "PA",
+      "area_total_km2": "3100,261",
+      "area_no_recorte_km2": "3100,261",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1502103",
+      "municipio": "Cametá",
+      "uf": "PA",
+      "area_total_km2": "3082,190",
+      "area_no_recorte_km2": "3082,190",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1502152",
+      "municipio": "Canaã dos Carajás",
+      "uf": "PA",
+      "area_total_km2": "3146,749",
+      "area_no_recorte_km2": "3146,749",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1502202",
+      "municipio": "Capanema",
+      "uf": "PA",
+      "area_total_km2": "621,483",
+      "area_no_recorte_km2": "621,483",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1502301",
+      "municipio": "Capitão Poço",
+      "uf": "PA",
+      "area_total_km2": "2901,026",
+      "area_no_recorte_km2": "2901,026",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1502400",
+      "municipio": "Castanhal",
+      "uf": "PA",
+      "area_total_km2": "1029,300",
+      "area_no_recorte_km2": "1029,300",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1502509",
+      "municipio": "Chaves",
+      "uf": "PA",
+      "area_total_km2": "12534,995",
+      "area_no_recorte_km2": "12534,995",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1502608",
+      "municipio": "Colares",
+      "uf": "PA",
+      "area_total_km2": "384,068",
+      "area_no_recorte_km2": "384,068",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1502707",
+      "municipio": "Conceição do Araguaia",
+      "uf": "PA",
+      "area_total_km2": "5829,482",
+      "area_no_recorte_km2": "5829,482",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1502756",
+      "municipio": "Concórdia do Pará",
+      "uf": "PA",
+      "area_total_km2": "700,614",
+      "area_no_recorte_km2": "700,614",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1502764",
+      "municipio": "Cumaru do Norte",
+      "uf": "PA",
+      "area_total_km2": "17085,001",
+      "area_no_recorte_km2": "17085,001",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1502772",
+      "municipio": "Curionópolis",
+      "uf": "PA",
+      "area_total_km2": "2369,096",
+      "area_no_recorte_km2": "2369,096",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1502806",
+      "municipio": "Curralinho",
+      "uf": "PA",
+      "area_total_km2": "3617,350",
+      "area_no_recorte_km2": "3617,350",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1502855",
+      "municipio": "Curuá",
+      "uf": "PA",
+      "area_total_km2": "1431,351",
+      "area_no_recorte_km2": "1431,351",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1502905",
+      "municipio": "Curuçá",
+      "uf": "PA",
+      "area_total_km2": "676,322",
+      "area_no_recorte_km2": "676,322",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1502939",
+      "municipio": "Dom Eliseu",
+      "uf": "PA",
+      "area_total_km2": "5268,809",
+      "area_no_recorte_km2": "5268,809",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1502954",
+      "municipio": "Eldorado do Carajás",
+      "uf": "PA",
+      "area_total_km2": "2956,691",
+      "area_no_recorte_km2": "2956,691",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1503002",
+      "municipio": "Faro",
+      "uf": "PA",
+      "area_total_km2": "11771,669",
+      "area_no_recorte_km2": "11771,669",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1503044",
+      "municipio": "Floresta do Araguaia",
+      "uf": "PA",
+      "area_total_km2": "3444,285",
+      "area_no_recorte_km2": "3444,285",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1503077",
+      "municipio": "Garrafão do Norte",
+      "uf": "PA",
+      "area_total_km2": "1608,014",
+      "area_no_recorte_km2": "1608,014",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1503093",
+      "municipio": "Goianésia do Pará",
+      "uf": "PA",
+      "area_total_km2": "7023,932",
+      "area_no_recorte_km2": "7023,932",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1503101",
+      "municipio": "Gurupá",
+      "uf": "PA",
+      "area_total_km2": "8569,676",
+      "area_no_recorte_km2": "8569,676",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1503200",
+      "municipio": "Igarapé-Açu",
+      "uf": "PA",
+      "area_total_km2": "785,983",
+      "area_no_recorte_km2": "785,983",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1503309",
+      "municipio": "Igarapé-Miri",
+      "uf": "PA",
+      "area_total_km2": "1996,798",
+      "area_no_recorte_km2": "1996,798",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1503408",
+      "municipio": "Inhangapi",
+      "uf": "PA",
+      "area_total_km2": "472,605",
+      "area_no_recorte_km2": "472,605",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1503457",
+      "municipio": "Ipixuna do Pará",
+      "uf": "PA",
+      "area_total_km2": "5215,555",
+      "area_no_recorte_km2": "5215,555",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1503507",
+      "municipio": "Irituia",
+      "uf": "PA",
+      "area_total_km2": "1385,209",
+      "area_no_recorte_km2": "1385,209",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1503606",
+      "municipio": "Itaituba",
+      "uf": "PA",
+      "area_total_km2": "62042,472",
+      "area_no_recorte_km2": "62042,472",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1503705",
+      "municipio": "Itupiranga",
+      "uf": "PA",
+      "area_total_km2": "7880,296",
+      "area_no_recorte_km2": "7880,296",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1503754",
+      "municipio": "Jacareacanga",
+      "uf": "PA",
+      "area_total_km2": "53304,563",
+      "area_no_recorte_km2": "53304,563",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1503804",
+      "municipio": "Jacundá",
+      "uf": "PA",
+      "area_total_km2": "2008,333",
+      "area_no_recorte_km2": "2008,333",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1503903",
+      "municipio": "Juruti",
+      "uf": "PA",
+      "area_total_km2": "8306,240",
+      "area_no_recorte_km2": "8306,240",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1504000",
+      "municipio": "Limoeiro do Ajuru",
+      "uf": "PA",
+      "area_total_km2": "1489,356",
+      "area_no_recorte_km2": "1489,356",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1504059",
+      "municipio": "Mãe do Rio",
+      "uf": "PA",
+      "area_total_km2": "469,341",
+      "area_no_recorte_km2": "469,341",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1504109",
+      "municipio": "Magalhães Barata",
+      "uf": "PA",
+      "area_total_km2": "323,984",
+      "area_no_recorte_km2": "323,984",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1504208",
+      "municipio": "Marabá",
+      "uf": "PA",
+      "area_total_km2": "15127,872",
+      "area_no_recorte_km2": "15127,872",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1504307",
+      "municipio": "Maracanã",
+      "uf": "PA",
+      "area_total_km2": "807,628",
+      "area_no_recorte_km2": "807,628",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1504406",
+      "municipio": "Marapanim",
+      "uf": "PA",
+      "area_total_km2": "804,625",
+      "area_no_recorte_km2": "804,625",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1504422",
+      "municipio": "Marituba",
+      "uf": "PA",
+      "area_total_km2": "103,214",
+      "area_no_recorte_km2": "103,214",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1504455",
+      "municipio": "Medicilândia",
+      "uf": "PA",
+      "area_total_km2": "8272,629",
+      "area_no_recorte_km2": "8272,629",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1504505",
+      "municipio": "Melgaço",
+      "uf": "PA",
+      "area_total_km2": "6772,764",
+      "area_no_recorte_km2": "6772,764",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1504604",
+      "municipio": "Mocajuba",
+      "uf": "PA",
+      "area_total_km2": "871,168",
+      "area_no_recorte_km2": "871,168",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1504703",
+      "municipio": "Moju",
+      "uf": "PA",
+      "area_total_km2": "9094,139",
+      "area_no_recorte_km2": "9094,139",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1504752",
+      "municipio": "Mojuí dos Campos",
+      "uf": "PA",
+      "area_total_km2": "4988,236",
+      "area_no_recorte_km2": "4988,236",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1504802",
+      "municipio": "Monte Alegre",
+      "uf": "PA",
+      "area_total_km2": "18151,323",
+      "area_no_recorte_km2": "18151,323",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1504901",
+      "municipio": "Muaná",
+      "uf": "PA",
+      "area_total_km2": "3763,343",
+      "area_no_recorte_km2": "3763,343",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1504950",
+      "municipio": "Nova Esperança do Piriá",
+      "uf": "PA",
+      "area_total_km2": "2808,195",
+      "area_no_recorte_km2": "2808,195",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1504976",
+      "municipio": "Nova Ipixuna",
+      "uf": "PA",
+      "area_total_km2": "1564,184",
+      "area_no_recorte_km2": "1564,184",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1505007",
+      "municipio": "Nova Timboteua",
+      "uf": "PA",
+      "area_total_km2": "489,852",
+      "area_no_recorte_km2": "489,852",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1505031",
+      "municipio": "Novo Progresso",
+      "uf": "PA",
+      "area_total_km2": "38162,003",
+      "area_no_recorte_km2": "38162,003",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1505064",
+      "municipio": "Novo Repartimento",
+      "uf": "PA",
+      "area_total_km2": "15398,736",
+      "area_no_recorte_km2": "15398,736",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1505106",
+      "municipio": "Óbidos",
+      "uf": "PA",
+      "area_total_km2": "28009,650",
+      "area_no_recorte_km2": "28009,650",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1505205",
+      "municipio": "Oeiras do Pará",
+      "uf": "PA",
+      "area_total_km2": "3852,291",
+      "area_no_recorte_km2": "3852,291",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1505304",
+      "municipio": "Oriximiná",
+      "uf": "PA",
+      "area_total_km2": "107560,161",
+      "area_no_recorte_km2": "107560,161",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1505403",
+      "municipio": "Ourém",
+      "uf": "PA",
+      "area_total_km2": "561,710",
+      "area_no_recorte_km2": "561,710",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1505437",
+      "municipio": "Ourilândia do Norte",
+      "uf": "PA",
+      "area_total_km2": "14410,567",
+      "area_no_recorte_km2": "14410,567",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1505486",
+      "municipio": "Pacajá",
+      "uf": "PA",
+      "area_total_km2": "11832,323",
+      "area_no_recorte_km2": "11832,323",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1505494",
+      "municipio": "Palestina do Pará",
+      "uf": "PA",
+      "area_total_km2": "984,362",
+      "area_no_recorte_km2": "984,362",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1505502",
+      "municipio": "Paragominas",
+      "uf": "PA",
+      "area_total_km2": "19342,565",
+      "area_no_recorte_km2": "19342,565",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1505536",
+      "municipio": "Parauapebas",
+      "uf": "PA",
+      "area_total_km2": "6885,865",
+      "area_no_recorte_km2": "6885,865",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1505551",
+      "municipio": "Pau D'Arco",
+      "uf": "PA",
+      "area_total_km2": "1671,418",
+      "area_no_recorte_km2": "1671,418",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1505601",
+      "municipio": "Peixe-Boi",
+      "uf": "PA",
+      "area_total_km2": "450,224",
+      "area_no_recorte_km2": "450,224",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1505635",
+      "municipio": "Piçarra",
+      "uf": "PA",
+      "area_total_km2": "3312,703",
+      "area_no_recorte_km2": "3312,703",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1505650",
+      "municipio": "Placas",
+      "uf": "PA",
+      "area_total_km2": "7173,200",
+      "area_no_recorte_km2": "7173,200",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1505700",
+      "municipio": "Ponta de Pedras",
+      "uf": "PA",
+      "area_total_km2": "3363,743",
+      "area_no_recorte_km2": "3363,743",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1505809",
+      "municipio": "Portel",
+      "uf": "PA",
+      "area_total_km2": "25386,158",
+      "area_no_recorte_km2": "25386,158",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1505908",
+      "municipio": "Porto de Moz",
+      "uf": "PA",
+      "area_total_km2": "17422,329",
+      "area_no_recorte_km2": "17422,329",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1506005",
+      "municipio": "Prainha",
+      "uf": "PA",
+      "area_total_km2": "14788,189",
+      "area_no_recorte_km2": "14788,189",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1506104",
+      "municipio": "Primavera",
+      "uf": "PA",
+      "area_total_km2": "259,331",
+      "area_no_recorte_km2": "259,331",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1506112",
+      "municipio": "Quatipuru",
+      "uf": "PA",
+      "area_total_km2": "302,586",
+      "area_no_recorte_km2": "302,586",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1506138",
+      "municipio": "Redenção",
+      "uf": "PA",
+      "area_total_km2": "3823,809",
+      "area_no_recorte_km2": "3823,809",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1506161",
+      "municipio": "Rio Maria",
+      "uf": "PA",
+      "area_total_km2": "4114,627",
+      "area_no_recorte_km2": "4114,627",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1506187",
+      "municipio": "Rondon do Pará",
+      "uf": "PA",
+      "area_total_km2": "8246,394",
+      "area_no_recorte_km2": "8246,394",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1506195",
+      "municipio": "Rurópolis",
+      "uf": "PA",
+      "area_total_km2": "7021,321",
+      "area_no_recorte_km2": "7021,321",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1506203",
+      "municipio": "Salinópolis",
+      "uf": "PA",
+      "area_total_km2": "226,120",
+      "area_no_recorte_km2": "226,120",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1506302",
+      "municipio": "Salvaterra",
+      "uf": "PA",
+      "area_total_km2": "918,563",
+      "area_no_recorte_km2": "918,563",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1506351",
+      "municipio": "Santa Bárbara do Pará",
+      "uf": "PA",
+      "area_total_km2": "278,154",
+      "area_no_recorte_km2": "278,154",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1506401",
+      "municipio": "Santa Cruz do Arari",
+      "uf": "PA",
+      "area_total_km2": "1076,652",
+      "area_no_recorte_km2": "1076,652",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1506500",
+      "municipio": "Santa Izabel do Pará",
+      "uf": "PA",
+      "area_total_km2": "717,662",
+      "area_no_recorte_km2": "717,662",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1506559",
+      "municipio": "Santa Luzia do Pará",
+      "uf": "PA",
+      "area_total_km2": "1346,502",
+      "area_no_recorte_km2": "1346,502",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1506583",
+      "municipio": "Santa Maria das Barreiras",
+      "uf": "PA",
+      "area_total_km2": "10330,214",
+      "area_no_recorte_km2": "10330,214",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1506609",
+      "municipio": "Santa Maria do Pará",
+      "uf": "PA",
+      "area_total_km2": "457,724",
+      "area_no_recorte_km2": "457,724",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1506708",
+      "municipio": "Santana do Araguaia",
+      "uf": "PA",
+      "area_total_km2": "11591,441",
+      "area_no_recorte_km2": "11591,441",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1506807",
+      "municipio": "Santarém",
+      "uf": "PA",
+      "area_total_km2": "17899,238",
+      "area_no_recorte_km2": "17899,238",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1506906",
+      "municipio": "Santarém Novo",
+      "uf": "PA",
+      "area_total_km2": "229,510",
+      "area_no_recorte_km2": "229,510",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1507003",
+      "municipio": "Santo Antônio do Tauá",
+      "uf": "PA",
+      "area_total_km2": "537,618",
+      "area_no_recorte_km2": "537,618",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1507102",
+      "municipio": "São Caetano de Odivelas",
+      "uf": "PA",
+      "area_total_km2": "464,166",
+      "area_no_recorte_km2": "464,166",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1507151",
+      "municipio": "São Domingos do Araguaia",
+      "uf": "PA",
+      "area_total_km2": "1392,464",
+      "area_no_recorte_km2": "1392,464",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1507201",
+      "municipio": "São Domingos do Capim",
+      "uf": "PA",
+      "area_total_km2": "1686,765",
+      "area_no_recorte_km2": "1686,765",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1507300",
+      "municipio": "São Félix do Xingu",
+      "uf": "PA",
+      "area_total_km2": "84212,901",
+      "area_no_recorte_km2": "84212,901",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1507409",
+      "municipio": "São Francisco do Pará",
+      "uf": "PA",
+      "area_total_km2": "479,441",
+      "area_no_recorte_km2": "479,441",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1507458",
+      "municipio": "São Geraldo do Araguaia",
+      "uf": "PA",
+      "area_total_km2": "3168,392",
+      "area_no_recorte_km2": "3168,392",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1507466",
+      "municipio": "São João da Ponta",
+      "uf": "PA",
+      "area_total_km2": "195,918",
+      "area_no_recorte_km2": "195,918",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1507474",
+      "municipio": "São João de Pirabas",
+      "uf": "PA",
+      "area_total_km2": "668,058",
+      "area_no_recorte_km2": "668,058",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1507508",
+      "municipio": "São João do Araguaia",
+      "uf": "PA",
+      "area_total_km2": "1279,889",
+      "area_no_recorte_km2": "1279,889",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1507607",
+      "municipio": "São Miguel do Guamá",
+      "uf": "PA",
+      "area_total_km2": "1094,565",
+      "area_no_recorte_km2": "1094,565",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1507706",
+      "municipio": "São Sebastião da Boa Vista",
+      "uf": "PA",
+      "area_total_km2": "1632,251",
+      "area_no_recorte_km2": "1632,251",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1507755",
+      "municipio": "Sapucaia",
+      "uf": "PA",
+      "area_total_km2": "1298,190",
+      "area_no_recorte_km2": "1298,190",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1507805",
+      "municipio": "Senador José Porfírio",
+      "uf": "PA",
+      "area_total_km2": "14419,917",
+      "area_no_recorte_km2": "14419,917",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1507904",
+      "municipio": "Soure",
+      "uf": "PA",
+      "area_total_km2": "2857,349",
+      "area_no_recorte_km2": "2857,349",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1507953",
+      "municipio": "Tailândia",
+      "uf": "PA",
+      "area_total_km2": "4430,477",
+      "area_no_recorte_km2": "4430,477",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1507961",
+      "municipio": "Terra Alta",
+      "uf": "PA",
+      "area_total_km2": "204,970",
+      "area_no_recorte_km2": "204,970",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1507979",
+      "municipio": "Terra Santa",
+      "uf": "PA",
+      "area_total_km2": "1895,884",
+      "area_no_recorte_km2": "1895,884",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1508001",
+      "municipio": "Tomé-Açu",
+      "uf": "PA",
+      "area_total_km2": "5145,361",
+      "area_no_recorte_km2": "5145,361",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1508035",
+      "municipio": "Tracuateua",
+      "uf": "PA",
+      "area_total_km2": "868,025",
+      "area_no_recorte_km2": "868,025",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1508050",
+      "municipio": "Trairão",
+      "uf": "PA",
+      "area_total_km2": "11991,085",
+      "area_no_recorte_km2": "11991,085",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1508084",
+      "municipio": "Tucumã",
+      "uf": "PA",
+      "area_total_km2": "2512,594",
+      "area_no_recorte_km2": "2512,594",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1508100",
+      "municipio": "Tucuruí",
+      "uf": "PA",
+      "area_total_km2": "2084,287",
+      "area_no_recorte_km2": "2084,287",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1508126",
+      "municipio": "Ulianópolis",
+      "uf": "PA",
+      "area_total_km2": "5088,468",
+      "area_no_recorte_km2": "5088,468",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1508159",
+      "municipio": "Uruará",
+      "uf": "PA",
+      "area_total_km2": "10791,400",
+      "area_no_recorte_km2": "10791,400",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1508209",
+      "municipio": "Vigia",
+      "uf": "PA",
+      "area_total_km2": "401,589",
+      "area_no_recorte_km2": "401,589",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1508308",
+      "municipio": "Viseu",
+      "uf": "PA",
+      "area_total_km2": "4972,936",
+      "area_no_recorte_km2": "4972,936",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1508357",
+      "municipio": "Vitória do Xingu",
+      "uf": "PA",
+      "area_total_km2": "3089,537",
+      "area_no_recorte_km2": "3089,537",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1508407",
+      "municipio": "Xinguara",
+      "uf": "PA",
+      "area_total_km2": "3779,348",
+      "area_no_recorte_km2": "3779,348",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1600055",
+      "municipio": "Serra do Navio",
+      "uf": "AP",
+      "area_total_km2": "7713,046",
+      "area_no_recorte_km2": "7713,046",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1600105",
+      "municipio": "Amapá",
+      "uf": "AP",
+      "area_total_km2": "8454,846",
+      "area_no_recorte_km2": "8454,846",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1600154",
+      "municipio": "Pedra Branca do Amapari",
+      "uf": "AP",
+      "area_total_km2": "9622,290",
+      "area_no_recorte_km2": "9622,290",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1600204",
+      "municipio": "Calçoene",
+      "uf": "AP",
+      "area_total_km2": "14117,297",
+      "area_no_recorte_km2": "14117,297",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1600212",
+      "municipio": "Cutias",
+      "uf": "AP",
+      "area_total_km2": "2179,114",
+      "area_no_recorte_km2": "2179,114",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1600238",
+      "municipio": "Ferreira Gomes",
+      "uf": "AP",
+      "area_total_km2": "4973,855",
+      "area_no_recorte_km2": "4973,855",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1600253",
+      "municipio": "Itaubal",
+      "uf": "AP",
+      "area_total_km2": "1622,867",
+      "area_no_recorte_km2": "1622,867",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1600279",
+      "municipio": "Laranjal do Jari",
+      "uf": "AP",
+      "area_total_km2": "30542,284",
+      "area_no_recorte_km2": "30542,284",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1600303",
+      "municipio": "Macapá",
+      "uf": "AP",
+      "area_total_km2": "6563,849",
+      "area_no_recorte_km2": "6563,849",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1600402",
+      "municipio": "Mazagão",
+      "uf": "AP",
+      "area_total_km2": "13294,778",
+      "area_no_recorte_km2": "13294,778",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1600501",
+      "municipio": "Oiapoque",
+      "uf": "AP",
+      "area_total_km2": "23058,224",
+      "area_no_recorte_km2": "23058,224",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1600535",
+      "municipio": "Porto Grande",
+      "uf": "AP",
+      "area_total_km2": "4428,013",
+      "area_no_recorte_km2": "4428,013",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1600550",
+      "municipio": "Pracuúba",
+      "uf": "AP",
+      "area_total_km2": "4948,508",
+      "area_no_recorte_km2": "4948,508",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1600600",
+      "municipio": "Santana",
+      "uf": "AP",
+      "area_total_km2": "1541,225",
+      "area_no_recorte_km2": "1541,225",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1600709",
+      "municipio": "Tartarugalzinho",
+      "uf": "AP",
+      "area_total_km2": "6684,705",
+      "area_no_recorte_km2": "6684,705",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1600808",
+      "municipio": "Vitória do Jari",
+      "uf": "AP",
+      "area_total_km2": "2508,979",
+      "area_no_recorte_km2": "2508,979",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1700251",
+      "municipio": "Abreulândia",
+      "uf": "TO",
+      "area_total_km2": "1906,295",
+      "area_no_recorte_km2": "1906,295",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1700301",
+      "municipio": "Aguiarnópolis",
+      "uf": "TO",
+      "area_total_km2": "236,792",
+      "area_no_recorte_km2": "236,792",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1700350",
+      "municipio": "Aliança do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "1580,999",
+      "area_no_recorte_km2": "1580,999",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1700400",
+      "municipio": "Almas",
+      "uf": "TO",
+      "area_total_km2": "4007,152",
+      "area_no_recorte_km2": "4007,152",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1700707",
+      "municipio": "Alvorada",
+      "uf": "TO",
+      "area_total_km2": "1207,201",
+      "area_no_recorte_km2": "1207,201",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1701002",
+      "municipio": "Ananás",
+      "uf": "TO",
+      "area_total_km2": "1581,058",
+      "area_no_recorte_km2": "1581,058",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1701051",
+      "municipio": "Angico",
+      "uf": "TO",
+      "area_total_km2": "447,549",
+      "area_no_recorte_km2": "447,549",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1701101",
+      "municipio": "Aparecida do Rio Negro",
+      "uf": "TO",
+      "area_total_km2": "1159,034",
+      "area_no_recorte_km2": "1159,034",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1701309",
+      "municipio": "Aragominas",
+      "uf": "TO",
+      "area_total_km2": "1168,213",
+      "area_no_recorte_km2": "1168,213",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1701903",
+      "municipio": "Araguacema",
+      "uf": "TO",
+      "area_total_km2": "2774,505",
+      "area_no_recorte_km2": "2774,505",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1702000",
+      "municipio": "Araguaçu",
+      "uf": "TO",
+      "area_total_km2": "5155,223",
+      "area_no_recorte_km2": "5155,223",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1702109",
+      "municipio": "Araguaína",
+      "uf": "TO",
+      "area_total_km2": "4004,645",
+      "area_no_recorte_km2": "4004,645",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1702158",
+      "municipio": "Araguanã",
+      "uf": "TO",
+      "area_total_km2": "834,834",
+      "area_no_recorte_km2": "834,834",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1702208",
+      "municipio": "Araguatins",
+      "uf": "TO",
+      "area_total_km2": "2633,278",
+      "area_no_recorte_km2": "2633,278",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1702307",
+      "municipio": "Arapoema",
+      "uf": "TO",
+      "area_total_km2": "1558,138",
+      "area_no_recorte_km2": "1558,138",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1702406",
+      "municipio": "Arraias",
+      "uf": "TO",
+      "area_total_km2": "5803,085",
+      "area_no_recorte_km2": "5803,085",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1702554",
+      "municipio": "Augustinópolis",
+      "uf": "TO",
+      "area_total_km2": "388,810",
+      "area_no_recorte_km2": "388,810",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1702703",
+      "municipio": "Aurora do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "696,194",
+      "area_no_recorte_km2": "696,194",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1702901",
+      "municipio": "Axixá do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "153,539",
+      "area_no_recorte_km2": "153,539",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1703008",
+      "municipio": "Babaçulândia",
+      "uf": "TO",
+      "area_total_km2": "1790,297",
+      "area_no_recorte_km2": "1790,297",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1703057",
+      "municipio": "Bandeirantes do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "1540,541",
+      "area_no_recorte_km2": "1540,541",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1703073",
+      "municipio": "Barra do Ouro",
+      "uf": "TO",
+      "area_total_km2": "1105,840",
+      "area_no_recorte_km2": "1105,840",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1703107",
+      "municipio": "Barrolândia",
+      "uf": "TO",
+      "area_total_km2": "697,759",
+      "area_no_recorte_km2": "697,759",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1703206",
+      "municipio": "Bernardo Sayão",
+      "uf": "TO",
+      "area_total_km2": "924,045",
+      "area_no_recorte_km2": "924,045",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1703305",
+      "municipio": "Bom Jesus do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "1326,947",
+      "area_no_recorte_km2": "1326,947",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1703602",
+      "municipio": "Brasilândia do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "645,908",
+      "area_no_recorte_km2": "645,908",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1703701",
+      "municipio": "Brejinho de Nazaré",
+      "uf": "TO",
+      "area_total_km2": "1722,590",
+      "area_no_recorte_km2": "1722,590",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1703800",
+      "municipio": "Buriti do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "252,730",
+      "area_no_recorte_km2": "252,730",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1703826",
+      "municipio": "Cachoeirinha",
+      "uf": "TO",
+      "area_total_km2": "351,535",
+      "area_no_recorte_km2": "351,535",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1703842",
+      "municipio": "Campos Lindos",
+      "uf": "TO",
+      "area_total_km2": "3234,445",
+      "area_no_recorte_km2": "3234,445",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1703867",
+      "municipio": "Cariri do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "1126,291",
+      "area_no_recorte_km2": "1126,291",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1703883",
+      "municipio": "Carmolândia",
+      "uf": "TO",
+      "area_total_km2": "339,366",
+      "area_no_recorte_km2": "339,366",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1703891",
+      "municipio": "Carrasco Bonito",
+      "uf": "TO",
+      "area_total_km2": "190,352",
+      "area_no_recorte_km2": "190,352",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1703909",
+      "municipio": "Caseara",
+      "uf": "TO",
+      "area_total_km2": "1680,014",
+      "area_no_recorte_km2": "1680,014",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1704105",
+      "municipio": "Centenário",
+      "uf": "TO",
+      "area_total_km2": "1953,134",
+      "area_no_recorte_km2": "1953,134",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1704600",
+      "municipio": "Chapada de Areia",
+      "uf": "TO",
+      "area_total_km2": "658,564",
+      "area_no_recorte_km2": "658,564",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1705102",
+      "municipio": "Chapada da Natividade",
+      "uf": "TO",
+      "area_total_km2": "1640,833",
+      "area_no_recorte_km2": "1640,833",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1705508",
+      "municipio": "Colinas do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "842,488",
+      "area_no_recorte_km2": "842,488",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1705557",
+      "municipio": "Combinado",
+      "uf": "TO",
+      "area_total_km2": "208,791",
+      "area_no_recorte_km2": "208,791",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1705607",
+      "municipio": "Conceição do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "2530,647",
+      "area_no_recorte_km2": "2530,647",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1706001",
+      "municipio": "Couto Magalhães",
+      "uf": "TO",
+      "area_total_km2": "1584,196",
+      "area_no_recorte_km2": "1584,196",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1706100",
+      "municipio": "Cristalândia",
+      "uf": "TO",
+      "area_total_km2": "1850,750",
+      "area_no_recorte_km2": "1850,750",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1706258",
+      "municipio": "Crixás do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "983,766",
+      "area_no_recorte_km2": "983,766",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1706506",
+      "municipio": "Darcinópolis",
+      "uf": "TO",
+      "area_total_km2": "1641,770",
+      "area_no_recorte_km2": "1641,770",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1707009",
+      "municipio": "Dianópolis",
+      "uf": "TO",
+      "area_total_km2": "3318,094",
+      "area_no_recorte_km2": "3318,094",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1707108",
+      "municipio": "Divinópolis do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "2358,282",
+      "area_no_recorte_km2": "2358,282",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1707207",
+      "municipio": "Dois Irmãos do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "3747,645",
+      "area_no_recorte_km2": "3747,645",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1707306",
+      "municipio": "Dueré",
+      "uf": "TO",
+      "area_total_km2": "3420,657",
+      "area_no_recorte_km2": "3420,657",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1707405",
+      "municipio": "Esperantina",
+      "uf": "TO",
+      "area_total_km2": "506,175",
+      "area_no_recorte_km2": "506,175",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1707553",
+      "municipio": "Fátima",
+      "uf": "TO",
+      "area_total_km2": "380,373",
+      "area_no_recorte_km2": "380,373",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1707652",
+      "municipio": "Figueirópolis",
+      "uf": "TO",
+      "area_total_km2": "1935,709",
+      "area_no_recorte_km2": "1935,709",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1707702",
+      "municipio": "Filadélfia",
+      "uf": "TO",
+      "area_total_km2": "1991,258",
+      "area_no_recorte_km2": "1991,258",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1708205",
+      "municipio": "Formoso do Araguaia",
+      "uf": "TO",
+      "area_total_km2": "13431,861",
+      "area_no_recorte_km2": "13431,861",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1708254",
+      "municipio": "Tabocão",
+      "uf": "TO",
+      "area_total_km2": "624,463",
+      "area_no_recorte_km2": "624,463",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1708304",
+      "municipio": "Goianorte",
+      "uf": "TO",
+      "area_total_km2": "1797,229",
+      "area_no_recorte_km2": "1797,229",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1709005",
+      "municipio": "Goiatins",
+      "uf": "TO",
+      "area_total_km2": "6414,846",
+      "area_no_recorte_km2": "6414,846",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1709302",
+      "municipio": "Guaraí",
+      "uf": "TO",
+      "area_total_km2": "2106,753",
+      "area_no_recorte_km2": "2106,753",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1709500",
+      "municipio": "Gurupi",
+      "uf": "TO",
+      "area_total_km2": "1844,164",
+      "area_no_recorte_km2": "1844,164",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1709807",
+      "municipio": "Ipueiras",
+      "uf": "TO",
+      "area_total_km2": "821,152",
+      "area_no_recorte_km2": "821,152",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1710508",
+      "municipio": "Itacajá",
+      "uf": "TO",
+      "area_total_km2": "3047,204",
+      "area_no_recorte_km2": "3047,204",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1710706",
+      "municipio": "Itaguatins",
+      "uf": "TO",
+      "area_total_km2": "730,163",
+      "area_no_recorte_km2": "730,163",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1710904",
+      "municipio": "Itapiratins",
+      "uf": "TO",
+      "area_total_km2": "1246,349",
+      "area_no_recorte_km2": "1246,349",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1711100",
+      "municipio": "Itaporã do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "969,794",
+      "area_no_recorte_km2": "969,794",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1711506",
+      "municipio": "Jaú do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "2167,201",
+      "area_no_recorte_km2": "2167,201",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1711803",
+      "municipio": "Juarina",
+      "uf": "TO",
+      "area_total_km2": "483,452",
+      "area_no_recorte_km2": "483,452",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1711902",
+      "municipio": "Lagoa da Confusão",
+      "uf": "TO",
+      "area_total_km2": "10563,181",
+      "area_no_recorte_km2": "10563,181",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1711951",
+      "municipio": "Lagoa do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "917,632",
+      "area_no_recorte_km2": "917,632",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1712009",
+      "municipio": "Lajeado",
+      "uf": "TO",
+      "area_total_km2": "318,292",
+      "area_no_recorte_km2": "318,292",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1712157",
+      "municipio": "Lavandeira",
+      "uf": "TO",
+      "area_total_km2": "468,006",
+      "area_no_recorte_km2": "468,006",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1712405",
+      "municipio": "Lizarda",
+      "uf": "TO",
+      "area_total_km2": "5716,641",
+      "area_no_recorte_km2": "5716,641",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1712454",
+      "municipio": "Luzinópolis",
+      "uf": "TO",
+      "area_total_km2": "281,543",
+      "area_no_recorte_km2": "281,543",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1712504",
+      "municipio": "Marianópolis do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "2089,575",
+      "area_no_recorte_km2": "2089,575",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1712702",
+      "municipio": "Mateiros",
+      "uf": "TO",
+      "area_total_km2": "9589,273",
+      "area_no_recorte_km2": "9589,273",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1712801",
+      "municipio": "Maurilândia do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "736,303",
+      "area_no_recorte_km2": "736,303",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1713205",
+      "municipio": "Miracema do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "2663,745",
+      "area_no_recorte_km2": "2663,745",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1713304",
+      "municipio": "Miranorte",
+      "uf": "TO",
+      "area_total_km2": "1033,301",
+      "area_no_recorte_km2": "1033,301",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1713601",
+      "municipio": "Monte do Carmo",
+      "uf": "TO",
+      "area_total_km2": "3601,205",
+      "area_no_recorte_km2": "3601,205",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1713700",
+      "municipio": "Monte Santo do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "1072,920",
+      "area_no_recorte_km2": "1072,920",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1713809",
+      "municipio": "Palmeiras do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "743,407",
+      "area_no_recorte_km2": "743,407",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1713957",
+      "municipio": "Muricilândia",
+      "uf": "TO",
+      "area_total_km2": "1194,368",
+      "area_no_recorte_km2": "1194,368",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1714203",
+      "municipio": "Natividade",
+      "uf": "TO",
+      "area_total_km2": "3241,672",
+      "area_no_recorte_km2": "3241,672",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1714302",
+      "municipio": "Nazaré",
+      "uf": "TO",
+      "area_total_km2": "395,997",
+      "area_no_recorte_km2": "395,997",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1714880",
+      "municipio": "Nova Olinda",
+      "uf": "TO",
+      "area_total_km2": "1567,834",
+      "area_no_recorte_km2": "1567,834",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1715002",
+      "municipio": "Nova Rosalândia",
+      "uf": "TO",
+      "area_total_km2": "514,791",
+      "area_no_recorte_km2": "514,791",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1715101",
+      "municipio": "Novo Acordo",
+      "uf": "TO",
+      "area_total_km2": "2678,262",
+      "area_no_recorte_km2": "2678,262",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1715150",
+      "municipio": "Novo Alegre",
+      "uf": "TO",
+      "area_total_km2": "200,412",
+      "area_no_recorte_km2": "200,412",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1715259",
+      "municipio": "Novo Jardim",
+      "uf": "TO",
+      "area_total_km2": "1213,893",
+      "area_no_recorte_km2": "1213,893",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1715507",
+      "municipio": "Oliveira de Fátima",
+      "uf": "TO",
+      "area_total_km2": "209,292",
+      "area_no_recorte_km2": "209,292",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1715705",
+      "municipio": "Palmeirante",
+      "uf": "TO",
+      "area_total_km2": "2638,465",
+      "area_no_recorte_km2": "2638,465",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1715754",
+      "municipio": "Palmeirópolis",
+      "uf": "TO",
+      "area_total_km2": "1708,981",
+      "area_no_recorte_km2": "1708,981",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1716109",
+      "municipio": "Paraíso do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "1292,267",
+      "area_no_recorte_km2": "1292,267",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1716208",
+      "municipio": "Paranã",
+      "uf": "TO",
+      "area_total_km2": "11217,373",
+      "area_no_recorte_km2": "11217,373",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1716307",
+      "municipio": "Pau D'Arco",
+      "uf": "TO",
+      "area_total_km2": "1375,551",
+      "area_no_recorte_km2": "1375,551",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1716505",
+      "municipio": "Pedro Afonso",
+      "uf": "TO",
+      "area_total_km2": "2019,556",
+      "area_no_recorte_km2": "2019,556",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1716604",
+      "municipio": "Peixe",
+      "uf": "TO",
+      "area_total_km2": "5303,612",
+      "area_no_recorte_km2": "5303,612",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1716653",
+      "municipio": "Pequizeiro",
+      "uf": "TO",
+      "area_total_km2": "1206,118",
+      "area_no_recorte_km2": "1206,118",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1716703",
+      "municipio": "Colméia",
+      "uf": "TO",
+      "area_total_km2": "1161,030",
+      "area_no_recorte_km2": "1161,030",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1717008",
+      "municipio": "Pindorama do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "1560,551",
+      "area_no_recorte_km2": "1560,551",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1717206",
+      "municipio": "Piraquê",
+      "uf": "TO",
+      "area_total_km2": "1363,412",
+      "area_no_recorte_km2": "1363,412",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1717503",
+      "municipio": "Pium",
+      "uf": "TO",
+      "area_total_km2": "10003,549",
+      "area_no_recorte_km2": "10003,549",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1717800",
+      "municipio": "Ponte Alta do Bom Jesus",
+      "uf": "TO",
+      "area_total_km2": "1718,791",
+      "area_no_recorte_km2": "1718,791",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1717909",
+      "municipio": "Ponte Alta do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "6542,838",
+      "area_no_recorte_km2": "6542,838",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1718006",
+      "municipio": "Porto Alegre do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "506,717",
+      "area_no_recorte_km2": "506,717",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1718204",
+      "municipio": "Porto Nacional",
+      "uf": "TO",
+      "area_total_km2": "4434,680",
+      "area_no_recorte_km2": "4434,680",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1718303",
+      "municipio": "Praia Norte",
+      "uf": "TO",
+      "area_total_km2": "300,999",
+      "area_no_recorte_km2": "300,999",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1718402",
+      "municipio": "Presidente Kennedy",
+      "uf": "TO",
+      "area_total_km2": "771,716",
+      "area_no_recorte_km2": "771,716",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1718451",
+      "municipio": "Pugmil",
+      "uf": "TO",
+      "area_total_km2": "401,174",
+      "area_no_recorte_km2": "401,174",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1718501",
+      "municipio": "Recursolândia",
+      "uf": "TO",
+      "area_total_km2": "2215,669",
+      "area_no_recorte_km2": "2215,669",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1718550",
+      "municipio": "Riachinho",
+      "uf": "TO",
+      "area_total_km2": "512,156",
+      "area_no_recorte_km2": "512,156",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1718659",
+      "municipio": "Rio da Conceição",
+      "uf": "TO",
+      "area_total_km2": "845,823",
+      "area_no_recorte_km2": "845,823",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1718709",
+      "municipio": "Rio dos Bois",
+      "uf": "TO",
+      "area_total_km2": "847,255",
+      "area_no_recorte_km2": "847,255",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1718758",
+      "municipio": "Rio Sono",
+      "uf": "TO",
+      "area_total_km2": "6346,279",
+      "area_no_recorte_km2": "6346,279",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1718808",
+      "municipio": "Sampaio",
+      "uf": "TO",
+      "area_total_km2": "222,435",
+      "area_no_recorte_km2": "222,435",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1718840",
+      "municipio": "Sandolândia",
+      "uf": "TO",
+      "area_total_km2": "3535,135",
+      "area_no_recorte_km2": "3535,135",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1718865",
+      "municipio": "Santa Fé do Araguaia",
+      "uf": "TO",
+      "area_total_km2": "1671,239",
+      "area_no_recorte_km2": "1671,239",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1718881",
+      "municipio": "Santa Maria do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "1412,318",
+      "area_no_recorte_km2": "1412,318",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1718899",
+      "municipio": "Santa Rita do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "3281,219",
+      "area_no_recorte_km2": "3281,219",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1718907",
+      "municipio": "Santa Rosa do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "1804,686",
+      "area_no_recorte_km2": "1804,686",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1719004",
+      "municipio": "Santa Tereza do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "539,511",
+      "area_no_recorte_km2": "539,511",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1720002",
+      "municipio": "Santa Terezinha do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "274,104",
+      "area_no_recorte_km2": "274,104",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1720101",
+      "municipio": "São Bento do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "1099,580",
+      "area_no_recorte_km2": "1099,580",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1720150",
+      "municipio": "São Félix do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "1913,110",
+      "area_no_recorte_km2": "1913,110",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1720200",
+      "municipio": "São Miguel do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "406,957",
+      "area_no_recorte_km2": "406,957",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1720259",
+      "municipio": "São Salvador do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "1424,753",
+      "area_no_recorte_km2": "1424,753",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1720309",
+      "municipio": "São Sebastião do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "289,597",
+      "area_no_recorte_km2": "289,597",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1720499",
+      "municipio": "São Valério",
+      "uf": "TO",
+      "area_total_km2": "2520,465",
+      "area_no_recorte_km2": "2520,465",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1720655",
+      "municipio": "Silvanópolis",
+      "uf": "TO",
+      "area_total_km2": "1258,771",
+      "area_no_recorte_km2": "1258,771",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1720804",
+      "municipio": "Sítio Novo do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "307,095",
+      "area_no_recorte_km2": "307,095",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1720853",
+      "municipio": "Sucupira",
+      "uf": "TO",
+      "area_total_km2": "1018,222",
+      "area_no_recorte_km2": "1018,222",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1720903",
+      "municipio": "Taguatinga",
+      "uf": "TO",
+      "area_total_km2": "2341,919",
+      "area_no_recorte_km2": "2341,919",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1720937",
+      "municipio": "Taipas do Tocantins",
+      "uf": "TO",
+      "area_total_km2": "1105,303",
+      "area_no_recorte_km2": "1105,303",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1720978",
+      "municipio": "Talismã",
+      "uf": "TO",
+      "area_total_km2": "2155,503",
+      "area_no_recorte_km2": "2155,503",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1721000",
+      "municipio": "Palmas",
+      "uf": "TO",
+      "area_total_km2": "2227,329",
+      "area_no_recorte_km2": "2227,329",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1721109",
+      "municipio": "Tocantínia",
+      "uf": "TO",
+      "area_total_km2": "2609,775",
+      "area_no_recorte_km2": "2609,775",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1721208",
+      "municipio": "Tocantinópolis",
+      "uf": "TO",
+      "area_total_km2": "1083,600",
+      "area_no_recorte_km2": "1083,600",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1721257",
+      "municipio": "Tupirama",
+      "uf": "TO",
+      "area_total_km2": "706,883",
+      "area_no_recorte_km2": "706,883",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1721307",
+      "municipio": "Tupiratins",
+      "uf": "TO",
+      "area_total_km2": "889,126",
+      "area_no_recorte_km2": "889,126",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1722081",
+      "municipio": "Wanderlândia",
+      "uf": "TO",
+      "area_total_km2": "1365,431",
+      "area_no_recorte_km2": "1365,431",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "1722107",
+      "municipio": "Xambioá",
+      "uf": "TO",
+      "area_total_km2": "1190,489",
+      "area_no_recorte_km2": "1190,489",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2100055",
+      "municipio": "Açailândia",
+      "uf": "MA",
+      "area_total_km2": "5805,159",
+      "area_no_recorte_km2": "5805,159",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2100204",
+      "municipio": "Alcântara",
+      "uf": "MA",
+      "area_total_km2": "1167,964",
+      "area_no_recorte_km2": "1167,964",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2100402",
+      "municipio": "Altamira do Maranhão",
+      "uf": "MA",
+      "area_total_km2": "524,374",
+      "area_no_recorte_km2": "524,374",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2100436",
+      "municipio": "Alto Alegre do Maranhão",
+      "uf": "MA",
+      "area_total_km2": "392,750",
+      "area_no_recorte_km2": "392,750",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2100477",
+      "municipio": "Alto Alegre do Pindaré",
+      "uf": "MA",
+      "area_total_km2": "1875,580",
+      "area_no_recorte_km2": "1875,580",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2100501",
+      "municipio": "Alto Parnaíba",
+      "uf": "MA",
+      "area_total_km2": "11127,384",
+      "area_no_recorte_km2": "11127,384",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2100550",
+      "municipio": "Amapá do Maranhão",
+      "uf": "MA",
+      "area_total_km2": "493,738",
+      "area_no_recorte_km2": "493,738",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2100600",
+      "municipio": "Amarante do Maranhão",
+      "uf": "MA",
+      "area_total_km2": "7441,771",
+      "area_no_recorte_km2": "7441,771",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2100709",
+      "municipio": "Anajatuba",
+      "uf": "MA",
+      "area_total_km2": "940,489",
+      "area_no_recorte_km2": "940,489",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2100832",
+      "municipio": "Apicum-Açu",
+      "uf": "MA",
+      "area_total_km2": "341,120",
+      "area_no_recorte_km2": "341,120",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2100873",
+      "municipio": "Araguanã",
+      "uf": "MA",
+      "area_total_km2": "805,194",
+      "area_no_recorte_km2": "805,194",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2100956",
+      "municipio": "Arame",
+      "uf": "MA",
+      "area_total_km2": "2976,039",
+      "area_no_recorte_km2": "2976,039",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2101004",
+      "municipio": "Arari",
+      "uf": "MA",
+      "area_total_km2": "1099,810",
+      "area_no_recorte_km2": "1099,810",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2101103",
+      "municipio": "Axixá",
+      "uf": "MA",
+      "area_total_km2": "160,462",
+      "area_no_recorte_km2": "160,462",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2101202",
+      "municipio": "Bacabal",
+      "uf": "MA",
+      "area_total_km2": "1656,736",
+      "area_no_recorte_km2": "1656,736",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2101251",
+      "municipio": "Bacabeira",
+      "uf": "MA",
+      "area_total_km2": "542,961",
+      "area_no_recorte_km2": "542,961",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2101301",
+      "municipio": "Bacuri",
+      "uf": "MA",
+      "area_total_km2": "832,084",
+      "area_no_recorte_km2": "832,084",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2101350",
+      "municipio": "Bacurituba",
+      "uf": "MA",
+      "area_total_km2": "413,651",
+      "area_no_recorte_km2": "413,651",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2101400",
+      "municipio": "Balsas",
+      "uf": "MA",
+      "area_total_km2": "13141,162",
+      "area_no_recorte_km2": "13141,162",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2101608",
+      "municipio": "Barra do Corda",
+      "uf": "MA",
+      "area_total_km2": "5187,673",
+      "area_no_recorte_km2": "5187,673",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2101772",
+      "municipio": "Bela Vista do Maranhão",
+      "uf": "MA",
+      "area_total_km2": "147,949",
+      "area_no_recorte_km2": "147,949",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2101806",
+      "municipio": "Benedito Leite",
+      "uf": "MA",
+      "area_total_km2": "1784,640",
+      "area_no_recorte_km2": "1784,640",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2101905",
+      "municipio": "Bequimão",
+      "uf": "MA",
+      "area_total_km2": "790,222",
+      "area_no_recorte_km2": "790,222",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2101939",
+      "municipio": "Bernardo do Mearim",
+      "uf": "MA",
+      "area_total_km2": "247,186",
+      "area_no_recorte_km2": "247,186",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2101970",
+      "municipio": "Boa Vista do Gurupi",
+      "uf": "MA",
+      "area_total_km2": "400,350",
+      "area_no_recorte_km2": "400,350",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2102002",
+      "municipio": "Bom Jardim",
+      "uf": "MA",
+      "area_total_km2": "6579,946",
+      "area_no_recorte_km2": "6579,946",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2102036",
+      "municipio": "Bom Jesus das Selvas",
+      "uf": "MA",
+      "area_total_km2": "2676,930",
+      "area_no_recorte_km2": "2676,930",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2102077",
+      "municipio": "Bom Lugar",
+      "uf": "MA",
+      "area_total_km2": "445,171",
+      "area_no_recorte_km2": "445,171",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2102150",
+      "municipio": "Brejo de Areia",
+      "uf": "MA",
+      "area_total_km2": "986,036",
+      "area_no_recorte_km2": "986,036",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2102309",
+      "municipio": "Buriti Bravo",
+      "uf": "MA",
+      "area_total_km2": "1581,721",
+      "area_no_recorte_km2": "95,169",
+      "percentual_no_recorte": "6,010"
+    },
+    {
+      "codigo_municipio": "2102325",
+      "municipio": "Buriticupu",
+      "uf": "MA",
+      "area_total_km2": "2553,663",
+      "area_no_recorte_km2": "2553,663",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2102358",
+      "municipio": "Buritirana",
+      "uf": "MA",
+      "area_total_km2": "821,261",
+      "area_no_recorte_km2": "821,261",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2102374",
+      "municipio": "Cachoeira Grande",
+      "uf": "MA",
+      "area_total_km2": "707,236",
+      "area_no_recorte_km2": "161,916",
+      "percentual_no_recorte": "22,800"
+    },
+    {
+      "codigo_municipio": "2102408",
+      "municipio": "Cajapió",
+      "uf": "MA",
+      "area_total_km2": "545,244",
+      "area_no_recorte_km2": "545,244",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2102507",
+      "municipio": "Cajari",
+      "uf": "MA",
+      "area_total_km2": "662,066",
+      "area_no_recorte_km2": "662,066",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2102556",
+      "municipio": "Campestre do Maranhão",
+      "uf": "MA",
+      "area_total_km2": "613,529",
+      "area_no_recorte_km2": "613,529",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2102606",
+      "municipio": "Cândido Mendes",
+      "uf": "MA",
+      "area_total_km2": "1643,796",
+      "area_no_recorte_km2": "1643,796",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2102705",
+      "municipio": "Cantanhede",
+      "uf": "MA",
+      "area_total_km2": "773,009",
+      "area_no_recorte_km2": "773,009",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2102754",
+      "municipio": "Capinzal do Norte",
+      "uf": "MA",
+      "area_total_km2": "590,271",
+      "area_no_recorte_km2": "590,271",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2102804",
+      "municipio": "Carolina",
+      "uf": "MA",
+      "area_total_km2": "6267,602",
+      "area_no_recorte_km2": "6267,602",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2102903",
+      "municipio": "Carutapera",
+      "uf": "MA",
+      "area_total_km2": "1260,569",
+      "area_no_recorte_km2": "1260,569",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2103109",
+      "municipio": "Cedral",
+      "uf": "MA",
+      "area_total_km2": "285,211",
+      "area_no_recorte_km2": "285,211",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2103125",
+      "municipio": "Central do Maranhão",
+      "uf": "MA",
+      "area_total_km2": "319,538",
+      "area_no_recorte_km2": "319,538",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2103158",
+      "municipio": "Centro do Guilherme",
+      "uf": "MA",
+      "area_total_km2": "1134,646",
+      "area_no_recorte_km2": "1134,646",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2103174",
+      "municipio": "Centro Novo do Maranhão",
+      "uf": "MA",
+      "area_total_km2": "8401,002",
+      "area_no_recorte_km2": "8401,002",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2103257",
+      "municipio": "Cidelândia",
+      "uf": "MA",
+      "area_total_km2": "1462,809",
+      "area_no_recorte_km2": "1462,809",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2103307",
+      "municipio": "Codó",
+      "uf": "MA",
+      "area_total_km2": "4361,599",
+      "area_no_recorte_km2": "1367,377",
+      "percentual_no_recorte": "31,300"
+    },
+    {
+      "codigo_municipio": "2103505",
+      "municipio": "Colinas",
+      "uf": "MA",
+      "area_total_km2": "1978,669",
+      "area_no_recorte_km2": "1723,408",
+      "percentual_no_recorte": "87,000"
+    },
+    {
+      "codigo_municipio": "2103554",
+      "municipio": "Conceição do Lago-Açu",
+      "uf": "MA",
+      "area_total_km2": "727,132",
+      "area_no_recorte_km2": "727,132",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2103604",
+      "municipio": "Coroatá",
+      "uf": "MA",
+      "area_total_km2": "2263,691",
+      "area_no_recorte_km2": "2033,255",
+      "percentual_no_recorte": "89,800"
+    },
+    {
+      "codigo_municipio": "2103703",
+      "municipio": "Cururupu",
+      "uf": "MA",
+      "area_total_km2": "1255,667",
+      "area_no_recorte_km2": "1255,667",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2103752",
+      "municipio": "Davinópolis",
+      "uf": "MA",
+      "area_total_km2": "332,249",
+      "area_no_recorte_km2": "332,249",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2103802",
+      "municipio": "Dom Pedro",
+      "uf": "MA",
+      "area_total_km2": "358,493",
+      "area_no_recorte_km2": "358,493",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2104008",
+      "municipio": "Esperantinópolis",
+      "uf": "MA",
+      "area_total_km2": "452,402",
+      "area_no_recorte_km2": "452,402",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2104057",
+      "municipio": "Estreito",
+      "uf": "MA",
+      "area_total_km2": "2719,964",
+      "area_no_recorte_km2": "2719,964",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2104073",
+      "municipio": "Feira Nova do Maranhão",
+      "uf": "MA",
+      "area_total_km2": "1626,053",
+      "area_no_recorte_km2": "1626,053",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2104081",
+      "municipio": "Fernando Falcão",
+      "uf": "MA",
+      "area_total_km2": "5086,591",
+      "area_no_recorte_km2": "5086,591",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2104099",
+      "municipio": "Formosa da Serra Negra",
+      "uf": "MA",
+      "area_total_km2": "3690,610",
+      "area_no_recorte_km2": "3690,610",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2104107",
+      "municipio": "Fortaleza dos Nogueiras",
+      "uf": "MA",
+      "area_total_km2": "1853,406",
+      "area_no_recorte_km2": "1853,406",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2104206",
+      "municipio": "Fortuna",
+      "uf": "MA",
+      "area_total_km2": "835,668",
+      "area_no_recorte_km2": "435,615",
+      "percentual_no_recorte": "52,100"
+    },
+    {
+      "codigo_municipio": "2104305",
+      "municipio": "Godofredo Viana",
+      "uf": "MA",
+      "area_total_km2": "725,707",
+      "area_no_recorte_km2": "725,707",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2104404",
+      "municipio": "Gonçalves Dias",
+      "uf": "MA",
+      "area_total_km2": "883,588",
+      "area_no_recorte_km2": "846,103",
+      "percentual_no_recorte": "95,700"
+    },
+    {
+      "codigo_municipio": "2104503",
+      "municipio": "Governador Archer",
+      "uf": "MA",
+      "area_total_km2": "445,856",
+      "area_no_recorte_km2": "445,856",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2104552",
+      "municipio": "Governador Edison Lobão",
+      "uf": "MA",
+      "area_total_km2": "615,957",
+      "area_no_recorte_km2": "615,957",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2104602",
+      "municipio": "Governador Eugênio Barros",
+      "uf": "MA",
+      "area_total_km2": "647,015",
+      "area_no_recorte_km2": "481,283",
+      "percentual_no_recorte": "74,300"
+    },
+    {
+      "codigo_municipio": "2104628",
+      "municipio": "Governador Luiz Rocha",
+      "uf": "MA",
+      "area_total_km2": "401,587",
+      "area_no_recorte_km2": "379,471",
+      "percentual_no_recorte": "94,400"
+    },
+    {
+      "codigo_municipio": "2104651",
+      "municipio": "Governador Newton Bello",
+      "uf": "MA",
+      "area_total_km2": "1144,146",
+      "area_no_recorte_km2": "1144,146",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2104677",
+      "municipio": "Governador Nunes Freire",
+      "uf": "MA",
+      "area_total_km2": "1049,208",
+      "area_no_recorte_km2": "1049,208",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2104701",
+      "municipio": "Graça Aranha",
+      "uf": "MA",
+      "area_total_km2": "271,445",
+      "area_no_recorte_km2": "271,445",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2104800",
+      "municipio": "Grajaú",
+      "uf": "MA",
+      "area_total_km2": "8861,718",
+      "area_no_recorte_km2": "8861,718",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2104909",
+      "municipio": "Guimarães",
+      "uf": "MA",
+      "area_total_km2": "478,857",
+      "area_no_recorte_km2": "478,857",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2105104",
+      "municipio": "Icatu",
+      "uf": "MA",
+      "area_total_km2": "1124,446",
+      "area_no_recorte_km2": "114,302",
+      "percentual_no_recorte": "10,100"
+    },
+    {
+      "codigo_municipio": "2105153",
+      "municipio": "Igarapé do Meio",
+      "uf": "MA",
+      "area_total_km2": "368,704",
+      "area_no_recorte_km2": "368,704",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2105203",
+      "municipio": "Igarapé Grande",
+      "uf": "MA",
+      "area_total_km2": "346,218",
+      "area_no_recorte_km2": "346,218",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2105302",
+      "municipio": "Imperatriz",
+      "uf": "MA",
+      "area_total_km2": "1369,039",
+      "area_no_recorte_km2": "1369,039",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2105351",
+      "municipio": "Itaipava do Grajaú",
+      "uf": "MA",
+      "area_total_km2": "1244,398",
+      "area_no_recorte_km2": "1244,398",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2105401",
+      "municipio": "Itapecuru Mirim",
+      "uf": "MA",
+      "area_total_km2": "1480,641",
+      "area_no_recorte_km2": "1480,641",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2105427",
+      "municipio": "Itinga do Maranhão",
+      "uf": "MA",
+      "area_total_km2": "3583,423",
+      "area_no_recorte_km2": "3583,423",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2105450",
+      "municipio": "Jatobá",
+      "uf": "MA",
+      "area_total_km2": "591,637",
+      "area_no_recorte_km2": "591,637",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2105476",
+      "municipio": "Jenipapo dos Vieiras",
+      "uf": "MA",
+      "area_total_km2": "1962,362",
+      "area_no_recorte_km2": "1962,362",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2105500",
+      "municipio": "João Lisboa",
+      "uf": "MA",
+      "area_total_km2": "1135,080",
+      "area_no_recorte_km2": "1135,080",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2105609",
+      "municipio": "Joselândia",
+      "uf": "MA",
+      "area_total_km2": "703,094",
+      "area_no_recorte_km2": "703,094",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2105658",
+      "municipio": "Junco do Maranhão",
+      "uf": "MA",
+      "area_total_km2": "568,499",
+      "area_no_recorte_km2": "568,499",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2105708",
+      "municipio": "Lago da Pedra",
+      "uf": "MA",
+      "area_total_km2": "1240,444",
+      "area_no_recorte_km2": "1240,444",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2105807",
+      "municipio": "Lago do Junco",
+      "uf": "MA",
+      "area_total_km2": "328,525",
+      "area_no_recorte_km2": "328,525",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2105906",
+      "municipio": "Lago Verde",
+      "uf": "MA",
+      "area_total_km2": "631,455",
+      "area_no_recorte_km2": "631,455",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2105948",
+      "municipio": "Lago dos Rodrigues",
+      "uf": "MA",
+      "area_total_km2": "220,776",
+      "area_no_recorte_km2": "220,776",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2105963",
+      "municipio": "Lagoa Grande do Maranhão",
+      "uf": "MA",
+      "area_total_km2": "744,199",
+      "area_no_recorte_km2": "744,199",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2105989",
+      "municipio": "Lajeado Novo",
+      "uf": "MA",
+      "area_total_km2": "1063,620",
+      "area_no_recorte_km2": "1063,620",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2106003",
+      "municipio": "Lima Campos",
+      "uf": "MA",
+      "area_total_km2": "321,932",
+      "area_no_recorte_km2": "321,932",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2106102",
+      "municipio": "Loreto",
+      "uf": "MA",
+      "area_total_km2": "3596,740",
+      "area_no_recorte_km2": "3596,740",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2106201",
+      "municipio": "Luís Domingues",
+      "uf": "MA",
+      "area_total_km2": "467,251",
+      "area_no_recorte_km2": "467,251",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2106326",
+      "municipio": "Maracaçumé",
+      "uf": "MA",
+      "area_total_km2": "635,758",
+      "area_no_recorte_km2": "635,758",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2106359",
+      "municipio": "Marajá do Sena",
+      "uf": "MA",
+      "area_total_km2": "1402,593",
+      "area_no_recorte_km2": "1402,593",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2106375",
+      "municipio": "Maranhãozinho",
+      "uf": "MA",
+      "area_total_km2": "781,676",
+      "area_no_recorte_km2": "781,676",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2106508",
+      "municipio": "Matinha",
+      "uf": "MA",
+      "area_total_km2": "410,633",
+      "area_no_recorte_km2": "410,633",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2106631",
+      "municipio": "Matões do Norte",
+      "uf": "MA",
+      "area_total_km2": "794,454",
+      "area_no_recorte_km2": "794,454",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2106706",
+      "municipio": "Mirador",
+      "uf": "MA",
+      "area_total_km2": "8522,881",
+      "area_no_recorte_km2": "8522,881",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2106755",
+      "municipio": "Miranda do Norte",
+      "uf": "MA",
+      "area_total_km2": "341,107",
+      "area_no_recorte_km2": "341,107",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2106805",
+      "municipio": "Mirinzal",
+      "uf": "MA",
+      "area_total_km2": "686,944",
+      "area_no_recorte_km2": "686,944",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2106904",
+      "municipio": "Monção",
+      "uf": "MA",
+      "area_total_km2": "1245,548",
+      "area_no_recorte_km2": "1245,548",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2107001",
+      "municipio": "Montes Altos",
+      "uf": "MA",
+      "area_total_km2": "1489,198",
+      "area_no_recorte_km2": "1489,198",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2107100",
+      "municipio": "Morros",
+      "uf": "MA",
+      "area_total_km2": "1712,121",
+      "area_no_recorte_km2": "80,081",
+      "percentual_no_recorte": "4,670"
+    },
+    {
+      "codigo_municipio": "2107258",
+      "municipio": "Nova Colinas",
+      "uf": "MA",
+      "area_total_km2": "743,085",
+      "area_no_recorte_km2": "743,085",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2107308",
+      "municipio": "Nova Iorque",
+      "uf": "MA",
+      "area_total_km2": "978,340",
+      "area_no_recorte_km2": "554,155",
+      "percentual_no_recorte": "56,600"
+    },
+    {
+      "codigo_municipio": "2107357",
+      "municipio": "Nova Olinda do Maranhão",
+      "uf": "MA",
+      "area_total_km2": "2452,615",
+      "area_no_recorte_km2": "2452,615",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2107407",
+      "municipio": "Olho d'Água das Cunhãs",
+      "uf": "MA",
+      "area_total_km2": "695,333",
+      "area_no_recorte_km2": "695,333",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2107456",
+      "municipio": "Olinda Nova do Maranhão",
+      "uf": "MA",
+      "area_total_km2": "199,879",
+      "area_no_recorte_km2": "199,879",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2107506",
+      "municipio": "Paço do Lumiar",
+      "uf": "MA",
+      "area_total_km2": "127,193",
+      "area_no_recorte_km2": "127,193",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2107605",
+      "municipio": "Palmeirândia",
+      "uf": "MA",
+      "area_total_km2": "532,162",
+      "area_no_recorte_km2": "532,162",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2107704",
+      "municipio": "Paraibano",
+      "uf": "MA",
+      "area_total_km2": "530,517",
+      "area_no_recorte_km2": "70,630",
+      "percentual_no_recorte": "13,300"
+    },
+    {
+      "codigo_municipio": "2108009",
+      "municipio": "Pastos Bons",
+      "uf": "MA",
+      "area_total_km2": "1635,181",
+      "area_no_recorte_km2": "1425,272",
+      "percentual_no_recorte": "87,100"
+    },
+    {
+      "codigo_municipio": "2108108",
+      "municipio": "Paulo Ramos",
+      "uf": "MA",
+      "area_total_km2": "1168,609",
+      "area_no_recorte_km2": "1168,609",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2108207",
+      "municipio": "Pedreiras",
+      "uf": "MA",
+      "area_total_km2": "261,814",
+      "area_no_recorte_km2": "261,814",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2108256",
+      "municipio": "Pedro do Rosário",
+      "uf": "MA",
+      "area_total_km2": "1753,867",
+      "area_no_recorte_km2": "1753,867",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2108306",
+      "municipio": "Penalva",
+      "uf": "MA",
+      "area_total_km2": "800,916",
+      "area_no_recorte_km2": "800,916",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2108405",
+      "municipio": "Peri Mirim",
+      "uf": "MA",
+      "area_total_km2": "397,993",
+      "area_no_recorte_km2": "397,993",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2108454",
+      "municipio": "Peritoró",
+      "uf": "MA",
+      "area_total_km2": "824,721",
+      "area_no_recorte_km2": "824,721",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2108504",
+      "municipio": "Pindaré-Mirim",
+      "uf": "MA",
+      "area_total_km2": "268,285",
+      "area_no_recorte_km2": "268,285",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2108603",
+      "municipio": "Pinheiro",
+      "uf": "MA",
+      "area_total_km2": "1512,969",
+      "area_no_recorte_km2": "1512,969",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2108702",
+      "municipio": "Pio XII",
+      "uf": "MA",
+      "area_total_km2": "545,217",
+      "area_no_recorte_km2": "545,217",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2108801",
+      "municipio": "Pirapemas",
+      "uf": "MA",
+      "area_total_km2": "688,761",
+      "area_no_recorte_km2": "687,934",
+      "percentual_no_recorte": "99,800"
+    },
+    {
+      "codigo_municipio": "2108900",
+      "municipio": "Poção de Pedras",
+      "uf": "MA",
+      "area_total_km2": "990,663",
+      "area_no_recorte_km2": "990,663",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2109007",
+      "municipio": "Porto Franco",
+      "uf": "MA",
+      "area_total_km2": "1421,011",
+      "area_no_recorte_km2": "1421,011",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2109056",
+      "municipio": "Porto Rico do Maranhão",
+      "uf": "MA",
+      "area_total_km2": "244,979",
+      "area_no_recorte_km2": "244,979",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2109106",
+      "municipio": "Presidente Dutra",
+      "uf": "MA",
+      "area_total_km2": "771,574",
+      "area_no_recorte_km2": "771,574",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2109205",
+      "municipio": "Presidente Juscelino",
+      "uf": "MA",
+      "area_total_km2": "355,568",
+      "area_no_recorte_km2": "351,526",
+      "percentual_no_recorte": "98,800"
+    },
+    {
+      "codigo_municipio": "2109239",
+      "municipio": "Presidente Médici",
+      "uf": "MA",
+      "area_total_km2": "437,687",
+      "area_no_recorte_km2": "437,687",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2109270",
+      "municipio": "Presidente Sarney",
+      "uf": "MA",
+      "area_total_km2": "726,176",
+      "area_no_recorte_km2": "726,176",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2109304",
+      "municipio": "Presidente Vargas",
+      "uf": "MA",
+      "area_total_km2": "460,004",
+      "area_no_recorte_km2": "149,416",
+      "percentual_no_recorte": "32,400"
+    },
+    {
+      "codigo_municipio": "2109452",
+      "municipio": "Raposa",
+      "uf": "MA",
+      "area_total_km2": "79,213",
+      "area_no_recorte_km2": "79,213",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2109502",
+      "municipio": "Riachão",
+      "uf": "MA",
+      "area_total_km2": "6402,830",
+      "area_no_recorte_km2": "6402,830",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2109551",
+      "municipio": "Ribamar Fiquene",
+      "uf": "MA",
+      "area_total_km2": "733,458",
+      "area_no_recorte_km2": "733,458",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2109601",
+      "municipio": "Rosário",
+      "uf": "MA",
+      "area_total_km2": "647,998",
+      "area_no_recorte_km2": "647,998",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2109700",
+      "municipio": "Sambaíba",
+      "uf": "MA",
+      "area_total_km2": "2475,900",
+      "area_no_recorte_km2": "2475,900",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2109759",
+      "municipio": "Santa Filomena do Maranhão",
+      "uf": "MA",
+      "area_total_km2": "623,213",
+      "area_no_recorte_km2": "623,213",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2109809",
+      "municipio": "Santa Helena",
+      "uf": "MA",
+      "area_total_km2": "2191,164",
+      "area_no_recorte_km2": "2191,164",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2109908",
+      "municipio": "Santa Inês",
+      "uf": "MA",
+      "area_total_km2": "786,689",
+      "area_no_recorte_km2": "786,689",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2110005",
+      "municipio": "Santa Luzia",
+      "uf": "MA",
+      "area_total_km2": "4837,168",
+      "area_no_recorte_km2": "4837,168",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2110039",
+      "municipio": "Santa Luzia do Paruá",
+      "uf": "MA",
+      "area_total_km2": "1010,483",
+      "area_no_recorte_km2": "1010,483",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2110203",
+      "municipio": "Santa Rita",
+      "uf": "MA",
+      "area_total_km2": "756,797",
+      "area_no_recorte_km2": "756,797",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2110302",
+      "municipio": "Santo Antônio dos Lopes",
+      "uf": "MA",
+      "area_total_km2": "770,923",
+      "area_no_recorte_km2": "770,923",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2110500",
+      "municipio": "São Bento",
+      "uf": "MA",
+      "area_total_km2": "456,997",
+      "area_no_recorte_km2": "456,997",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2110658",
+      "municipio": "São Domingos do Azeitão",
+      "uf": "MA",
+      "area_total_km2": "961,153",
+      "area_no_recorte_km2": "961,153",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2110708",
+      "municipio": "São Domingos do Maranhão",
+      "uf": "MA",
+      "area_total_km2": "1151,978",
+      "area_no_recorte_km2": "1151,978",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2110807",
+      "municipio": "São Félix de Balsas",
+      "uf": "MA",
+      "area_total_km2": "2033,290",
+      "area_no_recorte_km2": "2033,290",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2110856",
+      "municipio": "São Francisco do Brejão",
+      "uf": "MA",
+      "area_total_km2": "745,357",
+      "area_no_recorte_km2": "745,357",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2111003",
+      "municipio": "São João Batista",
+      "uf": "MA",
+      "area_total_km2": "649,956",
+      "area_no_recorte_km2": "649,956",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2111029",
+      "municipio": "São João do Carú",
+      "uf": "MA",
+      "area_total_km2": "910,065",
+      "area_no_recorte_km2": "910,065",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2111052",
+      "municipio": "São João do Paraíso",
+      "uf": "MA",
+      "area_total_km2": "2052,328",
+      "area_no_recorte_km2": "2052,328",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2111078",
+      "municipio": "São João do Soter",
+      "uf": "MA",
+      "area_total_km2": "1438,066",
+      "area_no_recorte_km2": "1,207",
+      "percentual_no_recorte": "0,080"
+    },
+    {
+      "codigo_municipio": "2111201",
+      "municipio": "São José de Ribamar",
+      "uf": "MA",
+      "area_total_km2": "180,363",
+      "area_no_recorte_km2": "180,363",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2111250",
+      "municipio": "São José dos Basílios",
+      "uf": "MA",
+      "area_total_km2": "353,720",
+      "area_no_recorte_km2": "353,720",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2111300",
+      "municipio": "São Luís",
+      "uf": "MA",
+      "area_total_km2": "583,063",
+      "area_no_recorte_km2": "583,063",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2111409",
+      "municipio": "São Luís Gonzaga do Maranhão",
+      "uf": "MA",
+      "area_total_km2": "909,164",
+      "area_no_recorte_km2": "909,164",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2111508",
+      "municipio": "São Mateus do Maranhão",
+      "uf": "MA",
+      "area_total_km2": "800,045",
+      "area_no_recorte_km2": "800,045",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2111532",
+      "municipio": "São Pedro da Água Branca",
+      "uf": "MA",
+      "area_total_km2": "720,461",
+      "area_no_recorte_km2": "720,461",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2111573",
+      "municipio": "São Pedro dos Crentes",
+      "uf": "MA",
+      "area_total_km2": "979,559",
+      "area_no_recorte_km2": "979,559",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2111607",
+      "municipio": "São Raimundo das Mangabeiras",
+      "uf": "MA",
+      "area_total_km2": "3523,940",
+      "area_no_recorte_km2": "3523,940",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2111631",
+      "municipio": "São Raimundo do Doca Bezerra",
+      "uf": "MA",
+      "area_total_km2": "419,550",
+      "area_no_recorte_km2": "419,550",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2111672",
+      "municipio": "São Roberto",
+      "uf": "MA",
+      "area_total_km2": "226,811",
+      "area_no_recorte_km2": "226,811",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2111706",
+      "municipio": "São Vicente Ferrer",
+      "uf": "MA",
+      "area_total_km2": "393,928",
+      "area_no_recorte_km2": "393,928",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2111722",
+      "municipio": "Satubinha",
+      "uf": "MA",
+      "area_total_km2": "441,811",
+      "area_no_recorte_km2": "441,811",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2111748",
+      "municipio": "Senador Alexandre Costa",
+      "uf": "MA",
+      "area_total_km2": "426,431",
+      "area_no_recorte_km2": "195,992",
+      "percentual_no_recorte": "45,900"
+    },
+    {
+      "codigo_municipio": "2111763",
+      "municipio": "Senador La Rocque",
+      "uf": "MA",
+      "area_total_km2": "737,078",
+      "area_no_recorte_km2": "737,078",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2111789",
+      "municipio": "Serrano do Maranhão",
+      "uf": "MA",
+      "area_total_km2": "1185,310",
+      "area_no_recorte_km2": "1185,310",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2111805",
+      "municipio": "Sítio Novo",
+      "uf": "MA",
+      "area_total_km2": "3114,683",
+      "area_no_recorte_km2": "3114,683",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2111904",
+      "municipio": "Sucupira do Norte",
+      "uf": "MA",
+      "area_total_km2": "1074,435",
+      "area_no_recorte_km2": "1074,435",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2112001",
+      "municipio": "Tasso Fragoso",
+      "uf": "MA",
+      "area_total_km2": "4369,316",
+      "area_no_recorte_km2": "4369,316",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2112100",
+      "municipio": "Timbiras",
+      "uf": "MA",
+      "area_total_km2": "1486,584",
+      "area_no_recorte_km2": "81,785",
+      "percentual_no_recorte": "5,500"
+    },
+    {
+      "codigo_municipio": "2112233",
+      "municipio": "Trizidela do Vale",
+      "uf": "MA",
+      "area_total_km2": "291,610",
+      "area_no_recorte_km2": "291,610",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2112274",
+      "municipio": "Tufilândia",
+      "uf": "MA",
+      "area_total_km2": "270,934",
+      "area_no_recorte_km2": "270,934",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2112308",
+      "municipio": "Tuntum",
+      "uf": "MA",
+      "area_total_km2": "3369,119",
+      "area_no_recorte_km2": "3369,119",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2112407",
+      "municipio": "Turiaçu",
+      "uf": "MA",
+      "area_total_km2": "2622,281",
+      "area_no_recorte_km2": "2622,281",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2112456",
+      "municipio": "Turilândia",
+      "uf": "MA",
+      "area_total_km2": "1507,976",
+      "area_no_recorte_km2": "1507,976",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2112704",
+      "municipio": "Vargem Grande",
+      "uf": "MA",
+      "area_total_km2": "1958,702",
+      "area_no_recorte_km2": "180,862",
+      "percentual_no_recorte": "9,230"
+    },
+    {
+      "codigo_municipio": "2112803",
+      "municipio": "Viana",
+      "uf": "MA",
+      "area_total_km2": "1166,745",
+      "area_no_recorte_km2": "1166,745",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2112852",
+      "municipio": "Vila Nova dos Martírios",
+      "uf": "MA",
+      "area_total_km2": "1190,008",
+      "area_no_recorte_km2": "1190,008",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2112902",
+      "municipio": "Vitória do Mearim",
+      "uf": "MA",
+      "area_total_km2": "715,625",
+      "area_no_recorte_km2": "715,625",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2113009",
+      "municipio": "Vitorino Freire",
+      "uf": "MA",
+      "area_total_km2": "1193,386",
+      "area_no_recorte_km2": "1193,386",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "2114007",
+      "municipio": "Zé Doca",
+      "uf": "MA",
+      "area_total_km2": "2140,109",
+      "area_no_recorte_km2": "2140,109",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5100102",
+      "municipio": "Acorizal",
+      "uf": "MT",
+      "area_total_km2": "850,763",
+      "area_no_recorte_km2": "850,763",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5100201",
+      "municipio": "Água Boa",
+      "uf": "MT",
+      "area_total_km2": "7549,308",
+      "area_no_recorte_km2": "7549,308",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5100250",
+      "municipio": "Alta Floresta",
+      "uf": "MT",
+      "area_total_km2": "8955,410",
+      "area_no_recorte_km2": "8955,410",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5100300",
+      "municipio": "Alto Araguaia",
+      "uf": "MT",
+      "area_total_km2": "5317,513",
+      "area_no_recorte_km2": "5317,513",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5100359",
+      "municipio": "Alto Boa Vista",
+      "uf": "MT",
+      "area_total_km2": "2248,414",
+      "area_no_recorte_km2": "2248,414",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5100409",
+      "municipio": "Alto Garças",
+      "uf": "MT",
+      "area_total_km2": "3857,559",
+      "area_no_recorte_km2": "3857,559",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5100508",
+      "municipio": "Alto Paraguai",
+      "uf": "MT",
+      "area_total_km2": "1847,354",
+      "area_no_recorte_km2": "1847,354",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5100607",
+      "municipio": "Alto Taquari",
+      "uf": "MT",
+      "area_total_km2": "1521,377",
+      "area_no_recorte_km2": "1521,377",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5100805",
+      "municipio": "Apiacás",
+      "uf": "MT",
+      "area_total_km2": "20489,024",
+      "area_no_recorte_km2": "20489,024",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5101001",
+      "municipio": "Araguaiana",
+      "uf": "MT",
+      "area_total_km2": "6380,700",
+      "area_no_recorte_km2": "6380,700",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5101209",
+      "municipio": "Araguainha",
+      "uf": "MT",
+      "area_total_km2": "675,231",
+      "area_no_recorte_km2": "675,231",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5101258",
+      "municipio": "Araputanga",
+      "uf": "MT",
+      "area_total_km2": "1639,733",
+      "area_no_recorte_km2": "1639,733",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5101308",
+      "municipio": "Arenápolis",
+      "uf": "MT",
+      "area_total_km2": "417,337",
+      "area_no_recorte_km2": "417,337",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5101407",
+      "municipio": "Aripuanã",
+      "uf": "MT",
+      "area_total_km2": "24678,135",
+      "area_no_recorte_km2": "24678,135",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5101605",
+      "municipio": "Barão de Melgaço",
+      "uf": "MT",
+      "area_total_km2": "11374,872",
+      "area_no_recorte_km2": "11374,872",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5101704",
+      "municipio": "Barra do Bugres",
+      "uf": "MT",
+      "area_total_km2": "5976,865",
+      "area_no_recorte_km2": "5976,865",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5101803",
+      "municipio": "Barra do Garças",
+      "uf": "MT",
+      "area_total_km2": "8362,915",
+      "area_no_recorte_km2": "8362,915",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5101837",
+      "municipio": "Boa Esperança do Norte",
+      "uf": "MT",
+      "area_total_km2": "4704,488",
+      "area_no_recorte_km2": "4704,488",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5101852",
+      "municipio": "Bom Jesus do Araguaia",
+      "uf": "MT",
+      "area_total_km2": "4266,636",
+      "area_no_recorte_km2": "4266,636",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5101902",
+      "municipio": "Brasnorte",
+      "uf": "MT",
+      "area_total_km2": "15968,355",
+      "area_no_recorte_km2": "15968,355",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5102504",
+      "municipio": "Cáceres",
+      "uf": "MT",
+      "area_total_km2": "24499,922",
+      "area_no_recorte_km2": "24499,922",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5102603",
+      "municipio": "Campinápolis",
+      "uf": "MT",
+      "area_total_km2": "5978,985",
+      "area_no_recorte_km2": "5978,985",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5102637",
+      "municipio": "Campo Novo do Parecis",
+      "uf": "MT",
+      "area_total_km2": "9428,585",
+      "area_no_recorte_km2": "9428,585",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5102678",
+      "municipio": "Campo Verde",
+      "uf": "MT",
+      "area_total_km2": "4771,091",
+      "area_no_recorte_km2": "4771,091",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5102686",
+      "municipio": "Campos de Júlio",
+      "uf": "MT",
+      "area_total_km2": "6792,808",
+      "area_no_recorte_km2": "6792,808",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5102694",
+      "municipio": "Canabrava do Norte",
+      "uf": "MT",
+      "area_total_km2": "3449,037",
+      "area_no_recorte_km2": "3449,037",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5102702",
+      "municipio": "Canarana",
+      "uf": "MT",
+      "area_total_km2": "10855,181",
+      "area_no_recorte_km2": "10855,181",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5102793",
+      "municipio": "Carlinda",
+      "uf": "MT",
+      "area_total_km2": "2421,788",
+      "area_no_recorte_km2": "2421,788",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5102850",
+      "municipio": "Castanheira",
+      "uf": "MT",
+      "area_total_km2": "3713,466",
+      "area_no_recorte_km2": "3713,466",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5103007",
+      "municipio": "Chapada dos Guimarães",
+      "uf": "MT",
+      "area_total_km2": "6603,252",
+      "area_no_recorte_km2": "6603,252",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5103056",
+      "municipio": "Cláudia",
+      "uf": "MT",
+      "area_total_km2": "3843,561",
+      "area_no_recorte_km2": "3843,561",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5103106",
+      "municipio": "Cocalinho",
+      "uf": "MT",
+      "area_total_km2": "16563,136",
+      "area_no_recorte_km2": "16563,136",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5103205",
+      "municipio": "Colíder",
+      "uf": "MT",
+      "area_total_km2": "3112,091",
+      "area_no_recorte_km2": "3112,091",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5103254",
+      "municipio": "Colniza",
+      "uf": "MT",
+      "area_total_km2": "27960,237",
+      "area_no_recorte_km2": "27960,237",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5103304",
+      "municipio": "Comodoro",
+      "uf": "MT",
+      "area_total_km2": "21485,018",
+      "area_no_recorte_km2": "21485,018",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5103353",
+      "municipio": "Confresa",
+      "uf": "MT",
+      "area_total_km2": "5802,303",
+      "area_no_recorte_km2": "5802,303",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5103361",
+      "municipio": "Conquista D'Oeste",
+      "uf": "MT",
+      "area_total_km2": "2684,676",
+      "area_no_recorte_km2": "2684,676",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5103379",
+      "municipio": "Cotriguaçu",
+      "uf": "MT",
+      "area_total_km2": "9469,957",
+      "area_no_recorte_km2": "9469,957",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5103403",
+      "municipio": "Cuiabá",
+      "uf": "MT",
+      "area_total_km2": "4327,220",
+      "area_no_recorte_km2": "4327,220",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5103437",
+      "municipio": "Curvelândia",
+      "uf": "MT",
+      "area_total_km2": "357,212",
+      "area_no_recorte_km2": "357,212",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5103452",
+      "municipio": "Denise",
+      "uf": "MT",
+      "area_total_km2": "1273,178",
+      "area_no_recorte_km2": "1273,178",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5103502",
+      "municipio": "Diamantino",
+      "uf": "MT",
+      "area_total_km2": "8263,397",
+      "area_no_recorte_km2": "8263,397",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5103601",
+      "municipio": "Dom Aquino",
+      "uf": "MT",
+      "area_total_km2": "2183,603",
+      "area_no_recorte_km2": "2183,603",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5103700",
+      "municipio": "Feliz Natal",
+      "uf": "MT",
+      "area_total_km2": "11661,514",
+      "area_no_recorte_km2": "11661,514",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5103809",
+      "municipio": "Figueirópolis D'Oeste",
+      "uf": "MT",
+      "area_total_km2": "891,448",
+      "area_no_recorte_km2": "891,448",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5103858",
+      "municipio": "Gaúcha do Norte",
+      "uf": "MT",
+      "area_total_km2": "16908,375",
+      "area_no_recorte_km2": "16908,375",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5103908",
+      "municipio": "General Carneiro",
+      "uf": "MT",
+      "area_total_km2": "4514,917",
+      "area_no_recorte_km2": "4514,917",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5103957",
+      "municipio": "Glória D'Oeste",
+      "uf": "MT",
+      "area_total_km2": "833,130",
+      "area_no_recorte_km2": "833,130",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5104104",
+      "municipio": "Guarantã do Norte",
+      "uf": "MT",
+      "area_total_km2": "4725,281",
+      "area_no_recorte_km2": "4725,281",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5104203",
+      "municipio": "Guiratinga",
+      "uf": "MT",
+      "area_total_km2": "5044,493",
+      "area_no_recorte_km2": "5044,493",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5104500",
+      "municipio": "Indiavaí",
+      "uf": "MT",
+      "area_total_km2": "592,495",
+      "area_no_recorte_km2": "592,495",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5104526",
+      "municipio": "Ipiranga do Norte",
+      "uf": "MT",
+      "area_total_km2": "3422,016",
+      "area_no_recorte_km2": "3422,016",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5104542",
+      "municipio": "Itanhangá",
+      "uf": "MT",
+      "area_total_km2": "2909,745",
+      "area_no_recorte_km2": "2909,745",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5104559",
+      "municipio": "Itaúba",
+      "uf": "MT",
+      "area_total_km2": "4521,790",
+      "area_no_recorte_km2": "4521,790",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5104609",
+      "municipio": "Itiquira",
+      "uf": "MT",
+      "area_total_km2": "8698,814",
+      "area_no_recorte_km2": "8698,814",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5104807",
+      "municipio": "Jaciara",
+      "uf": "MT",
+      "area_total_km2": "2429,678",
+      "area_no_recorte_km2": "2429,678",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5104906",
+      "municipio": "Jangada",
+      "uf": "MT",
+      "area_total_km2": "1114,302",
+      "area_no_recorte_km2": "1114,302",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5105002",
+      "municipio": "Jauru",
+      "uf": "MT",
+      "area_total_km2": "1345,411",
+      "area_no_recorte_km2": "1345,411",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5105101",
+      "municipio": "Juara",
+      "uf": "MT",
+      "area_total_km2": "22632,713",
+      "area_no_recorte_km2": "22632,713",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5105150",
+      "municipio": "Juína",
+      "uf": "MT",
+      "area_total_km2": "26397,173",
+      "area_no_recorte_km2": "26397,173",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5105176",
+      "municipio": "Juruena",
+      "uf": "MT",
+      "area_total_km2": "3207,837",
+      "area_no_recorte_km2": "3207,837",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5105200",
+      "municipio": "Juscimeira",
+      "uf": "MT",
+      "area_total_km2": "2291,301",
+      "area_no_recorte_km2": "2291,301",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5105234",
+      "municipio": "Lambari D'Oeste",
+      "uf": "MT",
+      "area_total_km2": "1810,463",
+      "area_no_recorte_km2": "1810,463",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5105259",
+      "municipio": "Lucas do Rio Verde",
+      "uf": "MT",
+      "area_total_km2": "3674,596",
+      "area_no_recorte_km2": "3674,596",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5105309",
+      "municipio": "Luciara",
+      "uf": "MT",
+      "area_total_km2": "4282,733",
+      "area_no_recorte_km2": "4282,733",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5105507",
+      "municipio": "Vila Bela da Santíssima Trindade",
+      "uf": "MT",
+      "area_total_km2": "13484,710",
+      "area_no_recorte_km2": "13484,710",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5105580",
+      "municipio": "Marcelândia",
+      "uf": "MT",
+      "area_total_km2": "12285,486",
+      "area_no_recorte_km2": "12285,486",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5105606",
+      "municipio": "Matupá",
+      "uf": "MT",
+      "area_total_km2": "5228,272",
+      "area_no_recorte_km2": "5228,272",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5105622",
+      "municipio": "Mirassol d'Oeste",
+      "uf": "MT",
+      "area_total_km2": "1085,486",
+      "area_no_recorte_km2": "1085,486",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5105903",
+      "municipio": "Nobres",
+      "uf": "MT",
+      "area_total_km2": "3908,739",
+      "area_no_recorte_km2": "3908,739",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106000",
+      "municipio": "Nortelândia",
+      "uf": "MT",
+      "area_total_km2": "1336,754",
+      "area_no_recorte_km2": "1336,754",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106109",
+      "municipio": "Nossa Senhora do Livramento",
+      "uf": "MT",
+      "area_total_km2": "5410,138",
+      "area_no_recorte_km2": "5410,138",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106158",
+      "municipio": "Nova Bandeirantes",
+      "uf": "MT",
+      "area_total_km2": "9556,661",
+      "area_no_recorte_km2": "9556,661",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106174",
+      "municipio": "Nova Nazaré",
+      "uf": "MT",
+      "area_total_km2": "4034,539",
+      "area_no_recorte_km2": "4034,539",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106182",
+      "municipio": "Nova Lacerda",
+      "uf": "MT",
+      "area_total_km2": "4780,426",
+      "area_no_recorte_km2": "4780,426",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106190",
+      "municipio": "Nova Santa Helena",
+      "uf": "MT",
+      "area_total_km2": "2385,611",
+      "area_no_recorte_km2": "2385,611",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106208",
+      "municipio": "Nova Brasilândia",
+      "uf": "MT",
+      "area_total_km2": "3289,572",
+      "area_no_recorte_km2": "3289,572",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106216",
+      "municipio": "Nova Canaã do Norte",
+      "uf": "MT",
+      "area_total_km2": "5953,099",
+      "area_no_recorte_km2": "5953,099",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106224",
+      "municipio": "Nova Mutum",
+      "uf": "MT",
+      "area_total_km2": "9536,814",
+      "area_no_recorte_km2": "9536,814",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106232",
+      "municipio": "Nova Olímpia",
+      "uf": "MT",
+      "area_total_km2": "1327,266",
+      "area_no_recorte_km2": "1327,266",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106240",
+      "municipio": "Nova Ubiratã",
+      "uf": "MT",
+      "area_total_km2": "8720,777",
+      "area_no_recorte_km2": "8720,777",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106257",
+      "municipio": "Nova Xavantina",
+      "uf": "MT",
+      "area_total_km2": "5492,206",
+      "area_no_recorte_km2": "5492,206",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106265",
+      "municipio": "Novo Mundo",
+      "uf": "MT",
+      "area_total_km2": "5800,759",
+      "area_no_recorte_km2": "5800,759",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106273",
+      "municipio": "Novo Horizonte do Norte",
+      "uf": "MT",
+      "area_total_km2": "920,048",
+      "area_no_recorte_km2": "920,048",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106281",
+      "municipio": "Novo São Joaquim",
+      "uf": "MT",
+      "area_total_km2": "5225,595",
+      "area_no_recorte_km2": "5225,595",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106299",
+      "municipio": "Paranaíta",
+      "uf": "MT",
+      "area_total_km2": "4814,149",
+      "area_no_recorte_km2": "4814,149",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106307",
+      "municipio": "Paranatinga",
+      "uf": "MT",
+      "area_total_km2": "24127,429",
+      "area_no_recorte_km2": "24127,429",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106315",
+      "municipio": "Novo Santo Antônio",
+      "uf": "MT",
+      "area_total_km2": "4394,780",
+      "area_no_recorte_km2": "4394,780",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106372",
+      "municipio": "Pedra Preta",
+      "uf": "MT",
+      "area_total_km2": "3841,672",
+      "area_no_recorte_km2": "3841,672",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106422",
+      "municipio": "Peixoto de Azevedo",
+      "uf": "MT",
+      "area_total_km2": "14433,775",
+      "area_no_recorte_km2": "14433,775",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106455",
+      "municipio": "Planalto da Serra",
+      "uf": "MT",
+      "area_total_km2": "2437,590",
+      "area_no_recorte_km2": "2437,590",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106505",
+      "municipio": "Poconé",
+      "uf": "MT",
+      "area_total_km2": "17013,707",
+      "area_no_recorte_km2": "17013,707",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106653",
+      "municipio": "Pontal do Araguaia",
+      "uf": "MT",
+      "area_total_km2": "2742,482",
+      "area_no_recorte_km2": "2742,482",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106703",
+      "municipio": "Ponte Branca",
+      "uf": "MT",
+      "area_total_km2": "701,138",
+      "area_no_recorte_km2": "701,138",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106752",
+      "municipio": "Pontes e Lacerda",
+      "uf": "MT",
+      "area_total_km2": "8545,292",
+      "area_no_recorte_km2": "8545,292",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106778",
+      "municipio": "Porto Alegre do Norte",
+      "uf": "MT",
+      "area_total_km2": "3971,732",
+      "area_no_recorte_km2": "3971,732",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106802",
+      "municipio": "Porto dos Gaúchos",
+      "uf": "MT",
+      "area_total_km2": "6846,668",
+      "area_no_recorte_km2": "6846,668",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106828",
+      "municipio": "Porto Esperidião",
+      "uf": "MT",
+      "area_total_km2": "5835,278",
+      "area_no_recorte_km2": "5835,278",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5106851",
+      "municipio": "Porto Estrela",
+      "uf": "MT",
+      "area_total_km2": "2045,467",
+      "area_no_recorte_km2": "2045,467",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107008",
+      "municipio": "Poxoréu",
+      "uf": "MT",
+      "area_total_km2": "6915,298",
+      "area_no_recorte_km2": "6915,298",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107040",
+      "municipio": "Primavera do Leste",
+      "uf": "MT",
+      "area_total_km2": "5470,383",
+      "area_no_recorte_km2": "5470,383",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107065",
+      "municipio": "Querência",
+      "uf": "MT",
+      "area_total_km2": "17799,989",
+      "area_no_recorte_km2": "17799,989",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107107",
+      "municipio": "São José dos Quatro Marcos",
+      "uf": "MT",
+      "area_total_km2": "1282,763",
+      "area_no_recorte_km2": "1282,763",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107156",
+      "municipio": "Reserva do Cabaçal",
+      "uf": "MT",
+      "area_total_km2": "1331,677",
+      "area_no_recorte_km2": "1331,677",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107180",
+      "municipio": "Ribeirão Cascalheira",
+      "uf": "MT",
+      "area_total_km2": "11354,555",
+      "area_no_recorte_km2": "11354,555",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107198",
+      "municipio": "Ribeirãozinho",
+      "uf": "MT",
+      "area_total_km2": "624,997",
+      "area_no_recorte_km2": "624,997",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107206",
+      "municipio": "Rio Branco",
+      "uf": "MT",
+      "area_total_km2": "539,287",
+      "area_no_recorte_km2": "539,287",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107248",
+      "municipio": "Santa Carmem",
+      "uf": "MT",
+      "area_total_km2": "3812,090",
+      "area_no_recorte_km2": "3812,090",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107263",
+      "municipio": "Santo Afonso",
+      "uf": "MT",
+      "area_total_km2": "1166,382",
+      "area_no_recorte_km2": "1166,382",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107297",
+      "municipio": "São José do Povo",
+      "uf": "MT",
+      "area_total_km2": "489,737",
+      "area_no_recorte_km2": "489,737",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107305",
+      "municipio": "São José do Rio Claro",
+      "uf": "MT",
+      "area_total_km2": "4525,304",
+      "area_no_recorte_km2": "4525,304",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107354",
+      "municipio": "São José do Xingu",
+      "uf": "MT",
+      "area_total_km2": "7465,563",
+      "area_no_recorte_km2": "7465,563",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107404",
+      "municipio": "São Pedro da Cipa",
+      "uf": "MT",
+      "area_total_km2": "344,330",
+      "area_no_recorte_km2": "344,330",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107578",
+      "municipio": "Rondolândia",
+      "uf": "MT",
+      "area_total_km2": "12658,342",
+      "area_no_recorte_km2": "12658,342",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107602",
+      "municipio": "Rondonópolis",
+      "uf": "MT",
+      "area_total_km2": "4824,505",
+      "area_no_recorte_km2": "4824,505",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107701",
+      "municipio": "Rosário Oeste",
+      "uf": "MT",
+      "area_total_km2": "7339,443",
+      "area_no_recorte_km2": "7339,443",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107743",
+      "municipio": "Santa Cruz do Xingu",
+      "uf": "MT",
+      "area_total_km2": "5623,390",
+      "area_no_recorte_km2": "5623,390",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107750",
+      "municipio": "Salto do Céu",
+      "uf": "MT",
+      "area_total_km2": "1753,378",
+      "area_no_recorte_km2": "1753,378",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107768",
+      "municipio": "Santa Rita do Trivelato",
+      "uf": "MT",
+      "area_total_km2": "4740,204",
+      "area_no_recorte_km2": "4740,204",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107776",
+      "municipio": "Santa Terezinha",
+      "uf": "MT",
+      "area_total_km2": "6466,223",
+      "area_no_recorte_km2": "6466,223",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107792",
+      "municipio": "Santo Antônio do Leste",
+      "uf": "MT",
+      "area_total_km2": "3403,593",
+      "area_no_recorte_km2": "3403,593",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107800",
+      "municipio": "Santo Antônio de Leverger",
+      "uf": "MT",
+      "area_total_km2": "9519,194",
+      "area_no_recorte_km2": "9519,194",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107859",
+      "municipio": "São Félix do Araguaia",
+      "uf": "MT",
+      "area_total_km2": "16682,473",
+      "area_no_recorte_km2": "16682,473",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107875",
+      "municipio": "Sapezal",
+      "uf": "MT",
+      "area_total_km2": "13614,552",
+      "area_no_recorte_km2": "13614,552",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107883",
+      "municipio": "Serra Nova Dourada",
+      "uf": "MT",
+      "area_total_km2": "1490,793",
+      "area_no_recorte_km2": "1490,793",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107909",
+      "municipio": "Sinop",
+      "uf": "MT",
+      "area_total_km2": "3990,870",
+      "area_no_recorte_km2": "3990,870",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107925",
+      "municipio": "Sorriso",
+      "uf": "MT",
+      "area_total_km2": "8454,830",
+      "area_no_recorte_km2": "8454,830",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107941",
+      "municipio": "Tabaporã",
+      "uf": "MT",
+      "area_total_km2": "8439,050",
+      "area_no_recorte_km2": "8439,050",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5107958",
+      "municipio": "Tangará da Serra",
+      "uf": "MT",
+      "area_total_km2": "11636,262",
+      "area_no_recorte_km2": "11636,262",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5108006",
+      "municipio": "Tapurah",
+      "uf": "MT",
+      "area_total_km2": "4492,539",
+      "area_no_recorte_km2": "4492,539",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5108055",
+      "municipio": "Terra Nova do Norte",
+      "uf": "MT",
+      "area_total_km2": "2399,737",
+      "area_no_recorte_km2": "2399,737",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5108105",
+      "municipio": "Tesouro",
+      "uf": "MT",
+      "area_total_km2": "4244,073",
+      "area_no_recorte_km2": "4244,073",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5108204",
+      "municipio": "Torixoréu",
+      "uf": "MT",
+      "area_total_km2": "2398,383",
+      "area_no_recorte_km2": "2398,383",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5108303",
+      "municipio": "União do Sul",
+      "uf": "MT",
+      "area_total_km2": "4590,628",
+      "area_no_recorte_km2": "4590,628",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5108352",
+      "municipio": "Vale de São Domingos",
+      "uf": "MT",
+      "area_total_km2": "1902,108",
+      "area_no_recorte_km2": "1902,108",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5108402",
+      "municipio": "Várzea Grande",
+      "uf": "MT",
+      "area_total_km2": "939,887",
+      "area_no_recorte_km2": "939,887",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5108501",
+      "municipio": "Vera",
+      "uf": "MT",
+      "area_total_km2": "2978,674",
+      "area_no_recorte_km2": "2978,674",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5108600",
+      "municipio": "Vila Rica",
+      "uf": "MT",
+      "area_total_km2": "7436,383",
+      "area_no_recorte_km2": "7436,383",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5108808",
+      "municipio": "Nova Guarita",
+      "uf": "MT",
+      "area_total_km2": "1121,928",
+      "area_no_recorte_km2": "1121,928",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5108857",
+      "municipio": "Nova Marilândia",
+      "uf": "MT",
+      "area_total_km2": "1905,744",
+      "area_no_recorte_km2": "1905,744",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5108907",
+      "municipio": "Nova Maringá",
+      "uf": "MT",
+      "area_total_km2": "11553,479",
+      "area_no_recorte_km2": "11553,479",
+      "percentual_no_recorte": "100,000"
+    },
+    {
+      "codigo_municipio": "5108956",
+      "municipio": "Nova Monte Verde",
+      "uf": "MT",
+      "area_total_km2": "5139,307",
+      "area_no_recorte_km2": "5139,307",
+      "percentual_no_recorte": "100,000"
+    }
+  ]
+}

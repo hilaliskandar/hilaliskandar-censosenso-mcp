@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "name": "CensoSenso MCP",
+    "package": "censosenso-mcp",
+    "mcp_name": "io.github.hilaliskandar/censosenso-mcp",
+    "version": "0.6.0",
+    "repository": "https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp",
+    "license": "MIT",
+    "origin_project": "https://github.com/SidneyBissoli/ibge-br-mcp",
+    "origin_author": "Sidney da Silva Pereira Bissoli",
+    "lineage_baseline_commit": "d170c584b1a76a29ac16a4a5f7b56afdbc5dd337"
+  },
+  "runtime": {
+    "node": ">=22",
+    "package_manager": "npm",
+    "stdio_entrypoint": "dist/index.js",
+    "remote": {
+      "transport": "streamable-http",
+      "url": "https://censosenso.poderdapalavra.org/mcp",
+      "health": "https://censosenso.poderdapalavra.org/health",
+      "status": "https://censosenso.poderdapalavra.org/status",
+      "hosting": "Cloudflare Workers",
+      "worker_name": "censosenso-mcp"
+    }
+  },
+  "meta_namespaces": {
+    "provenance": "io.github.hilaliskandar.censosenso/provenance",
+    "attribution": "io.github.hilaliskandar.censosenso/attribution"
+  },
+  "build": {
+    "install": "npm ci",
+    "gate": "npm run gate:deploy",
+    "build": "npm run build",
+    "worker_install": "npm --prefix worker ci",
+    "worker_deploy": "npm --prefix worker run deploy",
+    "remote_smoke": "node scripts/smoke-mcp.mjs https://censosenso.poderdapalavra.org"
+  },
+  "ci_cd": {
+    "source": "GitHub main",
+    "build_service": "Cloudflare Workers Builds",
+    "build_command": "npm run gate:deploy",
+    "deploy_command": "npm --prefix worker run deploy"
+  },
+  "external_modules": {
+    "@sbissoli/mcp-provenance": "canonical provenance model; local IBGE adapter and CensoSenso namespace",
+    "@sbissoli/mcp-search": "generic search/fetch contract, envelope, ranking and vocabulary mechanics; local IBGE index/renderer",
+    "@sbissoli/mcp-stats": "generic statistics engine; local SIDRA adapter",
+    "@sbissoli/mcp-evals": "evaluation harness; local IBGE catalog and fixtures",
+    "@modelcontextprotocol/server": "MCP server primitives",
+    "@modelcontextprotocol/client": "MCP client/testing primitives",
+    "@turf/boolean-touches": "topological contiguity",
+    "@turf/centroid": "centroid calculation",
+    "@turf/distance": "centroid distance",
+    "agents": "Cloudflare/Workers MCP HTTP handler via createMcpHandler; CensoSenso adds routing, auth, rate limiting, sessions, metrics and domain registration"
+  },
+  "source_classes": {
+    "live_apis": [
+      "IBGE Localidades",
+      "IBGE Agregados/SIDRA",
+      "IBGE Pesquisas/Cidades@",
+      "IBGE Malhas",
+      "IBGE Nomes",
+      "IBGE Notícias",
+      "IBGE Calendário",
+      "IBGE CNAE",
+      "IBGE Países"
+    ],
+    "versioned_snapshots": [
+      "Amazônia Legal 2024",
+      "Biomas 2025",
+      "Semiárido 2022",
+      "Zona Costeira 2021",
+      "Faixa de Fronteira 2024",
+      "Regiões Metropolitanas 2025",
+      "RIDEs 2025"
+    ]
+  },
+  "validation": {
+    "baseline_surface": "baselines/surface-stdio-0.6.0.json",
+    "integration_gate": "scripts/run_integration_gate.ps1",
+    "smoke_script": "scripts/smoke-mcp.mjs",
+    "remote_homologation_date": "2026-10-03",
+    "remote_homologation_steps": [
+      "health",
+      "status",
+      "initialize",
+      "notifications/initialized",
+      "tools/list",
+      "tools/call"
+    ]
+  },
+  "documentation": {
+    "architecture": "docs/ARQUITETURA_FLUXOS_E_REPRODUTIBILIDADE.md",
+    "lineage": "docs/ORIGEM_MODULOS_E_CONTRIBUICOES.md",
+    "deploy": "docs/deploy-cloudflare-workers.md",
+    "journal": "docs/DIARIO_LABORATORIO.md",
+    "governance": "LABORATORIO_PRIVADO.md",
+    "notice": "NOTICE.md"
+  },
+  "lineage_audit": {
+    "baseline_commit": "d170c584b1a76a29ac16a4a5f7b56afdbc5dd337",
+    "compared_head_before_documentation_review": "ff880cfdbc5ebf89d0735a2274a4c9cc17764d86",
+    "commits_ahead": 392,
+    "files_unchanged_byte_for_byte": 134,
+    "files_modified": 56,
+    "files_added": 73,
+    "files_removed": 1,
+    "details": "docs/ORIGEM_MODULOS_E_CONTRIBUICOES.md"
+  },
+  "tool_surface": {
+    "count": 23,
+    "tools": [
+      "ibge_estados",
+      "ibge_municipios",
+      "ibge_localidade",
+      "ibge_sidra",
+      "ibge_nomes",
+      "ibge_noticias",
+      "ibge_sidra_tabelas",
+      "ibge_sidra_metadados",
+      "ibge_malhas",
+      "ibge_pesquisas",
+      "ibge_censo",
+      "ibge_indicadores",
+      "ibge_cnae",
+      "ibge_geocodigo",
+      "ibge_calendario",
+      "ibge_comparar",
+      "ibge_malhas_tema",
+      "ibge_vizinhos",
+      "ibge_datasaude",
+      "ibge_paises",
+      "ibge_cidades",
+      "search",
+      "fetch"
+    ],
+    "source_of_truth": "src/server.ts",
+    "baseline": "baselines/surface-stdio-0.6.0.json"
+  }
+}

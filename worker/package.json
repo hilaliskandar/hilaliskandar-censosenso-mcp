@@ -1,0 +1,34 @@
+{
+  "name": "censosenso-mcp-worker",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "description": "Cloudflare Worker do CensoSenso MCP para transporte Streamable HTTP, com preflight reproduzivel antes do deploy.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepare:parent": "npm --prefix .. ci && npm --prefix .. run typecheck && npm --prefix .. run build",
+    "test:http-e2e": "node scripts/m3-http-e2e-local.mjs",
+    "test:security-http": "node scripts/m6-host-origin-local.mjs",
+    "predeploy": "npm run prepare:parent && npm run typecheck && npm test"
+  },
+  "//": "@modelcontextprotocol/server and zod are intentionally NOT listed here — they resolve from the parent package's node_modules so there is a single SDK copy (avoids duplicate-instance type clashes with registerAll). `agents` declares them as hard peers, so .npmrc pins legacy-peer-deps=true to stop npm from installing a second copy here. If you extract this Worker to its own repo, add them as dependencies and depend on the corresponding published CensoSenso package when one exists.",
+  "dependencies": {
+    "agents": "^0.24.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261002.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.2",
+    "vitest": "^5.0.3",
+    "wrangler": "^4.147.0"
+  },
+  "overrides": {
+    "sharp": "^0.35.4"
+  }
+}

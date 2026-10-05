@@ -1,0 +1,106 @@
+{
+  "name": "censosenso-mcp",
+  "version": "0.6.0",
+  "mcpName": "io.github.hilaliskandar/censosenso-mcp",
+  "description": "CensoSenso MCP server for official Brazilian public data from IBGE APIs, with structured provenance and reproducible territorial queries.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "censosenso-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "version": "node scripts/sync-version.mjs && git add -u",
+    "build": "node node_modules/typescript-7/bin/tsc",
+    "typecheck": "node node_modules/typescript-7/bin/tsc --noEmit",
+    "watch": "node node_modules/typescript-7/bin/tsc --watch",
+    "start": "node dist/index.js",
+    "dev": "npm run build && node dist/index.js",
+    "inspector": "npx @modelcontextprotocol/inspector dist/index.js",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write src/",
+    "format:check": "npm run eol:check && prettier --check src/",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "eol:check": "node scripts/check-eol.mjs src",
+    "eol:fix:windows": "npm run eol:fix",
+    "eol:fix": "node scripts/normalize-eol.mjs src",
+    "pilot:guararema": "npm run build && node scripts/piloto-guararema.mjs",
+    "gate:deploy": "npm run check:version-sync && npm run check:homologacao && npm run typecheck && npm run lint && npm run format:check && npm run build && npm test && npm run test:coverage && npm --prefix worker ci && npm --prefix worker run typecheck && npm --prefix worker test",
+    "homologar:tic-tim": "node scripts/homologar-tic-tim.mjs",
+    "check:homologacao": "node --check scripts/homologar-tic-tim.mjs",
+    "gate:sp-645": "npm run build && node scripts/gate-sp-645.mjs",
+    "check:version-sync": "node scripts/check-version-sync.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ibge",
+    "brasil",
+    "brazil",
+    "localidades",
+    "sidra",
+    "nomes",
+    "estados",
+    "municipios",
+    "censo",
+    "populacao",
+    "malhas",
+    "geojson",
+    "pnad",
+    "pib",
+    "pesquisas",
+    "mcp-server",
+    "datasus",
+    "ipca",
+    "cidades",
+    "demografia",
+    "geografia",
+    "estatistica",
+    "dados-abertos",
+    "open-data"
+  ],
+  "author": "Carlos Alexandre Gomes <hilaliskandar@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.0.0",
+    "@sbissoli/mcp-provenance": "^0.1.0",
+    "@sbissoli/mcp-search": "^0.5.0",
+    "@sbissoli/mcp-stats": "^0.3.0",
+    "@turf/boolean-touches": "^7.4.0",
+    "@turf/centroid": "^7.4.0",
+    "@turf/distance": "^7.4.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@modelcontextprotocol/client": "^2.0.0",
+    "@sbissoli/mcp-evals": "^0.1.0",
+    "@types/node": "^26.6.1",
+    "@vitest/coverage-v8": "^5.0.1",
+    "eslint": "^10.9.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "prettier": "^3.9.8",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
+    "typescript-7": "npm:typescript@^7.0.2",
+    "typescript-eslint": "^8.53.0",
+    "vite": "^8.2.2",
+    "vitest": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp.git"
+  },
+  "homepage": "https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/issues"
+  }
+}

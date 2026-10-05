@@ -1,0 +1,566 @@
+import { z } from "zod";
+import { IBGE_API } from "../types.js";
+import { CACHE_TTL } from "../cache.js";
+import { fetchSidra } from "../sidra-agregados.js";
+import { withMetrics } from "../metrics.js";
+import { createMarkdownTable } from "../utils/index.js";
+import { ValidationErrors } from "../errors.js";
+import { territorialLevelHint, territorialLevelList } from "../config.js";
+import {
+  type StructuredToolResult,
+  sidraRecords,
+  selectSidraColumns,
+  formatarCelulaSidra,
+} from "../structured.js";
+import {
+  extrairPeriodoSidra,
+  NOTA_DERIVACAO_ESTATISTICAS,
+  provenienciaIbge,
+  type Provenance,
+} from "../provenance.js";
+import {
+  agruparPorParam,
+  estatisticasBlocoSchema,
+  estatisticasParam,
+  estatisticasSidra,
+  topNParam,
+  TOP_N_DEFAULT,
+} from "../stats.js";
+
+// União dos níveis aceitos por pelo menos um indicador do catálogo.
+// A validação efetiva é feita por indicador, abaixo; não existe nível global.
+const INDICADORES_NIVEIS = ["1", "2", "3", "6", "7", "8", "9", "14"];
+
+export interface IndicadorConhecido {
+  tabela: string;
+  variavel: string;
+  niveis: string[];
+  nome: string;
+  descricao: string;
+  periodicidade: string;
+  categoria: string;
+}
+
+// Catálogo semântico auditado contra os metadados oficiais da API de Agregados.
+// Cada wrapper fixa UMA variável e somente os níveis realmente publicados.
+export const INDICADORES_CONHECIDOS: Record<string, IndicadorConhecido> = {
+  // Econômicos
+  pib: {
+    tabela: "5938",
+    variavel: "37",
+    niveis: ["1", "2", "3", "6", "8", "9"],
+    nome: "PIB - Produto Interno Bruto",
+    descricao: "Produto Interno Bruto a preços correntes",
+    periodicidade: "Anual",
+    categoria: "economico",
+  },
+  pib_variacao: {
+    tabela: "5932",
+    variavel: "6561",
+    niveis: ["1"],
+    nome: "PIB - Variação",
+    descricao: "Taxa trimestral em relação ao mesmo período do ano anterior",
+    periodicidade: "Trimestral",
+    categoria: "economico",
+  },
+  pib_per_capita: {
+    tabela: "6784",
+    variavel: "9812",
+    niveis: ["1"],
+    nome: "PIB per capita",
+    descricao: "PIB per capita a valores correntes",
+    periodicidade: "Anual",
+    categoria: "economico",
+  },
+  industria: {
+    tabela: "8888",
+    variavel: "12606",
+    niveis: ["1", "2", "3"],
+    nome: "Produção Industrial",
+    descricao: "PIM-PF - número-índice da produção física industrial (2022=100)",
+    periodicidade: "Mensal",
+    categoria: "economico",
+  },
+  comercio: {
+    tabela: "8880",
+    variavel: "7169",
+    niveis: ["1", "3"],
+    nome: "Volume de Vendas do Comércio",
+    descricao: "PMC - número-índice do volume de vendas no comércio varejista (2022=100)",
+    periodicidade: "Mensal",
+    categoria: "economico",
+  },
+  servicos: {
+    tabela: "8688",
+    variavel: "7167",
+    niveis: ["1"],
+    nome: "Volume de Serviços",
+    descricao: "PMS - número-índice do volume de serviços (2022=100)",
+    periodicidade: "Mensal",
+    categoria: "economico",
+  },
+  // Preços
+  ipca: {
+    tabela: "7060",
+    variavel: "63",
+    niveis: ["1", "6", "7"],
+    nome: "IPCA - Variação Mensal",
+    descricao: "Variação mensal do Índice Nacional de Preços ao Consumidor Amplo",
+    periodicidade: "Mensal",
+    categoria: "precos",
+  },
+  ipca_acumulado: {
+    tabela: "7060",
+    variavel: "2265",
+    niveis: ["1", "6", "7"],
+    nome: "IPCA - Acumulado 12 meses",
+    descricao: "IPCA acumulado nos últimos 12 meses",
+    periodicidade: "Mensal",
+    categoria: "precos",
+  },
+  inpc: {
+    tabela: "7063",
+    variavel: "44",
+    niveis: ["1", "6", "7"],
+    nome: "INPC - Variação Mensal",
+    descricao: "Variação mensal do Índice Nacional de Preços ao Consumidor",
+    periodicidade: "Mensal",
+    categoria: "precos",
+  },
+  // Trabalho
+  desemprego: {
+    tabela: "4099",
+    variavel: "4099",
+    niveis: ["1", "2", "3", "6", "7", "14"],
+    nome: "Taxa de Desocupação",
+    descricao: "Taxa de desocupação da população de 14 anos ou mais",
+    periodicidade: "Trimestral",
+    categoria: "trabalho",
+  },
+  ocupacao: {
+    tabela: "4093",
+    variavel: "4090",
+    niveis: ["1", "2", "3", "6", "7", "14"],
+    nome: "Pessoas Ocupadas",
+    descricao: "Pessoas de 14 anos ou mais ocupadas na semana de referência",
+    periodicidade: "Trimestral",
+    categoria: "trabalho",
+  },
+  rendimento: {
+    tabela: "5436",
+    variavel: "5932",
+    niveis: ["1", "2", "3", "6", "7", "14"],
+    nome: "Rendimento Médio",
+    descricao: "Rendimento médio mensal real habitualmente recebido no trabalho principal",
+    periodicidade: "Trimestral",
+    categoria: "trabalho",
+  },
+  informalidade: {
+    tabela: "4708",
+    variavel: "12466",
+    niveis: ["1", "2", "3"],
+    nome: "Taxa de Informalidade",
+    descricao: "Taxa de informalidade da população ocupada",
+    periodicidade: "Anual",
+    categoria: "trabalho",
+  },
+  // População
+  populacao: {
+    tabela: "6579",
+    variavel: "9324",
+    niveis: ["1", "2", "3", "6"],
+    nome: "Estimativa de População",
+    descricao: "Estimativa da população residente",
+    periodicidade: "Anual",
+    categoria: "populacao",
+  },
+  densidade: {
+    tabela: "4714",
+    variavel: "614",
+    niveis: ["1", "2", "3", "6"],
+    nome: "Densidade Demográfica",
+    descricao: "Densidade demográfica (hab/km²)",
+    periodicidade: "Censo 2022",
+    categoria: "populacao",
+  },
+  // Agropecuária
+  agricultura: {
+    tabela: "5457",
+    variavel: "214",
+    niveis: ["1", "2", "3", "6", "8", "9"],
+    nome: "Produção Agrícola",
+    descricao: "Quantidade produzida das lavouras temporárias e permanentes",
+    periodicidade: "Anual",
+    categoria: "agropecuaria",
+  },
+  pecuaria: {
+    tabela: "3939",
+    variavel: "105",
+    niveis: ["1", "2", "3", "6", "8", "9"],
+    nome: "Efetivo de Rebanhos",
+    descricao: "Efetivo dos rebanhos",
+    periodicidade: "Anual",
+    categoria: "agropecuaria",
+  },
+};
+
+// Categories for listing
+const CATEGORIAS = {
+  economico: "Indicadores Econômicos",
+  precos: "Índices de Preços",
+  trabalho: "Mercado de Trabalho",
+  populacao: "População",
+  agropecuaria: "Agropecuária",
+};
+
+export const indicadoresSchema = z.object({
+  indicador: z.string().optional()
+    .describe(`Nome do indicador (ex: "pib", "ipca", "desemprego", "populacao").
+Use "listar" para ver todos os indicadores disponíveis.`),
+  categoria: z
+    .enum(["economico", "precos", "trabalho", "populacao", "agropecuaria", "todos"])
+    .optional()
+    .describe("Filtrar por categoria de indicadores"),
+  nivel_territorial: z
+    .string()
+    .optional()
+    .default("1")
+    .describe(territorialLevelHint(INDICADORES_NIVEIS)),
+  localidades: z.string().optional().default("all").describe("Códigos das localidades ou 'all'"),
+  periodos: z
+    .string()
+    .optional()
+    .default("last")
+    .describe("Períodos (ex: '2023', 'last', 'last 4')"),
+  formato: z.enum(["tabela", "json"]).optional().default("tabela").describe("Formato de saída"),
+  campos: z
+    .string()
+    .optional()
+    .describe(
+      "Selecionar apenas algumas colunas por rótulo, separadas por vírgula (ex: 'Valor,Ano'). Reduz o volume da resposta."
+    ),
+  estatisticas: estatisticasParam,
+  agruparPor: agruparPorParam,
+  topN: topNParam,
+});
+
+export type IndicadoresInput = z.infer<typeof indicadoresSchema>;
+
+/** Structured output payload (validated against this schema by the MCP SDK). */
+export const indicadoresOutputSchema = z.object({
+  indicador: z.string().optional().describe("Chave do indicador consultado"),
+  nome: z.string().optional().describe("Nome do indicador"),
+  tabela: z.string().optional().describe("Tabela SIDRA de origem"),
+  totalRegistros: z.number().describe("Total de registros de dados"),
+  colunas: z.array(z.string()).describe("Rótulos das colunas, na ordem"),
+  registros: z
+    .array(z.record(z.string(), z.string()))
+    .describe("Registros: cada um mapeia rótulo da coluna -> valor"),
+  estatisticas: estatisticasBlocoSchema.optional(),
+});
+
+/** Minimal valid payload for non-data success responses (e.g. the indicator catalog). */
+function emptyMeta(): Record<string, unknown> {
+  return { totalRegistros: 0, colunas: [], registros: [] };
+}
+
+/** Provenance for the static indicator catalog maintained in code (no upstream fetch). */
+function provenienciaCatalogo(): Provenance {
+  return provenienciaIbge({
+    fonte: "SIDRA",
+    url: IBGE_API.AGREGADOS,
+    pesquisa: "catálogo de indicadores mantido pelo servidor",
+  });
+}
+
+/**
+ * Fetches economic and social indicators from IBGE
+ */
+export async function ibgeIndicadores(input: IndicadoresInput): Promise<StructuredToolResult> {
+  return withMetrics("ibge_indicadores", "agregados", async () => {
+    // List available indicators (catalog goes in the text channel)
+    if (input.indicador === "listar" || (!input.indicador && !input.categoria)) {
+      return {
+        markdown: listIndicadores(input.categoria),
+        structured: emptyMeta(),
+        provenance: provenienciaCatalogo(),
+      };
+    }
+
+    // Get indicator by category
+    if (input.categoria && input.categoria !== "todos" && !input.indicador) {
+      return {
+        markdown: listIndicadores(input.categoria),
+        structured: emptyMeta(),
+        provenance: provenienciaCatalogo(),
+      };
+    }
+
+    // Get specific indicator
+    const indicadorKey = input.indicador?.toLowerCase();
+    if (!indicadorKey) {
+      return {
+        markdown: listIndicadores(),
+        structured: emptyMeta(),
+        provenance: provenienciaCatalogo(),
+      };
+    }
+
+    const indicador = INDICADORES_CONHECIDOS[indicadorKey];
+    if (!indicador) {
+      return {
+        markdown:
+          `Indicador "${input.indicador}" não encontrado.\n\n` +
+          `Use ibge_indicadores(indicador="listar") para ver os indicadores disponíveis.\n\n` +
+          `Dica: Você também pode usar ibge_sidra_tabelas para buscar tabelas específicas.`,
+        isError: true,
+      };
+    }
+
+    const nivel = input.nivel_territorial ?? "1";
+    if (!indicador.niveis.includes(nivel)) {
+      return {
+        markdown:
+          ValidationErrors.invalidTerritory(
+            nivel,
+            "ibge_indicadores",
+            territorialLevelList(indicador.niveis)
+          ) +
+          `\n\n**Indicador:** ${indicador.nome} (Tabela ${indicador.tabela}, variável ${indicador.variavel}).`,
+        isError: true,
+      };
+    }
+
+    try {
+      // Build SIDRA URL
+      const caminho = buildSidraPath(
+        indicador.tabela,
+        nivel,
+        input.localidades ?? "all",
+        input.periodos ?? "last",
+        indicador.variavel
+      );
+
+      // Pela API de Agregados v3 (ver src/sidra-agregados.ts); a chave de
+      // cache passa a ser a URL consultada, como nas outras ferramentas.
+      let url = "";
+      let key = "";
+      let data: Record<string, string>[];
+      try {
+        ({ url, chaveCache: key, data } = await fetchSidra(caminho, CACHE_TTL.SHORT));
+      } catch (fetchError) {
+        // Provide helpful error message
+        if (fetchError instanceof Error && fetchError.message.includes("400")) {
+          return {
+            markdown: formatErrorMessage(
+              "Parâmetros inválidos",
+              indicador,
+              indicadorKey,
+              "Verifique se o nível territorial e localidades são suportados para este indicador."
+            ),
+            isError: true,
+          };
+        }
+        throw fetchError;
+      }
+
+      const meta = { indicador: indicadorKey, nome: indicador.nome, tabela: indicador.tabela };
+
+      const pesquisa = `SIDRA, Tabela ${indicador.tabela} (${indicador.nome})`;
+      const proveniencia = (opts?: {
+        dataVintage?: string | null;
+        derivado?: { nota: string };
+      }): Provenance =>
+        provenienciaIbge({
+          fonte: "SIDRA",
+          url,
+          chaveCache: key,
+          pesquisa,
+          dataset: indicador.tabela,
+          ...opts,
+        });
+
+      if (!data || data.length === 0) {
+        // No data is a valid (empty) result, not a failure.
+        return {
+          markdown: formatErrorMessage(
+            "Nenhum dado encontrado",
+            indicador,
+            indicadorKey,
+            "Tente ajustar os períodos ou localidades."
+          ),
+          structured: { ...meta, ...sidraRecords(data) },
+          provenance: proveniencia(),
+        };
+      }
+
+      // Reference period from the FULL result, before field selection/truncation.
+      const completo = sidraRecords(data);
+      const dataVintage = extrairPeriodoSidra(completo.colunas, completo.registros);
+
+      // Format output
+      let output = `## ${indicador.nome}\n\n`;
+      output += `**Descrição:** ${indicador.descricao}\n`;
+      output += `**Periodicidade:** ${indicador.periodicidade}\n`;
+      output += `**Tabela SIDRA:** ${indicador.tabela}\n\n`;
+
+      // Statistics mode (D2): full distribution over ALL data rows, before any
+      // truncation or field selection — `campos`/`formato` are ignored.
+      if (input.estatisticas) {
+        const dados = sidraRecords(data);
+        const resultado = estatisticasSidra(dados, {
+          agruparPor: input.agruparPor,
+          topN: input.topN ?? TOP_N_DEFAULT,
+        });
+        if (!resultado.ok) {
+          return { markdown: output + resultado.erro, isError: true };
+        }
+        return {
+          markdown: output + resultado.markdown,
+          structured: {
+            ...meta,
+            totalRegistros: dados.totalRegistros,
+            colunas: dados.colunas,
+            registros: [],
+            estatisticas: resultado.bloco,
+          },
+          provenance: proveniencia({
+            dataVintage,
+            derivado: { nota: NOTA_DERIVACAO_ESTATISTICAS },
+          }),
+        };
+      }
+
+      // Apply optional field selection (1.2) to both channels.
+      const filtered = selectSidraColumns(data, input.campos);
+      const structured = { ...meta, ...sidraRecords(filtered) };
+
+      if (input.formato === "json") {
+        return {
+          markdown: output + "```json\n" + JSON.stringify(filtered, null, 2) + "\n```",
+          structured,
+          provenance: proveniencia({ dataVintage }),
+        };
+      }
+
+      output += formatIndicadorTable(filtered);
+      return { markdown: output, structured, provenance: proveniencia({ dataVintage }) };
+    } catch (error) {
+      if (error instanceof Error) {
+        return {
+          markdown: formatErrorMessage(
+            error.message,
+            indicadorKey ? INDICADORES_CONHECIDOS[indicadorKey] : undefined,
+            indicadorKey ?? "unknown",
+            "Verifique sua conexão ou tente novamente mais tarde."
+          ),
+          isError: true,
+        };
+      }
+      return { markdown: "Erro desconhecido ao consultar indicador.", isError: true };
+    }
+  });
+}
+
+function buildSidraPath(
+  tabela: string,
+  nivel: string,
+  localidades: string,
+  periodos: string,
+  variavel: string
+): string {
+  let path = `/t/${tabela}`;
+  path += `/n${nivel}/${localidades}`;
+  path += `/v/${variavel}`;
+  path += `/p/${periodos}`;
+
+  return path;
+}
+
+function listIndicadores(categoria?: string): string {
+  let output = "## Indicadores Disponíveis\n\n";
+
+  const categoriasToShow =
+    categoria && categoria !== "todos"
+      ? { [categoria]: CATEGORIAS[categoria as keyof typeof CATEGORIAS] }
+      : CATEGORIAS;
+
+  for (const [catKey, catNome] of Object.entries(categoriasToShow)) {
+    const indicadoresCategoria = Object.entries(INDICADORES_CONHECIDOS).filter(
+      ([, info]) => info.categoria === catKey
+    );
+
+    if (indicadoresCategoria.length === 0) continue;
+
+    output += `### ${catNome}\n\n`;
+
+    const rows = indicadoresCategoria.map(([codigo, info]) => [
+      codigo,
+      info.nome,
+      info.periodicidade,
+      info.niveis.join(","),
+      info.tabela,
+      info.variavel,
+    ]);
+    output += createMarkdownTable(
+      ["Código", "Nome", "Periodicidade", "Níveis", "Tabela", "Variável"],
+      rows,
+      { alignment: ["left", "left", "left", "left", "right", "right"] }
+    );
+    output += "\n";
+  }
+
+  output += "---\n\n";
+  output += "### Como usar\n\n";
+  output += "```\n";
+  output += "# PIB do Brasil\n";
+  output += 'ibge_indicadores(indicador="pib")\n\n';
+  output += "# IPCA dos últimos 12 meses\n";
+  output += 'ibge_indicadores(indicador="ipca", periodos="last 12")\n\n';
+  output += "# Taxa de desemprego por UF\n";
+  output += 'ibge_indicadores(indicador="desemprego", nivel_territorial="3")\n\n';
+  output += "# Listar indicadores de preços\n";
+  output += 'ibge_indicadores(categoria="precos")\n';
+  output += "```\n";
+
+  return output;
+}
+
+function formatIndicadorTable(data: Record<string, string>[]): string {
+  if (data.length === 0) return "Nenhum dado encontrado.";
+
+  const headerRow = data[0];
+  const dataRows = data.slice(1);
+  const columns = Object.keys(headerRow);
+
+  const displayRows = dataRows.slice(0, 30);
+
+  const headers = columns.map((col) => headerRow[col] || col);
+  const rows = displayRows.map((row) =>
+    columns.map((col) => formatarCelulaSidra(headerRow[col] || col, row[col]))
+  );
+
+  let output = createMarkdownTable(headers, rows);
+
+  if (dataRows.length > 30) {
+    output += `\n_Mostrando 30 de ${dataRows.length} registros._\n`;
+  }
+
+  return output;
+}
+
+function formatErrorMessage(
+  error: string,
+  indicador: (typeof INDICADORES_CONHECIDOS)[string] | undefined,
+  indicadorKey: string,
+  dica: string
+): string {
+  return (
+    `## Erro ao consultar indicador\n\n` +
+    `**Indicador:** ${indicador?.nome || indicadorKey}\n` +
+    `**Erro:** ${error}\n\n` +
+    `**Dica:** ${dica}\n\n` +
+    `Para ver a estrutura completa desta tabela, use:\n` +
+    `\`\`\`\nibge_sidra_metadados(tabela="${indicador?.tabela}")\n\`\`\``
+  );
+}

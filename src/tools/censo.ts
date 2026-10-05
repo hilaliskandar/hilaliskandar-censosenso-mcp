@@ -1,0 +1,726 @@
+import { z } from "zod";
+import { IBGE_API } from "../types.js";
+import { CACHE_TTL } from "../cache.js";
+import { fetchSidra } from "../sidra-agregados.js";
+import { withMetrics } from "../metrics.js";
+import { createMarkdownTable } from "../utils/index.js";
+import { parseHttpError, ValidationErrors } from "../errors.js";
+import { territorialLevelHint, territorialLevelList } from "../config.js";
+import {
+  type StructuredToolResult,
+  sidraRecords,
+  selectSidraColumns,
+  formatarCelulaSidra,
+} from "../structured.js";
+import {
+  extrairPeriodoSidra,
+  NOTA_DERIVACAO_ESTATISTICAS,
+  provenienciaIbge,
+  type Provenance,
+} from "../provenance.js";
+import {
+  agruparPorParam,
+  estatisticasBlocoSchema,
+  estatisticasParam,
+  estatisticasSidra,
+  topNParam,
+  TOP_N_DEFAULT,
+} from "../stats.js";
+
+// Census data is published by SIDRA down to the municipality level.
+const CENSO_NIVEIS = ["1", "2", "3", "6"];
+
+// Mapping of census data themes to SIDRA tables
+/**
+ * Tema → tabela SIDRA. EXPORTADO para que `tests/censo-mapa-de-tabelas.test.ts`
+ * prove, contra o catálogo oficial do Censo, que cada código daqui é mesmo do
+ * Censo Demográfico e mesmo do assunto que a `descricao` promete.
+ *
+ * POR QUE ISSO PRECISA SER PROVADO. Em 2026-08-31 uma varredura contra a API de
+ * Agregados achou **13 das 41 tabelas deste mapa fora do Censo Demográfico**:
+ * `saneamento`/2022 apontava para uma tabela da PNAD Contínua sobre renda em
+ * domicílios com TV por assinatura; `fecundidade`/2010, para o INPC;
+ * `rendimento`/2000, para o Censo Agropecuário; `quilombolas`/2022, para uso de
+ * Internet. A tool respondia normalmente, com a `descricao` escrita à mão no
+ * cabeçalho — ou seja, devolvia dado de outra pesquisa sob um rótulo que
+ * mentia. Nada quebrava: código e descrição moram lado a lado e nunca foram
+ * confrontados com a fonte.
+ */
+export const CENSO_TABELAS: Record<
+  string,
+  Record<string, { tabela: string; descricao: string }>
+> = {
+  // População
+  populacao: {
+    "1970-2010": {
+      tabela: "200",
+      descricao: "População residente por sexo e situação (série histórica)",
+    },
+    "1991-2010": {
+      tabela: "202",
+      descricao: "População residente por sexo e situação do domicílio",
+    },
+    "2000": { tabela: "1552", descricao: "População residente por situação, sexo e idade" },
+    "2010": {
+      tabela: "1378",
+      descricao: "População residente por situação, sexo, idade e condição no domicílio",
+    },
+    "2022": { tabela: "9514", descricao: "População residente por idade e sexo (universo)" },
+    "2022-primeiros": { tabela: "4709", descricao: "População residente - primeiros resultados" },
+  },
+  // Alfabetização
+  alfabetizacao: {
+    "1970-2010": {
+      tabela: "204",
+      descricao: "População de 5 anos ou mais por alfabetização e idade",
+    },
+    // 2000 não tem entrada: a tabela 752, que estava aqui, não é do Censo
+    // Demográfico. Sem substituta conferida, é melhor não ter tema para o ano
+    // do que servir outra pesquisa com este rótulo.
+    "2010": {
+      tabela: "1383",
+      descricao: "Taxa de alfabetização das pessoas de 10 anos ou mais por sexo",
+    },
+    "2022": { tabela: "9543", descricao: "Taxa de alfabetização por idade, cor/raça e sexo" },
+  },
+  // Domicílios
+  domicilios: {
+    "2000": {
+      tabela: "1310",
+      descricao: "Domicílios recenseados, por espécie e situação do domicílio",
+    },
+    "2010": {
+      tabela: "1310",
+      descricao: "Domicílios recenseados, por espécie e situação do domicílio",
+    },
+    "2022": { tabela: "4711", descricao: "Domicílios recenseados, por espécie" },
+    // "2022-detalhado" não existe mais: apontava para a 9605, que é a tabela de
+    // COR OU RAÇA — o mesmo código que o tema cor_raca usa, e corretamente.
+  },
+  // Idade e sexo
+  idade_sexo: {
+    "2000": { tabela: "200", descricao: "População por grupos de idade e sexo" },
+    "2010": { tabela: "1552", descricao: "População por forma de declaração da idade e idade" },
+    "2022": {
+      tabela: "9514",
+      descricao: "População residente por sexo e idade — base para pirâmide etária",
+    },
+  },
+  // Indicadores sintéticos de estrutura etária
+  estrutura_etaria: {
+    "2022": {
+      tabela: "9515",
+      descricao: "Índice de envelhecimento, idade mediana e razão de sexo da população",
+    },
+  },
+  // Religião
+  religiao: {
+    "2000": { tabela: "2102", descricao: "População por religião" },
+    "2010": { tabela: "2103", descricao: "População por situação, sexo, idade e religião" },
+  },
+  // Cor/Raça
+  cor_raca: {
+    "2000": { tabela: "2093", descricao: "População por cor ou raça" },
+    "2010": { tabela: "3175", descricao: "População por cor ou raça e sexo" },
+    "2022": { tabela: "9605", descricao: "População por cor ou raça" },
+  },
+  // Rendimento
+  rendimento: {
+    // 2000 não tem entrada: a 857, que estava aqui, é do Censo AGROPECUÁRIO.
+    "2010": {
+      tabela: "3548",
+      descricao: "Rendimento nominal médio e mediano das pessoas de 10 anos ou mais",
+    },
+    "2022": {
+      tabela: "10295",
+      descricao:
+        "Rendimento domiciliar mensal per capita médio e mediano dos moradores em domicílios particulares permanentes ocupados",
+    },
+  },
+  // Migração
+  migracao: {
+    "2000": { tabela: "631", descricao: "População por lugar de nascimento" },
+    "2010": {
+      tabela: "1505",
+      descricao: "População residente por naturalidade em relação ao município e à UF",
+    },
+  },
+  // Educação
+  educacao: {
+    // 2000 não tem entrada: a 706, que estava aqui, é das Estatísticas do
+    // Registro Civil (nascidos vivos).
+    "2010": {
+      tabela: "3540",
+      descricao: "Pessoas de 10 anos ou mais por nível de instrução",
+    },
+    "2022": {
+      tabela: "10061",
+      descricao: "Pessoas de 18 anos ou mais por nível de instrução, idade, sexo e cor ou raça",
+    },
+  },
+  // Trabalho
+  trabalho: {
+    "2000": { tabela: "616", descricao: "Pessoas de 10 anos ou mais por condição de ocupação" },
+    "2010": { tabela: "3592", descricao: "População ocupada por setor de atividade" },
+    "2022": {
+      tabela: "10268",
+      descricao:
+        "Pessoas de 10 anos ou mais, total e ocupadas na semana de referência, e nível de ocupação",
+    },
+  },
+  // Indígenas (novo)
+  indigenas: {
+    "2010": {
+      tabela: "3452",
+      descricao: "Pessoas indígenas por situação e localização do domicílio, sexo e idade",
+    },
+    "2022": {
+      tabela: "10395",
+      descricao: "Pessoas indígenas por sexo e grupos de idade, segundo etnia, povo ou grupo",
+    },
+    "2022-terras": {
+      tabela: "10396",
+      descricao: "Pessoas indígenas residentes em Terras Indígenas, por sexo, idade e etnia",
+    },
+  },
+  // Quilombolas (novo)
+  quilombolas: {
+    "2022": {
+      tabela: "10089",
+      descricao: "População residente, total e quilombola, por sexo e grupos de idade",
+    },
+    "2022-territorios": {
+      tabela: "10090",
+      descricao: "População, total e quilombola, residente em Territórios Quilombolas",
+    },
+  },
+  // Saneamento (novo)
+  saneamento: {
+    "2000": {
+      tabela: "1453",
+      descricao:
+        "Domicílios particulares permanentes por esgotamento sanitário e abastecimento de água",
+    },
+    "2010": {
+      tabela: "3218",
+      descricao: "Domicílios particulares permanentes por forma de abastecimento de água",
+    },
+    "2022": {
+      tabela: "6803",
+      descricao:
+        "Domicílios particulares permanentes ocupados por ligação à rede geral e principal forma de abastecimento de água",
+    },
+  },
+  // Deficiência (novo)
+  deficiencia: {
+    // 2000 não tem entrada: a 2649, que estava aqui, é da Pesquisa Anual de
+    // Serviços (transportes).
+    "2010": {
+      tabela: "3426",
+      descricao: "População residente por tipo de deficiência, segundo sexo e cor ou raça",
+    },
+    "2022": {
+      tabela: "10125",
+      descricao: "Pessoas de 2 anos ou mais, total e com deficiência, por sexo e grupos de idade",
+    },
+  },
+  // Nupcialidade/Estado civil (novo)
+  nupcialidade: {
+    "2000": {
+      tabela: "1624",
+      descricao: "Pessoas de 10 anos ou mais de idade por sexo e estado civil",
+    },
+    "2010": {
+      tabela: "1541",
+      descricao: "Pessoas de 10 anos ou mais de idade, por estado civil",
+    },
+  },
+  // Fecundidade (novo)
+  fecundidade: {
+    // 2000 não tem entrada: a 2443, que estava aqui, é de FAMÍLIAS por tipo.
+    "2010": {
+      tabela: "10075",
+      descricao: "Mulheres de 12 anos ou mais por número de filhos tidos nascidos vivos",
+    },
+    "2022": {
+      tabela: "10075",
+      descricao: "Mulheres de 12 anos ou mais por número de filhos tidos nascidos vivos",
+    },
+  },
+};
+
+// Available themes
+const TEMAS_CENSO = [
+  "populacao",
+  "alfabetizacao",
+  "domicilios",
+  "idade_sexo",
+  "estrutura_etaria",
+  "religiao",
+  "cor_raca",
+  "rendimento",
+  "migracao",
+  "educacao",
+  "trabalho",
+  "indigenas",
+  "quilombolas",
+  "saneamento",
+  "deficiencia",
+  "nupcialidade",
+  "fecundidade",
+] as const;
+
+// Schema for the tool input
+export const censoSchema = z.object({
+  ano: z
+    .enum(["1970", "1980", "1991", "2000", "2010", "2022", "todos"])
+    .optional()
+    .describe("Ano do censo (1970, 1980, 1991, 2000, 2010, 2022) ou 'todos' para série histórica"),
+  tema: z
+    .enum([
+      "populacao",
+      "alfabetizacao",
+      "domicilios",
+      "idade_sexo",
+      "estrutura_etaria",
+      "religiao",
+      "cor_raca",
+      "rendimento",
+      "migracao",
+      "educacao",
+      "trabalho",
+      "indigenas",
+      "quilombolas",
+      "saneamento",
+      "deficiencia",
+      "nupcialidade",
+      "fecundidade",
+      "listar",
+    ])
+    .optional()
+    .default("populacao").describe(`Tema dos dados:
+- populacao: População residente
+- alfabetizacao: Taxa de alfabetização
+- domicilios: Características dos domicílios
+- idade_sexo: Distribuição por sexo e idade para pirâmide etária
+- estrutura_etaria: Índice de envelhecimento, idade mediana e razão de sexo
+- religiao: Distribuição por religião
+- cor_raca: Cor ou raça
+- rendimento: Rendimento mensal
+- migracao: Migração
+- educacao: Nível de instrução
+- trabalho: Ocupação e trabalho
+- indigenas: População indígena
+- quilombolas: População quilombola
+- saneamento: Abastecimento de água; para esgotamento sanitário use ibge_datasaude(saneamento_esgoto)
+- deficiencia: Pessoas com deficiência
+- nupcialidade: Estado civil
+- fecundidade: Taxa de fecundidade
+- listar: Lista tabelas disponíveis`),
+  nivel_territorial: z
+    .string()
+    .optional()
+    .default("1")
+    .describe(territorialLevelHint(CENSO_NIVEIS)),
+  localidades: z.string().optional().default("all").describe("Códigos das localidades ou 'all'"),
+  formato: z.enum(["tabela", "json"]).optional().default("tabela").describe("Formato de saída"),
+  campos: z
+    .string()
+    .optional()
+    .describe(
+      "Selecionar apenas algumas colunas por rótulo, separadas por vírgula (ex: 'Valor,Ano'). Reduz o volume da resposta."
+    ),
+  estatisticas: estatisticasParam,
+  agruparPor: agruparPorParam,
+  topN: topNParam,
+});
+
+export type CensoInput = z.infer<typeof censoSchema>;
+
+/** Structured output payload (validated against this schema by the MCP SDK). */
+export const censoOutputSchema = z.object({
+  tema: z.string().optional().describe("Tema do censo consultado"),
+  tabela: z.string().optional().describe("Tabela SIDRA de origem"),
+  descricao: z.string().optional().describe("Descrição da tabela"),
+  ano: z.string().optional().describe("Ano(s) de referência"),
+  totalRegistros: z.number().describe("Total de registros de dados"),
+  colunas: z.array(z.string()).describe("Rótulos das colunas, na ordem"),
+  registros: z
+    .array(z.record(z.string(), z.string()))
+    .describe("Registros: cada um mapeia rótulo da coluna -> valor"),
+  estatisticas: estatisticasBlocoSchema.optional(),
+});
+
+/** Minimal valid payload for non-data success responses (e.g. the table catalog). */
+function emptyMeta(): Record<string, unknown> {
+  return { totalRegistros: 0, colunas: [], registros: [] };
+}
+
+/**
+ * Fetches census data from IBGE SIDRA API
+ */
+export async function ibgeCenso(input: CensoInput): Promise<StructuredToolResult> {
+  return withMetrics("ibge_censo", "sidra", async () => {
+    // If tema is "listar", show available tables (catalog in the text channel)
+    if (input.tema === "listar") {
+      return {
+        markdown: listAvailableTables(input.ano),
+        structured: emptyMeta(),
+        // Static catalog maintained in code — no upstream fetch (no cache key/dataset).
+        provenance: provenienciaIbge({
+          fonte: "SIDRA",
+          url: IBGE_API.AGREGADOS,
+          pesquisa: "catálogo de temas do Censo mantido pelo servidor",
+        }),
+      };
+    }
+
+    // Get the appropriate table
+    const tema = input.tema || "populacao";
+    const temaTabelas = CENSO_TABELAS[tema];
+
+    if (!temaTabelas) {
+      return {
+        markdown: `Tema "${tema}" não encontrado. Temas disponíveis: ${TEMAS_CENSO.join(", ")}`,
+        isError: true,
+      };
+    }
+
+    // Determine which table to use based on year
+    let tabelaInfo: { tabela: string; descricao: string } | undefined;
+    // Sem inicializador: os dois ramos abaixo atribuem, e quem prova isso é o
+    // compilador. O "last" que ficava aqui nunca chegava a ser lido.
+    let periodos: string;
+
+    if (input.ano === "todos" || !input.ano) {
+      // Try to find a table with historical series
+      tabelaInfo = temaTabelas["1970-2010"] || temaTabelas["1991-2010"];
+      periodos = "all";
+
+      if (!tabelaInfo) {
+        // No historical series, get most recent
+        tabelaInfo = temaTabelas["2022"] || temaTabelas["2010"] || temaTabelas["2000"];
+      }
+    } else {
+      // Specific year requested
+      tabelaInfo = temaTabelas[input.ano];
+
+      // If not found for specific year, try ranges
+      if (!tabelaInfo) {
+        if (["1970", "1980", "1991", "2000", "2010"].includes(input.ano)) {
+          tabelaInfo = temaTabelas["1970-2010"] || temaTabelas["1991-2010"];
+        }
+      }
+
+      periodos = input.ano;
+    }
+
+    if (!tabelaInfo) {
+      return {
+        markdown:
+          `Dados de "${tema}" não disponíveis para o ano ${input.ano || "solicitado"}.\n\n` +
+          `Use ibge_censo(tema="listar") para ver tabelas disponíveis.`,
+        isError: true,
+      };
+    }
+
+    const nivel = input.nivel_territorial ?? "1";
+    if (!CENSO_NIVEIS.includes(nivel)) {
+      return {
+        markdown: ValidationErrors.invalidTerritory(
+          nivel,
+          "ibge_censo",
+          territorialLevelList(CENSO_NIVEIS)
+        ),
+        isError: true,
+      };
+    }
+
+    const meta = {
+      tema,
+      tabela: tabelaInfo.tabela,
+      descricao: tabelaInfo.descricao,
+      ano: input.ano,
+    };
+
+    // Build SIDRA query
+    try {
+      const caminho = buildSidraPath(
+        tabelaInfo.tabela,
+        nivel,
+        input.localidades ?? "all",
+        periodos,
+        tema
+      );
+
+      // Pela API de Agregados v3 (ver src/sidra-agregados.ts). Cache de 1 hora:
+      // o dado muda pouco, as consultas variam. `url` é a consultada de fato.
+      let url = "";
+      let key = "";
+      let data: Record<string, string>[];
+
+      try {
+        ({ url, chaveCache: key, data } = await fetchSidra(caminho, CACHE_TTL.MEDIUM));
+      } catch (error) {
+        if (error instanceof Error && error.message.includes("400")) {
+          return {
+            markdown:
+              `Erro na consulta: Parâmetros inválidos para a tabela ${tabelaInfo.tabela}.\n` +
+              `Descrição: ${tabelaInfo.descricao}\n\n` +
+              `Use ibge_sidra_metadados(tabela="${tabelaInfo.tabela}") para ver a estrutura da tabela.`,
+            isError: true,
+          };
+        }
+        throw error;
+      }
+
+      const pesquisa = `SIDRA, Tabela ${tabelaInfo.tabela} (${tabelaInfo.descricao})`;
+      const dataset = tabelaInfo.tabela;
+      const proveniencia = (opts?: {
+        dataVintage?: string | null;
+        derivado?: { nota: string };
+      }): Provenance =>
+        provenienciaIbge({ fonte: "SIDRA", url, chaveCache: key, pesquisa, dataset, ...opts });
+
+      if (!data || data.length === 0) {
+        return {
+          markdown: "Nenhum dado encontrado para os parâmetros informados.",
+          structured: { ...meta, ...sidraRecords(data) },
+          provenance: proveniencia(),
+        };
+      }
+
+      // Reference period from the FULL result, before field selection/truncation.
+      const completo = sidraRecords(data);
+      const dataVintage = extrairPeriodoSidra(completo.colunas, completo.registros);
+
+      // Format output
+      let output = `## Censo Demográfico - ${tema.charAt(0).toUpperCase() + tema.slice(1).replace("_", " ")}\n\n`;
+      output += `**Tabela SIDRA:** ${tabelaInfo.tabela}\n`;
+      output += `**Descrição:** ${tabelaInfo.descricao}\n`;
+      output += `**Ano(s):** ${input.ano || "Série histórica"}\n\n`;
+
+      // Statistics mode (D2): full distribution over ALL data rows, before any
+      // truncation or field selection — `campos`/`formato` are ignored.
+      if (input.estatisticas) {
+        const dados = sidraRecords(data);
+        const resultado = estatisticasSidra(dados, {
+          agruparPor: input.agruparPor,
+          topN: input.topN ?? TOP_N_DEFAULT,
+        });
+        if (!resultado.ok) {
+          return { markdown: output + resultado.erro, isError: true };
+        }
+        return {
+          markdown: output + resultado.markdown,
+          structured: {
+            ...meta,
+            totalRegistros: dados.totalRegistros,
+            colunas: dados.colunas,
+            registros: [],
+            estatisticas: resultado.bloco,
+          },
+          provenance: proveniencia({
+            dataVintage,
+            derivado: { nota: NOTA_DERIVACAO_ESTATISTICAS },
+          }),
+        };
+      }
+
+      // Apply optional field selection (1.2) to both channels.
+      const filtered = selectSidraColumns(data, input.campos);
+
+      const structured = { ...meta, ...sidraRecords(filtered) };
+
+      if (input.formato === "json") {
+        return {
+          markdown: output + "```json\n" + JSON.stringify(filtered, null, 2) + "\n```",
+          structured,
+          provenance: proveniencia({ dataVintage }),
+        };
+      }
+
+      // Format as table
+      output += formatCensoTable(filtered);
+
+      return { markdown: output, structured, provenance: proveniencia({ dataVintage }) };
+    } catch (error) {
+      if (error instanceof Error) {
+        return {
+          markdown: parseHttpError(error, "ibge_censo", { ano: input.ano, tema: input.tema }, [
+            "ibge_sidra_metadados",
+            "ibge_sidra",
+          ]),
+          isError: true,
+        };
+      }
+      return { markdown: ValidationErrors.emptyResult("ibge_censo"), isError: true };
+    }
+  });
+}
+
+function buildSidraPath(
+  tabela: string,
+  nivel: string,
+  localidades: string,
+  periodos: string,
+  tema?: string
+): string {
+  let path = `/t/${tabela}`;
+  path += `/n${nivel}/${localidades}`;
+
+  // A tabela 9514 só devolve totais quando consultada sem classificações.
+  // Para o tema idade_sexo, a semântica prometida é a distribuição necessária
+  // à pirâmide etária: variável 93 (população residente), sexo Homens/Mulheres
+  // e todas as categorias de idade. A forma de declaração da idade permanece
+  // no total padrão da própria tabela.
+  if (tema === "idade_sexo" && tabela === "9514") {
+    path += `/v/93`;
+    path += `/p/${periodos}`;
+    path += `/c2/4,5`;
+    path += `/c287/all`;
+    return path;
+  }
+
+  // A tabela 9515 publica três indicadores sintéticos centrais do diagnóstico
+  // demográfico. Fixar as variáveis evita trazer medidas não previstas caso a
+  // tabela seja ampliada futuramente.
+  if (tema === "estrutura_etaria" && tabela === "9515") {
+    path += `/v/10612,10613,8845`;
+    path += `/p/${periodos}`;
+    return path;
+  }
+
+  // Educação 2022: expor os quatro grandes níveis de instrução usados pelo
+  // próprio IBGE na síntese do Censo, mantendo sexo, idade e cor/raça no total.
+  if (tema === "educacao" && tabela === "10061") {
+    path += `/v/2667`;
+    path += `/p/${periodos}`;
+    path += `/c1568/120704,9493,9494,9495,99713`;
+    return path;
+  }
+
+  // Trabalho 2022: selecionar explicitamente população 10+, ocupados e nível
+  // de ocupação, todos disponíveis em nível municipal.
+  if (tema === "trabalho" && tabela === "10268") {
+    path += `/v/140,696,675`;
+    path += `/p/${periodos}`;
+    return path;
+  }
+
+  // Rendimento 2022: renda domiciliar per capita média e mediana, publicadas
+  // pela tabela 10295 até o nível municipal.
+  if (tema === "rendimento" && tabela === "10295") {
+    path += `/v/13431,13534`;
+    path += `/p/${periodos}`;
+    return path;
+  }
+
+  // Em 2022, a tabela 6803 só devolve o total se a classificação não for
+  // expandida. O tema saneamento representa abastecimento de água; esgoto é
+  // exposto separadamente por ibge_datasaude(saneamento_esgoto), tabela 6805.
+  // Cor/raça 2022: expor as categorias publicadas pelo IBGE em vez do total.
+  if (tema === "cor_raca" && tabela === "9605") {
+    path += `/v/93`;
+    path += `/p/${periodos}`;
+    path += `/c86/all`;
+    return path;
+  }
+
+  // Deficiência 2022: total 2+, pessoas com deficiência e percentual.
+  if (tema === "deficiencia" && tabela === "10125") {
+    path += `/v/11852,12785,13403`;
+    path += `/p/${periodos}`;
+    return path;
+  }
+
+  if (tema === "saneamento" && tabela === "6803") {
+    path += `/v/381`;
+    path += `/p/${periodos}`;
+    path += `/c1821/all`;
+    return path;
+  }
+
+  path += `/v/allxp`;
+  path += `/p/${periodos}`;
+
+  return path;
+}
+
+function formatCensoTable(data: Record<string, string>[]): string {
+  if (data.length === 0) return "Nenhum dado encontrado.";
+
+  const headerRow = data[0];
+  const dataRows = data.slice(1);
+  const columns = Object.keys(headerRow);
+
+  // Limit to first 30 rows
+  const displayRows = dataRows.slice(0, 30);
+
+  const headers = columns.map((col) => headerRow[col] || col);
+  const rows = displayRows.map((row) =>
+    columns.map((col) => formatarCelulaSidra(headerRow[col] || col, row[col]))
+  );
+
+  let output = createMarkdownTable(headers, rows);
+
+  if (dataRows.length > 30) {
+    output += `\n_Mostrando 30 de ${dataRows.length} registros._\n`;
+  }
+
+  return output;
+}
+
+function listAvailableTables(ano?: string): string {
+  let output = "## Tabelas do Censo Demográfico Disponíveis\n\n";
+
+  if (ano && ano !== "todos") {
+    output += `### Tabelas para o Censo ${ano}\n\n`;
+
+    const rows: string[][] = [];
+    for (const [tema, tabelas] of Object.entries(CENSO_TABELAS)) {
+      const tabelaInfo =
+        tabelas[ano] ||
+        (["1970", "1980", "1991", "2000", "2010"].includes(ano)
+          ? tabelas["1970-2010"] || tabelas["1991-2010"]
+          : null);
+      if (tabelaInfo) {
+        rows.push([tema, tabelaInfo.tabela, tabelaInfo.descricao]);
+      }
+    }
+    output += createMarkdownTable(["Tema", "Tabela", "Descrição"], rows, {
+      alignment: ["left", "right", "left"],
+    });
+  } else {
+    // List all tables by theme
+    for (const [tema, tabelas] of Object.entries(CENSO_TABELAS)) {
+      output += `### ${tema.charAt(0).toUpperCase() + tema.slice(1).replace("_", " ")}\n\n`;
+
+      const rows = Object.entries(tabelas).map(([anos, info]) => [
+        anos,
+        info.tabela,
+        info.descricao,
+      ]);
+      output += createMarkdownTable(["Anos", "Tabela", "Descrição"], rows, {
+        alignment: ["left", "right", "left"],
+      });
+      output += "\n";
+    }
+  }
+
+  output += "---\n\n";
+  output += "### Como usar\n\n";
+  output += "```\n";
+  output += "# População do Censo 2022\n";
+  output += 'ibge_censo(ano="2022", tema="populacao")\n\n';
+  output += "# Série histórica de população (1970-2010)\n";
+  output += 'ibge_censo(ano="todos", tema="populacao")\n\n';
+  output += "# Alfabetização em 2010 por UF\n";
+  output += 'ibge_censo(ano="2010", tema="alfabetizacao", nivel_territorial="3")\n\n';
+  output += "# População de um município específico\n";
+  output +=
+    'ibge_censo(ano="2022", tema="populacao", nivel_territorial="6", localidades="3550308")\n';
+  output += "```\n";
+
+  return output;
+}

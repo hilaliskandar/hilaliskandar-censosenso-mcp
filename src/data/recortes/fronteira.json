@@ -1,0 +1,5911 @@
+{
+  "tema": "fronteira",
+  "versao": "2024",
+  "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/municipios_da_faixa_de_fronteira/2024/Mun_Faixa_de_Fronteira_Cidades_Gemeas_2024.ods",
+  "produto_url": "https://www.ibge.gov.br/geociencias/organizacao-do-territorio/estrutura-territorial/24073-municipios-da-faixa-de-fronteira.html",
+  "planilha": "Faixa de Fronteira - Município 2024",
+  "sha256_fonte": "0867803fd2fd6dcdec300218d0774c4ef6079a07ed0c56af1c95810fc90dc807",
+  "total_registros": 590,
+  "registros": [
+    {
+      "codigo_municipio": "1100015",
+      "municipio": "Alta Floresta D'Oeste",
+      "uf": "RO",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "7067,127",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1100031",
+      "municipio": "Cabixi",
+      "uf": "RO",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "1314,352",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1100056",
+      "municipio": "Cerejeiras",
+      "uf": "RO",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2783,297",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1100064",
+      "municipio": "Colorado do Oeste",
+      "uf": "RO",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1451,063",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1100072",
+      "municipio": "Corumbiara",
+      "uf": "RO",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "3060,321",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1100080",
+      "municipio": "Costa Marques",
+      "uf": "RO",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "4987,177",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1100106",
+      "municipio": "Guajará-Mirim",
+      "uf": "RO",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "24088,916",
+      "percentual_no_recorte": "96,910",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "1100148",
+      "municipio": "Nova Brasilândia D'Oeste",
+      "uf": "RO",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1174,890",
+      "percentual_no_recorte": "68,989",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1100189",
+      "municipio": "Pimenta Bueno",
+      "uf": "RO",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "320,680",
+      "percentual_no_recorte": "5,138",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1100205",
+      "municipio": "Porto Velho",
+      "uf": "RO",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "19149,678",
+      "percentual_no_recorte": "56,172",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1100288",
+      "municipio": "Rolim de Moura",
+      "uf": "RO",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "283,746",
+      "percentual_no_recorte": "19,464",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1100296",
+      "municipio": "Santa Luzia D'Oeste",
+      "uf": "RO",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1157,631",
+      "percentual_no_recorte": "96,647",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1100304",
+      "municipio": "Vilhena",
+      "uf": "RO",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "4517,528",
+      "percentual_no_recorte": "38,583",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1100320",
+      "municipio": "São Miguel do Guaporé",
+      "uf": "RO",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "6479,854",
+      "percentual_no_recorte": "95,438",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1100338",
+      "municipio": "Nova Mamoré",
+      "uf": "RO",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "9947,059",
+      "percentual_no_recorte": "98,774",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1100346",
+      "municipio": "Alvorada D'Oeste",
+      "uf": "RO",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "818,123",
+      "percentual_no_recorte": "27,008",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1100379",
+      "municipio": "Alto Alegre dos Parecis",
+      "uf": "RO",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "3958,273",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1100452",
+      "municipio": "Buritis",
+      "uf": "RO",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1644,568",
+      "percentual_no_recorte": "50,357",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1100502",
+      "municipio": "Novo Horizonte do Oeste",
+      "uf": "RO",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "359,926",
+      "percentual_no_recorte": "42,673",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1100700",
+      "municipio": "Campo Novo de Rondônia",
+      "uf": "RO",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "900,875",
+      "percentual_no_recorte": "26,173",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1100924",
+      "municipio": "Chupinguaia",
+      "uf": "RO",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "5117,290",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1101005",
+      "municipio": "Governador Jorge Teixeira",
+      "uf": "RO",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "0,012",
+      "percentual_no_recorte": "0,000",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1101450",
+      "municipio": "Parecis",
+      "uf": "RO",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2335,582",
+      "percentual_no_recorte": "91,639",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1101468",
+      "municipio": "Pimenteiras do Oeste",
+      "uf": "RO",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "6014,733",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1101476",
+      "municipio": "Primavera de Rondônia",
+      "uf": "RO",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "37,336",
+      "percentual_no_recorte": "6,164",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1101484",
+      "municipio": "São Felipe D'Oeste",
+      "uf": "RO",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "193,777",
+      "percentual_no_recorte": "35,776",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1101492",
+      "municipio": "São Francisco do Guaporé",
+      "uf": "RO",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "10948,593",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1101500",
+      "municipio": "Seringueiras",
+      "uf": "RO",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "4444,017",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1200013",
+      "municipio": "Acrelândia",
+      "uf": "AC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "1811,621",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1200054",
+      "municipio": "Assis Brasil",
+      "uf": "AC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "4962,946",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "1200104",
+      "municipio": "Brasiléia",
+      "uf": "AC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "3928,820",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "1200138",
+      "municipio": "Bujari",
+      "uf": "AC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2946,508",
+      "percentual_no_recorte": "97,067",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1200179",
+      "municipio": "Capixaba",
+      "uf": "AC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "1705,236",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1200203",
+      "municipio": "Cruzeiro do Sul",
+      "uf": "AC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "8158,690",
+      "percentual_no_recorte": "92,783",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1200252",
+      "municipio": "Epitaciolândia",
+      "uf": "AC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "1652,715",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "1200302",
+      "municipio": "Feijó",
+      "uf": "AC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "24734,162",
+      "percentual_no_recorte": "88,505",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1200328",
+      "municipio": "Jordão",
+      "uf": "AC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "5346,443",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1200336",
+      "municipio": "Mâncio Lima",
+      "uf": "AC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "5414,070",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1200344",
+      "municipio": "Manoel Urbano",
+      "uf": "AC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "8991,158",
+      "percentual_no_recorte": "84,997",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1200351",
+      "municipio": "Marechal Thaumaturgo",
+      "uf": "AC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "8185,635",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1200385",
+      "municipio": "Plácido de Castro",
+      "uf": "AC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "1952,531",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1200393",
+      "municipio": "Porto Walter",
+      "uf": "AC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "6452,756",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1200401",
+      "municipio": "Rio Branco",
+      "uf": "AC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "8834,831",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1200427",
+      "municipio": "Rodrigues Alves",
+      "uf": "AC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "3082,398",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1200435",
+      "municipio": "Santa Rosa do Purus",
+      "uf": "AC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "6222,340",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "1200450",
+      "municipio": "Senador Guiomard",
+      "uf": "AC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2320,946",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1200500",
+      "municipio": "Sena Madureira",
+      "uf": "AC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "18736,245",
+      "percentual_no_recorte": "78,949",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1200609",
+      "municipio": "Tarauacá",
+      "uf": "AC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "11440,618",
+      "percentual_no_recorte": "56,722",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1200708",
+      "municipio": "Xapuri",
+      "uf": "AC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "5350,300",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1200807",
+      "municipio": "Porto Acre",
+      "uf": "AC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2603,942",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1300060",
+      "municipio": "Amaturá",
+      "uf": "AM",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1349,249",
+      "percentual_no_recorte": "28,381",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1300201",
+      "municipio": "Atalaia do Norte",
+      "uf": "AM",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "65019,626",
+      "percentual_no_recorte": "84,988",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1300409",
+      "municipio": "Barcelos",
+      "uf": "AM",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "32417,070",
+      "percentual_no_recorte": "26,475",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1300607",
+      "municipio": "Benjamin Constant",
+      "uf": "AM",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "5086,809",
+      "percentual_no_recorte": "58,518",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1300706",
+      "municipio": "Boca do Acre",
+      "uf": "AM",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "5737,997",
+      "percentual_no_recorte": "26,155",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1300904",
+      "municipio": "Canutama",
+      "uf": "AM",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "512,862",
+      "percentual_no_recorte": "1,524",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1301654",
+      "municipio": "Guajará",
+      "uf": "AM",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "7470,181",
+      "percentual_no_recorte": "98,505",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1301803",
+      "municipio": "Ipixuna",
+      "uf": "AM",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "466,059",
+      "percentual_no_recorte": "3,849",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1302108",
+      "municipio": "Japurá",
+      "uf": "AM",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "36130,454",
+      "percentual_no_recorte": "64,784",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1302306",
+      "municipio": "Jutaí",
+      "uf": "AM",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "11940,574",
+      "percentual_no_recorte": "17,191",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1302405",
+      "municipio": "Lábrea",
+      "uf": "AM",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "32764,198",
+      "percentual_no_recorte": "47,997",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1303007",
+      "municipio": "Nhamundá",
+      "uf": "AM",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "660,221",
+      "percentual_no_recorte": "4,680",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1303601",
+      "municipio": "Santa Isabel do Rio Negro",
+      "uf": "AM",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "37257,303",
+      "percentual_no_recorte": "59,324",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1303700",
+      "municipio": "Santo Antônio do Içá",
+      "uf": "AM",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "10941,938",
+      "percentual_no_recorte": "88,367",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1303809",
+      "municipio": "São Gabriel da Cachoeira",
+      "uf": "AM",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "90253,552",
+      "percentual_no_recorte": "83,020",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1303908",
+      "municipio": "São Paulo de Olivença",
+      "uf": "AM",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "17805,916",
+      "percentual_no_recorte": "90,576",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1304062",
+      "municipio": "Tabatinga",
+      "uf": "AM",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "3259,543",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "1304237",
+      "municipio": "Tonantins",
+      "uf": "AM",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1078,395",
+      "percentual_no_recorte": "16,726",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1304302",
+      "municipio": "Urucará",
+      "uf": "AM",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "3086,152",
+      "percentual_no_recorte": "11,052",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1400027",
+      "municipio": "Amajari",
+      "uf": "RR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "28370,592",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1400050",
+      "municipio": "Alto Alegre",
+      "uf": "RR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "25354,864",
+      "percentual_no_recorte": "99,727",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1400100",
+      "municipio": "Boa Vista",
+      "uf": "RR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "5687,037",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1400159",
+      "municipio": "Bonfim",
+      "uf": "RR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "8079,840",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "1400175",
+      "municipio": "Cantá",
+      "uf": "RR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "7664,831",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1400209",
+      "municipio": "Caracaraí",
+      "uf": "RR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "16066,575",
+      "percentual_no_recorte": "33,906",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1400233",
+      "municipio": "Caroebe",
+      "uf": "RR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "12064,439",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1400282",
+      "municipio": "Iracema",
+      "uf": "RR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "10069,405",
+      "percentual_no_recorte": "71,828",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1400308",
+      "municipio": "Mucajaí",
+      "uf": "RR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "9252,172",
+      "percentual_no_recorte": "74,990",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1400407",
+      "municipio": "Normandia",
+      "uf": "RR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "6959,982",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1400456",
+      "municipio": "Pacaraima",
+      "uf": "RR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "8019,088",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "1400472",
+      "municipio": "Rorainópolis",
+      "uf": "RR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2325,492",
+      "percentual_no_recorte": "6,925",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1400506",
+      "municipio": "São João da Baliza",
+      "uf": "RR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "4280,817",
+      "percentual_no_recorte": "99,914",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1400605",
+      "municipio": "São Luiz",
+      "uf": "RR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1526,898",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1400704",
+      "municipio": "Uiramutã",
+      "uf": "RR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "8102,219",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1500404",
+      "municipio": "Alenquer",
+      "uf": "PA",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2361,854",
+      "percentual_no_recorte": "9,989",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1500503",
+      "municipio": "Almeirim",
+      "uf": "PA",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "25225,847",
+      "percentual_no_recorte": "34,571",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1503002",
+      "municipio": "Faro",
+      "uf": "PA",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "273,265",
+      "percentual_no_recorte": "2,321",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1505106",
+      "municipio": "Óbidos",
+      "uf": "PA",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "7610,963",
+      "percentual_no_recorte": "27,173",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1505304",
+      "municipio": "Oriximiná",
+      "uf": "PA",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "57736,566",
+      "percentual_no_recorte": "53,678",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1600055",
+      "municipio": "Serra do Navio",
+      "uf": "AP",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "7088,513",
+      "percentual_no_recorte": "91,903",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1600105",
+      "municipio": "Amapá",
+      "uf": "AP",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "810,291",
+      "percentual_no_recorte": "9,584",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1600154",
+      "municipio": "Pedra Branca do Amapari",
+      "uf": "AP",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "6227,171",
+      "percentual_no_recorte": "64,716",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1600204",
+      "municipio": "Calçoene",
+      "uf": "AP",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "11745,915",
+      "percentual_no_recorte": "83,202",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1600238",
+      "municipio": "Ferreira Gomes",
+      "uf": "AP",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "147,515",
+      "percentual_no_recorte": "2,966",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1600279",
+      "municipio": "Laranjal do Jari",
+      "uf": "AP",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "19593,833",
+      "percentual_no_recorte": "64,153",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "1600501",
+      "municipio": "Oiapoque",
+      "uf": "AP",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "23058,224",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "1600550",
+      "municipio": "Pracuúba",
+      "uf": "AP",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1370,439",
+      "percentual_no_recorte": "27,694",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4100459",
+      "municipio": "Altamira do Paraná",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "194,836",
+      "percentual_no_recorte": "50,352",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4100509",
+      "municipio": "Altônia",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "661,560",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4100707",
+      "municipio": "Alto Piquiri",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "447,666",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4101002",
+      "municipio": "Ampére",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "298,349",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4101051",
+      "municipio": "Anahy",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "102,895",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4102000",
+      "municipio": "Assis Chateaubriand",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "980,727",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4102604",
+      "municipio": "Barracão",
+      "uf": "PR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "161,213",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "4102752",
+      "municipio": "Bela Vista da Caroba",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "148,107",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4103008",
+      "municipio": "Boa Esperança",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "104,080",
+      "percentual_no_recorte": "34,362",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4103024",
+      "municipio": "Boa Esperança do Iguaçu",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "151,797",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4103057",
+      "municipio": "Boa Vista da Aparecida",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "266,175",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4103156",
+      "municipio": "Bom Jesus do Sul",
+      "uf": "PR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "176,129",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4103222",
+      "municipio": "Bom Sucesso do Sul",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "195,931",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4103354",
+      "municipio": "Braganey",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "343,321",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4103370",
+      "municipio": "Brasilândia do Sul",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "291,036",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4103453",
+      "municipio": "Cafelândia",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "274,904",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4103479",
+      "municipio": "Cafezal do Sul",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "335,392",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4103909",
+      "municipio": "Campina da Lagoa",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "369,574",
+      "percentual_no_recorte": "46,393",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4104055",
+      "municipio": "Campo Bonito",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "433,832",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4104428",
+      "municipio": "Candói",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "93,337",
+      "percentual_no_recorte": "6,169",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4104501",
+      "municipio": "Capanema",
+      "uf": "PR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "418,805",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4104600",
+      "municipio": "Capitão Leônidas Marques",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "280,063",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4104808",
+      "municipio": "Cascavel",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2091,199",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4105003",
+      "municipio": "Catanduvas",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "580,421",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4105300",
+      "municipio": "Céu Azul",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1180,361",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4105409",
+      "municipio": "Chopinzinho",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "957,551",
+      "percentual_no_recorte": "99,769",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4105607",
+      "municipio": "Cidade Gaúcha",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "84,462",
+      "percentual_no_recorte": "20,956",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4105706",
+      "municipio": "Clevelândia",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "703,695",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4106308",
+      "municipio": "Corbélia",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "529,137",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4106456",
+      "municipio": "Coronel Domingos Soares",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "22,522",
+      "percentual_no_recorte": "1,488",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4106506",
+      "municipio": "Coronel Vivida",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "684,201",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4106571",
+      "municipio": "Cruzeiro do Iguaçu",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "161,862",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4106605",
+      "municipio": "Cruzeiro do Oeste",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "775,984",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4107124",
+      "municipio": "Diamante do Sul",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "347,066",
+      "percentual_no_recorte": "99,952",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4107157",
+      "municipio": "Diamante D'Oeste",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "309,110",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4107207",
+      "municipio": "Dois Vizinhos",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "418,648",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4107256",
+      "municipio": "Douradina",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "420,604",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4107405",
+      "municipio": "Enéas Marques",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "192,203",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4107520",
+      "municipio": "Esperança Nova",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "141,286",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4107538",
+      "municipio": "Entre Rios do Oeste",
+      "uf": "PR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "120,967",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4107546",
+      "municipio": "Espigão Alto do Iguaçu",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "326,440",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4107850",
+      "municipio": "Flor da Serra do Sul",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "255,721",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4108205",
+      "municipio": "Formosa do Oeste",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "275,901",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4108304",
+      "municipio": "Foz do Iguaçu",
+      "uf": "PR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "609,192",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "4108320",
+      "municipio": "Francisco Alves",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "321,898",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4108403",
+      "municipio": "Francisco Beltrão",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "735,111",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4108601",
+      "municipio": "Goioerê",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "564,456",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4108809",
+      "municipio": "Guaíra",
+      "uf": "PR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "563,742",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "4109302",
+      "municipio": "Guaraniaçu",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1238,320",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4109658",
+      "municipio": "Honório Serpa",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "502,170",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4109757",
+      "municipio": "Ibema",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "145,446",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4109906",
+      "municipio": "Icaraíma",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "675,240",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4110052",
+      "municipio": "Iguatu",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "106,937",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4110607",
+      "municipio": "Iporã",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "647,894",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4110656",
+      "municipio": "Iracema do Oeste",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "81,538",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4110953",
+      "municipio": "Itaipulândia",
+      "uf": "PR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "330,846",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4111209",
+      "municipio": "Itapejara d'Oeste",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "254,014",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4111555",
+      "municipio": "Ivaté",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "410,156",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4112207",
+      "municipio": "Janiópolis",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "200,915",
+      "percentual_no_recorte": "59,654",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4112751",
+      "municipio": "Jesuítas",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "247,496",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4112959",
+      "municipio": "Juranda",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "257,200",
+      "percentual_no_recorte": "72,581",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4113254",
+      "municipio": "Laranjal",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "28,474",
+      "percentual_no_recorte": "5,090",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4113304",
+      "municipio": "Laranjeiras do Sul",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "244,159",
+      "percentual_no_recorte": "36,194",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4113452",
+      "municipio": "Lindoeste",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "347,093",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4114351",
+      "municipio": "Manfrinópolis",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "215,779",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4114401",
+      "municipio": "Mangueirinha",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "753,241",
+      "percentual_no_recorte": "71,366",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4114609",
+      "municipio": "Marechal Cândido Rondon",
+      "uf": "PR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "745,748",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4114708",
+      "municipio": "Maria Helena",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "486,224",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4115101",
+      "municipio": "Mariluz",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "433,170",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4115309",
+      "municipio": "Mariópolis",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "230,365",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4115358",
+      "municipio": "Maripá",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "283,793",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4115408",
+      "municipio": "Marmeleiro",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "387,612",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4115606",
+      "municipio": "Matelândia",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "639,208",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4115804",
+      "municipio": "Medianeira",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "328,732",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4115853",
+      "municipio": "Mercedes",
+      "uf": "PR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "197,136",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4116059",
+      "municipio": "Missal",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "324,397",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4116109",
+      "municipio": "Moreira Sales",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "353,475",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4116703",
+      "municipio": "Nova Aurora",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "470,642",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4116950",
+      "municipio": "Nova Esperança do Sudoeste",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "208,472",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4117057",
+      "municipio": "Nova Laranjeiras",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1032,617",
+      "percentual_no_recorte": "85,389",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4117206",
+      "municipio": "Nova Olímpia",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "136,289",
+      "percentual_no_recorte": "99,957",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4117222",
+      "municipio": "Nova Santa Rosa",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "204,665",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4117255",
+      "municipio": "Nova Prata do Iguaçu",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "352,565",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4117453",
+      "municipio": "Ouro Verde do Oeste",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "293,042",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4117602",
+      "municipio": "Palmas",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "24,287",
+      "percentual_no_recorte": "1,558",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4117909",
+      "municipio": "Palotina",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "651,238",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4118451",
+      "municipio": "Pato Bragado",
+      "uf": "PR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "135,600",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4118501",
+      "municipio": "Pato Branco",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "539,311",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4118857",
+      "municipio": "Perobal",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "409,050",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4118907",
+      "municipio": "Pérola",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "236,186",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4119004",
+      "municipio": "Pérola d'Oeste",
+      "uf": "PR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "205,279",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4119251",
+      "municipio": "Pinhal de São Bento",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "97,463",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4119806",
+      "municipio": "Planalto",
+      "uf": "PR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "346,241",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4120150",
+      "municipio": "Porto Barreiro",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "278,960",
+      "percentual_no_recorte": "77,270",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4120358",
+      "municipio": "Pranchita",
+      "uf": "PR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "226,140",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4120655",
+      "municipio": "Quarto Centenário",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "320,779",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4120853",
+      "municipio": "Quatro Pontes",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "114,393",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4120903",
+      "municipio": "Quedas do Iguaçu",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "821,503",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4121000",
+      "municipio": "Querência do Norte",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "784,440",
+      "percentual_no_recorte": "85,753",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4121257",
+      "municipio": "Ramilândia",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "237,196",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4121356",
+      "municipio": "Rancho Alegre D'Oeste",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "241,185",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4121406",
+      "municipio": "Realeza",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "353,416",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4121604",
+      "municipio": "Renascença",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "425,273",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4122156",
+      "municipio": "Rio Bonito do Iguaçu",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "681,403",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4122602",
+      "municipio": "Rondon",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "25,434",
+      "percentual_no_recorte": "4,582",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4122800",
+      "municipio": "Salgado Filho",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "181,015",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4123006",
+      "municipio": "Salto do Lontra",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "312,717",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4123303",
+      "municipio": "Santa Cruz de Monte Castelo",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "330,574",
+      "percentual_no_recorte": "74,788",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4123501",
+      "municipio": "Santa Helena",
+      "uf": "PR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "754,701",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4123709",
+      "municipio": "Santa Isabel do Ivaí",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "205,900",
+      "percentual_no_recorte": "58,913",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4123808",
+      "municipio": "Santa Izabel do Oeste",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "321,182",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4123824",
+      "municipio": "Santa Lúcia",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "126,813",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4123956",
+      "municipio": "Santa Mônica",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "32,998",
+      "percentual_no_recorte": "12,694",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4124020",
+      "municipio": "Santa Tereza do Oeste",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "326,190",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4124053",
+      "municipio": "Santa Terezinha de Itaipu",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "268,258",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4124400",
+      "municipio": "Santo Antônio do Sudoeste",
+      "uf": "PR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "325,651",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "4124806",
+      "municipio": "São João",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "388,059",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4125209",
+      "municipio": "São Jorge d'Oeste",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "379,545",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4125357",
+      "municipio": "São Jorge do Patrocínio",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "406,413",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4125456",
+      "municipio": "São José das Palmeiras",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "182,419",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4125704",
+      "municipio": "São Miguel do Iguaçu",
+      "uf": "PR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "851,917",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4125753",
+      "municipio": "São Pedro do Iguaçu",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "308,324",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4126272",
+      "municipio": "Saudade do Iguaçu",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "152,084",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4126355",
+      "municipio": "Serranópolis do Iguaçu",
+      "uf": "PR",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "482,394",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4126652",
+      "municipio": "Sulina",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "170,759",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4126801",
+      "municipio": "Tapejara",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "351,407",
+      "percentual_no_recorte": "59,420",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4126900",
+      "municipio": "Tapira",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "354,954",
+      "percentual_no_recorte": "81,717",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4127403",
+      "municipio": "Terra Roxa",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "800,807",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4127700",
+      "municipio": "Toledo",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1198,049",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4127858",
+      "municipio": "Três Barras do Paraná",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "505,505",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4127908",
+      "municipio": "Tuneiras do Oeste",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "364,127",
+      "percentual_no_recorte": "52,102",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4127957",
+      "municipio": "Tupãssi",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "299,769",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4128005",
+      "municipio": "Ubiratã",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "652,581",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4128104",
+      "municipio": "Umuarama",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1234,537",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4128559",
+      "municipio": "Vera Cruz do Oeste",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "326,947",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4128609",
+      "municipio": "Verê",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "311,801",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4128625",
+      "municipio": "Alto Paraíso",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "967,772",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4128708",
+      "municipio": "Vitorino",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "308,218",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4128807",
+      "municipio": "Xambrê",
+      "uf": "PR",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "359,712",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4200101",
+      "municipio": "Abelardo Luz",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "685,962",
+      "percentual_no_recorte": "71,904",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4200507",
+      "municipio": "Águas de Chapecó",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "139,511",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4200556",
+      "municipio": "Águas Frias",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "76,631",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4200804",
+      "municipio": "Anchieta",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "232,348",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4201273",
+      "municipio": "Arabutã",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "73,294",
+      "percentual_no_recorte": "55,281",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4201653",
+      "municipio": "Arvoredo",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "90,503",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4202081",
+      "municipio": "Bandeirante",
+      "uf": "SC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "148,074",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4202099",
+      "municipio": "Barra Bonita",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "92,934",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4202156",
+      "municipio": "Belmonte",
+      "uf": "SC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "93,852",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4202537",
+      "municipio": "Bom Jesus",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "63,883",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4202578",
+      "municipio": "Bom Jesus do Oeste",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "67,777",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4203105",
+      "municipio": "Caibi",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "173,079",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4203501",
+      "municipio": "Campo Erê",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "479,161",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4204103",
+      "municipio": "Caxambu do Sul",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "140,873",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4204202",
+      "municipio": "Chapecó",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "624,673",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4204301",
+      "municipio": "Concórdia",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "44,309",
+      "percentual_no_recorte": "5,544",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4204350",
+      "municipio": "Cordilheira Alta",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "85,276",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4204400",
+      "municipio": "Coronel Freitas",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "232,470",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4204459",
+      "municipio": "Coronel Martins",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "107,502",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4204707",
+      "municipio": "Cunha Porã",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "220,099",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4204756",
+      "municipio": "Cunhataí",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "54,811",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4204905",
+      "municipio": "Descanso",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "287,057",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4205001",
+      "municipio": "Dionísio Cerqueira",
+      "uf": "SC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "378,843",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "4205175",
+      "municipio": "Entre Rios",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "103,838",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4205308",
+      "municipio": "Faxinal dos Guedes",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "329,615",
+      "percentual_no_recorte": "96,926",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4205357",
+      "municipio": "Flor do Sertão",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "58,457",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4205431",
+      "municipio": "Formosa do Sul",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "100,408",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4205605",
+      "municipio": "Galvão",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "139,836",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4206405",
+      "municipio": "Guaraciaba",
+      "uf": "SC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "331,766",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4206603",
+      "municipio": "Guarujá do Sul",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "100,630",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4206652",
+      "municipio": "Guatambú",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "206,196",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4207650",
+      "municipio": "Iporã do Oeste",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "201,118",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4207684",
+      "municipio": "Ipuaçu",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "261,130",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4207700",
+      "municipio": "Ipumirim",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "108,697",
+      "percentual_no_recorte": "44,165",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4207759",
+      "municipio": "Iraceminha",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "165,147",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4207858",
+      "municipio": "Irati",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "77,912",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4208005",
+      "municipio": "Itá",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "166,234",
+      "percentual_no_recorte": "99,981",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4208401",
+      "municipio": "Itapiranga",
+      "uf": "SC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "281,782",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4208955",
+      "municipio": "Jardinópolis",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "68,499",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4209177",
+      "municipio": "Jupiá",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "91,448",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4209458",
+      "municipio": "Lajeado Grande",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "65,348",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4210506",
+      "municipio": "Maravilha",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "170,339",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4210555",
+      "municipio": "Marema",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "104,184",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4210902",
+      "municipio": "Modelo",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "92,346",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4211009",
+      "municipio": "Mondaí",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "200,276",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4211405",
+      "municipio": "Nova Erechim",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "65,087",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4211454",
+      "municipio": "Nova Itaberaba",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "137,069",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4211652",
+      "municipio": "Novo Horizonte",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "151,722",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4211850",
+      "municipio": "Ouro Verde",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "188,568",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4211876",
+      "municipio": "Paial",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "86,048",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4212007",
+      "municipio": "Palma Sola",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "330,878",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4212106",
+      "municipio": "Palmitos",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "351,051",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4212239",
+      "municipio": "Paraíso",
+      "uf": "SC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "180,338",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4212908",
+      "municipio": "Pinhalzinho",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "128,726",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4213153",
+      "municipio": "Planalto Alegre",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "63,100",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4213401",
+      "municipio": "Ponte Serrada",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1,048",
+      "percentual_no_recorte": "0,187",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4214151",
+      "municipio": "Princesa",
+      "uf": "SC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "85,598",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4214201",
+      "municipio": "Quilombo",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "278,983",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4215075",
+      "municipio": "Riqueza",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "191,061",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4215208",
+      "municipio": "Romelândia",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "223,333",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4215356",
+      "municipio": "Saltinho",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "156,568",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4215554",
+      "municipio": "Santa Helena",
+      "uf": "SC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "81,004",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4215687",
+      "municipio": "Santa Terezinha do Progresso",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "119,653",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4215695",
+      "municipio": "Santiago do Sul",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "73,335",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4215752",
+      "municipio": "São Bernardino",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "149,891",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4216008",
+      "municipio": "São Carlos",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "162,120",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4216107",
+      "municipio": "São Domingos",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "367,525",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4216255",
+      "municipio": "São João do Oeste",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "163,589",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4216701",
+      "municipio": "São José do Cedro",
+      "uf": "SC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "280,760",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4216909",
+      "municipio": "São Lourenço do Oeste",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "356,193",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4217154",
+      "municipio": "São Miguel da Boa Vista",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "72,755",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4217204",
+      "municipio": "São Miguel do Oeste",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "233,830",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4217303",
+      "municipio": "Saudades",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "205,781",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4217501",
+      "municipio": "Seara",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "309,627",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4217550",
+      "municipio": "Serra Alta",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "90,564",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4217758",
+      "municipio": "Sul Brasil",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "113,125",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4217956",
+      "municipio": "Tigrinhos",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "56,962",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4218756",
+      "municipio": "Tunápolis",
+      "uf": "SC",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "132,939",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4218855",
+      "municipio": "União do Oeste",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "92,857",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4219101",
+      "municipio": "Vargeão",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "48,804",
+      "percentual_no_recorte": "29,279",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4219507",
+      "municipio": "Xanxerê",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "377,426",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4219606",
+      "municipio": "Xavantina",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "218,032",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4219705",
+      "municipio": "Xaxim",
+      "uf": "SC",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "293,628",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4300001",
+      "municipio": "Área Operacional \"Lagoa Mirim\"",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "2884,340",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4300002",
+      "municipio": "Área Operacional \"Lagoa dos Patos\"",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "750,082",
+      "percentual_no_recorte": "7,354",
+      "sede_na_faixa": "",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4300034",
+      "municipio": "Aceguá",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "1551,339",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "4300208",
+      "municipio": "Ajuricaba",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "322,674",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4300307",
+      "municipio": "Alecrim",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "316,394",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4300406",
+      "municipio": "Alegrete",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "7800,552",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4300455",
+      "municipio": "Alegria",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "172,794",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4300471",
+      "municipio": "Almirante Tamandaré do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "244,641",
+      "percentual_no_recorte": "92,303",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4300505",
+      "municipio": "Alpestre",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "325,979",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4300646",
+      "municipio": "Ametista do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "93,605",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4300901",
+      "municipio": "Aratiba",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "294,735",
+      "percentual_no_recorte": "86,110",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4301073",
+      "municipio": "Arroio do Padre",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "113,170",
+      "percentual_no_recorte": "90,759",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4301305",
+      "municipio": "Arroio Grande",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2508,557",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4301503",
+      "municipio": "Augusto Pestana",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "348,219",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4301602",
+      "municipio": "Bagé",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "4090,360",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4301701",
+      "municipio": "Barão de Cotegipe",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "244,868",
+      "percentual_no_recorte": "93,997",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4301859",
+      "municipio": "Barra do Guarita",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "62,801",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4301875",
+      "municipio": "Barra do Quaraí",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "1055,937",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "4301925",
+      "municipio": "Barra do Rio Azul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "146,995",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4301958",
+      "municipio": "Barra Funda",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "60,437",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4302055",
+      "municipio": "Benjamin Constant do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "132,351",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4302154",
+      "municipio": "Boa Vista das Missões",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "196,064",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4302204",
+      "municipio": "Boa Vista do Buricá",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "109,541",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4302220",
+      "municipio": "Boa Vista do Cadeado",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "586,336",
+      "percentual_no_recorte": "83,616",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4302378",
+      "municipio": "Bom Progresso",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "89,206",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4302501",
+      "municipio": "Bossoroca",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1610,056",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4302584",
+      "municipio": "Bozano",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "200,497",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4302600",
+      "municipio": "Braga",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "132,044",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4302808",
+      "municipio": "Caçapava do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1954,127",
+      "percentual_no_recorte": "64,109",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4302907",
+      "municipio": "Cacequi",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1937,477",
+      "percentual_no_recorte": "81,629",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4303301",
+      "municipio": "Caibaté",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "261,280",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4303400",
+      "municipio": "Caiçara",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "189,071",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4303707",
+      "municipio": "Campina das Missões",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "224,792",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4303806",
+      "municipio": "Campinas do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "276,162",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4304002",
+      "municipio": "Campo Novo",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "220,719",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4304309",
+      "municipio": "Cândido Godói",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "247,047",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4304358",
+      "municipio": "Candiota",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "933,628",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4304507",
+      "municipio": "Canguçu",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2269,852",
+      "percentual_no_recorte": "64,369",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4304655",
+      "municipio": "Capão do Cipó",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1007,796",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4304663",
+      "municipio": "Capão do Leão",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "783,196",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4304705",
+      "municipio": "Carazinho",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "176,695",
+      "percentual_no_recorte": "26,503",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4305009",
+      "municipio": "Catuípe",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "583,180",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4305124",
+      "municipio": "Cerrito",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "451,699",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4305157",
+      "municipio": "Cerro Grande",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "73,438",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4305207",
+      "municipio": "Cerro Largo",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "176,742",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4305306",
+      "municipio": "Chapada",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "684,247",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4305405",
+      "municipio": "Chiapetta",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "397,179",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4305439",
+      "municipio": "Chuí",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "202,387",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "4305702",
+      "municipio": "Condor",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "463,568",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4305801",
+      "municipio": "Constantina",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "203,614",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4305850",
+      "municipio": "Coqueiros do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "131,645",
+      "percentual_no_recorte": "47,500",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4305871",
+      "municipio": "Coronel Barros",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "163,716",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4305900",
+      "municipio": "Coronel Bicaco",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "492,303",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4306007",
+      "municipio": "Crissiumal",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "362,194",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4306072",
+      "municipio": "Cristal do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "97,073",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4306106",
+      "municipio": "Cruz Alta",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "378,905",
+      "percentual_no_recorte": "27,849",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4306130",
+      "municipio": "Cruzaltense",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "166,883",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4306320",
+      "municipio": "Derrubadas",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "360,851",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4306353",
+      "municipio": "Dezesseis de Novembro",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "216,341",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4306429",
+      "municipio": "Dois Irmãos das Missões",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "226,072",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4306601",
+      "municipio": "Dom Pedrito",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "5194,051",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4306734",
+      "municipio": "Doutor Maurício Cardoso",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "255,731",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4306908",
+      "municipio": "Encruzilhada do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "52,043",
+      "percentual_no_recorte": "1,555",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4306924",
+      "municipio": "Engenho Velho",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "71,191",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4306932",
+      "municipio": "Entre-Ijuís",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "553,915",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4306957",
+      "municipio": "Entre Rios do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "119,912",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4307005",
+      "municipio": "Erechim",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "24,759",
+      "percentual_no_recorte": "5,769",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4307104",
+      "municipio": "Herval",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "1759,717",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4307203",
+      "municipio": "Erval Grande",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "285,677",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4307302",
+      "municipio": "Erval Seco",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "357,181",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4307450",
+      "municipio": "Esperança do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "148,909",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4307831",
+      "municipio": "Eugênio de Castro",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "417,821",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4308052",
+      "municipio": "Faxinalzinho",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "143,321",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4308508",
+      "municipio": "Frederico Westphalen",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "264,876",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4308656",
+      "municipio": "Garruchos",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "803,970",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4309001",
+      "municipio": "Giruá",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "855,560",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4309126",
+      "municipio": "Gramado dos Loureiros",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "131,396",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4309506",
+      "municipio": "Guarani das Missões",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "289,516",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4309605",
+      "municipio": "Horizontina",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "229,694",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4309654",
+      "municipio": "Hulha Negra",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "822,608",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4309704",
+      "municipio": "Humaitá",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "135,010",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4310207",
+      "municipio": "Ijuí",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "688,982",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4310405",
+      "municipio": "Independência",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "358,284",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4310413",
+      "municipio": "Inhacorá",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "113,749",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4310504",
+      "municipio": "Iraí",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "181,850",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4310553",
+      "municipio": "Itacurubi",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1120,249",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4310603",
+      "municipio": "Itaqui",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "3405,999",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "4310702",
+      "municipio": "Itatiba do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "212,669",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4310850",
+      "municipio": "Jaboticaba",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "127,589",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4310900",
+      "municipio": "Jacutinga",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "178,009",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4311007",
+      "municipio": "Jaguarão",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "2051,845",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "4311106",
+      "municipio": "Jaguari",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "179,988",
+      "percentual_no_recorte": "26,661",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4311155",
+      "municipio": "Jóia",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1170,491",
+      "percentual_no_recorte": "94,493",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4311429",
+      "municipio": "Lajeado do Bugre",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "67,947",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4311502",
+      "municipio": "Lavras do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2600,969",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4311601",
+      "municipio": "Liberato Salzano",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "245,627",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4311718",
+      "municipio": "Maçambará",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1682,676",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4311759",
+      "municipio": "Manoel Viana",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1365,086",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4312005",
+      "municipio": "Mariano Moro",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "0,269",
+      "percentual_no_recorte": "0,272",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4312179",
+      "municipio": "Mato Queimado",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "114,653",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4312302",
+      "municipio": "Miraguaí",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "131,236",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4312450",
+      "municipio": "Morro Redondo",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "244,645",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4312708",
+      "municipio": "Nonoai",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "468,962",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4312955",
+      "municipio": "Nova Boa Vista",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "93,733",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4313011",
+      "municipio": "Nova Candelária",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "97,579",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4313037",
+      "municipio": "Nova Esperança do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "191,772",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4313334",
+      "municipio": "Nova Ramada",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "255,264",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4313425",
+      "municipio": "Novo Machado",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "218,836",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4313441",
+      "municipio": "Novo Tiradentes",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "75,428",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4313466",
+      "municipio": "Novo Xingu",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "79,851",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4313490",
+      "municipio": "Novo Barreiro",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "123,344",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4313706",
+      "municipio": "Palmeira das Missões",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1421,101",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4313805",
+      "municipio": "Palmitinho",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "144,181",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4313904",
+      "municipio": "Panambi",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "491,570",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4314134",
+      "municipio": "Paulo Bento",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "48,010",
+      "percentual_no_recorte": "32,077",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4314175",
+      "municipio": "Pedras Altas",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "1373,985",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4314209",
+      "municipio": "Pedro Osório",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "603,757",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4314308",
+      "municipio": "Pejuçara",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "414,106",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4314407",
+      "municipio": "Pelotas",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1253,093",
+      "percentual_no_recorte": "77,891",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4314456",
+      "municipio": "Pinhal",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "68,222",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4314498",
+      "municipio": "Pinheirinho do Vale",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "105,385",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4314506",
+      "municipio": "Pinheiro Machado",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2249,176",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4314555",
+      "municipio": "Pirapó",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "281,794",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4314605",
+      "municipio": "Piratini",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "3535,372",
+      "percentual_no_recorte": "99,917",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4314704",
+      "municipio": "Planalto",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "228,552",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4314779",
+      "municipio": "Pontão",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "224,138",
+      "percentual_no_recorte": "44,586",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4314787",
+      "municipio": "Ponte Preta",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "99,504",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4315008",
+      "municipio": "Porto Lucena",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "250,876",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4315057",
+      "municipio": "Porto Mauá",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "105,811",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "4315073",
+      "municipio": "Porto Vera Cruz",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "114,284",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4315107",
+      "municipio": "Porto Xavier",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "281,497",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "4315305",
+      "municipio": "Quaraí",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "3139,995",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "4315313",
+      "municipio": "Quatro Irmãos",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "82,837",
+      "percentual_no_recorte": "30,798",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4315404",
+      "municipio": "Redentora",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "303,705",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4315552",
+      "municipio": "Rio dos Índios",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "235,854",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4315602",
+      "municipio": "Rio Grande",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2682,867",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4315909",
+      "municipio": "Rodeio Bonito",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "83,278",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4315958",
+      "municipio": "Rolador",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "295,201",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4316105",
+      "municipio": "Ronda Alta",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "418,675",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4316204",
+      "municipio": "Rondinha",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "252,454",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4316303",
+      "municipio": "Roque Gonzales",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "349,084",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4316402",
+      "municipio": "Rosário do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "4343,656",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4316428",
+      "municipio": "Sagrada Família",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "77,889",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4316436",
+      "municipio": "Saldanha Marinho",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "57,842",
+      "percentual_no_recorte": "26,107",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4316477",
+      "municipio": "Salvador das Missões",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "95,952",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4316709",
+      "municipio": "Santa Bárbara do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "795,882",
+      "percentual_no_recorte": "81,562",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4316972",
+      "municipio": "Santa Margarida do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "955,299",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4317004",
+      "municipio": "Santana da Boa Vista",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "913,597",
+      "percentual_no_recorte": "64,392",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4317103",
+      "municipio": "Sant'Ana do Livramento",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "6946,407",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "4317202",
+      "municipio": "Santa Rosa",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "489,380",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4317301",
+      "municipio": "Santa Vitória do Palmar",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "5206,977",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4317400",
+      "municipio": "Santiago",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2312,426",
+      "percentual_no_recorte": "95,815",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4317509",
+      "municipio": "Santo Ângelo",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "678,502",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4317707",
+      "municipio": "Santo Antônio das Missões",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1710,466",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4317806",
+      "municipio": "Santo Augusto",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "467,775",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4317905",
+      "municipio": "Santo Cristo",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "367,202",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4318002",
+      "municipio": "São Borja",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "3616,674",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "4318101",
+      "municipio": "São Francisco de Assis",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2455,216",
+      "percentual_no_recorte": "96,861",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4318309",
+      "municipio": "São Gabriel",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "4153,227",
+      "percentual_no_recorte": "82,186",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4318457",
+      "municipio": "São José das Missões",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "98,125",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4318499",
+      "municipio": "São José do Inhacorá",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "77,732",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4318507",
+      "municipio": "São José do Norte",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "375,436",
+      "percentual_no_recorte": "35,011",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4318804",
+      "municipio": "São Lourenço do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1,120",
+      "percentual_no_recorte": "0,055",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4318903",
+      "municipio": "São Luiz Gonzaga",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1296,773",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4319109",
+      "municipio": "São Martinho",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "171,245",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4319158",
+      "municipio": "São Miguel das Missões",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1228,910",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4319208",
+      "municipio": "São Nicolau",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "497,446",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4319307",
+      "municipio": "São Paulo das Missões",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "222,504",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4319364",
+      "municipio": "São Pedro das Missões",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "79,894",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4319372",
+      "municipio": "São Pedro do Butiá",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "107,394",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4319604",
+      "municipio": "São Sepé",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "218,900",
+      "percentual_no_recorte": "9,928",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4319703",
+      "municipio": "São Valentim",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "154,450",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4319737",
+      "municipio": "São Valério do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "107,402",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4319802",
+      "municipio": "São Vicente do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "650,693",
+      "percentual_no_recorte": "55,415",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4320107",
+      "municipio": "Sarandi",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "351,718",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4320206",
+      "municipio": "Seberi",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "301,032",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4320230",
+      "municipio": "Sede Nova",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "119,312",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4320321",
+      "municipio": "Senador Salgado Filho",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "147,097",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4320503",
+      "municipio": "Sertão",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "0,137",
+      "percentual_no_recorte": "0,031",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4320578",
+      "municipio": "Sete de Setembro",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "131,660",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4321329",
+      "municipio": "Taquaruçu do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "76,917",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4321402",
+      "municipio": "Tenente Portela",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "337,495",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4321477",
+      "municipio": "Tiradentes do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "236,653",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4321808",
+      "municipio": "Três de Maio",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "421,461",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4321857",
+      "municipio": "Três Palmeiras",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "180,599",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4321907",
+      "municipio": "Três Passos",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "268,902",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4321956",
+      "municipio": "Trindade do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "268,417",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4322103",
+      "municipio": "Tucunduva",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "181,198",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4322202",
+      "municipio": "Tupanciretã",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "356,786",
+      "percentual_no_recorte": "15,834",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4322301",
+      "municipio": "Tuparendi",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "307,710",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4322343",
+      "municipio": "Ubiretama",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "125,876",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4322376",
+      "municipio": "Unistalda",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "602,260",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4322400",
+      "municipio": "Uruguaiana",
+      "uf": "RS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "5702,098",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "4323101",
+      "municipio": "Vicente Dutra",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "193,023",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4323457",
+      "municipio": "Vila Nova do Sul",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "470,545",
+      "percentual_no_recorte": "92,576",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4323507",
+      "municipio": "Vista Alegre",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "77,656",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4323705",
+      "municipio": "Vista Gaúcha",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "90,022",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "4323754",
+      "municipio": "Vitória das Missões",
+      "uf": "RS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "258,454",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5000609",
+      "municipio": "Amambai",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "4193,742",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5000708",
+      "municipio": "Anastácio",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "225,311",
+      "percentual_no_recorte": "7,734",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5000906",
+      "municipio": "Antônio João",
+      "uf": "MS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "1095,900",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5001102",
+      "municipio": "Aquidauana",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2180,205",
+      "percentual_no_recorte": "12,759",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5001243",
+      "municipio": "Aral Moreira",
+      "uf": "MS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "1653,860",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5002100",
+      "municipio": "Bela Vista",
+      "uf": "MS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "4956,473",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "5002159",
+      "municipio": "Bodoquena",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2402,555",
+      "percentual_no_recorte": "92,794",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5002209",
+      "municipio": "Bonito",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "4961,587",
+      "percentual_no_recorte": "92,245",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5002407",
+      "municipio": "Caarapó",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2115,730",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5002803",
+      "municipio": "Caracol",
+      "uf": "MS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "2928,706",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5003157",
+      "municipio": "Coronel Sapucaia",
+      "uf": "MS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "1023,727",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "5003207",
+      "municipio": "Corumbá",
+      "uf": "MS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "46549,938",
+      "percentual_no_recorte": "72,248",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "5003454",
+      "municipio": "Deodápolis",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "79,805",
+      "percentual_no_recorte": "9,633",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5003488",
+      "municipio": "Dois Irmãos do Buriti",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1,172",
+      "percentual_no_recorte": "0,048",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5003504",
+      "municipio": "Douradina",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "280,235",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5003702",
+      "municipio": "Dourados",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "3865,397",
+      "percentual_no_recorte": "95,139",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5003751",
+      "municipio": "Eldorado",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1012,796",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5003801",
+      "municipio": "Fátima do Sul",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "325,631",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5004007",
+      "municipio": "Glória de Dourados",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "275,716",
+      "percentual_no_recorte": "55,914",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5004106",
+      "municipio": "Guia Lopes da Laguna",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1225,426",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5004304",
+      "municipio": "Iguatemi",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2957,410",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5004502",
+      "municipio": "Itaporã",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1342,389",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5004601",
+      "municipio": "Itaquiraí",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2063,717",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5004809",
+      "municipio": "Japorã",
+      "uf": "MS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "416,605",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5005004",
+      "municipio": "Jardim",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2130,068",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5005103",
+      "municipio": "Jateí",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1704,552",
+      "percentual_no_recorte": "88,167",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5005152",
+      "municipio": "Juti",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1569,176",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5005202",
+      "municipio": "Ladário",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "354,255",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5005251",
+      "municipio": "Laguna Carapã",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1725,780",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5005400",
+      "municipio": "Maracaju",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "5388,558",
+      "percentual_no_recorte": "99,845",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5005608",
+      "municipio": "Miranda",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "3740,458",
+      "percentual_no_recorte": "68,369",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5005681",
+      "municipio": "Mundo Novo",
+      "uf": "MS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "478,380",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "5005707",
+      "municipio": "Naviraí",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "3189,667",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5005806",
+      "municipio": "Nioaque",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "3749,395",
+      "percentual_no_recorte": "95,899",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5006002",
+      "municipio": "Nova Alvorada do Sul",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "24,010",
+      "percentual_no_recorte": "0,596",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5006259",
+      "municipio": "Novo Horizonte do Sul",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "72,135",
+      "percentual_no_recorte": "8,495",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5006358",
+      "municipio": "Paranhos",
+      "uf": "MS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "1307,092",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "5006606",
+      "municipio": "Ponta Porã",
+      "uf": "MS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "5359,274",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "5006903",
+      "municipio": "Porto Murtinho",
+      "uf": "MS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "17502,994",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "5007208",
+      "municipio": "Rio Brilhante",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2395,282",
+      "percentual_no_recorte": "60,130",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5007703",
+      "municipio": "Sete Quedas",
+      "uf": "MS",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "839,117",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5007901",
+      "municipio": "Sidrolândia",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1605,491",
+      "percentual_no_recorte": "30,490",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5007950",
+      "municipio": "Tacuru",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1784,207",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5007976",
+      "municipio": "Taquarussu",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "123,665",
+      "percentual_no_recorte": "11,753",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5008404",
+      "municipio": "Vicentina",
+      "uf": "MS",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "302,542",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5101258",
+      "municipio": "Araputanga",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1639,733",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5101605",
+      "municipio": "Barão de Melgaço",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1094,935",
+      "percentual_no_recorte": "9,626",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5101704",
+      "municipio": "Barra do Bugres",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1302,245",
+      "percentual_no_recorte": "21,788",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5102504",
+      "municipio": "Cáceres",
+      "uf": "MT",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "24495,986",
+      "percentual_no_recorte": "99,984",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": "Portaria N 2.507 de 05/10/2021 do Ministrio do D"
+    },
+    {
+      "codigo_municipio": "5102686",
+      "municipio": "Campos de Júlio",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "4745,946",
+      "percentual_no_recorte": "69,867",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5103304",
+      "municipio": "Comodoro",
+      "uf": "MT",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "15700,225",
+      "percentual_no_recorte": "73,075",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5103361",
+      "municipio": "Conquista D'Oeste",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "2684,676",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5103437",
+      "municipio": "Curvelândia",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "357,212",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5103809",
+      "municipio": "Figueirópolis D'Oeste",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "891,448",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5103957",
+      "municipio": "Glória D'Oeste",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "833,130",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5104500",
+      "municipio": "Indiavaí",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "592,495",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5105002",
+      "municipio": "Jauru",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1345,411",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5105234",
+      "municipio": "Lambari D'Oeste",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1810,463",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5105507",
+      "municipio": "Vila Bela da Santíssima Trindade",
+      "uf": "MT",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "13484,710",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5105622",
+      "municipio": "Mirassol d'Oeste",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1085,486",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5106109",
+      "municipio": "Nossa Senhora do Livramento",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "221,948",
+      "percentual_no_recorte": "4,102",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5106182",
+      "municipio": "Nova Lacerda",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "4780,426",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5106505",
+      "municipio": "Poconé",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "11749,862",
+      "percentual_no_recorte": "69,061",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5106752",
+      "municipio": "Pontes e Lacerda",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "8545,292",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5106828",
+      "municipio": "Porto Esperidião",
+      "uf": "MT",
+      "toca_limite_internacional": "SIM",
+      "area_no_recorte_km2": "5835,278",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5106851",
+      "municipio": "Porto Estrela",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1208,765",
+      "percentual_no_recorte": "59,095",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5107107",
+      "municipio": "São José dos Quatro Marcos",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1282,763",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5107156",
+      "municipio": "Reserva do Cabaçal",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "719,779",
+      "percentual_no_recorte": "54,051",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5107206",
+      "municipio": "Rio Branco",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "539,287",
+      "percentual_no_recorte": "100,000",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5107750",
+      "municipio": "Salto do Céu",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1561,513",
+      "percentual_no_recorte": "89,057",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5107875",
+      "municipio": "Sapezal",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "41,857",
+      "percentual_no_recorte": "0,307",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5107958",
+      "municipio": "Tangará da Serra",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "968,201",
+      "percentual_no_recorte": "8,321",
+      "sede_na_faixa": "não",
+      "cidade_gemea": ""
+    },
+    {
+      "codigo_municipio": "5108352",
+      "municipio": "Vale de São Domingos",
+      "uf": "MT",
+      "toca_limite_internacional": "NÃO",
+      "area_no_recorte_km2": "1593,484",
+      "percentual_no_recorte": "83,775",
+      "sede_na_faixa": "sim",
+      "cidade_gemea": ""
+    }
+  ]
+}

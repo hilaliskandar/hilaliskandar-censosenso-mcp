@@ -1,0 +1,324 @@
+/**
+ * Smoke manual da superfície MCP (portado do ilo-mcp-server): initialize →
+ * tools/list → chamadas reais, cobrindo os modos estatísticos D2.
+ *
+ * O script fala com o SERVIDOR (worker em produção ou STDIO local), nunca com o
+ * IBGE diretamente — quem consulta o IBGE é o servidor (o WAF do IBGE rejeita
+ * User-Agent não-navegador; esse tratamento mora no retry do servidor).
+ *
+ * Uso:
+ *   node scripts/smoke-mcp.mjs --stdio                  # STDIO local
+ *   node scripts/smoke-mcp.mjs http://localhost:8787    # HTTP local
+ *   node scripts/smoke-mcp.mjs https://<host-proprio>   # HTTP explícito
+ *
+ * Produção: https://censosenso.poderdapalavra.org
+ */
+
+import { spawn } from "node:child_process";
+import { readdirSync, readFileSync } from "node:fs";
+
+const target = process.argv[2];
+const STDIO = target === "--stdio";
+if (!STDIO && !target) {
+  console.error("uso: smoke-mcp.mjs --stdio | <base-http-explicita>");
+  process.exit(2);
+}
+const BASE = STDIO ? null : target.replace(/\/+$/, "");
+
+/**
+ * O smoke fala pela ROTA DE USO PRÓPRIO, e isso não é detalhe de estilo.
+ *
+ * Ele chama `ibge_sidra` com um `agruparPor` inválido DE PROPÓSITO, para
+ * afirmar que a ferramenta recusa. Pela rota pública essa recusa entra na
+ * telemetria indistinguível de gente batendo numa porta emperrada — e entrava:
+ * medido em 11/09/2026, a `ibge_sidra` liderava a fila de urgências do painel
+ * com 42% de erro, e as redes da Azure (os runners do GitHub Actions) traziam
+ * 24 dos 43 erros da janela, numa proporção de um acerto para um erro que é a
+ * assinatura exata deste arquivo. O painel acusava o nosso próprio CI.
+ *
+ * O desconto de varredura do monitor não pega isto: ele procura rajada de
+ * catálogo e assinatura repetida de sessão GRANDE, e um smoke é uma sessão
+ * pequena e arrumada, igualzinha à de uma pessoa explorando. Quem sabe que
+ * este tráfego é nosso é este arquivo, então é ele que se identifica — a rota
+ * `/mcp/uso-proprio` existe desde 11/09/2026 para isso (worker/src/analytics.ts).
+ *
+ * A cobertura da rota pública não se perde: `confereRotaPublica()` abaixo abre
+ * um handshake contra `/mcp` antes de tudo. `initialize` é método de protocolo
+ * e não conta como chamada de ferramenta no painel.
+ */
+const ROTA_MCP = STDIO ? null : (process.env.SMOKE_MCP_ROUTE ?? "/mcp/uso-proprio");
+let nextId = 1;
+
+// --- Transporte HTTP (Streamable HTTP, com sessão) -------------------------
+let sessionId = null;
+async function rpcHttp(method, params, isNotification = false) {
+  const body = { jsonrpc: "2.0", method, params };
+  if (!isNotification) body.id = nextId++;
+  const res = await fetch(`${BASE}${ROTA_MCP}`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json, text/event-stream",
+      ...(sessionId ? { "mcp-session-id": sessionId } : {}),
+    },
+    body: JSON.stringify(body),
+  });
+  sessionId ??= res.headers.get("mcp-session-id");
+  if (isNotification) return null;
+  const text = await res.text();
+  if (!res.ok) throw new Error(`${method}: HTTP ${res.status} ${text.slice(0, 300)}`);
+  // Streamable HTTP pode responder SSE; extrair o(s) data:
+  const payloads =
+    text.startsWith("event:") || text.includes("\ndata:") || text.startsWith("data:")
+      ? text.split("\n").filter((l) => l.startsWith("data:")).map((l) => l.slice(5).trim())
+      : [text];
+  const msg = JSON.parse(payloads[payloads.length - 1]);
+  if (msg.error) throw new Error(`${method}: ${JSON.stringify(msg.error).slice(0, 400)}`);
+  return msg.result;
+}
+
+// --- Transporte STDIO (JSON delimitado por \n contra dist/index.js) --------
+let child = null;
+const pending = new Map();
+function startStdio() {
+  child = spawn(process.execPath, ["dist/index.js"], { stdio: ["pipe", "pipe", "inherit"] });
+  let buffer = "";
+  child.stdout.on("data", (chunk) => {
+    buffer += chunk.toString();
+    let idx;
+    while ((idx = buffer.indexOf("\n")) >= 0) {
+      const line = buffer.slice(0, idx).trim();
+      buffer = buffer.slice(idx + 1);
+      if (!line) continue;
+      const msg = JSON.parse(line);
+      if (msg.id !== undefined && pending.has(msg.id)) {
+        const { resolve, reject } = pending.get(msg.id);
+        pending.delete(msg.id);
+        if (msg.error) reject(new Error(JSON.stringify(msg.error).slice(0, 400)));
+        else resolve(msg.result);
+      }
+    }
+  });
+}
+function rpcStdio(method, params, isNotification = false) {
+  const body = { jsonrpc: "2.0", method, params };
+  if (isNotification) {
+    child.stdin.write(JSON.stringify(body) + "\n");
+    return Promise.resolve(null);
+  }
+  const id = nextId++;
+  body.id = id;
+  return new Promise((resolve, reject) => {
+    pending.set(id, { resolve, reject });
+    child.stdin.write(JSON.stringify(body) + "\n");
+    setTimeout(() => {
+      if (pending.has(id)) {
+        pending.delete(id);
+        reject(new Error(`${method}: timeout (60s)`));
+      }
+    }, 60_000).unref();
+  });
+}
+
+const rpc = STDIO ? rpcStdio : rpcHttp;
+if (STDIO) startStdio();
+
+function fail(msg) {
+  console.error(`SMOKE FALHOU: ${msg}`);
+  process.exit(1);
+}
+
+// --- Roteiro ----------------------------------------------------------------
+
+/**
+ * A rota PÚBLICA continua provada, mesmo com o roteiro correndo pela privada.
+ *
+ * Um handshake só, contra `/mcp`, conferindo que o servidor se apresenta com o
+ * mesmo nome. É o que fecha o buraco que trocar de rota abriria: uma quebra que
+ * atingisse `/mcp` e não a rota de uso próprio passaria despercebida. Sai de
+ * graça na telemetria de ferramenta — `initialize` é método de protocolo, e o
+ * painel os exclui por construção.
+ */
+async function confereRotaPublica() {
+  if (STDIO || ROTA_MCP === "/mcp") return;
+  const res = await fetch(`${BASE}/mcp`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", Accept: "application/json, text/event-stream" },
+    body: JSON.stringify({
+      jsonrpc: "2.0",
+      id: 0,
+      method: "initialize",
+      params: {
+        protocolVersion: "2025-06-18",
+        capabilities: {},
+        clientInfo: { name: "smoke-rota-publica", version: "0.0.0" },
+      },
+    }),
+  });
+  const texto = await res.text();
+  if (!res.ok) fail(`rota pública /mcp: HTTP ${res.status} ${texto.slice(0, 200)}`);
+  const linha = texto.includes("data:")
+    ? texto.split("\n").find((l) => l.startsWith("data:"))?.slice(5).trim()
+    : texto;
+  const nome = JSON.parse(linha)?.result?.serverInfo?.name;
+  if (!nome) fail(`rota pública /mcp: handshake sem serverInfo (${texto.slice(0, 200)})`);
+  console.log(`rota pública /mcp: ok (${nome})`);
+}
+
+/**
+ * CONTRATO DE SESSÃO (desde 2026-09-17). O Worker emite `Mcp-Session-Id` no
+ * initialize para a telemetria ligar as mensagens de um aperto de mão; o
+ * handler é stateless e IGNORA o cabeçalho que o cliente devolve. Este teste
+ * existe porque isso depende do modo stateless do SDK e do `agents`: um
+ * upgrade que passasse a validar sessão quebraria todo cliente que devolve o
+ * id — e quebraria aqui, no deploy, antes de virar incidente. O DELETE é 405
+ * nos sete servidores (servidor sem sessão não encerra sessão).
+ */
+async function contratoDeSessao(endpoint) {
+  const cab = { "Content-Type": "application/json", Accept: "application/json, text/event-stream" };
+  const init = await fetch(endpoint, {
+    method: "POST", headers: cab,
+    body: JSON.stringify({ jsonrpc: "2.0", id: 91, method: "initialize", params: {
+      protocolVersion: "2025-06-18", capabilities: {},
+      clientInfo: { name: "smoke-contrato-sessao", version: "0.0.0" } } })
+  });
+  await init.text();
+  const sid = init.headers.get("mcp-session-id") ?? "";
+  if (!/^[A-Za-z0-9._~-]{1,64}$/.test(sid)) {
+    throw new Error(`contrato de sessão: initialize sem Mcp-Session-Id legível (${JSON.stringify(sid)})`);
+  }
+  const lista = await fetch(endpoint, {
+    method: "POST", headers: { ...cab, "mcp-session-id": "contrato-inexistente-" + Date.now() },
+    body: JSON.stringify({ jsonrpc: "2.0", id: 92, method: "tools/list", params: {} })
+  });
+  await lista.text();
+  if (lista.status !== 200) {
+    throw new Error(`contrato de sessão: tools/list com id desconhecido respondeu HTTP ${lista.status} (o handler stateless tem de ignorar o cabeçalho)`);
+  }
+  const del = await fetch(endpoint, { method: "DELETE", headers: { "mcp-session-id": sid } });
+  await del.text();
+  if (del.status !== 405) {
+    throw new Error(`contrato de sessão: DELETE respondeu HTTP ${del.status}, esperado 405 (servidor sem sessão)`);
+  }
+  console.log("contrato de sessão: ok (id emitido no initialize, id desconhecido ignorado, DELETE 405)");
+}
+
+await confereRotaPublica();
+if (!STDIO) await contratoDeSessao(`${BASE}${ROTA_MCP}`);
+
+const init = await rpc("initialize", {
+  protocolVersion: "2025-06-18",
+  capabilities: {},
+  clientInfo: { name: "smoke", version: "0.0.0" },
+});
+console.log("initialize:", init.serverInfo);
+if (!init.instructions) fail("instructions ausentes no handshake");
+console.log("instructions:", init.instructions.slice(0, 80) + "...");
+
+await rpc("notifications/initialized", {}, true).catch(() => {});
+
+// A contagem esperada NÃO é um literal: vem do baseline de superfície mais
+// recente (baselines/surface-stdio-<versão>.json, ver baselines/README.md).
+// Mudou a superfície sem recapturar o baseline → o smoke fica vermelho, que é
+// o combinado; um "21" pinado aqui ficou para trás na 4.3.0 e derrubou o
+// deploy com a produção certa.
+const versaoDe = (nome) => nome.match(/(\d+)\.(\d+)\.(\d+)/).slice(1).map(Number);
+const baselineMaisRecente = readdirSync("baselines")
+  .filter((f) => /^surface-stdio-\d+\.\d+\.\d+\.json$/.test(f))
+  .sort((a, b) => {
+    const [va, vb] = [versaoDe(a), versaoDe(b)];
+    return va[0] - vb[0] || va[1] - vb[1] || va[2] - vb[2];
+  })
+  .at(-1);
+if (!baselineMaisRecente) fail("nenhum baselines/surface-stdio-*.json para derivar a contagem");
+const esperado = JSON.parse(readFileSync(`baselines/${baselineMaisRecente}`, "utf8")).toolCount;
+
+const { tools } = await rpc("tools/list", {});
+console.log(`tools/list: ${tools.length} tools (baseline ${baselineMaisRecente}: ${esperado})`);
+if (tools.length !== esperado) fail(`esperava ${esperado} tools, veio ${tools.length}`);
+const semTitle = tools.filter((t) => !t.title);
+if (semTitle.length > 0) fail(`tools sem title: ${semTitle.map((t) => t.name).join(", ")}`);
+console.log(`titles: ok nas ${tools.length}`);
+
+// 1) Tool simples + bloco de proveniência (contrato v1.0, três canais)
+const estados = await rpc("tools/call", {
+  name: "ibge_estados",
+  arguments: { regiao: "SE" },
+});
+if (estados.isError) fail("ibge_estados retornou erro");
+console.log("\nibge_estados SE: ok,", Object.keys(estados.structuredContent ?? {}));
+
+const prov = estados.structuredContent?.provenance;
+if (!prov) fail("bloco de proveniência ausente em structuredContent");
+const chaves = Object.keys(prov).join(",");
+if (chaves !== "source,source_url,data_vintage,retrieved_at,citation,license")
+  fail(`chaves do bloco concise fora do contrato: ${chaves}`);
+if (!/^Fonte: IBGE — .+, extraído em \d{2}\/\d{2}\/\d{4}\.$/.test(prov.citation))
+  fail(`citation fora do padrão: ${prov.citation}`);
+if (!Array.isArray(estados.structuredContent.attribution) || estados.structuredContent.attribution.length === 0)
+  fail("attribution ausente em structuredContent");
+const rodape = estados.content?.[estados.content.length - 1]?.text ?? "";
+if (!rodape.includes("A referência completa desta informação pode ser solicitada nesta própria conversa."))
+  fail("rodapé de proveniência ausente no canal de texto");
+const metaProv = estados._meta?.["io.github.hilaliskandar.censosenso/provenance"];
+if (!metaProv) fail("espelho de proveniência ausente em _meta");
+console.log("provenance: ok (structuredContent + rodapé + _meta) |", prov.source);
+
+// 2) D2 — distribuição + top/bottom (população por UF)
+const stats = await rpc("tools/call", {
+  name: "ibge_sidra",
+  arguments: { tabela: "6579", nivel_territorial: "3", estatisticas: true, topN: 3 },
+});
+if (stats.isError) fail("ibge_sidra estatisticas=true retornou erro");
+const bloco = stats.structuredContent?.estatisticas;
+if (!bloco?.distribuicao) fail("bloco estatisticas.distribuicao ausente");
+if (!stats.structuredContent?.provenance) fail("proveniência ausente no modo estatísticas (derivado)");
+console.log("\nibge_sidra estatisticas: n =", bloco.distribuicao.n, "| top[0] =", JSON.stringify(bloco.top?.[0]));
+if (stats.structuredContent.registros.length !== 0) fail("registros deveriam vir vazios no modo estatísticas");
+
+// 3) D2 — agrupado
+const agrupado = await rpc("tools/call", {
+  name: "ibge_censo",
+  arguments: { ano: "2022", tema: "populacao", nivel_territorial: "3", estatisticas: true, agruparPor: "Unidade da Federação" },
+});
+if (agrupado.isError) fail("ibge_censo agrupado retornou erro");
+const blocoG = agrupado.structuredContent?.estatisticas;
+if (!blocoG?.grupos?.length) fail("bloco agrupado sem grupos");
+console.log("ibge_censo agrupado: totalGrupos =", blocoG.totalGrupos, "| grupos[0] =", blocoG.grupos[0].grupo);
+
+// 4) Erro pedagógico — coluna de agrupamento inexistente
+const erro = await rpc("tools/call", {
+  name: "ibge_sidra",
+  arguments: { tabela: "6579", estatisticas: true, agruparPor: "ColunaInexistente" },
+});
+if (!erro.isError) fail("agruparPor inválido deveria retornar isError");
+console.log("agruparPor inválido → isError: true |", erro.content[0].text.slice(0, 80));
+
+// 5) Contrato Deep Research do ChatGPT: search → fetch. A primeira busca
+// constrói o índice (dois GETs + ranking) — no Worker é também a prova de
+// que o custo de CPU cabe no limite por requisição.
+const busca = await rpc("tools/call", { name: "search", arguments: { query: "população residente estimada" } });
+if (busca.isError) fail(`search retornou erro: ${busca.content?.[0]?.text?.slice(0, 200)}`);
+if (busca.content?.length !== 1) fail(`search: content deveria ter 1 bloco, veio ${busca.content?.length}`);
+const objetoBusca = JSON.parse(busca.content[0].text);
+if (!Array.isArray(objetoBusca.results) || objetoBusca.results.length === 0) fail("search: results vazio");
+if (JSON.stringify(objetoBusca.results) !== JSON.stringify(busca.structuredContent?.results))
+  fail("search: content[0].text e structuredContent.results divergem");
+if (!busca.structuredContent?.provenance) fail("search: proveniência ausente em structuredContent");
+const primeiro = objetoBusca.results[0];
+if (!primeiro.id || !primeiro.title || !primeiro.url) fail(`search: resultado fora do contrato: ${JSON.stringify(primeiro)}`);
+console.log(`search: ${objetoBusca.results.length} resultados | [0] = ${primeiro.id} — ${primeiro.title}`);
+
+const doc = await rpc("tools/call", { name: "fetch", arguments: { id: primeiro.id } });
+if (doc.isError) fail(`fetch retornou erro: ${doc.content?.[0]?.text?.slice(0, 200)}`);
+const objetoDoc = JSON.parse(doc.content[0].text);
+for (const chave of ["id", "title", "text", "url"]) {
+  if (typeof objetoDoc[chave] !== "string" || !objetoDoc[chave]) fail(`fetch: campo ${chave} ausente ou vazio`);
+}
+if (objetoDoc.id !== primeiro.id) fail("fetch: id devolvido difere do pedido");
+if (!doc.structuredContent?.provenance) fail("fetch: proveniência ausente em structuredContent");
+console.log(`fetch: ${objetoDoc.id} | text ${objetoDoc.text.length} chars | url ${objetoDoc.url}`);
+
+if (STDIO) child.kill();
+console.log("\nSMOKE OK");
+process.exit(0);

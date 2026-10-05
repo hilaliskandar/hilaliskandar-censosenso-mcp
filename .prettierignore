@@ -1,0 +1,4 @@
+# Generated compact TypeScript snapshot. Its source of truth is the normalizer
+# scripts + versioned JSON snapshots; formatting this file creates a very large
+# non-semantic diff and will be overwritten on regeneration.
+src/data/recortes-gerados.ts

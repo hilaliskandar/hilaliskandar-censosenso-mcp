@@ -1,0 +1,1783 @@
+{
+  "tema": "costeiro",
+  "versao": "2021",
+  "fonte_url": "https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/municipios_costeiros/2021/Municipios_Costeiros_2021.ods",
+  "produto_url": "https://www.ibge.gov.br/geociencias/organizacao-do-territorio/estrutura-territorial/24233-quadro-geografico-de-referencia-para-producao-analise-e-disseminacao-de-estatisticas.html?lang=pt-BR",
+  "planilha": "lote01_10mar2021",
+  "sha256_fonte": "ff3db77d7105569c041b60ff14a6c3a1202dd9b698f4097c69affa79d84596f5",
+  "total_registros": 443,
+  "registros": [
+    {
+      "codigo_municipio": "1500107",
+      "municipio": "Abaetetuba"
+    },
+    {
+      "codigo_municipio": "1500305",
+      "municipio": "Afuá"
+    },
+    {
+      "codigo_municipio": "1500701",
+      "municipio": "Anajás"
+    },
+    {
+      "codigo_municipio": "1500800",
+      "municipio": "Ananindeua"
+    },
+    {
+      "codigo_municipio": "1500909",
+      "municipio": "Augusto Corrêa"
+    },
+    {
+      "codigo_municipio": "1501105",
+      "municipio": "Bagre"
+    },
+    {
+      "codigo_municipio": "1501303",
+      "municipio": "Barcarena"
+    },
+    {
+      "codigo_municipio": "1501402",
+      "municipio": "Belém"
+    },
+    {
+      "codigo_municipio": "1501501",
+      "municipio": "Benevides"
+    },
+    {
+      "codigo_municipio": "1501709",
+      "municipio": "Bragança"
+    },
+    {
+      "codigo_municipio": "1501808",
+      "municipio": "Breves"
+    },
+    {
+      "codigo_municipio": "1502004",
+      "municipio": "Cachoeira do Arari"
+    },
+    {
+      "codigo_municipio": "1502202",
+      "municipio": "Capanema"
+    },
+    {
+      "codigo_municipio": "1502400",
+      "municipio": "Castanhal"
+    },
+    {
+      "codigo_municipio": "1502509",
+      "municipio": "Chaves"
+    },
+    {
+      "codigo_municipio": "1502608",
+      "municipio": "Colares"
+    },
+    {
+      "codigo_municipio": "1502806",
+      "municipio": "Curralinho"
+    },
+    {
+      "codigo_municipio": "1502905",
+      "municipio": "Curuçá"
+    },
+    {
+      "codigo_municipio": "1503101",
+      "municipio": "Gurupá"
+    },
+    {
+      "codigo_municipio": "1503408",
+      "municipio": "Inhangapi"
+    },
+    {
+      "codigo_municipio": "1504109",
+      "municipio": "Magalhães Barata"
+    },
+    {
+      "codigo_municipio": "1504307",
+      "municipio": "Maracanã"
+    },
+    {
+      "codigo_municipio": "1504406",
+      "municipio": "Marapanim"
+    },
+    {
+      "codigo_municipio": "1504422",
+      "municipio": "Marituba"
+    },
+    {
+      "codigo_municipio": "1504505",
+      "municipio": "Melgaço"
+    },
+    {
+      "codigo_municipio": "1504901",
+      "municipio": "Muaná"
+    },
+    {
+      "codigo_municipio": "1505205",
+      "municipio": "Oeiras do Pará"
+    },
+    {
+      "codigo_municipio": "1505700",
+      "municipio": "Ponta de Pedras"
+    },
+    {
+      "codigo_municipio": "1505809",
+      "municipio": "Portel"
+    },
+    {
+      "codigo_municipio": "1506104",
+      "municipio": "Primavera"
+    },
+    {
+      "codigo_municipio": "1506112",
+      "municipio": "Quatipuru"
+    },
+    {
+      "codigo_municipio": "1506203",
+      "municipio": "Salinópolis"
+    },
+    {
+      "codigo_municipio": "1506302",
+      "municipio": "Salvaterra"
+    },
+    {
+      "codigo_municipio": "1506351",
+      "municipio": "Santa Bárbara do Pará"
+    },
+    {
+      "codigo_municipio": "1506401",
+      "municipio": "Santa Cruz do Arari"
+    },
+    {
+      "codigo_municipio": "1506500",
+      "municipio": "Santa Izabel do Pará"
+    },
+    {
+      "codigo_municipio": "1506906",
+      "municipio": "Santarém Novo"
+    },
+    {
+      "codigo_municipio": "1507003",
+      "municipio": "Santo Antônio do Tauá"
+    },
+    {
+      "codigo_municipio": "1507102",
+      "municipio": "São Caetano de Odivelas"
+    },
+    {
+      "codigo_municipio": "1507466",
+      "municipio": "São João da Ponta"
+    },
+    {
+      "codigo_municipio": "1507474",
+      "municipio": "São João de Pirabas"
+    },
+    {
+      "codigo_municipio": "1507706",
+      "municipio": "São Sebastião da Boa Vista"
+    },
+    {
+      "codigo_municipio": "1507904",
+      "municipio": "Soure"
+    },
+    {
+      "codigo_municipio": "1507961",
+      "municipio": "Terra Alta"
+    },
+    {
+      "codigo_municipio": "1508035",
+      "municipio": "Tracuateua"
+    },
+    {
+      "codigo_municipio": "1508209",
+      "municipio": "Vigia"
+    },
+    {
+      "codigo_municipio": "1508308",
+      "municipio": "Viseu"
+    },
+    {
+      "codigo_municipio": "1600105",
+      "municipio": "Amapá"
+    },
+    {
+      "codigo_municipio": "1600204",
+      "municipio": "Calçoene"
+    },
+    {
+      "codigo_municipio": "1600212",
+      "municipio": "Cutias"
+    },
+    {
+      "codigo_municipio": "1600253",
+      "municipio": "Itaubal"
+    },
+    {
+      "codigo_municipio": "1600303",
+      "municipio": "Macapá"
+    },
+    {
+      "codigo_municipio": "1600402",
+      "municipio": "Mazagão"
+    },
+    {
+      "codigo_municipio": "1600501",
+      "municipio": "Oiapoque"
+    },
+    {
+      "codigo_municipio": "1600550",
+      "municipio": "Pracuúba"
+    },
+    {
+      "codigo_municipio": "1600600",
+      "municipio": "Santana"
+    },
+    {
+      "codigo_municipio": "1600709",
+      "municipio": "Tartarugalzinho"
+    },
+    {
+      "codigo_municipio": "1600808",
+      "municipio": "Vitória do Jari"
+    },
+    {
+      "codigo_municipio": "2100154",
+      "municipio": "Água Doce do Maranhão"
+    },
+    {
+      "codigo_municipio": "2100204",
+      "municipio": "Alcântara"
+    },
+    {
+      "codigo_municipio": "2100709",
+      "municipio": "Anajatuba"
+    },
+    {
+      "codigo_municipio": "2100832",
+      "municipio": "Apicum-Açu"
+    },
+    {
+      "codigo_municipio": "2100907",
+      "municipio": "Araioses"
+    },
+    {
+      "codigo_municipio": "2101004",
+      "municipio": "Arari"
+    },
+    {
+      "codigo_municipio": "2101103",
+      "municipio": "Axixá"
+    },
+    {
+      "codigo_municipio": "2101251",
+      "municipio": "Bacabeira"
+    },
+    {
+      "codigo_municipio": "2101301",
+      "municipio": "Bacuri"
+    },
+    {
+      "codigo_municipio": "2101350",
+      "municipio": "Bacurituba"
+    },
+    {
+      "codigo_municipio": "2101707",
+      "municipio": "Barreirinhas"
+    },
+    {
+      "codigo_municipio": "2101905",
+      "municipio": "Bequimão"
+    },
+    {
+      "codigo_municipio": "2102408",
+      "municipio": "Cajapió"
+    },
+    {
+      "codigo_municipio": "2102606",
+      "municipio": "Cândido Mendes"
+    },
+    {
+      "codigo_municipio": "2102903",
+      "municipio": "Carutapera"
+    },
+    {
+      "codigo_municipio": "2103109",
+      "municipio": "Cedral"
+    },
+    {
+      "codigo_municipio": "2103125",
+      "municipio": "Central do Maranhão"
+    },
+    {
+      "codigo_municipio": "2103703",
+      "municipio": "Cururupu"
+    },
+    {
+      "codigo_municipio": "2104305",
+      "municipio": "Godofredo Viana"
+    },
+    {
+      "codigo_municipio": "2104909",
+      "municipio": "Guimarães"
+    },
+    {
+      "codigo_municipio": "2105005",
+      "municipio": "Humberto de Campos"
+    },
+    {
+      "codigo_municipio": "2105104",
+      "municipio": "Icatu"
+    },
+    {
+      "codigo_municipio": "2106201",
+      "municipio": "Luís Domingues"
+    },
+    {
+      "codigo_municipio": "2106805",
+      "municipio": "Mirinzal"
+    },
+    {
+      "codigo_municipio": "2107100",
+      "municipio": "Morros"
+    },
+    {
+      "codigo_municipio": "2107506",
+      "municipio": "Paço do Lumiar"
+    },
+    {
+      "codigo_municipio": "2108058",
+      "municipio": "Paulino Neves"
+    },
+    {
+      "codigo_municipio": "2109056",
+      "municipio": "Porto Rico do Maranhão"
+    },
+    {
+      "codigo_municipio": "2109403",
+      "municipio": "Primeira Cruz"
+    },
+    {
+      "codigo_municipio": "2109452",
+      "municipio": "Raposa"
+    },
+    {
+      "codigo_municipio": "2109601",
+      "municipio": "Rosário"
+    },
+    {
+      "codigo_municipio": "2110203",
+      "municipio": "Santa Rita"
+    },
+    {
+      "codigo_municipio": "2110278",
+      "municipio": "Santo Amaro do Maranhão"
+    },
+    {
+      "codigo_municipio": "2111003",
+      "municipio": "São João Batista"
+    },
+    {
+      "codigo_municipio": "2111201",
+      "municipio": "São José de Ribamar"
+    },
+    {
+      "codigo_municipio": "2111300",
+      "municipio": "São Luís"
+    },
+    {
+      "codigo_municipio": "2111789",
+      "municipio": "Serrano do Maranhão"
+    },
+    {
+      "codigo_municipio": "2112407",
+      "municipio": "Turiaçu"
+    },
+    {
+      "codigo_municipio": "2112506",
+      "municipio": "Tutóia"
+    },
+    {
+      "codigo_municipio": "2112803",
+      "municipio": "Viana"
+    },
+    {
+      "codigo_municipio": "2201919",
+      "municipio": "Bom Princípio do Piauí"
+    },
+    {
+      "codigo_municipio": "2202083",
+      "municipio": "Cajueiro da Praia"
+    },
+    {
+      "codigo_municipio": "2204659",
+      "municipio": "Ilha Grande"
+    },
+    {
+      "codigo_municipio": "2205706",
+      "municipio": "Luís Correia"
+    },
+    {
+      "codigo_municipio": "2207702",
+      "municipio": "Parnaíba"
+    },
+    {
+      "codigo_municipio": "2300200",
+      "municipio": "Acaraú"
+    },
+    {
+      "codigo_municipio": "2300754",
+      "municipio": "Amontada"
+    },
+    {
+      "codigo_municipio": "2301000",
+      "municipio": "Aquiraz"
+    },
+    {
+      "codigo_municipio": "2301109",
+      "municipio": "Aracati"
+    },
+    {
+      "codigo_municipio": "2302057",
+      "municipio": "Barroquinha"
+    },
+    {
+      "codigo_municipio": "2302206",
+      "municipio": "Beberibe"
+    },
+    {
+      "codigo_municipio": "2302602",
+      "municipio": "Camocim"
+    },
+    {
+      "codigo_municipio": "2303501",
+      "municipio": "Cascavel"
+    },
+    {
+      "codigo_municipio": "2303709",
+      "municipio": "Caucaia"
+    },
+    {
+      "codigo_municipio": "2303907",
+      "municipio": "Chaval"
+    },
+    {
+      "codigo_municipio": "2304251",
+      "municipio": "Cruz"
+    },
+    {
+      "codigo_municipio": "2304285",
+      "municipio": "Eusébio"
+    },
+    {
+      "codigo_municipio": "2304400",
+      "municipio": "Fortaleza"
+    },
+    {
+      "codigo_municipio": "2304459",
+      "municipio": "Fortim"
+    },
+    {
+      "codigo_municipio": "2305357",
+      "municipio": "Icapuí"
+    },
+    {
+      "codigo_municipio": "2306405",
+      "municipio": "Itapipoca"
+    },
+    {
+      "codigo_municipio": "2306553",
+      "municipio": "Itarema"
+    },
+    {
+      "codigo_municipio": "2307254",
+      "municipio": "Jijoca de Jericoacoara"
+    },
+    {
+      "codigo_municipio": "2310209",
+      "municipio": "Paracuru"
+    },
+    {
+      "codigo_municipio": "2310258",
+      "municipio": "Paraipaba"
+    },
+    {
+      "codigo_municipio": "2310852",
+      "municipio": "Pindoretama"
+    },
+    {
+      "codigo_municipio": "2312403",
+      "municipio": "São Gonçalo do Amarante"
+    },
+    {
+      "codigo_municipio": "2313500",
+      "municipio": "Trairi"
+    },
+    {
+      "codigo_municipio": "2401107",
+      "municipio": "Areia Branca"
+    },
+    {
+      "codigo_municipio": "2401206",
+      "municipio": "Arês"
+    },
+    {
+      "codigo_municipio": "2401404",
+      "municipio": "Baía Formosa"
+    },
+    {
+      "codigo_municipio": "2401859",
+      "municipio": "Caiçara do Norte"
+    },
+    {
+      "codigo_municipio": "2402204",
+      "municipio": "Canguaretama"
+    },
+    {
+      "codigo_municipio": "2402600",
+      "municipio": "Ceará-Mirim"
+    },
+    {
+      "codigo_municipio": "2403251",
+      "municipio": "Parnamirim"
+    },
+    {
+      "codigo_municipio": "2403608",
+      "municipio": "Extremoz"
+    },
+    {
+      "codigo_municipio": "2404101",
+      "municipio": "Galinhos"
+    },
+    {
+      "codigo_municipio": "2404408",
+      "municipio": "Grossos"
+    },
+    {
+      "codigo_municipio": "2404507",
+      "municipio": "Guamaré"
+    },
+    {
+      "codigo_municipio": "2407104",
+      "municipio": "Macaíba"
+    },
+    {
+      "codigo_municipio": "2407203",
+      "municipio": "Macau"
+    },
+    {
+      "codigo_municipio": "2407500",
+      "municipio": "Maxaranguape"
+    },
+    {
+      "codigo_municipio": "2408003",
+      "municipio": "Mossoró"
+    },
+    {
+      "codigo_municipio": "2408102",
+      "municipio": "Natal"
+    },
+    {
+      "codigo_municipio": "2408201",
+      "municipio": "Nísia Floresta"
+    },
+    {
+      "codigo_municipio": "2408953",
+      "municipio": "Rio do Fogo"
+    },
+    {
+      "codigo_municipio": "2409506",
+      "municipio": "Pedra Grande"
+    },
+    {
+      "codigo_municipio": "2409902",
+      "municipio": "Pendências"
+    },
+    {
+      "codigo_municipio": "2410256",
+      "municipio": "Porto do Mangue"
+    },
+    {
+      "codigo_municipio": "2411056",
+      "municipio": "Tibau"
+    },
+    {
+      "codigo_municipio": "2411601",
+      "municipio": "São Bento do Norte"
+    },
+    {
+      "codigo_municipio": "2412005",
+      "municipio": "São Gonçalo do Amarante"
+    },
+    {
+      "codigo_municipio": "2412559",
+      "municipio": "São Miguel do Gostoso"
+    },
+    {
+      "codigo_municipio": "2413201",
+      "municipio": "Senador Georgino Avelino"
+    },
+    {
+      "codigo_municipio": "2414209",
+      "municipio": "Tibau do Sul"
+    },
+    {
+      "codigo_municipio": "2414407",
+      "municipio": "Touros"
+    },
+    {
+      "codigo_municipio": "2415008",
+      "municipio": "Vila Flor"
+    },
+    {
+      "codigo_municipio": "2500601",
+      "municipio": "Alhandra"
+    },
+    {
+      "codigo_municipio": "2501401",
+      "municipio": "Baía da Traição"
+    },
+    {
+      "codigo_municipio": "2501807",
+      "municipio": "Bayeux"
+    },
+    {
+      "codigo_municipio": "2503001",
+      "municipio": "Caaporã"
+    },
+    {
+      "codigo_municipio": "2503209",
+      "municipio": "Cabedelo"
+    },
+    {
+      "codigo_municipio": "2504603",
+      "municipio": "Conde"
+    },
+    {
+      "codigo_municipio": "2507507",
+      "municipio": "João Pessoa"
+    },
+    {
+      "codigo_municipio": "2508604",
+      "municipio": "Lucena"
+    },
+    {
+      "codigo_municipio": "2509057",
+      "municipio": "Marcação"
+    },
+    {
+      "codigo_municipio": "2509305",
+      "municipio": "Mataraca"
+    },
+    {
+      "codigo_municipio": "2511905",
+      "municipio": "Pitimbu"
+    },
+    {
+      "codigo_municipio": "2512903",
+      "municipio": "Rio Tinto"
+    },
+    {
+      "codigo_municipio": "2513703",
+      "municipio": "Santa Rita"
+    },
+    {
+      "codigo_municipio": "2600054",
+      "municipio": "Abreu e Lima"
+    },
+    {
+      "codigo_municipio": "2601409",
+      "municipio": "Barreiros"
+    },
+    {
+      "codigo_municipio": "2602902",
+      "municipio": "Cabo de Santo Agostinho"
+    },
+    {
+      "codigo_municipio": "2605459",
+      "municipio": "Fernando de Noronha"
+    },
+    {
+      "codigo_municipio": "2606200",
+      "municipio": "Goiana"
+    },
+    {
+      "codigo_municipio": "2606804",
+      "municipio": "Igarassu"
+    },
+    {
+      "codigo_municipio": "2607208",
+      "municipio": "Ipojuca"
+    },
+    {
+      "codigo_municipio": "2607604",
+      "municipio": "Ilha de Itamaracá"
+    },
+    {
+      "codigo_municipio": "2607752",
+      "municipio": "Itapissuma"
+    },
+    {
+      "codigo_municipio": "2607901",
+      "municipio": "Jaboatão dos Guararapes"
+    },
+    {
+      "codigo_municipio": "2609600",
+      "municipio": "Olinda"
+    },
+    {
+      "codigo_municipio": "2610707",
+      "municipio": "Paulista"
+    },
+    {
+      "codigo_municipio": "2611606",
+      "municipio": "Recife"
+    },
+    {
+      "codigo_municipio": "2611903",
+      "municipio": "Rio Formoso"
+    },
+    {
+      "codigo_municipio": "2613404",
+      "municipio": "São José da Coroa Grande"
+    },
+    {
+      "codigo_municipio": "2614204",
+      "municipio": "Sirinhaém"
+    },
+    {
+      "codigo_municipio": "2614857",
+      "municipio": "Tamandaré"
+    },
+    {
+      "codigo_municipio": "2700409",
+      "municipio": "Atalaia"
+    },
+    {
+      "codigo_municipio": "2700508",
+      "municipio": "Barra de Santo Antônio"
+    },
+    {
+      "codigo_municipio": "2700607",
+      "municipio": "Barra de São Miguel"
+    },
+    {
+      "codigo_municipio": "2702207",
+      "municipio": "Coqueiro Seco"
+    },
+    {
+      "codigo_municipio": "2702306",
+      "municipio": "Coruripe"
+    },
+    {
+      "codigo_municipio": "2702702",
+      "municipio": "Feliz Deserto"
+    },
+    {
+      "codigo_municipio": "2703205",
+      "municipio": "Igreja Nova"
+    },
+    {
+      "codigo_municipio": "2703601",
+      "municipio": "Japaratinga"
+    },
+    {
+      "codigo_municipio": "2703759",
+      "municipio": "Jequiá da Praia"
+    },
+    {
+      "codigo_municipio": "2704302",
+      "municipio": "Maceió"
+    },
+    {
+      "codigo_municipio": "2704500",
+      "municipio": "Maragogi"
+    },
+    {
+      "codigo_municipio": "2704708",
+      "municipio": "Marechal Deodoro"
+    },
+    {
+      "codigo_municipio": "2705200",
+      "municipio": "Messias"
+    },
+    {
+      "codigo_municipio": "2705507",
+      "municipio": "Murici"
+    },
+    {
+      "codigo_municipio": "2706448",
+      "municipio": "Paripueira"
+    },
+    {
+      "codigo_municipio": "2706505",
+      "municipio": "Passo de Camaragibe"
+    },
+    {
+      "codigo_municipio": "2706703",
+      "municipio": "Penedo"
+    },
+    {
+      "codigo_municipio": "2706802",
+      "municipio": "Piaçabuçu"
+    },
+    {
+      "codigo_municipio": "2706901",
+      "municipio": "Pilar"
+    },
+    {
+      "codigo_municipio": "2707305",
+      "municipio": "Porto Calvo"
+    },
+    {
+      "codigo_municipio": "2707404",
+      "municipio": "Porto de Pedras"
+    },
+    {
+      "codigo_municipio": "2707701",
+      "municipio": "Rio Largo"
+    },
+    {
+      "codigo_municipio": "2707800",
+      "municipio": "Roteiro"
+    },
+    {
+      "codigo_municipio": "2707909",
+      "municipio": "Santa Luzia do Norte"
+    },
+    {
+      "codigo_municipio": "2708501",
+      "municipio": "São Luís do Quitunde"
+    },
+    {
+      "codigo_municipio": "2708709",
+      "municipio": "São Miguel dos Milagres"
+    },
+    {
+      "codigo_municipio": "2708907",
+      "municipio": "Satuba"
+    },
+    {
+      "codigo_municipio": "2800308",
+      "municipio": "Aracaju"
+    },
+    {
+      "codigo_municipio": "2800605",
+      "municipio": "Barra dos Coqueiros"
+    },
+    {
+      "codigo_municipio": "2800704",
+      "municipio": "Brejo Grande"
+    },
+    {
+      "codigo_municipio": "2801504",
+      "municipio": "Carmópolis"
+    },
+    {
+      "codigo_municipio": "2802007",
+      "municipio": "Divina Pastora"
+    },
+    {
+      "codigo_municipio": "2802106",
+      "municipio": "Estância"
+    },
+    {
+      "codigo_municipio": "2802502",
+      "municipio": "General Maynard"
+    },
+    {
+      "codigo_municipio": "2802700",
+      "municipio": "Ilha das Flores"
+    },
+    {
+      "codigo_municipio": "2802809",
+      "municipio": "Indiaroba"
+    },
+    {
+      "codigo_municipio": "2803203",
+      "municipio": "Itaporanga d'Ajuda"
+    },
+    {
+      "codigo_municipio": "2803302",
+      "municipio": "Japaratuba"
+    },
+    {
+      "codigo_municipio": "2803401",
+      "municipio": "Japoatã"
+    },
+    {
+      "codigo_municipio": "2803609",
+      "municipio": "Laranjeiras"
+    },
+    {
+      "codigo_municipio": "2804003",
+      "municipio": "Maruim"
+    },
+    {
+      "codigo_municipio": "2804409",
+      "municipio": "Neópolis"
+    },
+    {
+      "codigo_municipio": "2804805",
+      "municipio": "Nossa Senhora do Socorro"
+    },
+    {
+      "codigo_municipio": "2804904",
+      "municipio": "Pacatuba"
+    },
+    {
+      "codigo_municipio": "2805307",
+      "municipio": "Pirambu"
+    },
+    {
+      "codigo_municipio": "2805901",
+      "municipio": "Riachuelo"
+    },
+    {
+      "codigo_municipio": "2806107",
+      "municipio": "Rosário do Catete"
+    },
+    {
+      "codigo_municipio": "2806305",
+      "municipio": "Santa Luzia do Itanhy"
+    },
+    {
+      "codigo_municipio": "2806602",
+      "municipio": "Santo Amaro das Brotas"
+    },
+    {
+      "codigo_municipio": "2806701",
+      "municipio": "São Cristóvão"
+    },
+    {
+      "codigo_municipio": "2807204",
+      "municipio": "Siriri"
+    },
+    {
+      "codigo_municipio": "2900801",
+      "municipio": "Alcobaça"
+    },
+    {
+      "codigo_municipio": "2902054",
+      "municipio": "Araçás"
+    },
+    {
+      "codigo_municipio": "2902302",
+      "municipio": "Aratuípe"
+    },
+    {
+      "codigo_municipio": "2903409",
+      "municipio": "Belmonte"
+    },
+    {
+      "codigo_municipio": "2904902",
+      "municipio": "Cachoeira"
+    },
+    {
+      "codigo_municipio": "2905404",
+      "municipio": "Cairu"
+    },
+    {
+      "codigo_municipio": "2905701",
+      "municipio": "Camaçari"
+    },
+    {
+      "codigo_municipio": "2905800",
+      "municipio": "Camamu"
+    },
+    {
+      "codigo_municipio": "2906303",
+      "municipio": "Canavieiras"
+    },
+    {
+      "codigo_municipio": "2906501",
+      "municipio": "Candeias"
+    },
+    {
+      "codigo_municipio": "2906907",
+      "municipio": "Caravelas"
+    },
+    {
+      "codigo_municipio": "2907004",
+      "municipio": "Cardeal da Silva"
+    },
+    {
+      "codigo_municipio": "2907509",
+      "municipio": "Catu"
+    },
+    {
+      "codigo_municipio": "2908606",
+      "municipio": "Conde"
+    },
+    {
+      "codigo_municipio": "2910057",
+      "municipio": "Dias d'Ávila"
+    },
+    {
+      "codigo_municipio": "2910503",
+      "municipio": "Entre Rios"
+    },
+    {
+      "codigo_municipio": "2910602",
+      "municipio": "Esplanada"
+    },
+    {
+      "codigo_municipio": "2913457",
+      "municipio": "Igrapiúna"
+    },
+    {
+      "codigo_municipio": "2913606",
+      "municipio": "Ilhéus"
+    },
+    {
+      "codigo_municipio": "2914802",
+      "municipio": "Itabuna"
+    },
+    {
+      "codigo_municipio": "2914901",
+      "municipio": "Itacaré"
+    },
+    {
+      "codigo_municipio": "2915908",
+      "municipio": "Itanagra"
+    },
+    {
+      "codigo_municipio": "2916104",
+      "municipio": "Itaparica"
+    },
+    {
+      "codigo_municipio": "2917300",
+      "municipio": "Ituberá"
+    },
+    {
+      "codigo_municipio": "2917805",
+      "municipio": "Jaguaripe"
+    },
+    {
+      "codigo_municipio": "2917904",
+      "municipio": "Jandaíra"
+    },
+    {
+      "codigo_municipio": "2919207",
+      "municipio": "Lauro de Freitas"
+    },
+    {
+      "codigo_municipio": "2919926",
+      "municipio": "Madre de Deus"
+    },
+    {
+      "codigo_municipio": "2920601",
+      "municipio": "Maragogipe"
+    },
+    {
+      "codigo_municipio": "2920700",
+      "municipio": "Maraú"
+    },
+    {
+      "codigo_municipio": "2921005",
+      "municipio": "Mata de São João"
+    },
+    {
+      "codigo_municipio": "2922003",
+      "municipio": "Mucuri"
+    },
+    {
+      "codigo_municipio": "2922508",
+      "municipio": "Nazaré"
+    },
+    {
+      "codigo_municipio": "2922607",
+      "municipio": "Nilo Peçanha"
+    },
+    {
+      "codigo_municipio": "2923001",
+      "municipio": "Nova Viçosa"
+    },
+    {
+      "codigo_municipio": "2925204",
+      "municipio": "Pojuca"
+    },
+    {
+      "codigo_municipio": "2925303",
+      "municipio": "Porto Seguro"
+    },
+    {
+      "codigo_municipio": "2925501",
+      "municipio": "Prado"
+    },
+    {
+      "codigo_municipio": "2927309",
+      "municipio": "Salinas da Margarida"
+    },
+    {
+      "codigo_municipio": "2927408",
+      "municipio": "Salvador"
+    },
+    {
+      "codigo_municipio": "2927705",
+      "municipio": "Santa Cruz Cabrália"
+    },
+    {
+      "codigo_municipio": "2928059",
+      "municipio": "Santa Luzia"
+    },
+    {
+      "codigo_municipio": "2928604",
+      "municipio": "Santo Amaro"
+    },
+    {
+      "codigo_municipio": "2929008",
+      "municipio": "São Félix"
+    },
+    {
+      "codigo_municipio": "2929206",
+      "municipio": "São Francisco do Conde"
+    },
+    {
+      "codigo_municipio": "2929503",
+      "municipio": "São Sebastião do Passé"
+    },
+    {
+      "codigo_municipio": "2929750",
+      "municipio": "Saubara"
+    },
+    {
+      "codigo_municipio": "2930709",
+      "municipio": "Simões Filho"
+    },
+    {
+      "codigo_municipio": "2931202",
+      "municipio": "Taperoá"
+    },
+    {
+      "codigo_municipio": "2932507",
+      "municipio": "Una"
+    },
+    {
+      "codigo_municipio": "2932705",
+      "municipio": "Uruçuca"
+    },
+    {
+      "codigo_municipio": "2932903",
+      "municipio": "Valença"
+    },
+    {
+      "codigo_municipio": "2933208",
+      "municipio": "Vera Cruz"
+    },
+    {
+      "codigo_municipio": "3200409",
+      "municipio": "Anchieta"
+    },
+    {
+      "codigo_municipio": "3200607",
+      "municipio": "Aracruz"
+    },
+    {
+      "codigo_municipio": "3201308",
+      "municipio": "Cariacica"
+    },
+    {
+      "codigo_municipio": "3201605",
+      "municipio": "Conceição da Barra"
+    },
+    {
+      "codigo_municipio": "3202207",
+      "municipio": "Fundão"
+    },
+    {
+      "codigo_municipio": "3202405",
+      "municipio": "Guarapari"
+    },
+    {
+      "codigo_municipio": "3202801",
+      "municipio": "Itapemirim"
+    },
+    {
+      "codigo_municipio": "3203056",
+      "municipio": "Jaguaré"
+    },
+    {
+      "codigo_municipio": "3203205",
+      "municipio": "Linhares"
+    },
+    {
+      "codigo_municipio": "3203320",
+      "municipio": "Marataízes"
+    },
+    {
+      "codigo_municipio": "3204203",
+      "municipio": "Piúma"
+    },
+    {
+      "codigo_municipio": "3204302",
+      "municipio": "Presidente Kennedy"
+    },
+    {
+      "codigo_municipio": "3204906",
+      "municipio": "São Mateus"
+    },
+    {
+      "codigo_municipio": "3205002",
+      "municipio": "Serra"
+    },
+    {
+      "codigo_municipio": "3205010",
+      "municipio": "Sooretama"
+    },
+    {
+      "codigo_municipio": "3205101",
+      "municipio": "Viana"
+    },
+    {
+      "codigo_municipio": "3205200",
+      "municipio": "Vila Velha"
+    },
+    {
+      "codigo_municipio": "3205309",
+      "municipio": "Vitória"
+    },
+    {
+      "codigo_municipio": "3300100",
+      "municipio": "Angra dos Reis"
+    },
+    {
+      "codigo_municipio": "3300209",
+      "municipio": "Araruama"
+    },
+    {
+      "codigo_municipio": "3300233",
+      "municipio": "Armação dos Búzios"
+    },
+    {
+      "codigo_municipio": "3300258",
+      "municipio": "Arraial do Cabo"
+    },
+    {
+      "codigo_municipio": "3300456",
+      "municipio": "Belford Roxo"
+    },
+    {
+      "codigo_municipio": "3300704",
+      "municipio": "Cabo Frio"
+    },
+    {
+      "codigo_municipio": "3300936",
+      "municipio": "Carapebus"
+    },
+    {
+      "codigo_municipio": "3301009",
+      "municipio": "Campos dos Goytacazes"
+    },
+    {
+      "codigo_municipio": "3301306",
+      "municipio": "Casimiro de Abreu"
+    },
+    {
+      "codigo_municipio": "3301702",
+      "municipio": "Duque de Caxias"
+    },
+    {
+      "codigo_municipio": "3301850",
+      "municipio": "Guapimirim"
+    },
+    {
+      "codigo_municipio": "3301876",
+      "municipio": "Iguaba Grande"
+    },
+    {
+      "codigo_municipio": "3301900",
+      "municipio": "Itaboraí"
+    },
+    {
+      "codigo_municipio": "3302007",
+      "municipio": "Itaguaí"
+    },
+    {
+      "codigo_municipio": "3302403",
+      "municipio": "Macaé"
+    },
+    {
+      "codigo_municipio": "3302502",
+      "municipio": "Magé"
+    },
+    {
+      "codigo_municipio": "3302601",
+      "municipio": "Mangaratiba"
+    },
+    {
+      "codigo_municipio": "3302700",
+      "municipio": "Maricá"
+    },
+    {
+      "codigo_municipio": "3302858",
+      "municipio": "Mesquita"
+    },
+    {
+      "codigo_municipio": "3303203",
+      "municipio": "Nilópolis"
+    },
+    {
+      "codigo_municipio": "3303302",
+      "municipio": "Niterói"
+    },
+    {
+      "codigo_municipio": "3303500",
+      "municipio": "Nova Iguaçu"
+    },
+    {
+      "codigo_municipio": "3303807",
+      "municipio": "Paraty"
+    },
+    {
+      "codigo_municipio": "3304151",
+      "municipio": "Quissamã"
+    },
+    {
+      "codigo_municipio": "3304524",
+      "municipio": "Rio das Ostras"
+    },
+    {
+      "codigo_municipio": "3304557",
+      "municipio": "Rio de Janeiro"
+    },
+    {
+      "codigo_municipio": "3304755",
+      "municipio": "São Francisco de Itabapoana"
+    },
+    {
+      "codigo_municipio": "3304904",
+      "municipio": "São Gonçalo"
+    },
+    {
+      "codigo_municipio": "3305000",
+      "municipio": "São João da Barra"
+    },
+    {
+      "codigo_municipio": "3305109",
+      "municipio": "São João de Meriti"
+    },
+    {
+      "codigo_municipio": "3305208",
+      "municipio": "São Pedro da Aldeia"
+    },
+    {
+      "codigo_municipio": "3305505",
+      "municipio": "Saquarema"
+    },
+    {
+      "codigo_municipio": "3305554",
+      "municipio": "Seropédica"
+    },
+    {
+      "codigo_municipio": "3506359",
+      "municipio": "Bertioga"
+    },
+    {
+      "codigo_municipio": "3509908",
+      "municipio": "Cananéia"
+    },
+    {
+      "codigo_municipio": "3510500",
+      "municipio": "Caraguatatuba"
+    },
+    {
+      "codigo_municipio": "3513504",
+      "municipio": "Cubatão"
+    },
+    {
+      "codigo_municipio": "3518701",
+      "municipio": "Guarujá"
+    },
+    {
+      "codigo_municipio": "3520301",
+      "municipio": "Iguape"
+    },
+    {
+      "codigo_municipio": "3520400",
+      "municipio": "Ilhabela"
+    },
+    {
+      "codigo_municipio": "3520426",
+      "municipio": "Ilha Comprida"
+    },
+    {
+      "codigo_municipio": "3522109",
+      "municipio": "Itanhaém"
+    },
+    {
+      "codigo_municipio": "3531100",
+      "municipio": "Mongaguá"
+    },
+    {
+      "codigo_municipio": "3537602",
+      "municipio": "Peruíbe"
+    },
+    {
+      "codigo_municipio": "3541000",
+      "municipio": "Praia Grande"
+    },
+    {
+      "codigo_municipio": "3548500",
+      "municipio": "Santos"
+    },
+    {
+      "codigo_municipio": "3550704",
+      "municipio": "São Sebastião"
+    },
+    {
+      "codigo_municipio": "3551009",
+      "municipio": "São Vicente"
+    },
+    {
+      "codigo_municipio": "3555406",
+      "municipio": "Ubatuba"
+    },
+    {
+      "codigo_municipio": "4101200",
+      "municipio": "Antonina"
+    },
+    {
+      "codigo_municipio": "4109500",
+      "municipio": "Guaraqueçaba"
+    },
+    {
+      "codigo_municipio": "4109609",
+      "municipio": "Guaratuba"
+    },
+    {
+      "codigo_municipio": "4115705",
+      "municipio": "Matinhos"
+    },
+    {
+      "codigo_municipio": "4116208",
+      "municipio": "Morretes"
+    },
+    {
+      "codigo_municipio": "4118204",
+      "municipio": "Paranaguá"
+    },
+    {
+      "codigo_municipio": "4119954",
+      "municipio": "Pontal do Paraná"
+    },
+    {
+      "codigo_municipio": "4201307",
+      "municipio": "Araquari"
+    },
+    {
+      "codigo_municipio": "4201406",
+      "municipio": "Araranguá"
+    },
+    {
+      "codigo_municipio": "4201950",
+      "municipio": "Balneário Arroio do Silva"
+    },
+    {
+      "codigo_municipio": "4202008",
+      "municipio": "Balneário Camboriú"
+    },
+    {
+      "codigo_municipio": "4202057",
+      "municipio": "Balneário Barra do Sul"
+    },
+    {
+      "codigo_municipio": "4202073",
+      "municipio": "Balneário Gaivota"
+    },
+    {
+      "codigo_municipio": "4202107",
+      "municipio": "Barra Velha"
+    },
+    {
+      "codigo_municipio": "4202305",
+      "municipio": "Biguaçu"
+    },
+    {
+      "codigo_municipio": "4202453",
+      "municipio": "Bombinhas"
+    },
+    {
+      "codigo_municipio": "4203204",
+      "municipio": "Camboriú"
+    },
+    {
+      "codigo_municipio": "4203956",
+      "municipio": "Capivari de Baixo"
+    },
+    {
+      "codigo_municipio": "4205407",
+      "municipio": "Florianópolis"
+    },
+    {
+      "codigo_municipio": "4205704",
+      "municipio": "Garopaba"
+    },
+    {
+      "codigo_municipio": "4205803",
+      "municipio": "Garuva"
+    },
+    {
+      "codigo_municipio": "4206009",
+      "municipio": "Governador Celso Ramos"
+    },
+    {
+      "codigo_municipio": "4207007",
+      "municipio": "Içara"
+    },
+    {
+      "codigo_municipio": "4207205",
+      "municipio": "Imaruí"
+    },
+    {
+      "codigo_municipio": "4207304",
+      "municipio": "Imbituba"
+    },
+    {
+      "codigo_municipio": "4208203",
+      "municipio": "Itajaí"
+    },
+    {
+      "codigo_municipio": "4208302",
+      "municipio": "Itapema"
+    },
+    {
+      "codigo_municipio": "4208450",
+      "municipio": "Itapoá"
+    },
+    {
+      "codigo_municipio": "4208807",
+      "municipio": "Jaguaruna"
+    },
+    {
+      "codigo_municipio": "4209102",
+      "municipio": "Joinville"
+    },
+    {
+      "codigo_municipio": "4209409",
+      "municipio": "Laguna"
+    },
+    {
+      "codigo_municipio": "4210407",
+      "municipio": "Maracajá"
+    },
+    {
+      "codigo_municipio": "4211306",
+      "municipio": "Navegantes"
+    },
+    {
+      "codigo_municipio": "4211900",
+      "municipio": "Palhoça"
+    },
+    {
+      "codigo_municipio": "4212254",
+      "municipio": "Passo de Torres"
+    },
+    {
+      "codigo_municipio": "4212304",
+      "municipio": "Paulo Lopes"
+    },
+    {
+      "codigo_municipio": "4212502",
+      "municipio": "Penha"
+    },
+    {
+      "codigo_municipio": "4212650",
+      "municipio": "Pescaria Brava"
+    },
+    {
+      "codigo_municipio": "4212809",
+      "municipio": "Balneário Piçarras"
+    },
+    {
+      "codigo_municipio": "4213500",
+      "municipio": "Porto Belo"
+    },
+    {
+      "codigo_municipio": "4215653",
+      "municipio": "Santa Rosa do Sul"
+    },
+    {
+      "codigo_municipio": "4216206",
+      "municipio": "São Francisco do Sul"
+    },
+    {
+      "codigo_municipio": "4216404",
+      "municipio": "São João do Sul"
+    },
+    {
+      "codigo_municipio": "4216602",
+      "municipio": "São José"
+    },
+    {
+      "codigo_municipio": "4217709",
+      "municipio": "Sombrio"
+    },
+    {
+      "codigo_municipio": "4218004",
+      "municipio": "Tijucas"
+    },
+    {
+      "codigo_municipio": "4218707",
+      "municipio": "Tubarão"
+    },
+    {
+      "codigo_municipio": "4220000",
+      "municipio": "Balneário Rincão"
+    },
+    {
+      "codigo_municipio": "4300851",
+      "municipio": "Arambaré"
+    },
+    {
+      "codigo_municipio": "4301057",
+      "municipio": "Arroio do Sal"
+    },
+    {
+      "codigo_municipio": "4301073",
+      "municipio": "Arroio do Padre"
+    },
+    {
+      "codigo_municipio": "4301305",
+      "municipio": "Arroio Grande"
+    },
+    {
+      "codigo_municipio": "4301636",
+      "municipio": "Balneário Pinhal"
+    },
+    {
+      "codigo_municipio": "4301909",
+      "municipio": "Barra do Ribeiro"
+    },
+    {
+      "codigo_municipio": "4303509",
+      "municipio": "Camaquã"
+    },
+    {
+      "codigo_municipio": "4304630",
+      "municipio": "Capão da Canoa"
+    },
+    {
+      "codigo_municipio": "4304663",
+      "municipio": "Capão do Leão"
+    },
+    {
+      "codigo_municipio": "4304671",
+      "municipio": "Capivari do Sul"
+    },
+    {
+      "codigo_municipio": "4305439",
+      "municipio": "Chuí"
+    },
+    {
+      "codigo_municipio": "4305454",
+      "municipio": "Cidreira"
+    },
+    {
+      "codigo_municipio": "4306056",
+      "municipio": "Cristal"
+    },
+    {
+      "codigo_municipio": "4306551",
+      "municipio": "Dom Pedro de Alcântara"
+    },
+    {
+      "codigo_municipio": "4310330",
+      "municipio": "Imbé"
+    },
+    {
+      "codigo_municipio": "4310652",
+      "municipio": "Itati"
+    },
+    {
+      "codigo_municipio": "4311007",
+      "municipio": "Jaguarão"
+    },
+    {
+      "codigo_municipio": "4311734",
+      "municipio": "Mampituba"
+    },
+    {
+      "codigo_municipio": "4311775",
+      "municipio": "Maquiné"
+    },
+    {
+      "codigo_municipio": "4312443",
+      "municipio": "Morrinhos do Sul"
+    },
+    {
+      "codigo_municipio": "4312500",
+      "municipio": "Mostardas"
+    },
+    {
+      "codigo_municipio": "4313508",
+      "municipio": "Osório"
+    },
+    {
+      "codigo_municipio": "4313656",
+      "municipio": "Palmares do Sul"
+    },
+    {
+      "codigo_municipio": "4314407",
+      "municipio": "Pelotas"
+    },
+    {
+      "codigo_municipio": "4315602",
+      "municipio": "Rio Grande"
+    },
+    {
+      "codigo_municipio": "4317301",
+      "municipio": "Santa Vitória do Palmar"
+    },
+    {
+      "codigo_municipio": "4317608",
+      "municipio": "Santo Antônio da Patrulha"
+    },
+    {
+      "codigo_municipio": "4318507",
+      "municipio": "São José do Norte"
+    },
+    {
+      "codigo_municipio": "4318804",
+      "municipio": "São Lourenço do Sul"
+    },
+    {
+      "codigo_municipio": "4321105",
+      "municipio": "Tapes"
+    },
+    {
+      "codigo_municipio": "4321352",
+      "municipio": "Tavares"
+    },
+    {
+      "codigo_municipio": "4321436",
+      "municipio": "Terra de Areia"
+    },
+    {
+      "codigo_municipio": "4321501",
+      "municipio": "Torres"
+    },
+    {
+      "codigo_municipio": "4321600",
+      "municipio": "Tramandaí"
+    },
+    {
+      "codigo_municipio": "4321667",
+      "municipio": "Três Cachoeiras"
+    },
+    {
+      "codigo_municipio": "4321832",
+      "municipio": "Três Forquilhas"
+    },
+    {
+      "codigo_municipio": "4322327",
+      "municipio": "Turuçu"
+    },
+    {
+      "codigo_municipio": "4323002",
+      "municipio": "Viamão"
+    },
+    {
+      "codigo_municipio": "4323804",
+      "municipio": "Xangri-lá"
+    }
+  ]
+}
