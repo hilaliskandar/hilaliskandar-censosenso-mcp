@@ -1,8 +1,9 @@
 /**
  * Identidade e parâmetros do transporte HTTP do CensoSenso.
  *
- * O Worker usa censosenso.poderdapalavra.org como domínio canônico e mantém workers.dev como fallback operacional. A versão continua vindo do build do pacote pai, que é a
-única fonte de verdade de versão.
+ * O Worker usa exclusivamente censosenso.poderdapalavra.org como domínio
+ * público de produção. A versão continua vindo do build do pacote pai, que é a
+ * única fonte de verdade de versão.
  */
 
 import { SERVER_VERSION } from "../../dist/server.js";
@@ -35,13 +36,12 @@ export const SERVER_CONFIG = {
   /** Rota do endpoint MCP (Streamable HTTP). */
   mcpRoute: "/mcp",
   /**
-   * Hosts aceitos pelo transporte MCP: desenvolvimento local, domínio canônico e fallback workers.dev.
+   * Hosts aceitos pelo transporte MCP: desenvolvimento local e domínio canônico.
    */
   extraAllowedHostnames: [
     "localhost",
     "127.0.0.1",
     "censosenso.poderdapalavra.org",
-    "censosenso-mcp.radar-urbano-hilaliskandar.workers.dev",
   ] as string[],
 } as const;
 
