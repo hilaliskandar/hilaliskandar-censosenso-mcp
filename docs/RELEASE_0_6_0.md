@@ -40,9 +40,9 @@ O gate específico do Estado de São Paulo confirmou:
 - zero divergências municipais;
 - amostra determinística de 21 municípios;
 - 21/21 chamadas reais aprovadas;
-- SHA-256 `dc6e4eebffb4d755d8899eadae4ce876e565506b0cce5657f08a2835e290acc7`.
+- SHA-256 `a215de0ed21d5538db07a35e65c8dcd9fb1c201491c1ee1f4d0aaaa757810d86`.
 
-Detalhes: [VALIDACAO_SP_645.md](VALIDACAO_SP_645.md).
+Detalhes: [VALIDACAO_SP_645.md](VALIDACAO_SP_645.md). Evidência pública: [`validation/sp/0.6.0/`](../validation/sp/0.6.0/).
 
 ## Estado do produto
 
