@@ -61,7 +61,7 @@ A sequência pública usa versões pré-1.0: `0.x.0` para acréscimo funcional e
 - fonte principal dos dados: **IBGE**;
 - natureza deste lançamento: **protótipo público experimental, sem SLA**.
 
-A superfície 0.6.0 possui **23 ferramentas**: 21 ferramentas `ibge_*` e duas ferramentas genéricas de pesquisa assistida, `search` e `fetch`.
+A superfície 0.6.0 possui **23 ferramentas**: 21 componentes `ibge_*` e duas ferramentas genéricas de pesquisa assistida, `search` e `fetch`.
 
 
 ### Documentação técnica
