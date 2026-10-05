@@ -1,6 +1,6 @@
 # Referência das 23 ferramentas do CensoSenso MCP
 
-Esta página é a referência operacional da superfície MCP 6.0.0. Ela complementa o [README](../README.md), que descreve arquitetura, algoritmos, instalação e validação.
+Esta página é a referência operacional da superfície MCP 0.6.0. Ela complementa o [README](../README.md), que descreve arquitetura, algoritmos, instalação e validação.
 
 Todas as ferramentas são **somente leitura**, idempotentes do ponto de vista do efeito e, quando consultam fontes externas, são marcadas como `openWorld`.
 
