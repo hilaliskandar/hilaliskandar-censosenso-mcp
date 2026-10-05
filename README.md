@@ -66,7 +66,10 @@ A superfície 0.6.0 possui **23 ferramentas**: 21 ferramentas `ibge_*` e duas fe
 ### Documentação técnica
 
 - [Referência das 23 ferramentas](docs/FERRAMENTAS.md)
+- [Exemplos de uso e casos de erro](docs/EXEMPLOS_E_CASOS_DE_ERRO.md)
 - [Matriz de fontes, cache, derivação e limitações](docs/MATRIZ_FONTES_E_PROCESSOS.md)
+- [Política de versionamento](docs/VERSIONAMENTO.md)
+- [Notas da versão 0.6.0](docs/RELEASE_0_6_0.md)
 - [Evidência da validação dos 645 municípios paulistas](docs/VALIDACAO_SP_645.md)
 - [Segurança](SECURITY.md)
 - [Privacidade](PRIVACY.md)
