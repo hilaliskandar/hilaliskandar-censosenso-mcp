@@ -1,0 +1,12 @@
+{
+  "total": 645,
+  "estrutural_ok": true,
+  "divergencias_globais": [],
+  "divergencias_municipais": [],
+  "amostra_total": 21,
+  "amostra_ok": 21,
+  "amostra_falhas": [],
+  "sha256": "a215de0ed21d5538db07a35e65c8dcd9fb1c201491c1ee1f4d0aaaa757810d86",
+  "artifact_name": "sp-645-validation-22",
+  "artifact_sha256": "48fd0a46d417ec45475d16b2c579931155cb73768f2cf40518e14061ada59021"
+}
