@@ -2,7 +2,11 @@
 
 O CensoSenso mantém um gate específico para validar o universo oficial dos municípios paulistas.
 
-## Onde encontrar
+## Evidência pública permanente
+
+Para a versão 0.6.0, o resultado município a município está disponível diretamente em [`validation/sp/0.6.0/municipios-sp-645.csv`](../validation/sp/0.6.0/municipios-sp-645.csv). Os metadados e o resumo da execução também estão nessa pasta.
+
+## Onde encontrar o artefato bruto
 
 No repositório de desenvolvimento, abra:
 
@@ -91,7 +95,7 @@ Exemplo de resultado da execução validada em 5 de outubro de 2026:
   "amostra_total": 21,
   "amostra_ok": 21,
   "amostra_falhas": [],
-  "sha256": "dc6e4eebffb4d755d8899eadae4ce876e565506b0cce5657f08a2835e290acc7"
+  "sha256": "a215de0ed21d5538db07a35e65c8dcd9fb1c201491c1ee1f4d0aaaa757810d86"
 }
 ```
 
