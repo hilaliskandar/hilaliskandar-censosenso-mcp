@@ -1,0 +1,27 @@
+{
+  "fonte": "IBGE — API de Localidades",
+  "source_url": "https://servicodados.ibge.gov.br/api/v1/localidades/estados/35/municipios?orderBy=nome",
+  "retrieved_at": "2026-10-05T17:34:27.186Z",
+  "versao": "2026-10-05",
+  "natureza_versao": "data_extracao_api_localidades",
+  "count": 645,
+  "sha256": "a215de0ed21d5538db07a35e65c8dcd9fb1c201491c1ee1f4d0aaaa757810d86",
+  "git_commit": "7a09f7a53fe606db5906a44b46b28f74138a3a44",
+  "gerador": "scripts/gate-sp-645.mjs",
+  "criterios": [
+    "total=645",
+    "codigo municipal com 7 digitos",
+    "codigo prefixado por 35",
+    "codigos unicos",
+    "nomes nao vazios e unicos",
+    "UF 35/SP quando presente",
+    "Regiao Sudeste quando presente",
+    "amostra deterministica validada em ibge_geocodigo e ibge_localidade"
+  ],
+  "validacao_estrutural_ok": true,
+  "divergencias_estruturais": 0,
+  "amostra_total": 21,
+  "amostra_ok": 21,
+  "amostra_falhas": 0,
+  "issue": 15
+}
