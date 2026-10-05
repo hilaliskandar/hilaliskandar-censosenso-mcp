@@ -1,6 +1,6 @@
 # Matriz de fontes, cache, derivação e limitações
 
-Esta matriz resume a superfície 6.0.0 do CensoSenso MCP. Para detalhes de parâmetros e uso, consulte [FERRAMENTAS.md](FERRAMENTAS.md).
+Esta matriz resume a superfície 0.6.0 do CensoSenso MCP. Para detalhes de parâmetros e uso, consulte [FERRAMENTAS.md](FERRAMENTAS.md).
 
 | Ferramenta | Fonte principal | Extração | Cache típico | Pode derivar? | Limitações/observações |
 |---|---|---|---|---|---|
