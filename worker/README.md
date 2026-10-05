@@ -16,6 +16,8 @@ Endpoint MCP:
 https://censosenso.poderdapalavra.org/mcp
 ```
 
+O domínio canônico acima é a única superfície pública de produção. O subdomínio `workers.dev` está desativado no `wrangler.jsonc` e não é aceito pelo transporte MCP.
+
 Rotas:
 
 - `/` — landing;
