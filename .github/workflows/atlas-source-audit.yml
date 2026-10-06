@@ -6,40 +6,40 @@ on:
       - feat/atlas-idhm-componentes
     paths:
       - .github/workflows/atlas-source-audit.yml
+      - scripts/update-atlas-idhm.py
+
+permissions:
+  contents: write
 
 jobs:
-  inspect:
+  inspect-and-generate:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: feat/atlas-idhm-componentes
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install openpyxl
-      - name: Download and inspect official Atlas workbook
+      - name: Generate audited Atlas snapshot
+        env:
+          ATLAS_INSECURE_TLS: "1"
+        run: python scripts/update-atlas-idhm.py
+      - name: Validate sample
         run: |
           python - <<'PY'
-          import json, ssl, urllib.request
-          from openpyxl import load_workbook
-          url="https://atlasbrasil.org.br/cockpit/storage/uploads/dados/censo_total_1991_2010.xlsx"
-          path="/tmp/censo_total_1991_2010.xlsx"
-          ctx=ssl._create_unverified_context()
-          with urllib.request.urlopen(url, context=ctx) as src, open(path,"wb") as dst:
-              dst.write(src.read())
-          wb=load_workbook(path,read_only=True,data_only=True)
-          print("SHEETS", wb.sheetnames)
-          for ws in wb.worksheets:
-              print("SHEET",ws.title,"ROWS",ws.max_row,"COLS",ws.max_column)
-              rows=ws.iter_rows(values_only=True)
-              header=next(rows)
-              print("HEADER",json.dumps(list(header),ensure_ascii=False))
-              wanted={"Codmun7","ANO","IDHM","IDHM_E","IDHM_L","IDHM_R"}
-              idx={str(v):i for i,v in enumerate(header) if v is not None}
-              if wanted.issubset(idx):
-                  print("MATCH_COLUMNS",json.dumps({k:idx[k] for k in sorted(wanted)},ensure_ascii=False))
-                  samples=[]
-                  for row in rows:
-                      if str(row[idx["Codmun7"]]) in {"3509502","3525904","3536505"}:
-                          samples.append({k:row[idx[k]] for k in sorted(wanted)})
-                  print("SAMPLES",json.dumps(samples,ensure_ascii=False))
+          import json
+          p=json.load(open("src/data/atlas-idhm-municipios-1991-2010.json",encoding="utf-8"))
+          for code in ["3509502","3525904","3536505"]:
+              print(code, json.dumps(p["municipalities"][code], ensure_ascii=False))
           PY
+      - name: Commit generated snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/atlas-idhm-municipios-1991-2010.json
+          git diff --cached --quiet && exit 0
+          git commit -m "data(atlas): atualizar snapshot municipal do IDHM"
+          git push origin HEAD:feat/atlas-idhm-componentes
