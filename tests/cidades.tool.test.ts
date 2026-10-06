@@ -15,6 +15,37 @@ function pesquisaResultado(res: Record<string, string | number | null>) {
   return [{ id: 1, res: [{ localidade: "3550308", res }] }];
 }
 
+function sidraFlat(valor: string, ano = "2024") {
+  return [
+    {
+      NC: "Nível Territorial (Código)",
+      NN: "Nível Territorial",
+      MC: "Unidade de Medida (Código)",
+      MN: "Unidade de Medida",
+      V: "Valor",
+      D1C: "Município (Código)",
+      D1N: "Município",
+      D2C: "Ano (Código)",
+      D2N: "Ano",
+      D3C: "Variável (Código)",
+      D3N: "Variável",
+    },
+    {
+      NC: "6",
+      NN: "Município",
+      MC: "1",
+      MN: "Reais",
+      V: valor,
+      D1C: "3550308",
+      D1N: "São Paulo (SP)",
+      D2C: ano,
+      D2N: ano,
+      D3C: "10143",
+      D3N: "Salário médio mensal em reais",
+    },
+  ];
+}
+
 const municipioLocalidade = {
   nome: "São Paulo",
   microrregiao: { mesorregiao: { UF: { nome: "São Paulo", sigla: "SP" } } },
@@ -152,11 +183,95 @@ describe("ibge_cidades", () => {
         municipio: "3550308",
       });
 
-      expect(lastUrl()).toContain("/33/indicadores/29171/resultados/3550308");
+      expect(lastUrl()).toContain("/pesquisas/indicadores/29171/resultados/3550308");
       expect(result.markdown).toContain("População estimada");
       expect(result.markdown).toContain("2022");
       expect(result.markdown).toContain("11451999");
     });
+
+    it("uses the generic Cidades indicator endpoint for escolarizacao", async () => {
+      mockFetch.mockResolvedValueOnce(mockResponse(pesquisaResultado({ "2022": "98.17" })));
+
+      const result = await ibgeCidades({
+        tipo: "indicador",
+        indicador: "escolarizacao",
+        municipio: "3509502",
+      });
+
+      expect(lastUrl()).toContain("/pesquisas/indicadores/60045/resultados/3509502");
+      expect(result.isError).toBeFalsy();
+      expect(result.markdown).toContain("98.17");
+    });
+
+    it("uses the generic Cidades indicator endpoint for IDHM", async () => {
+      mockFetch.mockResolvedValueOnce(mockResponse(pesquisaResultado({ "2010": "0.805" })));
+
+      const result = await ibgeCidades({
+        tipo: "indicador",
+        indicador: "idh",
+        municipio: "3509502",
+      });
+
+      expect(lastUrl()).toContain("/pesquisas/indicadores/30255/resultados/3509502");
+      expect(result.isError).toBeFalsy();
+      expect(result.markdown).toContain("0.805");
+    });
+
+    it("reports an explicit empty result when Cidades returns an empty inner series", async () => {
+      mockFetch.mockResolvedValueOnce(mockResponse(pesquisaResultado({})));
+
+      const result = await ibgeCidades({
+        tipo: "indicador",
+        indicador: "idh",
+        municipio: "3509502",
+      });
+
+      expect(result.markdown).toContain("Nenhum");
+      expect((result.structured as Record<string, unknown>).indicadores).toEqual([]);
+    });
+
+    it("uses SIDRA 9510 variable 10143 for salario_medio", async () => {
+      mockFetch.mockResolvedValueOnce(mockResponse(sidraFlat("5234.56")));
+
+      const result = await ibgeCidades({
+        tipo: "indicador",
+        indicador: "salario_medio",
+        municipio: "3550308",
+      });
+
+      expect(lastUrl()).toContain("/agregados/9510/");
+      expect(lastUrl()).toContain("/variaveis/10143");
+      expect(lastUrl()).toContain("localidades=N6[3550308]");
+      expect(result.isError).toBeFalsy();
+      expect(result.markdown).toContain("5234.56");
+    });
+
+    it("keeps legacy salario_medio id 29765 as a compatibility alias", async () => {
+      mockFetch.mockResolvedValueOnce(mockResponse(sidraFlat("5000.00")));
+
+      const result = await ibgeCidades({
+        tipo: "indicador",
+        indicador: "29765",
+        municipio: "3550308",
+      });
+
+      expect(lastUrl()).toContain("/agregados/9510/");
+      expect(result.isError).toBeFalsy();
+    });
+
+    it("maps despesas to the total committed expenditure indicator 29749", async () => {
+      mockFetch.mockResolvedValueOnce(mockResponse(pesquisaResultado({ "2025": "10666515272.08" })));
+
+      const result = await ibgeCidades({
+        tipo: "indicador",
+        indicador: "despesas",
+        municipio: "3509502",
+      });
+
+      expect(lastUrl()).toContain("/pesquisas/indicadores/29749/resultados/3509502");
+      expect(result.markdown).toContain("10666515272.08");
+    });
+
 
     it("rejects an unknown alias instead of answering another question", async () => {
       const result = await ibgeCidades({
@@ -245,7 +360,7 @@ describe("ibge_cidades", () => {
         indicador: "29171",
       });
 
-      expect(lastUrl()).toContain("/33/indicadores/29171/resultados/3550308");
+      expect(lastUrl()).toContain("/pesquisas/indicadores/29171/resultados/3550308");
       expect(result.markdown).toContain("Histórico: População estimada");
     });
 

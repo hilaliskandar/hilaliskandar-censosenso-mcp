@@ -2,11 +2,12 @@ import { z } from "zod";
 import { IBGE_API, PesquisaResultado, PesquisaIndicador, PesquisaDetalhe } from "../types.js";
 import { cacheKey, CACHE_TTL, cachedFetch } from "../cache.js";
 import { RETRY_PRESETS } from "../retry.js";
+import { fetchSidra } from "../sidra-agregados.js";
 import { withMetrics } from "../metrics.js";
 import { createMarkdownTable, formatNumber } from "../utils/index.js";
 import { parseHttpError, ValidationErrors } from "../errors.js";
 import { isValidIbgeCode, formatValidationError } from "../validation.js";
-import type { StructuredToolResult } from "../structured.js";
+import { sidraRecords, type StructuredToolResult } from "../structured.js";
 import { provenienciaIbge } from "../provenance.js";
 
 // Schema for the tool input
@@ -59,15 +60,89 @@ const INDICADORES_PANORAMA: Record<string, { id: number; pesquisa: string; nome:
   idh: { id: 30255, pesquisa: "37", nome: "IDH Municipal" },
   mortalidade: { id: 30279, pesquisa: "39", nome: "Mortalidade infantil" },
   pib_per_capita: { id: 47001, pesquisa: "38", nome: "PIB per capita" },
-  salario_medio: { id: 29765, pesquisa: "33", nome: "Salário médio mensal" },
+  salario_medio: { id: 10143, pesquisa: "SIDRA 9510", nome: "Salário médio mensal em reais" },
   populacao_ocupada: { id: 29763, pesquisa: "33", nome: "Pessoal ocupado" },
   receitas: { id: 28141, pesquisa: "33", nome: "Receitas realizadas" },
-  despesas: { id: 28142, pesquisa: "33", nome: "Despesas empenhadas" },
+  despesas: { id: 29749, pesquisa: "33", nome: "Total de despesas brutas empenhadas" },
   idhm_renda: { id: 30257, pesquisa: "37", nome: "IDHM Renda" },
   idhm_longevidade: { id: 30259, pesquisa: "37", nome: "IDHM Longevidade" },
   idhm_educacao: { id: 30261, pesquisa: "37", nome: "IDHM Educação" },
   area: { id: 29167, pesquisa: "33", nome: "Área territorial" },
 };
+
+type SerieMunicipal = {
+  entries: Array<[string, string | number | null]>;
+  url: string;
+  chaveCache: string;
+  fonte: "PESQUISAS" | "SIDRA";
+  aviso?: string;
+};
+
+function urlIndicadorCidades(indicadorId: number, municipio: string): string {
+  return `${IBGE_API.PESQUISAS}/indicadores/${indicadorId}/resultados/${municipio}`;
+}
+
+function extrairSeriePesquisa(data: PesquisaResultado[] | null | undefined) {
+  if (!data || data.length === 0 || !data[0].res || data[0].res.length === 0) return [];
+  return Object.entries(data[0].res[0].res)
+    .filter(([, valor]) => valor !== null && valor !== "-" && valor !== "...")
+    .sort(([a], [b]) => b.localeCompare(a));
+}
+
+/**
+ * Resolve a série municipal pelo endpoint genérico de indicadores do Cidades@.
+ *
+ * O caminho genérico é mais estável que a variante aninhada por pesquisa para
+ * indicadores transversais como escolarização e IDHM. Para salário médio, o
+ * Cidades@ deixou de ser uma origem programática confiável; usa-se a Tabela
+ * SIDRA 9510, variável 10143 (salário médio mensal em reais), cuja cobertura
+ * municipal publicada é restrita a municípios com 50 mil habitantes ou mais.
+ */
+async function buscarSerieMunicipal(
+  indKey: string,
+  municipio: string,
+  apenasUltimo = false,
+  retryRapido = false
+): Promise<SerieMunicipal> {
+  if (indKey === "salario_medio") {
+    const caminho = `/t/9510/n6/${municipio}/v/10143/p/${apenasUltimo ? "last" : "all"}`;
+    const { url, chaveCache, data } = await fetchSidra<Record<string, string>[]>(
+      caminho,
+      CACHE_TTL.MEDIUM,
+      retryRapido ? RETRY_PRESETS.QUICK : undefined
+    );
+    const parsed = sidraRecords(data);
+    const entries = parsed.registros
+      .map((row) => [row["Ano"] ?? row["Período"] ?? "", row["Valor"] ?? ""] as [string, string])
+      .filter(
+        ([ano, valor]) => Boolean(ano) && Boolean(valor) && !["-", "..", "...", "X"].includes(valor)
+      )
+      .sort(([a], [b]) => b.localeCompare(a));
+    return {
+      entries,
+      url,
+      chaveCache,
+      fonte: "SIDRA",
+      ...(entries.length === 0
+        ? {
+            aviso:
+              "Salário médio mensal: a Tabela SIDRA 9510 publica resultados municipais apenas para municípios com 50.000 habitantes ou mais.",
+          }
+        : {}),
+    };
+  }
+
+  const info = INDICADORES_PANORAMA[indKey];
+  const url = urlIndicadorCidades(info.id, municipio);
+  const chaveCache = cacheKey(url);
+  const data = await cachedFetch<PesquisaResultado[]>(
+    url,
+    chaveCache,
+    CACHE_TTL.MEDIUM,
+    retryRapido ? RETRY_PRESETS.QUICK : undefined
+  );
+  return { entries: extrairSeriePesquisa(data), url, chaveCache, fonte: "PESQUISAS" };
+}
 
 // Pesquisas principais disponíveis
 const PESQUISAS_PRINCIPAIS = [
@@ -206,11 +281,13 @@ async function panoramaMunicipio(codigoMunicipio: string): Promise<StructuredToo
   // demais respondendo em ~0,2s. Medido em 28/08/2026, quando `escolarizacao`
   // (pesquisa 40, indicador 60045) e `salario_medio` (33/29765) estavam nesse
   // estado — o panorama não respondia para município nenhum. Painel com 6 de 8
-  // indicadores é muito melhor que painel nenhum.
+  // indicadores é muito melhor que painel nenhum. Desde 0.6.x, escolarização
+  // e IDHM usam o endpoint genérico de indicadores do Cidades@; salário médio
+  // usa SIDRA 9510 para evitar depender de um mapeamento Cidades@ instável.
   type BuscaPanorama = {
     indKey: string;
     indInfo: (typeof INDICADORES_PANORAMA)[string];
-    data: PesquisaResultado[] | null;
+    serie: SerieMunicipal | null;
     erro?: string;
   };
 
@@ -219,41 +296,35 @@ async function panoramaMunicipio(codigoMunicipio: string): Promise<StructuredToo
       .filter((indKey) => INDICADORES_PANORAMA[indKey])
       .map(async (indKey) => {
         const indInfo = INDICADORES_PANORAMA[indKey];
-        const url = `${IBGE_API.PESQUISAS}/${indInfo.pesquisa}/indicadores/${indInfo.id}/resultados/${codigoMunicipio}`;
         try {
-          const key = cacheKey(url);
-          const data = await cachedFetch<PesquisaResultado[]>(
-            url,
-            key,
-            CACHE_TTL.MEDIUM,
-            RETRY_PRESETS.QUICK
-          );
-          return { indKey, indInfo, data };
+          const serie = await buscarSerieMunicipal(indKey, codigoMunicipio, true, true);
+          return { indKey, indInfo, serie };
         } catch (error) {
           // Indicador indisponível sai do painel; não leva os outros junto,
           // mas a resposta registra explicitamente a perda parcial.
           return {
             indKey,
             indInfo,
-            data: null,
+            serie: null,
             erro: error instanceof Error ? error.message : "falha upstream",
           };
         }
       })
   );
 
-  const avisos = respostas
-    .filter((r) => r.data === null)
-    .map((r) => `${r.indInfo.nome}: indisponível na origem nesta execução`);
+  const avisos = respostas.flatMap((r) => {
+    if (r.serie === null) return [`${r.indInfo.nome}: indisponível na origem nesta execução`];
+    if (r.serie.aviso) return [r.serie.aviso];
+    if (r.serie.entries.length === 0) {
+      return [`${r.indInfo.nome}: sem valor publicado pela origem para este município`];
+    }
+    return [];
+  });
 
-  for (const { indKey, indInfo, data } of respostas) {
+  for (const { indKey, indInfo, serie } of respostas) {
     try {
-      if (data && data.length > 0 && data[0].res && data[0].res.length > 0) {
-        const resultado = data[0].res[0].res;
-        const anos = Object.keys(resultado).sort().reverse();
-
-        for (const ano of anos) {
-          const valor = resultado[ano];
+      if (serie && serie.entries.length > 0) {
+        for (const [ano, valor] of serie.entries) {
           if (valor !== null && valor !== "-" && valor !== "...") {
             let valorFormatado = String(valor);
 
@@ -301,7 +372,7 @@ async function panoramaMunicipio(codigoMunicipio: string): Promise<StructuredToo
   // Provenance: keyed to the first/principal indicator fetch of the panorama
   // (populacao) — the response merges several fetches of the same API.
   const principal = INDICADORES_PANORAMA["populacao"];
-  const principalUrl = `${IBGE_API.PESQUISAS}/${principal.pesquisa}/indicadores/${principal.id}/resultados/${codigoMunicipio}`;
+  const principalUrl = urlIndicadorCidades(principal.id, codigoMunicipio);
   const provenance = provenienciaIbge({
     fonte: "PESQUISAS",
     url: principalUrl,
@@ -360,6 +431,8 @@ type IndicadorPanorama = (typeof INDICADORES_PANORAMA)[string];
 function resolverIndicadorPanorama(indicador: string): IndicadorPanorama | undefined {
   const porAlias = INDICADORES_PANORAMA[indicador.toLowerCase()];
   if (porAlias) return porAlias;
+  // Compatibilidade com o antigo ID do Cidades@ para salário médio.
+  if (indicador === "29765") return INDICADORES_PANORAMA.salario_medio;
   return Object.values(INDICADORES_PANORAMA).find((info) => String(info.id) === indicador);
 }
 
@@ -392,52 +465,64 @@ async function consultarIndicador(
       };
     }
 
-    const url = `${IBGE_API.PESQUISAS}/${indicadorInfo.pesquisa}/indicadores/${indicadorInfo.id}/resultados/${municipio}`;
-    const key = cacheKey(url);
-    const data = await cachedFetch<PesquisaResultado[]>(url, key, CACHE_TTL.MEDIUM);
-
+    const indKey =
+      Object.entries(INDICADORES_PANORAMA).find(([, info]) => info === indicadorInfo)?.[0] ??
+      indicador.toLowerCase();
+    const serie = await buscarSerieMunicipal(indKey, municipio, false, false);
     const provenance = provenienciaIbge({
-      fonte: "PESQUISAS",
-      url,
-      chaveCache: key,
-      pesquisa: `Cidades@ — indicador ${indicadorInfo.nome}`,
-      dataset: String(indicadorInfo.id),
+      fonte: serie.fonte,
+      url: serie.url,
+      chaveCache: serie.chaveCache,
+      pesquisa:
+        serie.fonte === "SIDRA"
+          ? "SIDRA, Tabela 9510 — salário médio mensal em reais"
+          : `Cidades@ — indicador ${indicadorInfo.nome}`,
+      dataset: serie.fonte === "SIDRA" ? "9510" : String(indicadorInfo.id),
+      ...(serie.fonte === "SIDRA" ? { dataVintage: serie.entries[0]?.[0] ?? null } : {}),
     });
 
-    if (!data || data.length === 0) {
+    const entries = serie.entries.slice(0, 20);
+    if (entries.length === 0) {
+      const detalhe =
+        serie.aviso ??
+        `Nenhum valor publicado para o indicador ${indicadorInfo.nome} neste município.`;
       return {
-        markdown: ValidationErrors.emptyResult("ibge_cidades"),
-        structured: { tipo: "indicador", municipio, nome: indicadorInfo.nome, indicadores: [] },
+        markdown: ValidationErrors.emptyResult("ibge_cidades", detalhe),
+        structured: {
+          tipo: "indicador",
+          municipio,
+          nome: indicadorInfo.nome,
+          indicadores: [],
+          ...(serie.aviso ? { avisos: [serie.aviso] } : {}),
+        },
         provenance,
       };
     }
 
     let output = `## ${indicadorInfo.nome}\n\n`;
     output += `**Município:** ${municipio}\n\n`;
+    output += createMarkdownTable(
+      ["Ano", "Valor"],
+      entries.map(([ano, valor]) => [ano, String(valor)]),
+      { alignment: ["center", "right"] }
+    );
+    if (serie.aviso) output += `\n### Avisos\n\n- ${serie.aviso}\n`;
 
-    const indicadores: Array<{ nome: string; valor: string; ano?: string }> = [];
-
-    if (data[0].res && data[0].res.length > 0) {
-      const resultado = data[0].res[0].res;
-      const entries = Object.entries(resultado)
-        .filter(([, v]) => v !== null && v !== "-" && v !== "...")
-        .sort(([a], [b]) => b.localeCompare(a))
-        .slice(0, 20);
-
-      output += createMarkdownTable(
-        ["Ano", "Valor"],
-        entries.map(([ano, valor]) => [ano, String(valor)]),
-        { alignment: ["center", "right"] }
-      );
-
-      for (const [ano, valor] of entries) {
-        indicadores.push({ nome: indicadorInfo.nome, valor: String(valor), ano });
-      }
-    }
+    const indicadores = entries.map(([ano, valor]) => ({
+      nome: indicadorInfo.nome,
+      valor: String(valor),
+      ano,
+    }));
 
     return {
       markdown: output,
-      structured: { tipo: "indicador", municipio, nome: indicadorInfo.nome, indicadores },
+      structured: {
+        tipo: "indicador",
+        municipio,
+        nome: indicadorInfo.nome,
+        indicadores,
+        ...(serie.aviso ? { avisos: [serie.aviso] } : {}),
+      },
       provenance,
     };
   }
@@ -565,46 +650,40 @@ async function historicoIndicador(
     };
   }
 
-  const pesquisa = indicadorInfo.pesquisa;
   const indicadorId = indicadorInfo.id;
   const indicadorNome = indicadorInfo.nome;
-
-  const url = `${IBGE_API.PESQUISAS}/${pesquisa}/indicadores/${indicadorId}/resultados/${municipio}`;
-  const key = cacheKey(url);
-
-  const data = await cachedFetch<PesquisaResultado[]>(url, key, CACHE_TTL.MEDIUM);
+  const indKey =
+    Object.entries(INDICADORES_PANORAMA).find(([, info]) => info === indicadorInfo)?.[0] ??
+    indicador.toLowerCase();
+  const serie = await buscarSerieMunicipal(indKey, municipio, false, false);
 
   const provenance = provenienciaIbge({
-    fonte: "PESQUISAS",
-    url,
-    chaveCache: key,
-    pesquisa: `Cidades@ — histórico do indicador ${indicadorNome}`,
-    dataset: String(indicadorId),
+    fonte: serie.fonte,
+    url: serie.url,
+    chaveCache: serie.chaveCache,
+    pesquisa:
+      serie.fonte === "SIDRA"
+        ? "SIDRA, Tabela 9510 — histórico do salário médio mensal em reais"
+        : `Cidades@ — histórico do indicador ${indicadorNome}`,
+    dataset: serie.fonte === "SIDRA" ? "9510" : String(indicadorId),
+    ...(serie.fonte === "SIDRA" ? { dataVintage: serie.entries[0]?.[0] ?? null } : {}),
   });
-
-  if (!data || data.length === 0 || !data[0].res || data[0].res.length === 0) {
-    return {
-      markdown: ValidationErrors.emptyResult(
-        "ibge_cidades",
-        `Nenhum histórico encontrado para o indicador ${indicador}`
-      ),
-      structured: { tipo: "historico", municipio, nome: indicadorNome, indicadores: [] },
-      provenance,
-    };
-  }
 
   let output = `## Histórico: ${indicadorNome}\n\n`;
   output += `**Município:** ${municipio}\n\n`;
 
-  const resultado = data[0].res[0].res;
-  const entries = Object.entries(resultado)
-    .filter(([, v]) => v !== null && v !== "-" && v !== "...")
-    .sort(([a], [b]) => b.localeCompare(a));
+  const entries = serie.entries;
 
   if (entries.length === 0) {
     return {
       markdown: ValidationErrors.emptyResult("ibge_cidades"),
-      structured: { tipo: "historico", municipio, nome: indicadorNome, indicadores: [] },
+      structured: {
+        tipo: "historico",
+        municipio,
+        nome: indicadorNome,
+        indicadores: [],
+        ...(serie.aviso ? { avisos: [serie.aviso] } : {}),
+      },
       provenance,
     };
   }

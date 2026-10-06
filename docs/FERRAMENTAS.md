@@ -249,7 +249,7 @@ ibge_sidra_tabelas → ibge_sidra_metadados → ibge_sidra
 
 **Finalidade:** produzir panorama de um município semelhante ao fluxo do Cidades@.
 
-**Fonte:** API de Pesquisas/Cidades@ e API de Localidades.
+**Fonte:** API de Pesquisas/Cidades@, API de Localidades e SIDRA/API de Agregados quando o indicador exigir fonte alternativa.
 
 **Entradas principais:**
 - `municipio`;
@@ -258,7 +258,14 @@ ibge_sidra_tabelas → ibge_sidra_metadados → ibge_sidra
 
 **Indicadores disponíveis no wrapper incluem:** população, área, densidade, PIB per capita, IDH, escolarização, mortalidade, salário médio, receitas e despesas.
 
-**Regra operacional:** um panorama pode combinar várias consultas; lacunas de fonte são relatadas como indisponibilidade parcial em vez de serem ocultadas.
+**Regras específicas de fonte:**
+- os indicadores Cidades@ usam o endpoint genérico `/pesquisas/indicadores/{id}/resultados/{municipio}`, evitando dependência da classificação interna por pesquisa quando o indicador é transversal;
+- `escolarizacao` preserva o conceito “taxa de escolarização de 6 a 14 anos” e usa o indicador Cidades@ `60045`;
+- `idh` usa o indicador Cidades@ `30255`, cuja fonte exibida pelo próprio Cidades@ é o PNUD;
+- `salario_medio` usa a Tabela SIDRA `9510`, variável `10143` (“Salário médio mensal em reais”); a publicação municipal dessa tabela é restrita a municípios com 50 mil habitantes ou mais;
+- `despesas` usa o indicador Cidades@ `29749`, correspondente ao total de despesas brutas empenhadas.
+
+**Regra operacional:** um panorama pode combinar várias consultas; lacunas de fonte, ausência de série e restrições de cobertura são relatadas explicitamente em `avisos` em vez de serem ocultadas.
 
 **Uso recomendado:** pergunta ampla sobre um único município.
 
