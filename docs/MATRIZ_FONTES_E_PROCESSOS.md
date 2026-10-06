@@ -15,7 +15,7 @@ Esta matriz resume a superfície 0.6.0 do CensoSenso MCP. Para detalhes de parâ
 | `ibge_censo` | SIDRA/Agregados | live GET | conforme consulta | sim | temas limitados ao dicionário auditado |
 | `ibge_indicadores` | SIDRA/Agregados | live GET | conforme consulta | sim | dicionário de indicadores auditados |
 | `ibge_comparar` | wrappers oficiais | live GET | conforme consulta | sim | recomendado para 2–10 localidades |
-| `ibge_cidades` | Pesquisas/Cidades@ + Localidades + SIDRA 9510 | múltiplos GETs | MEDIUM/STATIC | parcialmente | escolarização/IDHM via endpoint genérico; salário médio via SIDRA 9510 (municípios ≥50 mil hab.); lacunas e séries vazias são avisadas |
+| `ibge_cidades` | Pesquisas/Cidades@ + Localidades + SIDRA 9510 + Atlas Brasil Censo 1991–2010 | múltiplos GETs + snapshot versionado | MEDIUM/STATIC | parcialmente | IDHM total via Cidades@; componentes Educação/Longevidade/Renda via snapshot oficial Atlas (5.565 municípios, 1991/2000/2010); salário médio via SIDRA 9510 (municípios ≥50 mil hab.); lacunas são avisadas |
 | `ibge_datasaude` | SIDRA/Agregados | live GET | conforme consulta | sim | granularidade varia por indicador |
 | `ibge_malhas` | API de Malhas | live GET | STATIC | não | geometrias podem ser volumosas |
 | `ibge_vizinhos` | Malhas + Turf | live GET + cálculo | STATIC para geometrias | sim | raio usa distância entre centróides |

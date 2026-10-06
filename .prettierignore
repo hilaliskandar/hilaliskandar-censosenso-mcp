@@ -2,3 +2,6 @@
 # scripts + versioned JSON snapshots; formatting this file creates a very large
 # non-semantic diff and will be overwritten on regeneration.
 src/data/recortes-gerados.ts
+
+# Generated compact Atlas IDHM snapshot; source of truth is scripts/update-atlas-idhm.py.
+src/data/atlas-idhm-municipios-1991-2010.json

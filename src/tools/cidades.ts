@@ -8,7 +8,8 @@ import { createMarkdownTable, formatNumber } from "../utils/index.js";
 import { parseHttpError, ValidationErrors } from "../errors.js";
 import { isValidIbgeCode, formatValidationError } from "../validation.js";
 import { sidraRecords, type StructuredToolResult } from "../structured.js";
-import { provenienciaIbge } from "../provenance.js";
+import { provenienciaAtlas, provenienciaIbge } from "../provenance.js";
+import atlasIdhmSnapshot from "../data/atlas-idhm-municipios-1991-2010.json" with { type: "json" };
 
 // Schema for the tool input
 export const cidadesSchema = z.object({
@@ -53,7 +54,10 @@ function listingPayload(tipo: string): Record<string, unknown> {
 }
 
 // Indicadores principais do panorama (usados em cidades.ibge.gov.br)
-const INDICADORES_PANORAMA: Record<string, { id: number; pesquisa: string; nome: string }> = {
+const INDICADORES_PANORAMA: Record<
+  string,
+  { id: number | string; pesquisa: string; nome: string }
+> = {
   populacao: { id: 29171, pesquisa: "33", nome: "População estimada" },
   densidade: { id: 29168, pesquisa: "33", nome: "Densidade demográfica" },
   escolarizacao: { id: 60045, pesquisa: "40", nome: "Taxa de escolarização 6-14 anos" },
@@ -64,43 +68,43 @@ const INDICADORES_PANORAMA: Record<string, { id: number; pesquisa: string; nome:
   populacao_ocupada: { id: 29763, pesquisa: "33", nome: "Pessoal ocupado" },
   receitas: { id: 28141, pesquisa: "33", nome: "Receitas realizadas" },
   despesas: { id: 29749, pesquisa: "33", nome: "Total de despesas brutas empenhadas" },
+  idhm_renda: { id: "IDHM_R", pesquisa: "Atlas Brasil", nome: "IDHM Renda" },
+  idhm_longevidade: { id: "IDHM_L", pesquisa: "Atlas Brasil", nome: "IDHM Longevidade" },
+  idhm_educacao: { id: "IDHM_E", pesquisa: "Atlas Brasil", nome: "IDHM Educação" },
   area: { id: 29167, pesquisa: "33", nome: "Área territorial" },
 };
 
-const INDICADORES_NAO_SUPORTADOS: Record<string, { nome: string; ids: string[] }> = {
-  idhm_renda: { nome: "IDHM Renda", ids: ["30257"] },
-  idhm_longevidade: { nome: "IDHM Longevidade", ids: ["30259"] },
-  idhm_educacao: { nome: "IDHM Educação", ids: ["30261"] },
+type AtlasIdhmValues = [number, number, number, number];
+type AtlasIdhmSnapshot = {
+  source_url: string;
+  source_sheet: string;
+  source_sha256: string;
+  retrieved_at: string;
+  reference_years: number[];
+  value_order: string[];
+  municipality_count: number;
+  record_count: number;
+  municipalities: Record<string, Record<string, AtlasIdhmValues>>;
 };
 
-function componenteIdhmNaoSuportado(indicador: string) {
-  const normalizado = indicador.toLowerCase();
-  const porAlias = INDICADORES_NAO_SUPORTADOS[normalizado];
-  if (porAlias) return porAlias;
-  return Object.values(INDICADORES_NAO_SUPORTADOS).find((info) => info.ids.includes(indicador));
-}
+const ATLAS_IDHM = atlasIdhmSnapshot as unknown as AtlasIdhmSnapshot;
 
-function erroComponenteIdhm(indicador: string): StructuredToolResult | null {
-  const info = componenteIdhmNaoSuportado(indicador);
-  if (!info) return null;
-  return {
-    markdown:
-      "## Indicador não disponível na fonte atual\n\n" +
-      `**Indicador:** ${info.nome}\n\n` +
-      "A API pública Cidades@ atualmente expõe o IDHM municipal total pela pesquisa 10111 / indicador 329756, " +
-      "com série 1991, 2000 e 2010, mas não expõe nessa pesquisa os componentes Renda, Longevidade e Educação. " +
-      "Os antigos IDs da pesquisa 37 permanecem no catálogo histórico, porém não devolvem série municipal utilizável.\n\n" +
-      "Para evitar resultado vazio com aparência de sucesso, o CensoSenso não anuncia esses componentes como suportados. " +
-      "Use o alias `idh` para o IDHM total.",
-    isError: true,
-  };
-}
+const COMPONENTES_IDHM: Record<
+  string,
+  { valueIndex: 1 | 2 | 3; legacyIds: string[]; dataset: "IDHM_E" | "IDHM_L" | "IDHM_R" }
+> = {
+  idhm_educacao: { valueIndex: 1, legacyIds: ["30261"], dataset: "IDHM_E" },
+  idhm_longevidade: { valueIndex: 2, legacyIds: ["30259"], dataset: "IDHM_L" },
+  idhm_renda: { valueIndex: 3, legacyIds: ["30257"], dataset: "IDHM_R" },
+};
 
 type SerieMunicipal = {
   entries: Array<[string, string | number | null]>;
   url: string;
-  chaveCache: string;
-  fonte: "PESQUISAS" | "SIDRA";
+  chaveCache?: string;
+  fonte: "PESQUISAS" | "SIDRA" | "ATLAS";
+  dataset?: string;
+  retrievedAt?: string;
   aviso?: string;
 };
 
@@ -138,6 +142,31 @@ async function buscarSerieMunicipal(
   apenasUltimo = false,
   retryRapido = false
 ): Promise<SerieMunicipal> {
+  const componente = COMPONENTES_IDHM[indKey];
+  if (componente) {
+    const years = ATLAS_IDHM.municipalities[municipio];
+    const entries = years
+      ? Object.entries(years)
+          .map(
+            ([ano, valores]) => [ano, String(valores[componente.valueIndex])] as [string, string]
+          )
+          .sort(([a], [b]) => b.localeCompare(a))
+      : [];
+    return {
+      entries,
+      url: ATLAS_IDHM.source_url,
+      fonte: "ATLAS",
+      dataset: `${ATLAS_IDHM.source_sheet}#${componente.dataset}`,
+      retrievedAt: ATLAS_IDHM.retrieved_at,
+      ...(entries.length === 0
+        ? {
+            aviso:
+              "O snapshot Atlas Censo 1991–2010 usa a malha municipal harmonizada de 2010 (5.565 municípios); municípios criados posteriormente podem não possuir série.",
+          }
+        : {}),
+    };
+  }
+
   if (indKey === "salario_medio") {
     const caminho = `/t/9510/n6/${municipio}/v/10143/p/${apenasUltimo ? "last" : "all"}`;
     const { url, chaveCache, data } = await fetchSidra<Record<string, string>[]>(
@@ -167,7 +196,7 @@ async function buscarSerieMunicipal(
   }
 
   const info = INDICADORES_PANORAMA[indKey];
-  const url = urlIndicadorCidades(info.id, municipio);
+  const url = urlIndicadorCidades(Number(info.id), municipio);
   const chaveCache = cacheKey(url);
   const data = await cachedFetch<PesquisaResultado[]>(
     url,
@@ -406,7 +435,7 @@ async function panoramaMunicipio(codigoMunicipio: string): Promise<StructuredToo
   // Provenance: keyed to the first/principal indicator fetch of the panorama
   // (populacao) — the response merges several fetches of the same API.
   const principal = INDICADORES_PANORAMA["populacao"];
-  const principalUrl = urlIndicadorCidades(principal.id, codigoMunicipio);
+  const principalUrl = urlIndicadorCidades(Number(principal.id), codigoMunicipio);
   const provenance = provenienciaIbge({
     fonte: "PESQUISAS",
     url: principalUrl,
@@ -468,6 +497,9 @@ function resolverIndicadorPanorama(indicador: string): IndicadorPanorama | undef
   // Compatibilidade com IDs anteriormente expostos pelo wrapper.
   if (indicador === "29765") return INDICADORES_PANORAMA.salario_medio;
   if (indicador === "30255") return INDICADORES_PANORAMA.idh;
+  for (const [alias, componente] of Object.entries(COMPONENTES_IDHM)) {
+    if (componente.legacyIds.includes(indicador)) return INDICADORES_PANORAMA[alias];
+  }
   return Object.values(INDICADORES_PANORAMA).find((info) => String(info.id) === indicador);
 }
 
@@ -475,9 +507,6 @@ async function consultarIndicador(
   indicador: string,
   municipio?: string
 ): Promise<StructuredToolResult> {
-  const naoSuportado = erroComponenteIdhm(indicador);
-  if (naoSuportado) return naoSuportado;
-
   const indicadorInfo = resolverIndicadorPanorama(indicador);
 
   if (indicadorInfo) {
@@ -507,17 +536,25 @@ async function consultarIndicador(
       Object.entries(INDICADORES_PANORAMA).find(([, info]) => info === indicadorInfo)?.[0] ??
       indicador.toLowerCase();
     const serie = await buscarSerieMunicipal(indKey, municipio, false, false);
-    const provenance = provenienciaIbge({
-      fonte: serie.fonte,
-      url: serie.url,
-      chaveCache: serie.chaveCache,
-      pesquisa:
-        serie.fonte === "SIDRA"
-          ? "SIDRA, Tabela 9510 — salário médio mensal em reais"
-          : `Cidades@ — indicador ${indicadorInfo.nome}`,
-      dataset: serie.fonte === "SIDRA" ? "9510" : String(indicadorInfo.id),
-      ...(serie.fonte === "SIDRA" ? { dataVintage: serie.entries[0]?.[0] ?? null } : {}),
-    });
+    const provenance =
+      serie.fonte === "ATLAS"
+        ? provenienciaAtlas({
+            url: serie.url,
+            dataset: serie.dataset ?? String(indicadorInfo.id),
+            retrievedAt: serie.retrievedAt ?? new Date().toISOString(),
+            dataVintage: "1991–2010",
+          })
+        : provenienciaIbge({
+            fonte: serie.fonte,
+            url: serie.url,
+            ...(serie.chaveCache ? { chaveCache: serie.chaveCache } : {}),
+            pesquisa:
+              serie.fonte === "SIDRA"
+                ? "SIDRA, Tabela 9510 — salário médio mensal em reais"
+                : `Cidades@ — indicador ${indicadorInfo.nome}`,
+            dataset: serie.fonte === "SIDRA" ? "9510" : String(indicadorInfo.id),
+            ...(serie.fonte === "SIDRA" ? { dataVintage: serie.entries[0]?.[0] ?? null } : {}),
+          });
 
     const entries = serie.entries.slice(0, 20);
     if (entries.length === 0) {
@@ -667,9 +704,6 @@ async function historicoIndicador(
   municipio: string,
   indicador: string
 ): Promise<StructuredToolResult> {
-  const naoSuportado = erroComponenteIdhm(indicador);
-  if (naoSuportado) return naoSuportado;
-
   const indicadorInfo = resolverIndicadorPanorama(indicador);
   if (!indicadorInfo) {
     return {
@@ -698,17 +732,25 @@ async function historicoIndicador(
     indicador.toLowerCase();
   const serie = await buscarSerieMunicipal(indKey, municipio, false, false);
 
-  const provenance = provenienciaIbge({
-    fonte: serie.fonte,
-    url: serie.url,
-    chaveCache: serie.chaveCache,
-    pesquisa:
-      serie.fonte === "SIDRA"
-        ? "SIDRA, Tabela 9510 — histórico do salário médio mensal em reais"
-        : `Cidades@ — histórico do indicador ${indicadorNome}`,
-    dataset: serie.fonte === "SIDRA" ? "9510" : String(indicadorId),
-    ...(serie.fonte === "SIDRA" ? { dataVintage: serie.entries[0]?.[0] ?? null } : {}),
-  });
+  const provenance =
+    serie.fonte === "ATLAS"
+      ? provenienciaAtlas({
+          url: serie.url,
+          dataset: serie.dataset ?? String(indicadorId),
+          retrievedAt: serie.retrievedAt ?? new Date().toISOString(),
+          dataVintage: "1991–2010",
+        })
+      : provenienciaIbge({
+          fonte: serie.fonte,
+          url: serie.url,
+          ...(serie.chaveCache ? { chaveCache: serie.chaveCache } : {}),
+          pesquisa:
+            serie.fonte === "SIDRA"
+              ? "SIDRA, Tabela 9510 — histórico do salário médio mensal em reais"
+              : `Cidades@ — histórico do indicador ${indicadorNome}`,
+          dataset: serie.fonte === "SIDRA" ? "9510" : String(indicadorId),
+          ...(serie.fonte === "SIDRA" ? { dataVintage: serie.entries[0]?.[0] ?? null } : {}),
+        });
 
   let output = `## Histórico: ${indicadorNome}\n\n`;
   output += `**Município:** ${municipio}\n\n`;
