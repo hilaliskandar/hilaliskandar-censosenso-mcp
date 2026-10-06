@@ -224,7 +224,7 @@ export async function ibgeMalhas(input: MalhasInput): Promise<StructuredToolResu
       if (input.formato === "svg") {
         return {
           markdown: formatSvgResponse(fullUrl, input),
-          structured: buildMalhasMetadata(input, fullUrl, data),
+          structured: buildMalhasMetadata(input, fullUrl),
           provenance: provenienciaIbge({
             fonte: "MALHAS",
             url: fullUrl,
@@ -259,7 +259,7 @@ export async function ibgeMalhas(input: MalhasInput): Promise<StructuredToolResu
 
       return {
         markdown: formatMalhasResponse(data, fullUrl, input),
-        structured: buildMalhasMetadata(input, fullUrl),
+        structured: buildMalhasMetadata(input, fullUrl, data),
         provenance: provenienciaIbge({
           fonte: "MALHAS",
           url: fullUrl,
