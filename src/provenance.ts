@@ -66,6 +66,20 @@ export const IBGE_LICENSE = {
   verified_at: "2026-08-08",
 } as const;
 
+
+/**
+ * Atlas Brasil does not expose a machine-readable license alongside the
+ * downloadable Censo 1991–2010 workbook. Keep that uncertainty explicit
+ * instead of inheriting the IBGE open-data license used elsewhere.
+ */
+export const ATLAS_LICENSE = {
+  id: null,
+  name: "Licença específica não identificada na base publicada pelo Atlas Brasil",
+  url: null,
+  terms_url: null,
+  verified_at: "2026-10-06",
+} as const;
+
 /**
  * Source registry — one entry per IBGE API this server consumes. `name` is
  * what the concise projection shows as `source`; `endpoint` is the base URL
@@ -177,6 +191,40 @@ export function provenienciaIbge(opts: ProvenienciaIbgeOptions): Provenance {
     derived: opts.derivado !== undefined,
     ...(opts.derivado !== undefined ? { derivation_note: opts.derivado.nota } : {}),
     served_from_cache: meta ? meta.servedFromCache : null,
+  });
+}
+
+
+export interface ProvenienciaAtlasOptions {
+  url: string;
+  dataset: string;
+  retrievedAt: string;
+  dataVintage?: string | null;
+}
+
+/**
+ * Provenance for the versioned Atlas do Desenvolvimento Humano snapshot used
+ * only for IDHM components. The runtime never scrapes the Atlas site: values
+ * come from the audited snapshot generated from the official downloadable
+ * workbook.
+ */
+export function provenienciaAtlas(opts: ProvenienciaAtlasOptions): Provenance {
+  return provenanceContext.build({
+    source: {
+      name: "Atlas do Desenvolvimento Humano no Brasil",
+      agency: "PNUD Brasil / Ipea / Fundação João Pinheiro",
+      database: "Atlas Brasil — Censo 1991–2010",
+      endpoint: "https://atlasbrasil.org.br/",
+    },
+    source_url: opts.url,
+    dataset: opts.dataset,
+    data_vintage: opts.dataVintage ?? "1991–2010",
+    retrieved_at: opts.retrievedAt,
+    citation:
+      `Fonte: Atlas do Desenvolvimento Humano no Brasil (PNUD Brasil / Ipea / Fundação João Pinheiro), base Censo 1991–2010, ${opts.url}, extraído em ${dataCitacao(opts.retrievedAt)}.`,
+    license: ATLAS_LICENSE,
+    derived: false,
+    served_from_cache: null,
   });
 }
 
