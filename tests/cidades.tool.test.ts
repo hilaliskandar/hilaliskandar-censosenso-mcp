@@ -155,39 +155,79 @@ describe("ibge_cidades", () => {
       expect(mockFetch).not.toHaveBeenCalled();
     });
 
-    it("does not advertise unsupported IDHM components", async () => {
+    it("advertises the three IDHM components backed by Atlas Brasil", async () => {
       const result = await ibgeCidades({ tipo: "indicador" });
 
-      expect(result.markdown).not.toContain("idhm_renda");
-      expect(result.markdown).not.toContain("idhm_longevidade");
-      expect(result.markdown).not.toContain("idhm_educacao");
-      expect(result.markdown).toContain("idh");
+      expect(result.markdown).toContain("idhm_renda");
+      expect(result.markdown).toContain("idhm_longevidade");
+      expect(result.markdown).toContain("idhm_educacao");
+      expect(result.markdown).toContain("IDHM_R");
+      expect(result.markdown).toContain("IDHM_L");
+      expect(result.markdown).toContain("IDHM_E");
       expect(mockFetch).not.toHaveBeenCalled();
     });
 
-    it("rejects legacy IDHM component aliases with an explicit source limitation", async () => {
+    it("returns IDHM Renda from the versioned Atlas snapshot without network fetch", async () => {
       const result = await ibgeCidades({
         tipo: "indicador",
         indicador: "idhm_renda",
         municipio: "3509502",
       });
 
-      expect(result.isError).toBe(true);
-      expect(result.markdown).toContain("não disponível na fonte atual");
-      expect(result.markdown).toContain("pesquisa 10111");
-      expect(result.markdown).toContain("Use o alias `idh`");
+      expect(result.isError).toBeFalsy();
+      expect(result.markdown).toContain("IDHM Renda");
+      expect(result.markdown).toContain("0.829");
+      expect(result.markdown).toContain("0.808");
+      expect(result.markdown).toContain("0.775");
+      expect(result.provenance?.source.name).toContain("Atlas do Desenvolvimento Humano");
       expect(mockFetch).not.toHaveBeenCalled();
     });
 
-    it("rejects legacy numeric IDHM component ids without calling the upstream API", async () => {
+    it("returns IDHM Educação and Longevidade from Atlas", async () => {
+      const educacao = await ibgeCidades({
+        tipo: "indicador",
+        indicador: "idhm_educacao",
+        municipio: "3509502",
+      });
+      const longevidade = await ibgeCidades({
+        tipo: "indicador",
+        indicador: "idhm_longevidade",
+        municipio: "3509502",
+      });
+
+      expect(educacao.markdown).toContain("0.731");
+      expect(educacao.markdown).toContain("0.614");
+      expect(educacao.markdown).toContain("0.408");
+      expect(longevidade.markdown).toContain("0.86");
+      expect(longevidade.markdown).toContain("0.801");
+      expect(longevidade.markdown).toContain("0.746");
+      expect(mockFetch).not.toHaveBeenCalled();
+    });
+
+    it("keeps legacy numeric IDHM component ids as Atlas compatibility aliases", async () => {
       const result = await ibgeCidades({
         tipo: "historico",
         indicador: "30259",
         municipio: "3509502",
       });
 
-      expect(result.isError).toBe(true);
+      expect(result.isError).toBeFalsy();
       expect(result.markdown).toContain("IDHM Longevidade");
+      expect(result.markdown).toContain("2010");
+      expect(result.markdown).toContain("0.86");
+      expect(result.provenance?.source.name).toContain("Atlas do Desenvolvimento Humano");
+      expect(mockFetch).not.toHaveBeenCalled();
+    });
+
+    it("reports Atlas coverage limitation for municipalities absent from the 2010 harmonized mesh", async () => {
+      const result = await ibgeCidades({
+        tipo: "indicador",
+        indicador: "idhm_renda",
+        municipio: "4212650",
+      });
+
+      expect(result.markdown).toContain("5.565 municípios");
+      expect((result.structured as Record<string, unknown>).indicadores).toEqual([]);
       expect(mockFetch).not.toHaveBeenCalled();
     });
 
