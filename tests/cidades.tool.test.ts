@@ -155,6 +155,42 @@ describe("ibge_cidades", () => {
       expect(mockFetch).not.toHaveBeenCalled();
     });
 
+    it("does not advertise unsupported IDHM components", async () => {
+      const result = await ibgeCidades({ tipo: "indicador" });
+
+      expect(result.markdown).not.toContain("idhm_renda");
+      expect(result.markdown).not.toContain("idhm_longevidade");
+      expect(result.markdown).not.toContain("idhm_educacao");
+      expect(result.markdown).toContain("idh");
+      expect(mockFetch).not.toHaveBeenCalled();
+    });
+
+    it("rejects legacy IDHM component aliases with an explicit source limitation", async () => {
+      const result = await ibgeCidades({
+        tipo: "indicador",
+        indicador: "idhm_renda",
+        municipio: "3509502",
+      });
+
+      expect(result.isError).toBe(true);
+      expect(result.markdown).toContain("não disponível na fonte atual");
+      expect(result.markdown).toContain("pesquisa 10111");
+      expect(result.markdown).toContain("Use o alias `idh`");
+      expect(mockFetch).not.toHaveBeenCalled();
+    });
+
+    it("rejects legacy numeric IDHM component ids without calling the upstream API", async () => {
+      const result = await ibgeCidades({
+        tipo: "historico",
+        indicador: "30259",
+        municipio: "3509502",
+      });
+
+      expect(result.isError).toBe(true);
+      expect(result.markdown).toContain("IDHM Longevidade");
+      expect(mockFetch).not.toHaveBeenCalled();
+    });
+
     it("requires a municipio for a known alias", async () => {
       const result = await ibgeCidades({ tipo: "indicador", indicador: "populacao" });
       expect(result.markdown).toContain("municipio");
