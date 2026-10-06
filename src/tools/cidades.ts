@@ -276,7 +276,9 @@ async function panoramaMunicipio(codigoMunicipio: string): Promise<StructuredToo
   // demais respondendo em ~0,2s. Medido em 28/08/2026, quando `escolarizacao`
   // (pesquisa 40, indicador 60045) e `salario_medio` (33/29765) estavam nesse
   // estado — o panorama não respondia para município nenhum. Painel com 6 de 8
-  // indicadores é muito melhor que painel nenhum.
+  // indicadores é muito melhor que painel nenhum. Desde 0.6.x, escolarização
+  // e IDHM usam o endpoint genérico de indicadores do Cidades@; salário médio
+  // usa SIDRA 9510 para evitar depender de um mapeamento Cidades@ instável.
   type BuscaPanorama = {
     indKey: string;
     indInfo: (typeof INDICADORES_PANORAMA)[string];
@@ -354,6 +356,7 @@ async function panoramaMunicipio(codigoMunicipio: string): Promise<StructuredToo
             break;
           }
         }
+      }
     } catch {
       // Ignorar erros individuais
     }
