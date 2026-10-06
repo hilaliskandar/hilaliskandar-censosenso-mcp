@@ -1,0 +1,23 @@
+name: Format preview
+
+on:
+  push:
+    branches:
+      - feat/atlas-idhm-componentes
+    paths:
+      - .github/workflows/format-preview.yml
+
+jobs:
+  prettier-diff:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Generate Prettier diff
+        run: |
+          npx prettier --write src/provenance.ts src/tools/cidades.ts
+          git diff -- src/provenance.ts src/tools/cidades.ts
