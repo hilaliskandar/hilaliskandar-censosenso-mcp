@@ -212,7 +212,7 @@ describe("ibge_cidades", () => {
         municipio: "3509502",
       });
 
-      expect(lastUrl()).toContain("/pesquisas/37/periodos/2010/indicadores/30255/resultados/3509502");
+      expect(lastUrl()).toContain("/pesquisas/37/periodos/2010/indicadores/30255/resultados/350950");
       expect(result.isError).toBeFalsy();
       expect(result.markdown).toContain("0.805");
     });
@@ -226,7 +226,7 @@ describe("ibge_cidades", () => {
         municipio: "3509502",
       });
 
-      expect(lastUrl()).toContain("/pesquisas/37/periodos/2010/indicadores/30257/resultados/3509502");
+      expect(lastUrl()).toContain("/pesquisas/37/periodos/2010/indicadores/30257/resultados/350950");
       expect(result.isError).toBeFalsy();
       expect(result.markdown).toContain("0.834");
     });

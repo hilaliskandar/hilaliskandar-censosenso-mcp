@@ -80,10 +80,12 @@ type SerieMunicipal = {
 
 function urlIndicadorCidades(indicadorId: number, municipio: string, pesquisa?: string): string {
   // O IDHM e seus componentes pertencem ao Atlas/PNUD e só são publicados
-  // pelo Cidades@ para o período 2010. Sem /periodos/2010, o endpoint
-  // genérico responde validamente, mas com série vazia.
+  // pelo Cidades@ para o período 2010. Essa pesquisa histórica também usa o
+  // identificador municipal legado de 6 dígitos (o código atual sem o dígito
+  // verificador). Sem período e sem essa conversão, a API responde com série vazia.
   if (pesquisa === "37") {
-    return `${IBGE_API.PESQUISAS}/37/periodos/2010/indicadores/${indicadorId}/resultados/${municipio}`;
+    const codigoLegado = municipio.slice(0, 6);
+    return `${IBGE_API.PESQUISAS}/37/periodos/2010/indicadores/${indicadorId}/resultados/${codigoLegado}`;
   }
   return `${IBGE_API.PESQUISAS}/indicadores/${indicadorId}/resultados/${municipio}`;
 }
