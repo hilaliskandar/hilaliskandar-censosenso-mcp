@@ -84,7 +84,7 @@ type AtlasIdhmSnapshot = {
   municipalities: Record<string, Record<string, AtlasIdhmValues>>;
 };
 
-const ATLAS_IDHM = atlasIdhmSnapshot as AtlasIdhmSnapshot;
+const ATLAS_IDHM = atlasIdhmSnapshot as unknown as AtlasIdhmSnapshot;
 
 const COMPONENTES_IDHM: Record<
   string,
@@ -433,7 +433,7 @@ async function panoramaMunicipio(codigoMunicipio: string): Promise<StructuredToo
   // Provenance: keyed to the first/principal indicator fetch of the panorama
   // (populacao) — the response merges several fetches of the same API.
   const principal = INDICADORES_PANORAMA["populacao"];
-  const principalUrl = urlIndicadorCidades(principal.id, codigoMunicipio);
+  const principalUrl = urlIndicadorCidades(Number(principal.id), codigoMunicipio);
   const provenance = provenienciaIbge({
     fonte: "PESQUISAS",
     url: principalUrl,
@@ -704,9 +704,6 @@ async function historicoIndicador(
   municipio: string,
   indicador: string
 ): Promise<StructuredToolResult> {
-  const naoSuportado = erroComponenteIdhm(indicador);
-  if (naoSuportado) return naoSuportado;
-
   const indicadorInfo = resolverIndicadorPanorama(indicador);
   if (!indicadorInfo) {
     return {
