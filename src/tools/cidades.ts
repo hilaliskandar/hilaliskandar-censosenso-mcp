@@ -77,9 +77,7 @@ function componenteIdhmNaoSuportado(indicador: string) {
   const normalizado = indicador.toLowerCase();
   const porAlias = INDICADORES_NAO_SUPORTADOS[normalizado];
   if (porAlias) return porAlias;
-  return Object.values(INDICADORES_NAO_SUPORTADOS).find((info) =>
-    info.ids.includes(indicador)
-  );
+  return Object.values(INDICADORES_NAO_SUPORTADOS).find((info) => info.ids.includes(indicador));
 }
 
 function erroComponenteIdhm(indicador: string): StructuredToolResult | null {
