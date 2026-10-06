@@ -113,8 +113,14 @@ async function buscarSerieMunicipal(
     );
     const parsed = sidraRecords(data);
     const entries = parsed.registros
-      .map((row) => [row["Ano"] ?? row["Período"] ?? "", row["Valor"] ?? ""] as [string, string])
-      .filter(([ano, valor]) => Boolean(ano) && Boolean(valor) && !["-", "..", "...", "X"].includes(valor))
+      .map(
+        (row) =>
+          [row["Ano"] ?? row["Período"] ?? "", row["Valor"] ?? ""] as [string, string]
+      )
+      .filter(
+        ([ano, valor]) =>
+          Boolean(ano) && Boolean(valor) && !["-", "..", "...", "X"].includes(valor)
+      )
       .sort(([a], [b]) => b.localeCompare(a));
     return {
       entries,
@@ -122,7 +128,10 @@ async function buscarSerieMunicipal(
       chaveCache,
       fonte: "SIDRA",
       ...(entries.length === 0
-        ? { aviso: "Salário médio mensal: a Tabela SIDRA 9510 publica resultados municipais apenas para municípios com 50.000 habitantes ou mais." }
+        ? {
+            aviso:
+              "Salário médio mensal: a Tabela SIDRA 9510 publica resultados municipais apenas para municípios com 50.000 habitantes ou mais.",
+          }
         : {}),
     };
   }
@@ -310,7 +319,9 @@ async function panoramaMunicipio(codigoMunicipio: string): Promise<StructuredToo
   const avisos = respostas.flatMap((r) => {
     if (r.serie === null) return [`${r.indInfo.nome}: indisponível na origem nesta execução`];
     if (r.serie.aviso) return [r.serie.aviso];
-    if (r.serie.entries.length === 0) return [`${r.indInfo.nome}: sem valor publicado pela origem para este município`];
+    if (r.serie.entries.length === 0) {
+      return [`${r.indInfo.nome}: sem valor publicado pela origem para este município`];
+    }
     return [];
   });
 
@@ -476,7 +487,9 @@ async function consultarIndicador(
 
     const entries = serie.entries.slice(0, 20);
     if (entries.length === 0) {
-      const detalhe = serie.aviso ?? `Nenhum valor publicado para o indicador ${indicadorInfo.nome} neste município.`;
+      const detalhe =
+        serie.aviso ??
+        `Nenhum valor publicado para o indicador ${indicadorInfo.nome} neste município.`;
       return {
         markdown: ValidationErrors.emptyResult("ibge_cidades", detalhe),
         structured: {
