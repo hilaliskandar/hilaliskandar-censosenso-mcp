@@ -78,11 +78,7 @@ type SerieMunicipal = {
   aviso?: string;
 };
 
-function urlIndicadorCidades(
-  indicadorId: number,
-  municipio: string,
-  pesquisa?: string
-): string {
+function urlIndicadorCidades(indicadorId: number, municipio: string, pesquisa?: string): string {
   // O IDHM e seus componentes pertencem ao Atlas/PNUD e só são publicados
   // pelo Cidades@ para o período 2010. Sem /periodos/2010, o endpoint
   // genérico responde validamente, mas com série vazia.
