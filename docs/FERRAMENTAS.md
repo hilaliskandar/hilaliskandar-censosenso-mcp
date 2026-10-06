@@ -302,9 +302,11 @@ ibge_sidra_tabelas → ibge_sidra_metadados → ibge_sidra
 
 **Escopo:** Brasil, regiões, UFs, municípios e demais níveis aceitos pelo contrato.
 
-**Formatos:** conforme o contrato da API e do wrapper, incluindo formatos geográficos estruturados.
+**Formatos:** GeoJSON, TopoJSON e SVG, conforme o contrato da API v3.
 
-**Uso:** geometria administrativa; não confundir com recortes temáticos.
+**Resumo cartográfico:** para respostas geométricas, além do Markdown e da URL da malha completa, `structuredContent.resumo_geometrico` expõe quantidade de feições, tipos de geometria, extensão espacial `bbox`, centróide dos vértices e chaves de propriedades. A geometria integral continua fora do `structuredContent`, evitando payloads grandes e mantendo a URL oficial como meio de obtenção do arquivo completo.
+
+**Uso:** geometria administrativa e preparação de fluxos cartográficos; não confundir com recortes temáticos.
 
 ---
 

@@ -28,6 +28,44 @@ const singleFeature = {
   properties: { codarea: "3550308", nome: "São Paulo" },
 };
 
+const featureCollectionWithCoordinates = {
+  type: "FeatureCollection",
+  features: [
+    {
+      type: "Feature",
+      geometry: {
+        type: "Polygon",
+        coordinates: [
+          [
+            [-47.2, -23.1],
+            [-46.8, -23.1],
+            [-46.8, -22.8],
+            [-47.2, -22.8],
+            [-47.2, -23.1],
+          ],
+        ],
+      },
+      properties: { codarea: "3509502", nome: "Campinas" },
+    },
+    {
+      type: "Feature",
+      geometry: {
+        type: "Polygon",
+        coordinates: [
+          [
+            [-46.9, -23.0],
+            [-46.5, -23.0],
+            [-46.5, -22.7],
+            [-46.9, -22.7],
+            [-46.9, -23.0],
+          ],
+        ],
+      },
+      properties: { codarea: "3525904", nome: "Jundiaí", uf: "SP" },
+    },
+  ],
+};
+
 function lastUrl(): string {
   return String(mockFetch.mock.calls.at(-1)?.[0]);
 }
@@ -171,6 +209,49 @@ describe("ibge_malhas", () => {
 
       expect(result).toContain("Tipo de geometria");
       expect(result).toContain("MultiPolygon");
+    });
+
+    it("returns a structured cartographic summary without embedding geometry", async () => {
+      mockFetch.mockResolvedValueOnce(mockResponse(featureCollectionWithCoordinates));
+
+      const { structured } = await ibgeMalhas({
+        localidade: "SP",
+        resolucao: "5",
+        qualidade: "minima",
+      });
+      const payload = structured as {
+        resumo_geometrico?: {
+          feicoes: number;
+          tipos_geometria: Record<string, number>;
+          bbox?: [number, number, number, number];
+          centroide?: { longitude: number; latitude: number };
+          propriedades: string[];
+        };
+        features?: unknown;
+      };
+
+      expect(payload.features).toBeUndefined();
+      expect(payload.resumo_geometrico?.feicoes).toBe(2);
+      expect(payload.resumo_geometrico?.tipos_geometria).toEqual({ Polygon: 2 });
+      expect(payload.resumo_geometrico?.bbox).toEqual([-47.2, -23.1, -46.5, -22.7]);
+      expect(payload.resumo_geometrico?.centroide).toEqual({
+        longitude: -46.85,
+        latitude: -22.9,
+      });
+      expect(payload.resumo_geometrico?.propriedades).toEqual(["codarea", "nome", "uf"]);
+    });
+
+    it("omits bbox and centroid for empty geometries but keeps counts", async () => {
+      mockFetch.mockResolvedValueOnce(mockResponse(featureCollection));
+
+      const { structured } = await ibgeMalhas({ localidade: "BR", resolucao: "2" });
+      const resumo = (structured as {
+        resumo_geometrico?: Record<string, unknown>;
+      }).resumo_geometrico;
+
+      expect(resumo?.feicoes).toBe(2);
+      expect(resumo?.bbox).toBeUndefined();
+      expect(resumo?.centroide).toBeUndefined();
     });
   });
 

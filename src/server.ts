@@ -519,7 +519,7 @@ Features:
 - Meshes for Brazil, regions, states, municipalities
 - Different resolution levels (internal divisions)
 - Different quality levels
-- Formats: GeoJSON (data), TopoJSON (compact), SVG (image)
+- Formats: GeoJSON (data), TopoJSON (compact), SVG (image)\n- Structured cartographic summary for geometric responses: feature count, geometry types, bbox, vertex centroid, and property keys
 
 Locality types:
 - "BR" or "1" = Entire Brazil
@@ -540,7 +540,7 @@ Examples:
 Use a different tool when:
 - Thematic meshes (biomes, Legal Amazon, semi-arid, metropolitan regions) → ibge_malhas_tema
 
-Behavior: read-only and idempotent — a live GET against the public IBGE Malhas API. Returns the mesh in the requested format (GeoJSON, TopoJSON, or SVG).`,
+Behavior: read-only and idempotent — a live GET against the public IBGE Malhas API. The full geometry remains in the Markdown/download channel; structuredContent carries lightweight cartographic metadata only.`,
       inputSchema: malhasSchema.strict(),
       outputSchema: comProveniencia(malhasOutputSchema),
       annotations: READ_ONLY,

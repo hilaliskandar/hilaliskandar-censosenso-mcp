@@ -6,6 +6,7 @@ import { buildQueryString } from "../utils/index.js";
 import { formatError, parseHttpError, ValidationErrors } from "../errors.js";
 import type { StructuredToolResult } from "../structured.js";
 import { provenienciaIbge } from "../provenance.js";
+import centroid from "@turf/centroid";
 
 /**
  * O CONTRATO DA API DE MALHAS v3, e por que ele está escrito aqui.
@@ -141,6 +142,29 @@ export const malhasOutputSchema = z.object({
     .optional()
     .describe("Divisão interna desenhada dentro da malha (vocabulário da API v3)"),
   url: z.string().optional().describe("URL para download da malha completa"),
+  resumo_geometrico: z
+    .object({
+      feicoes: z.number().int().nonnegative().describe("Quantidade de feições na resposta"),
+      tipos_geometria: z
+        .record(z.string(), z.number().int().nonnegative())
+        .describe("Contagem por tipo de geometria"),
+      bbox: z
+        .tuple([z.number(), z.number(), z.number(), z.number()])
+        .optional()
+        .describe("[longitude mínima, latitude mínima, longitude máxima, latitude máxima]"),
+      centroide: z
+        .object({
+          longitude: z.number(),
+          latitude: z.number(),
+        })
+        .optional()
+        .describe("Centróide dos vértices da malha, em longitude/latitude"),
+      propriedades: z
+        .array(z.string())
+        .describe("Chaves de propriedades observadas nas feições retornadas"),
+    })
+    .optional()
+    .describe("Resumo cartográfico derivado da geometria retornada"),
 });
 
 /**
@@ -235,7 +259,7 @@ export async function ibgeMalhas(input: MalhasInput): Promise<StructuredToolResu
 
       return {
         markdown: formatMalhasResponse(data, fullUrl, input),
-        structured: buildMalhasMetadata(input, fullUrl),
+        structured: buildMalhasMetadata(input, fullUrl, data),
         provenance: provenienciaIbge({
           fonte: "MALHAS",
           url: fullUrl,
@@ -299,7 +323,11 @@ function malhasDivisaoInvalida(
 }
 
 /** Builds the lightweight structured metadata payload (never the geometry). */
-function buildMalhasMetadata(input: MalhasInput, url: string): Record<string, unknown> {
+function buildMalhasMetadata(
+  input: MalhasInput,
+  url: string,
+  data?: GeoJSONFeatureCollection | GeoJSONFeature
+): Record<string, unknown> {
   return {
     localidade: input.localidade,
     formato: input.formato || "geojson",
@@ -308,6 +336,75 @@ function buildMalhasMetadata(input: MalhasInput, url: string): Record<string, un
     tipo: input.tipo,
     intrarregiao: input.intrarregiao,
     url,
+    ...(data ? { resumo_geometrico: resumirGeometria(data) } : {}),
+  };
+}
+
+function resumirGeometria(data: GeoJSONFeatureCollection | GeoJSONFeature) {
+  const features = data.type === "FeatureCollection" ? data.features : [data];
+  const tiposGeometria: Record<string, number> = {};
+  const propriedades = new Set<string>();
+  let minX = Infinity;
+  let minY = Infinity;
+  let maxX = -Infinity;
+  let maxY = -Infinity;
+  let encontrouCoordenada = false;
+
+  for (const feature of features) {
+    const tipo = feature.geometry?.type || "Unknown";
+    tiposGeometria[tipo] = (tiposGeometria[tipo] || 0) + 1;
+    for (const chave of Object.keys(feature.properties ?? {})) propriedades.add(chave);
+    acumularBbox(feature.geometry?.coordinates);
+  }
+
+  function acumularBbox(valor: unknown): void {
+    if (!Array.isArray(valor)) return;
+    if (
+      valor.length >= 2 &&
+      typeof valor[0] === "number" &&
+      typeof valor[1] === "number" &&
+      Number.isFinite(valor[0]) &&
+      Number.isFinite(valor[1])
+    ) {
+      encontrouCoordenada = true;
+      minX = Math.min(minX, valor[0]);
+      minY = Math.min(minY, valor[1]);
+      maxX = Math.max(maxX, valor[0]);
+      maxY = Math.max(maxY, valor[1]);
+      return;
+    }
+    for (const item of valor) acumularBbox(item);
+  }
+
+  let centroideGeometrico: { longitude: number; latitude: number } | undefined;
+  try {
+    const ponto = centroid(data as unknown as Parameters<typeof centroid>[0]);
+    const [longitude, latitude] = ponto.geometry.coordinates;
+    if (Number.isFinite(longitude) && Number.isFinite(latitude)) {
+      centroideGeometrico = {
+        longitude: Number(longitude.toFixed(6)),
+        latitude: Number(latitude.toFixed(6)),
+      };
+    }
+  } catch {
+    // Geometrias vazias ou inválidas ainda podem ser resumidas sem centróide.
+  }
+
+  return {
+    feicoes: features.length,
+    tipos_geometria: tiposGeometria,
+    ...(encontrouCoordenada
+      ? {
+          bbox: [
+            Number(minX.toFixed(6)),
+            Number(minY.toFixed(6)),
+            Number(maxX.toFixed(6)),
+            Number(maxY.toFixed(6)),
+          ] as [number, number, number, number],
+        }
+      : {}),
+    ...(centroideGeometrico ? { centroide: centroideGeometrico } : {}),
+    propriedades: [...propriedades].sort(),
   };
 }
 
@@ -361,6 +458,25 @@ function formatMalhasResponse(
         output += `| **Propriedades** | ${Object.keys(feature.properties).join(", ")} |\n`;
       }
     }
+  }
+  output += "\n";
+
+  const resumo = resumirGeometria(data);
+  output += `### Resumo Cartográfico\n\n`;
+  output += `| Campo | Valor |\n`;
+  output += `|:------|:------|\n`;
+  output += `| **Feições** | ${resumo.feicoes} |\n`;
+  output += `| **Tipos de geometria** | ${Object.entries(resumo.tipos_geometria)
+    .map(([tipo, quantidade]) => `${tipo}: ${quantidade}`)
+    .join(", ")} |\n`;
+  if (resumo.bbox) {
+    output += `| **Extensão (bbox)** | ${resumo.bbox.join(", ")} |\n`;
+  }
+  if (resumo.centroide) {
+    output += `| **Centróide dos vértices** | ${resumo.centroide.longitude}, ${resumo.centroide.latitude} |\n`;
+  }
+  if (resumo.propriedades.length > 0) {
+    output += `| **Propriedades** | ${resumo.propriedades.join(", ")} |\n`;
   }
   output += "\n";
 
