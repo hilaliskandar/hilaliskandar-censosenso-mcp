@@ -261,9 +261,10 @@ ibge_sidra_tabelas → ibge_sidra_metadados → ibge_sidra
 **Regras específicas de fonte:**
 - os indicadores Cidades@ usam o endpoint genérico `/pesquisas/indicadores/{id}/resultados/{municipio}`, evitando dependência da classificação interna por pesquisa quando o indicador é transversal;
 - `escolarizacao` preserva o conceito “taxa de escolarização de 6 a 14 anos” e usa o indicador Cidades@ `60045`;
-- `idh` usa o indicador Cidades@ `30255` com período `2010` explicitado e converte o código municipal atual de 7 dígitos para o identificador legado de 6 dígitos exigido pela pesquisa 37; a fonte exibida pelo próprio Cidades@ é o PNUD;
+- `idh` usa a pesquisa vigente Cidades@ `10111`, indicador `329756` (“IDH”), que publica a série municipal 1991, 2000 e 2010 e mantém como fonte o Programa das Nações Unidas para o Desenvolvimento - PNUD;
 - `salario_medio` usa a Tabela SIDRA `9510`, variável `10143` (“Salário médio mensal em reais”); a publicação municipal dessa tabela é restrita a municípios com 50 mil habitantes ou mais;
 - `despesas` usa o indicador Cidades@ `29749`, correspondente ao total de despesas brutas empenhadas.
+- os componentes legados `idhm_renda`, `idhm_longevidade` e `idhm_educacao` continuam vinculados à antiga pesquisa 37 e podem retornar série vazia; não são usados no panorama padrão.
 
 **Regra operacional:** um panorama pode combinar várias consultas; lacunas de fonte, ausência de série e restrições de cobertura são relatadas explicitamente em `avisos` em vez de serem ocultadas.
 
