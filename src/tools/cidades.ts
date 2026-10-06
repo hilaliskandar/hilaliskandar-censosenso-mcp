@@ -113,13 +113,9 @@ async function buscarSerieMunicipal(
     );
     const parsed = sidraRecords(data);
     const entries = parsed.registros
-      .map(
-        (row) =>
-          [row["Ano"] ?? row["Período"] ?? "", row["Valor"] ?? ""] as [string, string]
-      )
+      .map((row) => [row["Ano"] ?? row["Período"] ?? "", row["Valor"] ?? ""] as [string, string])
       .filter(
-        ([ano, valor]) =>
-          Boolean(ano) && Boolean(valor) && !["-", "..", "...", "X"].includes(valor)
+        ([ano, valor]) => Boolean(ano) && Boolean(valor) && !["-", "..", "...", "X"].includes(valor)
       )
       .sort(([a], [b]) => b.localeCompare(a));
     return {
