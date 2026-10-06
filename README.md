@@ -36,7 +36,8 @@ O princípio central é simples: uma resposta útil não deve trazer apenas um n
 15. [Desenvolvimento e reprodução](#desenvolvimento-e-reproducao)
 16. [Segurança, privacidade e limites operacionais](#seguranca-privacidade-e-limites-operacionais)
 17. [Dados, licença e atribuições](#dados-licenca-e-atribuicoes)
-18. [Status do protótipo e próximos passos](#status-do-prototipo-e-proximos-passos)
+18. [Roadmap 0.7 — integração cartográfica](#roadmap-07-integracao-cartografica)
+19. [Status do protótipo e próximos passos](#status-do-prototipo-e-proximos-passos)
 
 ---
 
@@ -71,6 +72,7 @@ A superfície 0.6.0 possui **23 ferramentas**: 21 componentes `ibge_*` e duas fe
 - [Matriz de fontes, cache, derivação e limitações](docs/MATRIZ_FONTES_E_PROCESSOS.md)
 - [Política de versionamento](docs/VERSIONAMENTO.md)
 - [Notas da versão 0.6.0](docs/RELEASE_0_6_0.md)
+- [Roadmap 0.7 — integração cartográfica](docs/ROADMAP_0_7_CARTOGRAFIA.md)
 - [Evidência da validação dos 645 municípios paulistas](docs/VALIDACAO_SP_645.md)
 - [Como acessar os artefatos dos 645 municípios](docs/ACESSO_RESULTADOS_SP_645.md)
 - [Segurança](SECURITY.md)
@@ -1058,6 +1060,33 @@ O CensoSenso:
 
 ---
 
+<a id="roadmap-07-integracao-cartografica"></a>
+## Roadmap 0.7 — integração cartográfica
+
+A versão **0.7.0** será orientada à integração progressiva de dados espaciais e produção cartográfica no próprio MCP, sem introduzir QGIS como dependência do runtime. A referência metodológica inicial é o GISBR, especialmente seu catálogo de fontes e estratégias de filtragem, mas os conectores e renderizadores do CensoSenso serão implementados de forma independente para preservar a arquitetura TypeScript/Node, a compatibilidade com Cloudflare Workers e a licença MIT do projeto.
+
+O objetivo funcional final é permitir que um cliente MCP solicite, por exemplo, **“produza um mapa de geomorfologia de Jundiaí”** ou **“produza um mapa do PIB per capita dos 30 municípios do TIC-TIM”** e receba uma saída cartográfica reproduzível, com geometria, simbologia, legenda, fonte, CRS, data de extração e procedência.
+
+A implementação será dividida em PRs progressivos:
+
+| PR | Etapa | Resultado esperado |
+|---|---|---|
+| **PR 0** | documentação e contratos | roadmap, decisões arquiteturais e critérios de aceite |
+| **PR 1** | núcleo WFS | cliente WFS genérico, GeoJSON, BBOX, erros e truncamento |
+| **PR 2** | recorte espacial | limite municipal, BBOX e clip de feições |
+| **PR 3** | meio físico BDIA | `ibge_meio_fisico` com pedologia, geologia, geomorfologia e vegetação |
+| **PR 4** | homologação TIC-TIM | 30 municípios × 4 temas, total de 120 combinações |
+| **PR 5** | renderer SVG | motor cartográfico genérico sem dependências nativas |
+| **PR 6** | ferramenta de mapas | `ibge_mapa` para meio físico e coropléticos |
+| **PR 7** | ampliação de fontes | hidrografia, bacias, risco, SIAGAS, ANM, DataGeo-SP, biomas e MapBiomas |
+| **PR 8** | gate da 0.7 | baseline, testes, smoke remoto, documentação e release |
+
+Os marcos são sequenciais: **consulta espacial → meio físico → cartografia → diagnóstico territorial ampliado → release 0.7**. Nenhum PR funcional deverá avançar se o anterior deixar regressões ou contratos não estabilizados.
+
+A especificação completa, incluindo contratos propostos, branches sugeridas, critérios de aceite, limites operacionais e definição de pronto, está em [docs/ROADMAP_0_7_CARTOGRAFIA.md](docs/ROADMAP_0_7_CARTOGRAFIA.md).
+
+---
+
 <a id="status-do-prototipo-e-proximos-passos"></a>
 ## Status do protótipo e próximos passos
 
@@ -1087,12 +1116,22 @@ Antes da divulgação ampla:
 6. monitorar erros, uso e rate limiting;
 7. ampliar a divulgação somente após janela inicial estável.
 
-Itens deliberadamente posteriores:
+Próximo ciclo funcional prioritário:
+
+- executar a [roadmap 0.7 de integração cartográfica](docs/ROADMAP_0_7_CARTOGRAFIA.md);
+- reintroduzir WFS temático de forma controlada e testada;
+- integrar meio físico BDIA/IBGE;
+- produzir mapas SVG e coropléticos pelo MCP;
+- homologar cartografia nos 30 municípios do TIC-TIM.
+
+Itens deliberadamente posteriores à 0.7:
 
 - publicação npm;
 - OAuth obrigatório;
 - rate limit global rígido;
-- eventual retorno do WFS temático ao runtime.
+- PNG e tiles;
+- mapas interativos;
+- estilos cartográficos avançados.
 
 ---
 
