@@ -57,7 +57,7 @@ const INDICADORES_PANORAMA: Record<string, { id: number; pesquisa: string; nome:
   populacao: { id: 29171, pesquisa: "33", nome: "População estimada" },
   densidade: { id: 29168, pesquisa: "33", nome: "Densidade demográfica" },
   escolarizacao: { id: 60045, pesquisa: "40", nome: "Taxa de escolarização 6-14 anos" },
-  idh: { id: 30255, pesquisa: "37", nome: "IDH Municipal" },
+  idh: { id: 329756, pesquisa: "10111", nome: "IDH Municipal" },
   mortalidade: { id: 30279, pesquisa: "39", nome: "Mortalidade infantil" },
   pib_per_capita: { id: 47001, pesquisa: "38", nome: "PIB per capita" },
   salario_medio: { id: 10143, pesquisa: "SIDRA 9510", nome: "Salário médio mensal em reais" },
@@ -79,10 +79,9 @@ type SerieMunicipal = {
 };
 
 function urlIndicadorCidades(indicadorId: number, municipio: string, pesquisa?: string): string {
-  // O IDHM e seus componentes pertencem ao Atlas/PNUD e só são publicados
-  // pelo Cidades@ para o período 2010. Essa pesquisa histórica também usa o
-  // identificador municipal legado de 6 dígitos (o código atual sem o dígito
-  // verificador). Sem período e sem essa conversão, a API responde com série vazia.
+  // A pesquisa histórica 37 permanece apenas para os componentes legados de
+  // IDHM, cujos resultados municipais não estão mais sendo publicados por esse
+  // endpoint. O IDHM principal usa a pesquisa vigente 10111 / indicador 329756.
   if (pesquisa === "37") {
     const codigoLegado = municipio.slice(0, 6);
     return `${IBGE_API.PESQUISAS}/37/periodos/2010/indicadores/${indicadorId}/resultados/${codigoLegado}`;
@@ -101,7 +100,8 @@ function extrairSeriePesquisa(data: PesquisaResultado[] | null | undefined) {
  * Resolve a série municipal pelo endpoint genérico de indicadores do Cidades@.
  *
  * O caminho genérico é mais estável que a variante aninhada por pesquisa para
- * indicadores transversais como escolarização e IDHM. Para salário médio, o
+ * indicadores transversais como escolarização e para o IDHM vigente (pesquisa
+ * 10111, indicador 329756). Para salário médio, o
  * Cidades@ deixou de ser uma origem programática confiável; usa-se a Tabela
  * SIDRA 9510, variável 10143 (salário médio mensal em reais), cuja cobertura
  * municipal publicada é restrita a municípios com 50 mil habitantes ou mais.
