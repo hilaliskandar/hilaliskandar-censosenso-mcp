@@ -64,11 +64,37 @@ const INDICADORES_PANORAMA: Record<string, { id: number; pesquisa: string; nome:
   populacao_ocupada: { id: 29763, pesquisa: "33", nome: "Pessoal ocupado" },
   receitas: { id: 28141, pesquisa: "33", nome: "Receitas realizadas" },
   despesas: { id: 29749, pesquisa: "33", nome: "Total de despesas brutas empenhadas" },
-  idhm_renda: { id: 30257, pesquisa: "37", nome: "IDHM Renda" },
-  idhm_longevidade: { id: 30259, pesquisa: "37", nome: "IDHM Longevidade" },
-  idhm_educacao: { id: 30261, pesquisa: "37", nome: "IDHM Educação" },
   area: { id: 29167, pesquisa: "33", nome: "Área territorial" },
 };
+
+const INDICADORES_NAO_SUPORTADOS: Record<string, { nome: string; ids: string[] }> = {
+  idhm_renda: { nome: "IDHM Renda", ids: ["30257"] },
+  idhm_longevidade: { nome: "IDHM Longevidade", ids: ["30259"] },
+  idhm_educacao: { nome: "IDHM Educação", ids: ["30261"] },
+};
+
+function componenteIdhmNaoSuportado(indicador: string) {
+  const normalizado = indicador.toLowerCase();
+  const porAlias = INDICADORES_NAO_SUPORTADOS[normalizado];
+  if (porAlias) return porAlias;
+  return Object.values(INDICADORES_NAO_SUPORTADOS).find((info) => info.ids.includes(indicador));
+}
+
+function erroComponenteIdhm(indicador: string): StructuredToolResult | null {
+  const info = componenteIdhmNaoSuportado(indicador);
+  if (!info) return null;
+  return {
+    markdown:
+      "## Indicador não disponível na fonte atual\n\n" +
+      "**Indicador:** " + info.nome + "\n\n" +
+      "A API pública Cidades@ atualmente expõe o IDHM municipal total pela pesquisa 10111 / indicador 329756, " +
+      "com série 1991, 2000 e 2010, mas não expõe nessa pesquisa os componentes Renda, Longevidade e Educação. " +
+      "Os antigos IDs da pesquisa 37 permanecem no catálogo histórico, porém não devolvem série municipal utilizável.\n\n" +
+      "Para evitar resultado vazio com aparência de sucesso, o CensoSenso não anuncia esses componentes como suportados. " +
+      "Use o alias `idh` para o IDHM total.",
+    isError: true,
+  };
+}
 
 type SerieMunicipal = {
   entries: Array<[string, string | number | null]>;
@@ -155,7 +181,7 @@ async function buscarSerieMunicipal(
 // Pesquisas principais disponíveis
 const PESQUISAS_PRINCIPAIS = [
   { id: "33", nome: "Cadastro Central de Empresas" },
-  { id: "37", nome: "Índice de Desenvolvimento Humano Municipal" },
+  { id: "10111", nome: "Índice de Desenvolvimento Humano municipal" },
   { id: "38", nome: "Produto Interno Bruto dos Municípios" },
   { id: "39", nome: "Pesquisa Nacional de Saúde" },
   { id: "40", nome: "Censo Escolar" },
@@ -449,6 +475,9 @@ async function consultarIndicador(
   indicador: string,
   municipio?: string
 ): Promise<StructuredToolResult> {
+  const naoSuportado = erroComponenteIdhm(indicador);
+  if (naoSuportado) return naoSuportado;
+
   const indicadorInfo = resolverIndicadorPanorama(indicador);
 
   if (indicadorInfo) {
@@ -638,6 +667,9 @@ async function historicoIndicador(
   municipio: string,
   indicador: string
 ): Promise<StructuredToolResult> {
+  const naoSuportado = erroComponenteIdhm(indicador);
+  if (naoSuportado) return naoSuportado;
+
   const indicadorInfo = resolverIndicadorPanorama(indicador);
   if (!indicadorInfo) {
     return {
