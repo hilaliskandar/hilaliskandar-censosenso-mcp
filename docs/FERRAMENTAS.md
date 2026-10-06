@@ -261,7 +261,7 @@ ibge_sidra_tabelas → ibge_sidra_metadados → ibge_sidra
 **Regras específicas de fonte:**
 - os indicadores Cidades@ usam o endpoint genérico `/pesquisas/indicadores/{id}/resultados/{municipio}`, evitando dependência da classificação interna por pesquisa quando o indicador é transversal;
 - `escolarizacao` preserva o conceito “taxa de escolarização de 6 a 14 anos” e usa o indicador Cidades@ `60045`;
-- `idh` usa o indicador Cidades@ `30255` com período `2010` explicitado no endpoint; a fonte exibida pelo próprio Cidades@ é o PNUD;
+- `idh` usa o indicador Cidades@ `30255` com período `2010` explicitado e converte o código municipal atual de 7 dígitos para o identificador legado de 6 dígitos exigido pela pesquisa 37; a fonte exibida pelo próprio Cidades@ é o PNUD;
 - `salario_medio` usa a Tabela SIDRA `9510`, variável `10143` (“Salário médio mensal em reais”); a publicação municipal dessa tabela é restrita a municípios com 50 mil habitantes ou mais;
 - `despesas` usa o indicador Cidades@ `29749`, correspondente ao total de despesas brutas empenhadas.
 
