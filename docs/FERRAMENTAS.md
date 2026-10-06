@@ -249,7 +249,7 @@ ibge_sidra_tabelas → ibge_sidra_metadados → ibge_sidra
 
 **Finalidade:** produzir panorama de um município semelhante ao fluxo do Cidades@.
 
-**Fonte:** API de Pesquisas/Cidades@, API de Localidades e SIDRA/API de Agregados quando o indicador exigir fonte alternativa.
+**Fonte:** API de Pesquisas/Cidades@, API de Localidades, SIDRA/API de Agregados e snapshot oficial versionado do Atlas do Desenvolvimento Humano no Brasil quando o indicador exigir fonte alternativa.
 
 **Entradas principais:**
 - `municipio`;
@@ -264,7 +264,10 @@ ibge_sidra_tabelas → ibge_sidra_metadados → ibge_sidra
 - `idh` usa a pesquisa vigente Cidades@ `10111`, indicador `329756` (“IDH”), que publica a série municipal 1991, 2000 e 2010 e mantém como fonte o Programa das Nações Unidas para o Desenvolvimento - PNUD;
 - `salario_medio` usa a Tabela SIDRA `9510`, variável `10143` (“Salário médio mensal em reais”); a publicação municipal dessa tabela é restrita a municípios com 50 mil habitantes ou mais;
 - `despesas` usa o indicador Cidades@ `29749`, correspondente ao total de despesas brutas empenhadas.
-- os componentes `idhm_renda`, `idhm_longevidade` e `idhm_educacao` não são anunciados como suportados: a pesquisa vigente `10111` expõe apenas o IDHM total, enquanto os antigos IDs da pesquisa 37 não devolvem série municipal utilizável; consultas a esses aliases retornam erro explícito de limitação da fonte.
+- `idhm_renda`, `idhm_longevidade` e `idhm_educacao` usam o arquivo oficial `censo_total_1991_2010.xlsx` do Atlas do Desenvolvimento Humano no Brasil, aba `MUN 91-00-10`, campos `IDHM_R`, `IDHM_L` e `IDHM_E`; a série cobre 1991, 2000 e 2010 para 5.565 municípios na malha harmonizada de 2010;
+- o runtime não baixa nem faz scraping do XLSX: usa `src/data/atlas-idhm-municipios-1991-2010.json`, snapshot compacto e versionado gerado por `scripts/update-atlas-idhm.py`, que valida esquema, cobertura, três anos por município e registra SHA-256 do arquivo-fonte;
+- os IDs históricos `30257`, `30259` e `30261` permanecem como aliases de compatibilidade, mas a proveniência da resposta identifica corretamente o Atlas Brasil, e não a API Cidades@;
+- municípios criados após a malha de 2010 podem não constar do snapshot; nesses casos a ferramenta informa explicitamente a limitação de cobertura.
 
 **Regra operacional:** um panorama pode combinar várias consultas; lacunas de fonte, ausência de série e restrições de cobertura são relatadas explicitamente em `avisos` em vez de serem ocultadas.
 
