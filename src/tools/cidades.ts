@@ -54,7 +54,10 @@ function listingPayload(tipo: string): Record<string, unknown> {
 }
 
 // Indicadores principais do panorama (usados em cidades.ibge.gov.br)
-const INDICADORES_PANORAMA: Record<string, { id: number | string; pesquisa: string; nome: string }> = {
+const INDICADORES_PANORAMA: Record<
+  string,
+  { id: number | string; pesquisa: string; nome: string }
+> = {
   populacao: { id: 29171, pesquisa: "33", nome: "População estimada" },
   densidade: { id: 29168, pesquisa: "33", nome: "Densidade demográfica" },
   escolarizacao: { id: 60045, pesquisa: "40", nome: "Taxa de escolarização 6-14 anos" },
@@ -145,8 +148,7 @@ async function buscarSerieMunicipal(
     const entries = years
       ? Object.entries(years)
           .map(
-            ([ano, valores]) =>
-              [ano, String(valores[componente.valueIndex])] as [string, string]
+            ([ano, valores]) => [ano, String(valores[componente.valueIndex])] as [string, string]
           )
           .sort(([a], [b]) => b.localeCompare(a))
       : [];
@@ -551,9 +553,7 @@ async function consultarIndicador(
                 ? "SIDRA, Tabela 9510 — salário médio mensal em reais"
                 : `Cidades@ — indicador ${indicadorInfo.nome}`,
             dataset: serie.fonte === "SIDRA" ? "9510" : String(indicadorInfo.id),
-            ...(serie.fonte === "SIDRA"
-              ? { dataVintage: serie.entries[0]?.[0] ?? null }
-              : {}),
+            ...(serie.fonte === "SIDRA" ? { dataVintage: serie.entries[0]?.[0] ?? null } : {}),
           });
 
     const entries = serie.entries.slice(0, 20);
@@ -749,9 +749,7 @@ async function historicoIndicador(
               ? "SIDRA, Tabela 9510 — histórico do salário médio mensal em reais"
               : `Cidades@ — histórico do indicador ${indicadorNome}`,
           dataset: serie.fonte === "SIDRA" ? "9510" : String(indicadorId),
-          ...(serie.fonte === "SIDRA"
-            ? { dataVintage: serie.entries[0]?.[0] ?? null }
-            : {}),
+          ...(serie.fonte === "SIDRA" ? { dataVintage: serie.entries[0]?.[0] ?? null } : {}),
         });
 
   let output = `## Histórico: ${indicadorNome}\n\n`;
