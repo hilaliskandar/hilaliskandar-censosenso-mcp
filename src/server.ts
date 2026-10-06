@@ -1001,7 +1001,7 @@ Use a different tool when:
 - Comparing multiple municipalities → ibge_comparar
 - A macro indicator time series → ibge_indicadores
 
-Behavior: read-only and idempotent — uses the public IBGE Pesquisas (Cidades@) API and Localidades lookup; panorama may combine several indicator calls and explicitly reports partial upstream gaps. Returns Markdown plus a typed structuredContent payload.`,
+Behavior: read-only and idempotent — uses the public IBGE Pesquisas (Cidades@) API, Localidades and, for salario_medio, SIDRA Table 9510 (municipal publication restricted to municipalities with 50,000 inhabitants or more). Panorama may combine several indicator calls and explicitly reports partial upstream gaps. Returns Markdown plus a typed structuredContent payload.`,
       inputSchema: cidadesSchema.strict(),
       outputSchema: comProveniencia(cidadesOutputSchema),
       annotations: READ_ONLY,
