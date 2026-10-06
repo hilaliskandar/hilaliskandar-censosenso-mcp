@@ -77,7 +77,9 @@ function componenteIdhmNaoSuportado(indicador: string) {
   const normalizado = indicador.toLowerCase();
   const porAlias = INDICADORES_NAO_SUPORTADOS[normalizado];
   if (porAlias) return porAlias;
-  return Object.values(INDICADORES_NAO_SUPORTADOS).find((info) => info.ids.includes(indicador));
+  return Object.values(INDICADORES_NAO_SUPORTADOS).find((info) =>
+    info.ids.includes(indicador)
+  );
 }
 
 function erroComponenteIdhm(indicador: string): StructuredToolResult | null {
@@ -86,7 +88,7 @@ function erroComponenteIdhm(indicador: string): StructuredToolResult | null {
   return {
     markdown:
       "## Indicador não disponível na fonte atual\n\n" +
-      "**Indicador:** " + info.nome + "\n\n" +
+      `**Indicador:** ${info.nome}\n\n` +
       "A API pública Cidades@ atualmente expõe o IDHM municipal total pela pesquisa 10111 / indicador 329756, " +
       "com série 1991, 2000 e 2010, mas não expõe nessa pesquisa os componentes Renda, Longevidade e Educação. " +
       "Os antigos IDs da pesquisa 37 permanecem no catálogo histórico, porém não devolvem série municipal utilizável.\n\n" +
