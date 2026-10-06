@@ -212,9 +212,23 @@ describe("ibge_cidades", () => {
         municipio: "3509502",
       });
 
-      expect(lastUrl()).toContain("/pesquisas/indicadores/30255/resultados/3509502");
+      expect(lastUrl()).toContain("/pesquisas/37/periodos/2010/indicadores/30255/resultados/3509502");
       expect(result.isError).toBeFalsy();
       expect(result.markdown).toContain("0.805");
+    });
+
+    it("pins IDHM components to the 2010 period published by Cidades", async () => {
+      mockFetch.mockResolvedValueOnce(mockResponse(pesquisaResultado({ "2010": "0.834" })));
+
+      const result = await ibgeCidades({
+        tipo: "indicador",
+        indicador: "idhm_renda",
+        municipio: "3509502",
+      });
+
+      expect(lastUrl()).toContain("/pesquisas/37/periodos/2010/indicadores/30257/resultados/3509502");
+      expect(result.isError).toBeFalsy();
+      expect(result.markdown).toContain("0.834");
     });
 
     it("reports an explicit empty result when Cidades returns an empty inner series", async () => {

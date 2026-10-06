@@ -78,7 +78,13 @@ type SerieMunicipal = {
   aviso?: string;
 };
 
-function urlIndicadorCidades(indicadorId: number, municipio: string): string {
+function urlIndicadorCidades(indicadorId: number, municipio: string, pesquisa?: string): string {
+  // O IDHM e seus componentes pertencem ao Atlas/PNUD e só são publicados
+  // pelo Cidades@ para o período 2010. Sem /periodos/2010, o endpoint
+  // genérico responde validamente, mas com série vazia.
+  if (pesquisa === "37") {
+    return `${IBGE_API.PESQUISAS}/37/periodos/2010/indicadores/${indicadorId}/resultados/${municipio}`;
+  }
   return `${IBGE_API.PESQUISAS}/indicadores/${indicadorId}/resultados/${municipio}`;
 }
 
@@ -133,7 +139,7 @@ async function buscarSerieMunicipal(
   }
 
   const info = INDICADORES_PANORAMA[indKey];
-  const url = urlIndicadorCidades(info.id, municipio);
+  const url = urlIndicadorCidades(info.id, municipio, info.pesquisa);
   const chaveCache = cacheKey(url);
   const data = await cachedFetch<PesquisaResultado[]>(
     url,
@@ -372,7 +378,7 @@ async function panoramaMunicipio(codigoMunicipio: string): Promise<StructuredToo
   // Provenance: keyed to the first/principal indicator fetch of the panorama
   // (populacao) — the response merges several fetches of the same API.
   const principal = INDICADORES_PANORAMA["populacao"];
-  const principalUrl = urlIndicadorCidades(principal.id, codigoMunicipio);
+  const principalUrl = urlIndicadorCidades(principal.id, codigoMunicipio, principal.pesquisa);
   const provenance = provenienciaIbge({
     fonte: "PESQUISAS",
     url: principalUrl,
