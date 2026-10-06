@@ -21,6 +21,7 @@ import os
 import ssl
 import tempfile
 import urllib.request
+from datetime import datetime, timezone
 from pathlib import Path
 
 from openpyxl import load_workbook
@@ -109,6 +110,7 @@ def main() -> None:
             "source_url": SOURCE_URL,
             "source_sheet": SHEET,
             "source_sha256": sha256(xlsx),
+            "retrieved_at": datetime.now(timezone.utc).isoformat(),
             "reference_years": EXPECTED_YEARS,
             "value_order": ["IDHM", "IDHM_E", "IDHM_L", "IDHM_R"],
             "municipality_count": len(municipalities),
