@@ -204,7 +204,7 @@ describe("ibge_cidades", () => {
     });
 
     it("uses the generic Cidades indicator endpoint for IDHM", async () => {
-      mockFetch.mockResolvedValueOnce(mockResponse(pesquisaResultado({ "2010": "0.805" })));
+      mockFetch.mockResolvedValueOnce(mockResponse(pesquisaResultado({ "1991": "0.618", "2000": "0.735", "2010": "0.805" })));
 
       const result = await ibgeCidades({
         tipo: "indicador",
@@ -212,7 +212,7 @@ describe("ibge_cidades", () => {
         municipio: "3509502",
       });
 
-      expect(lastUrl()).toContain("/pesquisas/37/periodos/2010/indicadores/30255/resultados/350950");
+      expect(lastUrl()).toContain("/pesquisas/indicadores/329756/resultados/3509502");
       expect(result.isError).toBeFalsy();
       expect(result.markdown).toContain("0.805");
     });
