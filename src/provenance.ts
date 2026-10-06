@@ -66,7 +66,6 @@ export const IBGE_LICENSE = {
   verified_at: "2026-08-08",
 } as const;
 
-
 /**
  * Atlas Brasil does not expose a machine-readable license alongside the
  * downloadable Censo 1991–2010 workbook. Keep that uncertainty explicit
@@ -194,7 +193,6 @@ export function provenienciaIbge(opts: ProvenienciaIbgeOptions): Provenance {
   });
 }
 
-
 export interface ProvenienciaAtlasOptions {
   url: string;
   dataset: string;
@@ -220,8 +218,7 @@ export function provenienciaAtlas(opts: ProvenienciaAtlasOptions): Provenance {
     dataset: opts.dataset,
     data_vintage: opts.dataVintage ?? "1991–2010",
     retrieved_at: opts.retrievedAt,
-    citation:
-      `Fonte: Atlas do Desenvolvimento Humano no Brasil (PNUD Brasil / Ipea / Fundação João Pinheiro), base Censo 1991–2010, ${opts.url}, extraído em ${dataCitacao(opts.retrievedAt)}.`,
+    citation: `Fonte: Atlas do Desenvolvimento Humano no Brasil (PNUD Brasil / Ipea / Fundação João Pinheiro), base Censo 1991–2010, ${opts.url}, extraído em ${dataCitacao(opts.retrievedAt)}.`,
     license: ATLAS_LICENSE,
     derived: false,
     served_from_cache: null,
