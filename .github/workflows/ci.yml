@@ -24,4 +24,8 @@ jobs:
           node-version: "22"
           cache: npm
       - run: npm ci
+      - name: Prettier preview
+        run: |
+          npx prettier --write src/tools/cidades.ts
+          git diff -- src/tools/cidades.ts
       - run: npm run gate:deploy
