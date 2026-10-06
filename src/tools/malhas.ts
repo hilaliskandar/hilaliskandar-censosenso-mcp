@@ -158,7 +158,7 @@ export const malhasOutputSchema = z.object({
           latitude: z.number(),
         })
         .optional()
-        .describe("Centróide geométrico aproximado da malha"),
+        .describe("Centróide dos vértices da malha, em longitude/latitude"),
       propriedades: z
         .array(z.string())
         .describe("Chaves de propriedades observadas nas feições retornadas"),
@@ -458,6 +458,25 @@ function formatMalhasResponse(
         output += `| **Propriedades** | ${Object.keys(feature.properties).join(", ")} |\n`;
       }
     }
+  }
+  output += "\n";
+
+  const resumo = resumirGeometria(data);
+  output += `### Resumo Cartográfico\n\n`;
+  output += `| Campo | Valor |\n`;
+  output += `|:------|:------|\n`;
+  output += `| **Feições** | ${resumo.feicoes} |\n`;
+  output += `| **Tipos de geometria** | ${Object.entries(resumo.tipos_geometria)
+    .map(([tipo, quantidade]) => `${tipo}: ${quantidade}`)
+    .join(", ")} |\n`;
+  if (resumo.bbox) {
+    output += `| **Extensão (bbox)** | ${resumo.bbox.join(", ")} |\n`;
+  }
+  if (resumo.centroide) {
+    output += `| **Centróide dos vértices** | ${resumo.centroide.longitude}, ${resumo.centroide.latitude} |\n`;
+  }
+  if (resumo.propriedades.length > 0) {
+    output += `| **Propriedades** | ${resumo.propriedades.join(", ")} |\n`;
   }
   output += "\n";
 
