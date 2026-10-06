@@ -141,7 +141,7 @@ async function buscarSerieMunicipal(
   }
 
   const info = INDICADORES_PANORAMA[indKey];
-  const url = urlIndicadorCidades(info.id, municipio, info.pesquisa);
+  const url = urlIndicadorCidades(info.id, municipio);
   const chaveCache = cacheKey(url);
   const data = await cachedFetch<PesquisaResultado[]>(
     url,
@@ -380,7 +380,7 @@ async function panoramaMunicipio(codigoMunicipio: string): Promise<StructuredToo
   // Provenance: keyed to the first/principal indicator fetch of the panorama
   // (populacao) — the response merges several fetches of the same API.
   const principal = INDICADORES_PANORAMA["populacao"];
-  const principalUrl = urlIndicadorCidades(principal.id, codigoMunicipio, principal.pesquisa);
+  const principalUrl = urlIndicadorCidades(principal.id, codigoMunicipio);
   const provenance = provenienciaIbge({
     fonte: "PESQUISAS",
     url: principalUrl,
@@ -439,8 +439,9 @@ type IndicadorPanorama = (typeof INDICADORES_PANORAMA)[string];
 function resolverIndicadorPanorama(indicador: string): IndicadorPanorama | undefined {
   const porAlias = INDICADORES_PANORAMA[indicador.toLowerCase()];
   if (porAlias) return porAlias;
-  // Compatibilidade com o antigo ID do Cidades@ para salário médio.
+  // Compatibilidade com IDs anteriormente expostos pelo wrapper.
   if (indicador === "29765") return INDICADORES_PANORAMA.salario_medio;
+  if (indicador === "30255") return INDICADORES_PANORAMA.idh;
   return Object.values(INDICADORES_PANORAMA).find((info) => String(info.id) === indicador);
 }
 

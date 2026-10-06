@@ -217,18 +217,36 @@ describe("ibge_cidades", () => {
       expect(result.markdown).toContain("0.805");
     });
 
-    it("pins IDHM components to the 2010 period published by Cidades", async () => {
-      mockFetch.mockResolvedValueOnce(mockResponse(pesquisaResultado({ "2010": "0.834" })));
+    it("returns the historical IDHM series from indicator 329756", async () => {
+      mockFetch.mockResolvedValueOnce(
+        mockResponse(pesquisaResultado({ "1991": "0.618", "2000": "0.735", "2010": "0.805" }))
+      );
 
       const result = await ibgeCidades({
         tipo: "indicador",
-        indicador: "idhm_renda",
+        indicador: "idh",
         municipio: "3509502",
       });
 
-      expect(lastUrl()).toContain("/pesquisas/37/periodos/2010/indicadores/30257/resultados/350950");
+      expect(lastUrl()).toContain("/pesquisas/indicadores/329756/resultados/3509502");
       expect(result.isError).toBeFalsy();
-      expect(result.markdown).toContain("0.834");
+      expect(result.markdown).toContain("0.805");
+      expect(result.markdown).toContain("0.735");
+      expect(result.markdown).toContain("0.618");
+    });
+
+    it("keeps former IDHM id 30255 as a compatibility alias", async () => {
+      mockFetch.mockResolvedValueOnce(mockResponse(pesquisaResultado({ "2010": "0.805" })));
+
+      const result = await ibgeCidades({
+        tipo: "indicador",
+        indicador: "30255",
+        municipio: "3509502",
+      });
+
+      expect(lastUrl()).toContain("/pesquisas/indicadores/329756/resultados/3509502");
+      expect(result.isError).toBeFalsy();
+      expect(result.markdown).toContain("0.805");
     });
 
     it("reports an explicit empty result when Cidades returns an empty inner series", async () => {
