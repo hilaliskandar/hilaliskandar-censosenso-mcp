@@ -1,4 +1,4 @@
-# Referência das 23 ferramentas do CensoSenso MCP
+# Referência das 24 ferramentas do CensoSenso MCP
 
 Esta página é a referência operacional da superfície MCP 0.6.0. Ela complementa o [README](../README.md), que descreve arquitetura, algoritmos, instalação e validação.
 
@@ -523,3 +523,36 @@ As estatísticas genéricas são calculadas por `@sbissoli/mcp-stats`; a lógica
 ## Segurança
 
 Todas as tools são somente leitura. O transporte remoto adiciona validação de host/origin, rate limit, autenticação Bearer opcional e proteção independente da rota `/metrics`.
+
+
+---
+
+## 24. `ibge_mapa`
+
+**Finalidade:** gerar mapa coroplético municipal vetorial a partir de indicadores SIDRA auditados e malhas municipais oficiais do IBGE.
+
+**Escopo inicial da versão 0.7:**
+- 2 a 50 municípios;
+- todos os municípios da mesma UF;
+- indicadores: população estimada, população Censo 2022, PIB, área, densidade, alfabetização e domicílios;
+- classificação por quantis ou intervalos iguais;
+- 2 a 7 classes;
+- saída SVG.
+
+**Fontes:**
+- valores: SIDRA/API de Agregados;
+- geometrias: API de Malhas Geográficas do IBGE, qualidade mínima e divisão municipal.
+
+**Saída estruturada:**
+- valores e classes por município;
+- limites das classes e cores;
+- `bbox` do recorte;
+- URLs das duas fontes;
+- SVG completo em `structuredContent.svg`.
+
+**Processamento derivado:** a classificação, a projeção simples para o plano SVG, a legenda e a composição cartográfica são produzidas pelo CensoSenso. A proveniência registra explicitamente que o mapa é derivado de valores SIDRA e geometrias oficiais.
+
+**Limites desta primeira versão:** não há ainda suporte a municípios de UFs diferentes, rotulagem cartográfica automática, projeção cartográfica especializada, tiles ou PNG. Esses itens pertencem às etapas seguintes da roadmap 0.7.
+
+**Uso recomendado:** mapas de comparação municipal para recortes explícitos, inclusive os 30 municípios do TIC-TIM.
+
