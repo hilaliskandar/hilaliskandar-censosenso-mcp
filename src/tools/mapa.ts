@@ -105,7 +105,7 @@ function limitesQuantis(valores: number[], quantidade: number): number[] {
     const pos = Math.min(ordenados.length - 1, Math.ceil((i * ordenados.length) / quantidade) - 1);
     limites.push(ordenados[pos]);
   }
-  limites.push(ordenados.at(-1)!);
+  limites.push(ordenados[ordenados.length - 1]);
   return limites;
 }
 
@@ -251,7 +251,7 @@ export async function ibgeMapa(input: MapaInput): Promise<StructuredToolResult> 
       const titulo = input.titulo?.trim() || template.nome + " — " + String(municipios.length) + " municípios";
       const svg = renderSvg(selecionados, porCodigo, classes, bbox, input.largura ?? 960, titulo, "IBGE — SIDRA, Tabela " + template.tabela);
       const localidades = municipios.map((codigo) => {
-        const item = porCodigo.get(codigo)!;
+        const item = porCodigo.get(codigo) ?? { codigo, nome: codigo, valor: null };
         return { codigo, nome: item.nome, valor: item.valor, classe: classeDoValor(item.valor, classes) };
       });
       const parsed = sidraRecords(sidra.data);
