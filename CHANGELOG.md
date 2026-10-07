@@ -4,6 +4,23 @@ All notable public changes to CensoSenso MCP will be documented in this file.
 
 The public project uses the pre-1.0 policy in [docs/VERSIONAMENTO.md](docs/VERSIONAMENTO.md).
 
+## [0.7.0] - 2026-10-07
+
+### Added
+- `ibge_mapa`, a 24th MCP tool for municipal choropleth maps in SVG.
+- Choropleth classification by quantiles or equal intervals for 2–50 municipalities of the same state.
+- Combined provenance for SIDRA indicator values and official IBGE municipal meshes.
+- Structured map output with classes, municipal values, bounding box, source URLs and complete SVG.
+
+### Changed
+- Public tool surface grows from 23 to 24 tools.
+- The cartography cluster now covers geometry retrieval (`ibge_malhas`) and derived municipal thematic maps (`ibge_mapa`).
+- Public surface baseline advances to `surface-stdio-0.7.0.json`.
+
+### Validated
+- Main test suite, coverage, OpenAI/MCP contracts, eval catalog and Worker tests pass with the 24-tool surface.
+- Production `tools/list` confirmed 24 tools after deployment.
+
 ## [0.6.0] - 2026-10-05
 
 ### Added

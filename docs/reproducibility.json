@@ -4,7 +4,7 @@
     "name": "CensoSenso MCP",
     "package": "censosenso-mcp",
     "mcp_name": "io.github.hilaliskandar/censosenso-mcp",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "repository": "https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp",
     "license": "MIT",
     "origin_project": "https://github.com/SidneyBissoli/ibge-br-mcp",
@@ -77,7 +77,7 @@
     ]
   },
   "validation": {
-    "baseline_surface": "baselines/surface-stdio-0.6.0.json",
+    "baseline_surface": "baselines/surface-stdio-0.7.0.json",
     "integration_gate": "scripts/run_integration_gate.ps1",
     "smoke_script": "scripts/smoke-mcp.mjs",
     "remote_homologation_date": "2026-10-03",
@@ -109,7 +109,7 @@
     "details": "docs/ORIGEM_MODULOS_E_CONTRIBUICOES.md"
   },
   "tool_surface": {
-    "count": 23,
+    "count": 24,
     "tools": [
       "ibge_estados",
       "ibge_municipios",
@@ -120,6 +120,7 @@
       "ibge_sidra_tabelas",
       "ibge_sidra_metadados",
       "ibge_malhas",
+      "ibge_mapa",
       "ibge_pesquisas",
       "ibge_censo",
       "ibge_indicadores",
@@ -136,6 +137,6 @@
       "fetch"
     ],
     "source_of_truth": "src/server.ts",
-    "baseline": "baselines/surface-stdio-0.6.0.json"
+    "baseline": "baselines/surface-stdio-0.7.0.json"
   }
 }
