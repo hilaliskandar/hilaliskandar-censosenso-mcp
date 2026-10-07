@@ -61,7 +61,7 @@ A sequência pública usa versões pré-1.0: `0.x.0` para acréscimo funcional e
 - fonte principal dos dados: **IBGE**;
 - natureza deste lançamento: **protótipo público experimental, sem SLA**.
 
-A superfície 0.6.0 possui **24 ferramentas**: 22 componentes `ibge_*` e duas ferramentas genéricas de pesquisa assistida, `search` e `fetch`.
+A superfície atual possui **24 ferramentas**: 22 componentes `ibge_*` e duas ferramentas genéricas de pesquisa assistida, `search` e `fetch`.
 
 
 ### Documentação técnica
@@ -631,6 +631,10 @@ Se uma consulta traz várias variáveis e o usuário não escolhe agrupamento, o
 ### Malhas administrativas
 
 `ibge_malhas` consulta a API oficial de Malhas para geometrias administrativas.
+
+### Mapas coropléticos
+
+`ibge_mapa` combina indicadores municipais auditados do SIDRA com a malha municipal oficial do IBGE e produz SVG vetorial para recortes explícitos de até 50 municípios de uma mesma UF. A primeira versão oferece classificação por quantis ou intervalos iguais e registra o produto como derivado.
 
 ### Vizinhança municipal
 
