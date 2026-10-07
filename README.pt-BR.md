@@ -1,6 +1,6 @@
 # CensoSenso MCP
 
-[![Version](https://img.shields.io/badge/version-0.6.0-blue.svg)](#versao-e-estado)
+[![Version](https://img.shields.io/badge/version-0.7.0-blue.svg)](#versao-e-estado)
 [![Node](https://img.shields.io/badge/node-%3E%3D22-brightgreen.svg)](#instalacao-local)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![CI](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/actions/workflows/ci.yml)
@@ -9,7 +9,7 @@
 
 **Endpoint MCP remoto:** `https://censosenso.poderdapalavra.org/mcp`
 
-> **Protótipo público 1.** A versão 0.6.0 é experimental, somente leitura e disponibilizada sem SLA. O canal oficial inicial é o endpoint remoto acima. O pacote npm ainda não integra este lançamento.
+> **Protótipo público 1.** A versão 0.7.0 é experimental, somente leitura e disponibilizada sem SLA. O canal oficial inicial é o endpoint remoto acima. O pacote npm ainda não integra este lançamento.
 
 O **CensoSenso MCP** é uma implementação de [Model Context Protocol](https://modelcontextprotocol.io/) voltada ao uso analítico de dados públicos brasileiros. A superfície atual reúne ferramentas de localidades, Censo Demográfico, SIDRA, indicadores, Cidades@, saúde, saneamento, economia, classificações, malhas administrativas, vizinhança municipal, recortes territoriais, notícias e calendário.
 
@@ -47,7 +47,7 @@ A sequência pública usa versões pré-1.0: `0.x.0` para acréscimo funcional e
 
 ## Versão e estado
 
-- versão do servidor: **0.6.0**;
+- versão do servidor: **0.7.0**;
 - linguagem principal: **TypeScript**;
 - runtime: **Node.js 22+**;
 - protocolo: **Model Context Protocol**;
@@ -70,7 +70,7 @@ A superfície atual possui **24 ferramentas**: 22 componentes `ibge_*` e duas fe
 - [Exemplos de uso e casos de erro](docs/EXEMPLOS_E_CASOS_DE_ERRO.md)
 - [Matriz de fontes, cache, derivação e limitações](docs/MATRIZ_FONTES_E_PROCESSOS.md)
 - [Política de versionamento](docs/VERSIONAMENTO.md)
-- [Notas da versão 0.6.0](docs/RELEASE_0_6_0.md)
+- [Notas da versão 0.7.0](docs/RELEASE_0_7_0.md)
 - [Evidência da validação dos 645 municípios paulistas](docs/VALIDACAO_SP_645.md)
 - [Como acessar os artefatos dos 645 municípios](docs/ACESSO_RESULTADOS_SP_645.md)
 - [Segurança](SECURITY.md)
@@ -816,7 +816,7 @@ node scripts/dump-surface.mjs --stdio
 Baseline atual:
 
 ```text
-baselines/surface-stdio-0.6.0.json
+baselines/surface-stdio-0.7.0.json
 ```
 
 Mudança de ferramentas, schemas, resources ou prompts deve produzir diff explícito no baseline.
@@ -826,7 +826,7 @@ Mudança de ferramentas, schemas, resources ou prompts deve produzir diff explí
 <a id="instalacao-local"></a>
 ## Instalação local
 
-A árvore homologada do protótipo **0.6.0** está publicada neste repositório. O CI público usa apenas runners hospedados pelo GitHub e não realiza deploy de produção.
+A árvore homologada do protótipo **0.7.0** está publicada neste repositório. O CI público usa apenas runners hospedados pelo GitHub e não realiza deploy de produção.
 
 Pré-requisitos:
 
@@ -1068,7 +1068,7 @@ O CensoSenso:
 
 Concluído:
 
-- versão 0.6.0;
+- versão 0.7.0;
 - 24 ferramentas;
 - transporte STDIO;
 - Streamable HTTP;
