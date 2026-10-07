@@ -58,7 +58,7 @@ export const RATE_LIMIT = {
 export const LANDING = {
   lang: "pt-BR" as "pt-BR" | "en",
   resumo:
-    "Servidor MCP com 23 ferramentas de dados oficiais do IBGE — geografia, censo, " +
+    "Servidor MCP com 24 ferramentas de dados oficiais do IBGE — geografia, censo, " +
     "economia e saúde — com valor exato e a fonte citada em cada resposta.",
   exemplos: [
     "“Qual era a população de Belo Horizonte no Censo 2022?”",
