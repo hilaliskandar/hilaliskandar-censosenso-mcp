@@ -55,6 +55,29 @@ function mockVizinhosPorUrl() {
     if (/\/malhas\/estados\/(31|33|41|50)\?/.test(alvo)) {
       return mockResponse(malhaVazia);
     }
+    if (/\/agregados\/4709\//.test(alvo)) {
+      const codigo = /N6\[(\d{7})\]/.exec(alvo)?.[1] ?? "3501608";
+      return mockResponse([
+        {
+          NC: "Nível Territorial (Código)",
+          NN: "Nível Territorial",
+          V: "Valor",
+          D1C: "Ano (Código)",
+          D1N: "Ano",
+          D2C: "Município (Código)",
+          D2N: "Município",
+        },
+        {
+          NC: "N6",
+          NN: "Município",
+          V: codigo === "3501608" ? "242018" : "60000",
+          D1C: "2022",
+          D1N: "2022",
+          D2C: codigo,
+          D2N: codigo === "3501608" ? "Americana" : "Jaguariúna",
+        },
+      ]);
+    }
 
     return mockResponse({ erro: `sem mock para ${alvo}` }, 404);
   });
@@ -124,6 +147,26 @@ describe("ibge_vizinhos — lógica espacial", () => {
     expect(result.isError).toBe(true);
     expect(result.markdown).toContain("uf");
     expect(mockFetch).not.toHaveBeenCalled();
+  });
+
+  it("expõe período e tabela da população quando incluir_dados=true", async () => {
+    mockVizinhosPorUrl();
+
+    const result = await ibgeVizinhos({ municipio: "3509502", incluir_dados: true });
+    expect(result.isError).toBeFalsy();
+
+    const structured = result.structured as {
+      vizinhos: Array<{
+        populacao?: number;
+        populacao_ano?: string;
+        populacao_tabela?: string;
+      }>;
+    };
+    expect(structured.vizinhos).toHaveLength(2);
+    expect(structured.vizinhos.every((v) => v.populacao_ano === "2022")).toBe(true);
+    expect(structured.vizinhos.every((v) => v.populacao_tabela === "4709")).toBe(true);
+    expect(result.markdown).toContain("Tabela 4709");
+    expect(vizinhosOutputSchema.safeParse(result.structured).success).toBe(true);
   });
 
   it("não devolve a antiga seleção por prefixo de código", async () => {
