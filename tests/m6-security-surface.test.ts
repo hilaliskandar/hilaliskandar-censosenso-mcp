@@ -24,7 +24,7 @@ describe("M6 — schema/runtime trust boundary", () => {
       const { tools } = await client.listTools();
       const own = tools.filter((tool) => !EXTERNAL_CONTRACT_TOOLS.has(tool.name));
 
-      expect(own).toHaveLength(21);
+      expect(own).toHaveLength(22);
       for (const tool of own) {
         expect(tool.annotations?.readOnlyHint, tool.name).toBe(true);
         expect(tool.annotations?.destructiveHint, tool.name).toBe(false);
@@ -34,7 +34,7 @@ describe("M6 — schema/runtime trust boundary", () => {
     });
   });
 
-  it("anuncia additionalProperties=false em todas as 21 tools de domínio", async () => {
+  it("anuncia additionalProperties=false em todas as 22 tools de domínio", async () => {
     await withClient(async (client) => {
       const { tools } = await client.listTools();
       const own = tools.filter((tool) => !EXTERNAL_CONTRACT_TOOLS.has(tool.name));
