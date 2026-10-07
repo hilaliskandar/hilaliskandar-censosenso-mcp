@@ -1,6 +1,6 @@
 {
   "name": "censosenso-mcp",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "mcpName": "io.github.hilaliskandar/censosenso-mcp",
   "description": "CensoSenso MCP server for official Brazilian public data from IBGE APIs, with structured provenance and reproducible territorial queries.",
   "type": "module",
