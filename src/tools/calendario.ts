@@ -132,12 +132,13 @@ export async function ibgeCalendario(input: CalendarioInput): Promise<Structured
       });
 
       const data = await cachedFetch<CalendarioResponse>(url, key, CACHE_TTL.SHORT);
+      const dataFiltrada = input.produto ? filtrarPorProduto(data, input.produto) : data;
 
-      if (!data.items || data.items.length === 0) {
+      if (!dataFiltrada.items || dataFiltrada.items.length === 0) {
         return { markdown: formatNoResults(input), isError: true };
       }
 
-      const eventos = data.items.map((item) => ({
+      const eventos = dataFiltrada.items.map((item) => ({
         id: item.id,
         titulo: item.titulo,
         produto: item.nome_produto || "",
@@ -148,12 +149,12 @@ export async function ibgeCalendario(input: CalendarioInput): Promise<Structured
       }));
 
       return {
-        markdown: formatCalendarioResponse(data, input),
+        markdown: formatCalendarioResponse(dataFiltrada, input),
         structured: {
           eventos,
-          total: data.count,
-          pagina: data.page,
-          totalPaginas: data.totalPages,
+          total: dataFiltrada.count,
+          pagina: dataFiltrada.page,
+          totalPaginas: dataFiltrada.totalPages,
           ...(input.produto ? { produto: input.produto } : {}),
         },
         provenance: provenienciaIbge({
@@ -173,6 +174,31 @@ export async function ibgeCalendario(input: CalendarioInput): Promise<Structured
       };
     }
   });
+}
+
+function normalizarBusca(value: string): string {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim();
+}
+
+function filtrarPorProduto(data: CalendarioResponse, produto: string): CalendarioResponse {
+  const termo = normalizarBusca(produto);
+  const items = data.items.filter((item) =>
+    [item.nome_produto, item.titulo, item.descricao]
+      .map((valor) => normalizarBusca(valor ?? ""))
+      .some((valor) => valor.includes(termo))
+  );
+
+  return {
+    ...data,
+    items,
+    count: items.length,
+    page: 1,
+    totalPages: items.length > 0 ? 1 : 0,
+  };
 }
 
 /**
