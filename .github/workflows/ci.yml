@@ -24,7 +24,4 @@ jobs:
           node-version: "22"
           cache: npm
       - run: npm ci
-      - run: |
-          npx prettier --write src/tools/vizinhos.ts
-          git diff -- src/tools/vizinhos.ts
-          exit 1
+      - run: npm run gate:deploy
