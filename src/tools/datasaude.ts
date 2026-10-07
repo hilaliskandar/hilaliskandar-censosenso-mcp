@@ -166,12 +166,17 @@ export const datasaudeSchema = z.object({
 - saneamento_esgoto: Esgotamento sanitário
 - plano_saude: Cobertura de plano de saúde
 - autoavaliacao_saude: Autoavaliação de saúde boa ou muito boa
-- listar: Lista indicadores disponíveis`),
+- listar: Lista indicadores disponíveis e os níveis territoriais válidos por indicador
+
+A disponibilidade territorial varia por indicador. Antes de usar nivel_territorial=6, consulte indicador="listar".`),
   nivel_territorial: z
     .string()
     .optional()
     .default("1")
-    .describe(territorialLevelHint(DATASAUDE_NIVEIS)),
+    .describe(
+      territorialLevelHint(DATASAUDE_NIVEIS) +
+        ". A disponibilidade é específica por indicador; use indicador='listar' para consultar os níveis válidos."
+    ),
   localidade: z.string().optional().default("all").describe("Código da localidade ou 'all'"),
   periodo: z
     .string()

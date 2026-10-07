@@ -11,8 +11,8 @@ import { isValidIbgeCode, formatValidationError } from "../validation.js";
 import { resolveUf } from "../config.js";
 import { RETRY_PRESETS } from "../retry.js";
 import { fetchSidra } from "../sidra-agregados.js";
-import type { StructuredToolResult } from "../structured.js";
-import { provenienciaIbge } from "../provenance.js";
+import { sidraRecords, type StructuredToolResult } from "../structured.js";
+import { extrairPeriodoSidra, provenienciaIbge } from "../provenance.js";
 
 // Schema for the tool input
 export const vizinhosSchema = z.object({
@@ -57,6 +57,14 @@ export const vizinhosOutputSchema = z.object({
           .number()
           .optional()
           .describe("População do município vizinho (apenas quando incluir_dados=true)"),
+        populacao_ano: z
+          .string()
+          .optional()
+          .describe("Período de referência da população enriquecida via SIDRA"),
+        populacao_tabela: z
+          .string()
+          .optional()
+          .describe("Tabela SIDRA usada no enriquecimento populacional"),
         distancia_km: z
           .number()
           .optional()
@@ -186,6 +194,8 @@ export async function ibgeVizinhos(input: VizinhosInput): Promise<StructuredTool
             nome: v.nome,
             ...(v.uf !== undefined ? { uf: v.uf } : {}),
             ...(v.populacao !== undefined ? { populacao: v.populacao } : {}),
+            ...(v.populacao_ano !== undefined ? { populacao_ano: v.populacao_ano } : {}),
+            ...(v.populacao_tabela !== undefined ? { populacao_tabela: v.populacao_tabela } : {}),
             ...(v.distancia_km !== undefined ? { distancia_km: v.distancia_km } : {}),
           })),
           total: vizinhosData.length,
@@ -216,6 +226,8 @@ interface VizinhoInfo {
   nome: string;
   uf?: string;
   populacao?: number;
+  populacao_ano?: string;
+  populacao_tabela?: string;
   area?: number;
   distancia_km?: number;
 }
@@ -421,6 +433,10 @@ async function enrichVizinhosData(vizinhos: VizinhoInfo[]): Promise<VizinhoInfo[
       );
       if (data && data.length > 1 && data[1].V) {
         v.populacao = parseInt(data[1].V);
+        v.populacao_tabela = "4709";
+        const registros = sidraRecords(data as Record<string, string>[]);
+        const periodo = extrairPeriodoSidra(registros.colunas, registros.registros);
+        if (periodo) v.populacao_ano = periodo;
       }
     } catch {
       // Ignore errors, just don't add population
@@ -447,17 +463,18 @@ function formatResponse(
     : "**Critério espacial:** contiguidade entre as geometrias municipais da malha oficial do IBGE.\n\n";
 
   if (input.incluir_dados && porRaio) {
-    output += "| Código | Município | UF | Distância | População |\n";
-    output += "|:------:|:----------|:--:|----------:|----------:|\n";
+    output += "| Código | Município | UF | Distância | População | Ano |\n";
+    output += "|:------:|:----------|:--:|----------:|----------:|:---:|\n";
     for (const v of vizinhos) {
       const pop = v.populacao ? formatNumber(v.populacao) : "-";
       const km = v.distancia_km !== undefined ? `${v.distancia_km.toFixed(2)} km` : "-";
-      output += `| ${v.codigo} | ${v.nome} | ${v.uf || "-"} | ${km} | ${pop} |\n`;
+      output += `| ${v.codigo} | ${v.nome} | ${v.uf || "-"} | ${km} | ${pop} | ${v.populacao_ano || "-"} |\n`;
     }
   } else if (input.incluir_dados) {
-    output += "| Código | Município | UF | População |\n|:------:|:----------|:--:|----------:|\n";
+    output +=
+      "| Código | Município | UF | População | Ano |\n|:------:|:----------|:--:|----------:|:---:|\n";
     for (const v of vizinhos) {
-      output += `| ${v.codigo} | ${v.nome} | ${v.uf || "-"} | ${v.populacao ? formatNumber(v.populacao) : "-"} |\n`;
+      output += `| ${v.codigo} | ${v.nome} | ${v.uf || "-"} | ${v.populacao ? formatNumber(v.populacao) : "-"} | ${v.populacao_ano || "-"} |\n`;
     }
   } else if (porRaio) {
     output += "| Código | Município | UF | Distância |\n|:------:|:----------|:--:|----------:|\n";
@@ -467,6 +484,11 @@ function formatResponse(
   } else {
     output += "| Código | Município | UF |\n|:------:|:----------|:--:|\n";
     for (const v of vizinhos) output += `| ${v.codigo} | ${v.nome} | ${v.uf || "-"} |\n`;
+  }
+  if (input.incluir_dados) {
+    output +=
+      "\n**População:** SIDRA, Tabela 4709; o período de referência é informado " +
+      "por município na coluna Ano.\n";
   }
   output += porRaio
     ? "\n---\n\n**Nota metodológica:** a distância é calculada entre os centróides das geometrias municipais, não entre seus limites.\n"
