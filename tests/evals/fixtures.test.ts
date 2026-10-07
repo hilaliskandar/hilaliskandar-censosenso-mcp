@@ -13,8 +13,8 @@ import { AREA_BY_TOOL, CATALOG } from "../../evals/catalog.js";
 import { FIXTURES } from "../../evals/fixtures/queries.js";
 
 describe("eval catalog (live, via registerAll)", () => {
-  it("captures exactly the 23 tools (21 ibge_* + the 2 of the Deep Research contract)", () => {
-    expect(CATALOG.tools).toHaveLength(23);
+  it("captures exactly the 24 tools (22 ibge_* + the 2 of the Deep Research contract)", () => {
+    expect(CATALOG.tools).toHaveLength(24);
   });
 
   it("every tool carries the ibge_ prefix — except the two the ChatGPT contract names", () => {
