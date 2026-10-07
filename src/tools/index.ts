@@ -14,6 +14,7 @@ export {
   sidraMetadadosOutputSchema,
 } from "./sidra-metadados.js";
 export { ibgeMalhas, malhasSchema, malhasOutputSchema } from "./malhas.js";
+export { ibgeMapa, mapaSchema, mapaOutputSchema } from "./mapa.js";
 export { ibgePesquisas, pesquisasSchema, pesquisasOutputSchema } from "./pesquisas.js";
 export { ibgeCenso, censoSchema, censoOutputSchema } from "./censo.js";
 

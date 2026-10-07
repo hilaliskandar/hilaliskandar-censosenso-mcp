@@ -80,6 +80,35 @@ const sidraComparar = sidraResponse(
 );
 
 
+const sidraMapa = sidraResponse(
+  { D1C: "Município (Código)", D1N: "Município", V: "Valor", D2N: "Ano" },
+  { D1C: "3550308", D1N: "São Paulo", V: "12300000", D2N: "2026" },
+  { D1C: "3509502", D1N: "Campinas", V: "1200000", D2N: "2026" }
+);
+
+const malhaMapa = {
+  type: "FeatureCollection",
+  features: [
+    {
+      type: "Feature",
+      properties: { codarea: "3550308" },
+      geometry: {
+        type: "Polygon",
+        coordinates: [[[-46.9, -23.8], [-46.3, -23.8], [-46.3, -23.3], [-46.9, -23.3], [-46.9, -23.8]]],
+      },
+    },
+    {
+      type: "Feature",
+      properties: { codarea: "3509502" },
+      geometry: {
+        type: "Polygon",
+        coordinates: [[[-47.2, -23.1], [-46.9, -23.1], [-46.9, -22.8], [-47.2, -22.8], [-47.2, -23.1]]],
+      },
+    },
+  ],
+};
+
+
 const rankingNomes = [
   {
     localidade: "BR",
@@ -350,6 +379,22 @@ const CASOS: Caso[] = [
 
   { nome: "ibge_malhas", cobre: "feature com properties", mock: um(featureUnica), args: { localidade: "SP" } },
   { nome: "ibge_malhas", cobre: "feature sem properties", mock: um(featureSemProperties), args: { localidade: "SP" } },
+
+  {
+    nome: "ibge_mapa",
+    cobre: "coroplético municipal em SVG",
+    mock: () => {
+      mockFetch
+        .mockResolvedValueOnce(mockResponse(sidraMapa))
+        .mockResolvedValueOnce(mockResponse(malhaMapa));
+    },
+    args: {
+      municipios: "3550308,3509502",
+      indicador: "populacao",
+      largura: 720,
+    },
+  },
+
 
   { nome: "ibge_pesquisas", cobre: "catálogo de pesquisas", mock: um(agregadosPesquisas), args: {} },
 

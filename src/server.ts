@@ -36,6 +36,9 @@ import {
   malhasSchema,
   malhasOutputSchema,
   ibgeMalhas,
+  mapaSchema,
+  mapaOutputSchema,
+  ibgeMapa,
   pesquisasSchema,
   pesquisasOutputSchema,
   ibgePesquisas,
@@ -108,7 +111,7 @@ export const SERVER_INSTRUCTIONS = [
   "Use este servidor para responder com dados oficiais do IBGE. Primeiro resolva corretamente a intenção e a localidade. Para um panorama de UM município use `ibge_cidades`; para Censo use `ibge_censo`; para séries/indicadores conhecidos use `ibge_indicadores`; para uma tabela SIDRA específica use `ibge_sidra`. Se o código da localidade não for conhecido, resolva com `ibge_geocodigo`. Quando não souber a tabela SIDRA, siga `ibge_sidra_tabelas` → `ibge_sidra_metadados` → `ibge_sidra`.",
   "Para comparar ou ranquear 2–10 localidades específicas, use `ibge_comparar`. Para perguntas de maior/menor/média/mediana/distribuição sobre uma tabela completa, use `estatisticas: true` em `ibge_sidra`, `ibge_censo`, `ibge_indicadores` ou `ibge_datasaude`; não pagine registros procurando extremos.",
   "Para localidades: listar/buscar municípios é `ibge_municipios`; resolver nome→código ou decompor código é `ibge_geocodigo`; consultar o registro completo de uma localidade por código é `ibge_localidade`; vizinhança/raio municipal é `ibge_vizinhos`.",
-  "Para mapas: geometria administrativa (Brasil/região/UF/município) é `ibge_malhas`; composição e atributos de recortes temáticos (biomas, Amazônia Legal, semiárido, zona costeira, faixa de fronteira, regiões metropolitanas, RIDEs) são `ibge_malhas_tema`. Geometria temática não faz parte do contrato desta ferramenta.",
+  "Para mapas: geometria administrativa (Brasil/região/UF/município) é `ibge_malhas`; mapas coropléticos de até 50 municípios de uma mesma UF são `ibge_mapa`; composição e atributos de recortes temáticos (biomas, Amazônia Legal, semiárido, zona costeira, faixa de fronteira, regiões metropolitanas, RIDEs) são `ibge_malhas_tema`. Geometria temática não faz parte do contrato desta última ferramenta.",
   "Para saúde, use `ibge_datasaude`; respeite as limitações territoriais retornadas pela ferramenta. Para notícias e calendário, use `ibge_noticias` e `ibge_calendario`.",
   "Ao apresentar estatísticas, escreva na linguagem do leitor: use os rótulos fornecidos e explique mediana/percentil quando forem centrais. Não exponha nomes internos de parâmetros ou chaves de API na resposta.",
   "Em respostas substantivas baseadas neste servidor, credite a fonte no padrão 'Fonte: IBGE — [pesquisa ou tabela]'.",
@@ -546,6 +549,35 @@ Behavior: read-only and idempotent — a live GET against the public IBGE Malhas
       annotations: READ_ONLY,
     },
     handle("ibge_malhas", ibgeMalhas)
+  );
+
+  // Register ibge_mapa tool (roadmap 0.7 cartography)
+  server.registerTool(
+    "ibge_mapa",
+    {
+      title: "Mapa coroplético municipal",
+      description: `Generates a municipal choropleth map as SVG from audited SIDRA indicators and official IBGE municipal meshes.
+
+Scope of this first cartographic release:
+- 2 to 50 municipalities
+- all municipalities must belong to the same state
+- indicators: populacao, populacao_censo, pib, area, densidade, alfabetizacao, domicilios
+- classification: quantiles or equal intervals
+- output: lightweight metadata plus complete SVG in structuredContent.svg
+
+The SVG includes municipal polygons, sequential classes, legend, title, tooltips and source note. The server fetches the state municipal mesh at minimum quality and filters it to the requested municipalities.
+
+Use a different tool when:
+- You need only geometry/download URL → ibge_malhas
+- You need non-cartographic comparison/ranking → ibge_comparar
+- You need thematic territorial composition (biomes, metropolitan regions, etc.) → ibge_malhas_tema
+
+Behavior: read-only and idempotent. The map is a server-side derived product from official IBGE SIDRA data and official IBGE geographic meshes.`,
+      inputSchema: mapaSchema.strict(),
+      outputSchema: comProveniencia(mapaOutputSchema),
+      annotations: READ_ONLY,
+    },
+    handle("ibge_mapa", ibgeMapa)
   );
 
   // Register ibge_pesquisas tool
