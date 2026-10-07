@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![CI](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/actions/workflows/ci.yml)
 
-**Servidor MCP independente para consulta, comparação e análise de dados oficiais do IBGE, com 23 ferramentas, procedência reproduzível, validação de contratos e transporte remoto via Cloudflare Workers.**
+**Servidor MCP independente para consulta, comparação e análise de dados oficiais do IBGE, com 24 ferramentas, procedência reproduzível, validação de contratos e transporte remoto via Cloudflare Workers.**
 
 **Endpoint MCP remoto:** `https://censosenso.poderdapalavra.org/mcp`
 
@@ -61,12 +61,12 @@ A sequência pública usa versões pré-1.0: `0.x.0` para acréscimo funcional e
 - fonte principal dos dados: **IBGE**;
 - natureza deste lançamento: **protótipo público experimental, sem SLA**.
 
-A superfície 0.6.0 possui **23 ferramentas**: 21 componentes `ibge_*` e duas ferramentas genéricas de pesquisa assistida, `search` e `fetch`.
+A superfície 0.6.0 possui **24 ferramentas**: 22 componentes `ibge_*` e duas ferramentas genéricas de pesquisa assistida, `search` e `fetch`.
 
 
 ### Documentação técnica
 
-- [Referência das 23 ferramentas](docs/FERRAMENTAS.md)
+- [Referência das 24 ferramentas](docs/FERRAMENTAS.md)
 - [Exemplos de uso e casos de erro](docs/EXEMPLOS_E_CASOS_DE_ERRO.md)
 - [Matriz de fontes, cache, derivação e limitações](docs/MATRIZ_FONTES_E_PROCESSOS.md)
 - [Política de versionamento](docs/VERSIONAMENTO.md)
@@ -268,7 +268,7 @@ Para schemas, parâmetros, decisões, fontes e limitações ferramenta por ferra
 | Localidades | `ibge_estados`, `ibge_municipios`, `ibge_localidade`, `ibge_geocodigo` |
 | SIDRA | `ibge_sidra`, `ibge_sidra_tabelas`, `ibge_sidra_metadados`, `ibge_pesquisas` |
 | Censo e indicadores | `ibge_censo`, `ibge_indicadores`, `ibge_comparar`, `ibge_cidades` |
-| Geografia | `ibge_malhas`, `ibge_malhas_tema`, `ibge_vizinhos` |
+| Geografia | `ibge_malhas`, `ibge_mapa`, `ibge_malhas_tema`, `ibge_vizinhos` |
 | Economia/classificações | `ibge_cnae` |
 | Saúde e condições de vida | `ibge_datasaude` |
 | Nomes | `ibge_nomes` |
@@ -289,6 +289,7 @@ Para schemas, parâmetros, decisões, fontes e limitações ferramenta por ferra
 | Inspecionar dimensões/classificações | `ibge_sidra_metadados` |
 | Resolver nome/código IBGE | `ibge_geocodigo` |
 | Geometria administrativa | `ibge_malhas` |
+| Mapa coroplético municipal | `ibge_mapa` |
 | Vizinhança municipal | `ibge_vizinhos` |
 | Recorte territorial especial | `ibge_malhas_tema` |
 
@@ -1064,7 +1065,7 @@ O CensoSenso:
 Concluído:
 
 - versão 0.6.0;
-- 23 ferramentas;
+- 24 ferramentas;
 - transporte STDIO;
 - Streamable HTTP;
 - domínio próprio;
