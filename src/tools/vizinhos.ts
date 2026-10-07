@@ -471,7 +471,8 @@ function formatResponse(
       output += `| ${v.codigo} | ${v.nome} | ${v.uf || "-"} | ${km} | ${pop} | ${v.populacao_ano || "-"} |\n`;
     }
   } else if (input.incluir_dados) {
-    output += "| Código | Município | UF | População | Ano |\n|:------:|:----------|:--:|----------:|:---:|\n";
+    output +=
+      "| Código | Município | UF | População | Ano |\n|:------:|:----------|:--:|----------:|:---:|\n";
     for (const v of vizinhos) {
       output += `| ${v.codigo} | ${v.nome} | ${v.uf || "-"} | ${v.populacao ? formatNumber(v.populacao) : "-"} | ${v.populacao_ano || "-"} |\n`;
     }
