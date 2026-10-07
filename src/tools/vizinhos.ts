@@ -194,12 +194,8 @@ export async function ibgeVizinhos(input: VizinhosInput): Promise<StructuredTool
             nome: v.nome,
             ...(v.uf !== undefined ? { uf: v.uf } : {}),
             ...(v.populacao !== undefined ? { populacao: v.populacao } : {}),
-            ...(v.populacao_ano !== undefined
-              ? { populacao_ano: v.populacao_ano }
-              : {}),
-            ...(v.populacao_tabela !== undefined
-              ? { populacao_tabela: v.populacao_tabela }
-              : {}),
+            ...(v.populacao_ano !== undefined ? { populacao_ano: v.populacao_ano } : {}),
+            ...(v.populacao_tabela !== undefined ? { populacao_tabela: v.populacao_tabela } : {}),
             ...(v.distancia_km !== undefined ? { distancia_km: v.distancia_km } : {}),
           })),
           total: vizinhosData.length,
@@ -472,16 +468,12 @@ function formatResponse(
     for (const v of vizinhos) {
       const pop = v.populacao ? formatNumber(v.populacao) : "-";
       const km = v.distancia_km !== undefined ? `${v.distancia_km.toFixed(2)} km` : "-";
-      output +=
-        `| ${v.codigo} | ${v.nome} | ${v.uf || "-"} | ${km} | ` +
-        `${pop} | ${v.populacao_ano || "-"} |\n`;
+      output += `| ${v.codigo} | ${v.nome} | ${v.uf || "-"} | ${km} | ${pop} | ${v.populacao_ano || "-"} |\n`;
     }
   } else if (input.incluir_dados) {
     output += "| Código | Município | UF | População | Ano |\n|:------:|:----------|:--:|----------:|:---:|\n";
     for (const v of vizinhos) {
-      output +=
-        `| ${v.codigo} | ${v.nome} | ${v.uf || "-"} | ` +
-        `${v.populacao ? formatNumber(v.populacao) : "-"} | ${v.populacao_ano || "-"} |\n`;
+      output += `| ${v.codigo} | ${v.nome} | ${v.uf || "-"} | ${v.populacao ? formatNumber(v.populacao) : "-"} | ${v.populacao_ano || "-"} |\n`;
     }
   } else if (porRaio) {
     output += "| Código | Município | UF | Distância |\n|:------:|:----------|:--:|----------:|\n";
