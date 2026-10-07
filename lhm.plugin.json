@@ -1,7 +1,7 @@
 {
   "identifier": "hilaliskandar-censosenso-mcp",
   "name": "CensoSenso MCP",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "CensoSenso MCP server for official Brazilian public data from IBGE APIs, with structured provenance and reproducible territorial queries.",
   "author": "Carlos Alexandre Gomes",
   "authorUrl": "https://github.com/hilaliskandar",
@@ -80,6 +80,13 @@
     {
       "name": "ibge_malhas",
       "description": "Get administrative geographic meshes (Brazil/region/state/municipality) as GeoJSON, TopoJSON or SVG.",
+      "inputSchema": {
+        "type": "object"
+      }
+    },
+    {
+      "name": "ibge_mapa",
+      "description": "Generate municipal choropleth maps as SVG from audited SIDRA indicators and official IBGE municipal meshes.",
       "inputSchema": {
         "type": "object"
       }
