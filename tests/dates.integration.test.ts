@@ -81,6 +81,49 @@ describe("Date normalization across tools", () => {
     });
   });
 
+  describe("calendario — validates product filtering defensively", () => {
+    it("removes unrelated events even when the upstream search returns false positives", async () => {
+      mockFetch.mockResolvedValueOnce(
+        mockResponse({
+          count: 2,
+          page: 1,
+          totalPages: 1,
+          items: [
+            {
+              id: 1,
+              titulo: "Resultados do Censo Demográfico",
+              descricao: "Divulgação censitária",
+              data_divulgacao: "10/10/2026 10:00:00",
+              tipo_id: 1,
+              tipo: "Divulgação de Indicadores",
+              produto_id: 100,
+              nome_produto: "Censo Demográfico",
+              link: "",
+            },
+            {
+              id: 2,
+              titulo: "Pesquisa Mensal de Comércio",
+              descricao: "PMC",
+              data_divulgacao: "11/10/2026 10:00:00",
+              tipo_id: 1,
+              tipo: "Divulgação de Indicadores",
+              produto_id: 200,
+              nome_produto: "PMC",
+              link: "",
+            },
+          ],
+        })
+      );
+
+      const result = await ibgeCalendario({ produto: "Censo", tipo: "todos" });
+
+      expect(result.isError).toBeFalsy();
+      expect(result.markdown).toContain("Censo Demográfico");
+      expect(result.markdown).not.toContain("Pesquisa Mensal de Comércio");
+      expect((result.structured as { eventos: unknown[] }).eventos).toHaveLength(1);
+    });
+  });
+
   describe("calendario — renders real IBGE API fields", () => {
     it("groups by data_divulgacao and shows nome_produto", async () => {
       mockFetch.mockResolvedValueOnce(
