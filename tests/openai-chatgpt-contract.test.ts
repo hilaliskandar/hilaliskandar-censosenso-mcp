@@ -36,7 +36,7 @@ describe("compatibilidade OpenAI/ChatGPT do MCP", () => {
 
   it("todas as ferramentas têm título, descrição, esquema de entrada e saída", async () => {
     const { tools } = await client.listTools();
-    expect(tools).toHaveLength(23);
+    expect(tools).toHaveLength(24);
 
     for (const tool of tools) {
       expect(tool.title, tool.name).toBeTruthy();
