@@ -53,6 +53,7 @@ export const AREA_BY_TOOL: Record<string, string> = {
   ibge_pesquisas: "sidra",
   // malhas
   ibge_malhas: "malhas",
+  ibge_mapa: "malhas",
   ibge_malhas_tema: "malhas",
   // saúde
   ibge_datasaude: "saude",
