@@ -1,5 +1,5 @@
 /**
- * Portão de release da proveniência (contrato v1.0): TODAS as 21 ferramentas
+ * Portão de release da proveniência (contrato v1.0): TODAS as 22 ferramentas
  * devem anexar o bloco `provenance` no caminho de SUCESSO. Cada caso chama a
  * ferramenta UMA vez no seu caminho principal de dados, com `global.fetch`
  * mockado (nunca a rede), e verifica o bloco canônico:
@@ -30,6 +30,8 @@ import {
   sidraMetadadosSchema,
   ibgeMalhas,
   malhasSchema,
+  ibgeMapa,
+  mapaSchema,
   ibgePesquisas,
   pesquisasSchema,
   ibgeCenso,
@@ -117,6 +119,35 @@ const sidraComparar = sidraResponse(
   { D1C: "3550308", D1N: "São Paulo", V: "12300000" },
   { D1C: "3304557", D1N: "Rio de Janeiro", V: "6700000" }
 );
+
+
+const sidraMapa = sidraResponse(
+  { D1C: "Município (Código)", D1N: "Município", V: "Valor", D2N: "Ano" },
+  { D1C: "3550308", D1N: "São Paulo", V: "12300000", D2N: "2026" },
+  { D1C: "3509502", D1N: "Campinas", V: "1200000", D2N: "2026" }
+);
+
+const malhaMapa = {
+  type: "FeatureCollection",
+  features: [
+    {
+      type: "Feature",
+      properties: { codarea: "3550308" },
+      geometry: {
+        type: "Polygon",
+        coordinates: [[[-46.9, -23.8], [-46.3, -23.8], [-46.3, -23.3], [-46.9, -23.3], [-46.9, -23.8]]],
+      },
+    },
+    {
+      type: "Feature",
+      properties: { codarea: "3509502" },
+      geometry: {
+        type: "Polygon",
+        coordinates: [[[-47.2, -23.1], [-46.9, -23.1], [-46.9, -22.8], [-47.2, -22.8], [-47.2, -23.1]]],
+      },
+    },
+  ],
+};
 
 
 const rankingNomes = [
@@ -349,6 +380,22 @@ const casos: Caso[] = [
     nome: "ibge_malhas",
     mock: () => mockFetch.mockResolvedValue(mockResponse(featureUnica)),
     executar: () => ibgeMalhas(malhasSchema.parse({ localidade: "SP" })),
+  },
+  {
+    nome: "ibge_mapa",
+    mock: () => {
+      mockFetch
+        .mockResolvedValueOnce(mockResponse(sidraMapa))
+        .mockResolvedValueOnce(mockResponse(malhaMapa));
+    },
+    executar: () =>
+      ibgeMapa(
+        mapaSchema.parse({
+          municipios: "3550308,3509502",
+          indicador: "populacao",
+          largura: 720,
+        })
+      ),
   },
   {
     nome: "ibge_pesquisas",
