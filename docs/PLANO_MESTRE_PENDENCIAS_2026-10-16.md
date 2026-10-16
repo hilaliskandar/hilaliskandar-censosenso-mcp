@@ -60,3 +60,10 @@ Em cada frente manter: `ID | título | prioridade | estado [não iniciado/em exe
 - WFS no laboratório: https://github.com/hilaliskandar/ibge-br-mcp-lab/issues/24
 
 **Revisão:** 16/10/2026. Documento operacional, sujeito a atualização por evidência; não substitui logs e testes.
+
+## Atualização de execução — 16/10/2026
+
+- PR #29 **integrada** à `main` via squash no commit `25b66838ffc85ff5147ec460dceee6287f6d6c18`, após gate completo e prova HTTP do Wrangler com requisições sequenciais e concorrentes: https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/pull/29.
+- PR #25 **fechada por redundância**, pois seus bumps de runtime fazem parte da PR #29 integrada.
+- Production smoke pós-merge **aprovado**: https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/actions/runs/38906241858. CI da `main` iniciado em https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/actions/runs/38906242114, pendente de resultado no momento deste registro.
+- Próximos itens: confirmar CI da `main`, resolver redundância de `agents` entre #22 e #26, avaliar demais PRs, regras da `main` e release #19. Integração de código não significa nova implantação do Worker; nenhum deploy manual foi solicitado ou realizado neste ciclo.
