@@ -18,7 +18,7 @@ Para regenerar snapshots territoriais, Python também é necessário.
 
 ```bash
 git clone https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp.git
-cd ibge-br-mcp-lab
+cd hilaliskandar-censosenso-mcp
 npm ci
 npm run gate:deploy
 ```
