@@ -1,5 +1,5 @@
 /**
- * pt-BR provenance adapter (contract v1.0) — the canonical block every tool
+ * pt-BR provenance adapter (contract v1.1) — the canonical block every tool
  * attaches and the three emission channels wired in `toMcpResult`.
  */
 import { describe, it, expect, beforeEach, vi, afterEach } from "vitest";
@@ -29,14 +29,14 @@ describe("provenienciaIbge", () => {
     vi.unstubAllGlobals();
   });
 
-  it("builds a canonical v1.0 block with the normative license and IBGE source", () => {
+  it("builds a canonical v1.1 block with the normative license and IBGE source", () => {
     const p = provenienciaIbge({
       fonte: "LOCALIDADES",
       url: URL_EXEMPLO,
       pesquisa: "API de Localidades (estados)",
     });
 
-    expect(p.contract_version).toBe("1.0");
+    expect(p.contract_version).toBe("1.1");
     expect(p.source.name).toBe("IBGE — API de Localidades");
     expect(p.source.agency).toBe("IBGE");
     expect(p.source_url).toBe(URL_EXEMPLO);
@@ -166,7 +166,7 @@ describe("toMcpResult with provenance (three channels)", () => {
       "A referência completa desta informação pode ser solicitada nesta própria conversa."
     );
 
-    // Channel 1: concise projection (6 keys) + attribution, visible to the model.
+    // Channel 1: concise projection (7 keys) + attribution, visible to the model.
     const sc = result.structuredContent as Record<string, unknown>;
     expect(sc.total).toBe(27);
     expect(Object.keys(sc.provenance as object)).toEqual([
@@ -176,7 +176,9 @@ describe("toMcpResult with provenance (three channels)", () => {
       "retrieved_at",
       "citation",
       "license",
+      "retrieval",
     ]);
+    expect((sc.provenance as Record<string, unknown>).retrieval).toBeNull();
     expect(sc.attribution).toEqual([URL_EXEMPLO]);
 
     // Channel 2: namespaced _meta mirror.
