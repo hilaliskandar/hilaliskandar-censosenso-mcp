@@ -67,3 +67,11 @@ Em cada frente manter: `ID | título | prioridade | estado [não iniciado/em exe
 - PR #25 **fechada por redundância**, pois seus bumps de runtime fazem parte da PR #29 integrada.
 - Production smoke pós-merge **aprovado**: https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/actions/runs/38906241858. CI da `main` iniciado em https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/actions/runs/38906242114, pendente de resultado no momento deste registro.
 - Próximos itens: confirmar CI da `main`, resolver redundância de `agents` entre #22 e #26, avaliar demais PRs, regras da `main` e release #19. Integração de código não significa nova implantação do Worker; nenhum deploy manual foi solicitado ou realizado neste ciclo.
+
+## Consolidação de integrações e referência detalhada — 16/10/2026
+
+**Leitura prioritária:** [Relatório de integração, validação e implantação de 16/10/2026](RELATORIO_INTEGRACAO_VALIDACAO_2026-10-16.md), com matriz de PRs, SHAs, gates, scripts, estado do Cloudflare, riscos e procedimento de retomada.
+
+Após a PR #29: #26 (`agents` 0.28.0; SHA `925fd4c37ea4`), #27 (tipos Cloudflare; SHA `20a85d1310ae`), #30 (smoke de proveniência v1.1; SHA `67e7ed39a04b`), #23 (Vite 8.3.4; SHA `07c3e7dda539`) e #24 (Wrangler 4.149.0; SHA `0e4c878dbda2`) foram integradas à `main`. PRs #22 e #25 fechadas por redundância. PR #28 aberta e pendente de avaliação. O CI e o smoke da PR #23 na `main` foram aprovados; smoke da PR #24 aprovado. CI após PR #24: completed/success na última consulta, run https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/actions/runs/38921060207.
+
+**Distinção operacional:** não houve implantação manual como consequência das integrações; a execução do smoke remoto não comprova que o Worker usa o último SHA do GitHub. Verificação de deployment exige consulta à API Cloudflare.
