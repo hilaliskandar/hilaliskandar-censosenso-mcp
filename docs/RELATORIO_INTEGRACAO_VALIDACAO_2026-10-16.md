@@ -125,3 +125,11 @@ A **PR #28 foi integrada** por squash na `main`, SHA `bdc1c0432504d6c2ebd603a10d
 CI e smoke pós-merge da #28: [CI 38923818837](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/actions/runs/38923818837), [Smoke 38923818797](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/actions/runs/38923818797). Estavam em execução no primeiro exame; consultar o estado atual antes de concluir homologação.
 
 **Auditoria administrativa na API GitHub:** propriedade `homepage` contém a grafia incorreta `censocenso.poderdapalavra.org` (correto: `https://censosenso.poderdapalavra.org`); descrição informa **23 ferramentas** apesar da superfície atual de **24**; a consulta ao endpoint de rulesets devolveu lista vazia. Estes dados são **metadados administrativos** e não se corrigem por simples edição do `package.json` ou deste documento. Ações pendentes, responsáveis e critérios foram registrados na [issue #19](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/issues/19). Não atribuir a elas estado 'corrigido' antes de comprovar alteração nas configurações do repositório.
+
+## 12. Homologação de rastreabilidade em produção — 16/10/2026
+
+**Resultado: APROVADO.** A PR #33, integrada na `main` por squash (`3c4a0e53228a9d7ce0ba5b615b104bc34ee0bd2e`), implementou `source_commit` na resposta pública de `GET /status`. A extração efetiva do endpoint por Crawl2AI retornou: `status=ok`, `version=0.7.0`, `source_commit=3c4a0e53228a9d7ce0ba5b615b104bc34ee0bd2e`, `deploy.id=c29a280d-bf0a-4600-bbbe-ae73863126f1` e timestamp `2026-10-16T20:09:39.515801Z`.
+
+A API Cloudflare retornou o deployment `3a2f4d2f-fea0-427c-8b2e-1dd3ce2378ac` de `2026-10-16T20:09:41.692611Z` com versão `c29a280d-bf0a-4600-bbbe-ae73863126f1` recebendo 100% do tráfego. O SHA do endpoint é idêntico ao HEAD GitHub verificado. O CI da `main` (run `38959231596`) e Production smoke (run `38959231597`) concluíram com sucesso.
+
+**Significado do resultado:** correspondência entre checkout, bundle e versão em serviço demonstrada para este deployment; não confundir com release semântica. A versão do pacote/serviço segue `0.7.0` e a candidata `0.7.1` ainda não foi publicada. A issue #19 conserva as etapas de fechamento.
