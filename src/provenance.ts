@@ -1,5 +1,5 @@
 /**
- * Provenance block (portfolio contract v1.0) — pt-BR adapter over
+ * Provenance block (portfolio contract v1.1) — pt-BR adapter over
  * `@sbissoli/mcp-provenance`. The canonical model, the `concise`/`detailed`
  * projections, serialization determinism, timezone handling and the footer
  * wording live in the package; this module binds them to the IBGE server:
@@ -29,6 +29,7 @@
 import { z } from "zod";
 import {
   attributionList,
+  ConciseBlockSchema,
   createProvenanceContext,
   renderConcise,
   type CanonicalProvenance,
@@ -45,7 +46,7 @@ export const provenanceContext = createProvenanceContext({
   defaultMode: "concise",
 });
 
-/** Canonical envelope v1.0 (post-validation). */
+/** Canonical envelope v1.1 (post-validation). */
 export type Provenance = CanonicalProvenance;
 
 /** Namespaced `_meta` keys (stable — audit/UI consumers read by these keys). */
@@ -253,19 +254,7 @@ export function extrairPeriodoSidra(
 }
 
 /** Concise projection of a block (the shape embedded in `structuredContent`/`_meta`). */
-export const provenanceBlockSchema = z.object({
-  source: z.string().describe("Fonte oficial do dado (API do IBGE consultada)"),
-  source_url: z.string().describe("URL canônica que reproduz a consulta"),
-  data_vintage: z
-    .string()
-    .nullable()
-    .describe("Período de referência do dado segundo a fonte; null se a fonte não expõe"),
-  retrieved_at: z
-    .string()
-    .describe("Instante real da extração no upstream (ISO-8601, horário de Brasília)"),
-  citation: z.string().describe("Citação pronta para uso"),
-  license: z.string().nullable().describe("Regime legal do dado"),
-});
+export const provenanceBlockSchema = ConciseBlockSchema;
 
 /**
  * Extends a tool's output schema with the provenance channel of the contract
@@ -275,7 +264,7 @@ export const provenanceBlockSchema = z.object({
 export function comProveniencia<T extends z.ZodObject<z.ZodRawShape>>(schema: T) {
   return schema.extend({
     provenance: provenanceBlockSchema.describe(
-      "Bloco de proveniência (contrato v1.0): fonte, URL, período, extração e licença"
+      "Bloco de proveniência (contrato v1.1): fonte, URL, período, extração e licença"
     ),
     attribution: z
       .array(z.string())
@@ -291,7 +280,7 @@ export function projetarProveniencia(p: Provenance): {
   return { provenance: renderConcise(p), attribution: attributionList([p]) };
 }
 
-/** Compact text footer for the Markdown channel (fixed wording, contract v1.0). */
+/** Compact text footer for the Markdown channel (fixed wording, contract v1.1). */
 export function rodapeProveniencia(p: Provenance): string {
   return provenanceContext.footer(p);
 }
