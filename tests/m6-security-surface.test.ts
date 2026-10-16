@@ -61,13 +61,13 @@ describe("M6 — schema/runtime trust boundary", () => {
     });
   });
 
-  it("caracteriza search/fetch como contrato externo menos estrito", async () => {
+  it("exige schema estrito também em search/fetch", async () => {
     await withClient(async (client) => {
       const { tools } = await client.listTools();
       for (const name of ["search", "fetch"]) {
         const tool = tools.find((item) => item.name === name);
         expect(tool, name).toBeDefined();
-        expect(tool?.inputSchema?.additionalProperties, name).toBeUndefined();
+        expect(tool?.inputSchema?.additionalProperties, name).toBe(false);
         expect(tool?.annotations?.readOnlyHint, name).toBe(true);
         expect(tool?.annotations?.destructiveHint, name).toBe(false);
       }
