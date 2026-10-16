@@ -174,9 +174,9 @@ describe("toMcpResult with provenance (three channels)", () => {
       "source_url",
       "data_vintage",
       "retrieved_at",
+      "retrieval",
       "citation",
       "license",
-      "retrieval",
     ]);
     expect((sc.provenance as Record<string, unknown>).retrieval).toBeNull();
     expect(sc.attribution).toEqual([URL_EXEMPLO]);
