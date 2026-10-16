@@ -8,6 +8,9 @@
 import { SERVER_CONFIG } from "./config.js";
 import type { Env } from "./types.js";
 
+/** Valor inserido pelo Wrangler no bundle; não é uma variável de ambiente em runtime. */
+declare const DEPLOY_GIT_SHA: string;
+
 export function buildStatus(env: Env) {
   const meta = env.CF_VERSION_METADATA;
   return {
@@ -15,6 +18,9 @@ export function buildStatus(env: Env) {
     name: SERVER_CONFIG.name,
     version: SERVER_CONFIG.version,
     mcp: SERVER_CONFIG.mcpRoute,
+    ...(typeof DEPLOY_GIT_SHA !== "undefined" && /^[a-f0-9]{40}$/.test(DEPLOY_GIT_SHA)
+      ? { source_commit: DEPLOY_GIT_SHA }
+      : {}),
     ...(meta
       ? { deploy: { id: meta.id, tag: meta.tag || null, timestamp: meta.timestamp } }
       : {}),

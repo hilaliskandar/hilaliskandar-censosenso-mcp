@@ -9,7 +9,7 @@
   "description": "Cloudflare Worker do CensoSenso MCP para transporte Streamable HTTP, com preflight reproduzivel antes do deploy.",
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy",
+    "deploy": "node scripts/deploy-with-commit.mjs",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "prepare:parent": "npm --prefix .. ci && npm --prefix .. run typecheck && npm --prefix .. run build",
