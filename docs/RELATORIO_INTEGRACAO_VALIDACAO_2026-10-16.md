@@ -111,3 +111,9 @@ Pontos de operação: `/health`, `/status`, `/mcp`, cartão de servidor, headers
 - [Smoke após Wrangler aprovado](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/actions/runs/38921060080)
 
 **Responsabilidade editorial:** documentar fatos observados, separar avaliações de evidências, nunca pressupor aprovação ou implantação.
+
+## 10. Adendo de verificações posteriores
+
+- **CI da PR #24 na `main` concluído com sucesso**: run https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/actions/runs/38921060207. O smoke remoto correspondente também foi aprovado, conforme registro acima.
+- **PR #28 — sobreposição específica identificada:** além de seis outras dependências de desenvolvimento, altera **Vite na raiz** de 8.3.2 para 8.3.4. A PR #23 já alterou **Vite no Worker**, que possui manifest e lockfile próprios. Portanto, há duas instalações diferentes e não se deve fechar #28 apenas por aparente duplicação do nome `vite`. A verificação da PR deve observar o lockfile da raiz, a compatibilidade com o SDK MCP e o CI da base atual.
+- O presente relatório é documentação operacional; a criação dos arquivos de documentação gera novos commits na `main` e novas execuções de CI. Não presumir que seus resultados sejam idênticos aos do commit anterior do Worker.
