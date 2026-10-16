@@ -236,7 +236,7 @@ const semTitle = tools.filter((t) => !t.title);
 if (semTitle.length > 0) fail(`tools sem title: ${semTitle.map((t) => t.name).join(", ")}`);
 console.log(`titles: ok nas ${tools.length}`);
 
-// 1) Tool simples + bloco de proveniência (contrato v1.0, três canais)
+// 1) Tool simples + bloco de proveniência (contrato v1.1, três canais)
 const estados = await rpc("tools/call", {
   name: "ibge_estados",
   arguments: { regiao: "SE" },
@@ -247,8 +247,10 @@ console.log("\nibge_estados SE: ok,", Object.keys(estados.structuredContent ?? {
 const prov = estados.structuredContent?.provenance;
 if (!prov) fail("bloco de proveniência ausente em structuredContent");
 const chaves = Object.keys(prov).join(",");
-if (chaves !== "source,source_url,data_vintage,retrieved_at,citation,license")
-  fail(`chaves do bloco concise fora do contrato: ${chaves}`);
+if (chaves !== "source,source_url,data_vintage,retrieved_at,retrieval,citation,license")
+  fail(`chaves do bloco concise v1.1 fora do contrato: ${chaves}`);
+if (prov.retrieval !== null && (typeof prov.retrieval !== "object" || Array.isArray(prov.retrieval)))
+  fail("retrieval deve ser objeto ou null segundo contrato v1.1");
 if (!/^Fonte: IBGE — .+, extraído em \d{2}\/\d{2}\/\d{4}\.$/.test(prov.citation))
   fail(`citation fora do padrão: ${prov.citation}`);
 if (!Array.isArray(estados.structuredContent.attribution) || estados.structuredContent.attribution.length === 0)
