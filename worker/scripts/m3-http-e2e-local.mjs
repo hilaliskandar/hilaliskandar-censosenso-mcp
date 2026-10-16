@@ -96,6 +96,29 @@ try {
   }
 
   console.log("TOOLS/LIST OK");
+
+  // SDK MCP >=2.3: um transporte stateless nao pode ser reutilizado entre
+  // requisicoes. Exigir sucesso tanto em chamadas consecutivas quanto simultaneas.
+  const sequencial = await postRpc(
+    { jsonrpc: "2.0", id: 3, method: "tools/list", params: {} },
+    session,
+  );
+  if (sequencial.status !== 200 || !(await sequencial.text()).includes("ibge_estados")) {
+    throw new Error("SDK HTTP falhou ao atender segunda chamada tools/list sequencial");
+  }
+
+  const simultaneas = await Promise.all(
+    [4, 5, 6].map((id) =>
+      postRpc({ jsonrpc: "2.0", id, method: "tools/list", params: {} }, session),
+    ),
+  );
+  for (const [index, response] of simultaneas.entries()) {
+    const body = await response.text();
+    if (response.status !== 200 || !body.includes("ibge_estados")) {
+      throw new Error(`SDK HTTP falhou na chamada concorrente ${index + 1}: ${response.status}`);
+    }
+  }
+  console.log("HTTP SEQUENCIAL E CONCORRENTE OK");
   console.log("HTTP E2E DEPLOY GATE OK");
 } finally {
   if (process.platform === "win32" && child.pid) {

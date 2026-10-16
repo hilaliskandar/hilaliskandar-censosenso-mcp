@@ -25,3 +25,4 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run gate:deploy
+      - run: npm --prefix worker run test:http-e2e
