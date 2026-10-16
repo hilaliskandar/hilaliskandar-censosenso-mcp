@@ -192,3 +192,13 @@ Em consulta direta à API Cloudflare, o Worker `censosenso-mcp` possuía deploym
 **Estado da governança GitHub na auditoria:** `main` sem rulesets registrados; metadados de homepage e descrição incorretos na API administrativa; issue #19 aberta. O `package.json` possui homepage correta, porém isso não atualiza automaticamente os metadados do repositório.
 
 **Gate antes de publicar nova versão:** conferir versão e SHA **efetivamente servidos**, smoke de produção, CI, políticas de rollback e ausência de regressões; somente depois criar tag/GitHub Release conforme checklist. Não confundir ausência de GitHub Release com ausência de Worker implantado.
+
+## Rastreabilidade do commit implantado
+
+A partir da alteração proposta em `feat/deploy-commit-provenance`, o comando `npm --prefix worker run deploy` preserva o preflight e executa `worker/scripts/deploy-with-commit.mjs`, que resolve o SHA por `git rev-parse --verify HEAD`, compara com `GITHUB_SHA` quando disponível e passa a constante `DEPLOY_GIT_SHA` ao bundle pelo `wrangler deploy --define`. Esta opção do Wrangler faz substituição em tempo de build, e não requer secret. Em caso de Git inválido ou divergência entre ambiente CI e checkout, o deploy é interrompido.
+
+A rota pública `GET /status` **somente depois de implantada esta alteração** apresentará `source_commit` com os 40 caracteres hexadecimais do checkout efetivamente empacotado. Em desenvolvimento sem injeção a propriedade é omitida, evitando sugerir SHA inexistente. O endpoint continua expondo `deploy.id`, `deploy.tag` e `deploy.timestamp` quando o binding Cloudflare estiver presente.
+
+**Conferência pós-deploy:** ler `source_commit` de `/status`, comparar com a revisão pretendida no GitHub e registrar conjuntamente o ID de versão e deployment Cloudflare. A correspondência entre SHA e Worker deve ser verificada **depois** da publicação, nunca inferida de um CI aprovado ou da data de implantação. Não adicionar `source_commit` manualmente no Wrangler nem publicar sha fictício em testes.
+
+**Nota:** quem implantar diretamente com `npx wrangler deploy`, contornando o comando npm, não injeta o SHA. O caminho oficial de deploy é o script npm documentado acima. Essa limitação deve ser eliminada por política de pipeline caso existam caminhos alternativos de publicação.
