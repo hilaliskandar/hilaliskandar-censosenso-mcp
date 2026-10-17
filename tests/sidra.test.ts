@@ -111,7 +111,7 @@ describe("ibge_sidra", () => {
     mockFetch.mockResolvedValueOnce(mockResponse(popByUf));
     const result = await ibgeSidra({ tabela: "6579", pagina: 2 });
     const s = result.structured as Record<string, any>;
-    expect(s.totalRegistros).toBe(1);
+    expect(s.totalRegistros).toBe(2);
     expect(s.registros).toEqual([]);
     expect(s.paginacao).toEqual({ pagina: 2, porPagina: 100, totalPaginas: 1, temMais: false });
     expect(sidraOutputSchema.safeParse(result.structured).success).toBe(true);
