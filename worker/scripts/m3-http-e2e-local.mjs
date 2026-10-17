@@ -181,7 +181,10 @@ try {
   }
   console.log("ERROS MCP OK (recurso, prompt e tool inexistentes)");
 
-  // Repor tokens apos leitura dos cinco catalogos e chamadas anteriores.\n  await sleep(5000);\n\n  // O SDK deve rejeitar argumentos de tipos incompatíveis e preservar o
+  // Repor tokens apos leitura dos cinco catalogos e chamadas anteriores.
+  await sleep(5000);
+
+  // O SDK deve rejeitar argumentos de tipos incompatíveis e preservar o
   // contrato de resposta estruturada para uma chamada válida sem rede externa.
   const invalido = await postRpc({
     jsonrpc: "2.0", id: 140, method: "tools/call",
