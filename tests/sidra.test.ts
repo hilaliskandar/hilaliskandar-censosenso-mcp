@@ -107,6 +107,16 @@ describe("ibge_sidra", () => {
     expect(s2.paginacao).toMatchObject({ pagina: 2, temMais: false });
   });
 
+  it("returns an empty page rather than repeating data when pagina exceeds totalPaginas", async () => {
+    mockFetch.mockResolvedValueOnce(mockResponse(popByUf));
+    const result = await ibgeSidra({ tabela: "6579", pagina: 2 });
+    const s = result.structured as Record<string, any>;
+    expect(s.totalRegistros).toBe(1);
+    expect(s.registros).toEqual([]);
+    expect(s.paginacao).toEqual({ pagina: 2, porPagina: 100, totalPaginas: 1, temMais: false });
+    expect(sidraOutputSchema.safeParse(result.structured).success).toBe(true);
+  });
+
   it("formato='json' returns the structured payload as JSON text plus structured", async () => {
     mockFetch.mockResolvedValueOnce(mockResponse(popByUf));
 
