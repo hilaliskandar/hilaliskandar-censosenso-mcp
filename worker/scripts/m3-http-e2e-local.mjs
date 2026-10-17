@@ -181,6 +181,11 @@ try {
   }
   console.log("ERROS MCP OK (recurso, prompt e tool inexistentes)");
 
+  // A bateria agora ultrapassa o burst por cliente (20 requisicoes, reposicao 5/s).
+  // Repor tokens antes da prova de concorrencia evita 429 esperado por excesso
+  // de chamadas no proprio teste, sem desativar a protecao do Worker.
+  await sleep(3000);
+
   // SDK MCP >=2.3: um transporte stateless nao pode ser reutilizado entre
   // requisicoes. Exigir sucesso tanto em chamadas consecutivas quanto simultaneas.
   const sequencial = await postRpc(
