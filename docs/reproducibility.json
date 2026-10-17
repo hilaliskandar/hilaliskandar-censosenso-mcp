@@ -4,7 +4,7 @@
     "name": "CensoSenso MCP",
     "package": "censosenso-mcp",
     "mcp_name": "io.github.hilaliskandar/censosenso-mcp",
-    "version": "0.7.0",
+    "version": "0.7.1",
     "repository": "https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp",
     "license": "MIT",
     "origin_project": "https://github.com/SidneyBissoli/ibge-br-mcp",
