@@ -100,7 +100,7 @@ try {
   // Verificacao explicita da superficie de recursos, modelos e prompts MCP.
   // As respostas Streamable HTTP podem ser JSON simples ou eventos SSE.
   function readRpcPayload(text) {
-    const chunks = text.split("\\n").filter((line) => line.startsWith("data:")).map((line) => line.slice(5).trim());
+    const chunks = text.split("\n").filter((line) => line.startsWith("data:")).map((line) => line.slice(5).trim());
     return JSON.parse(chunks.length ? chunks[chunks.length - 1] : text);
   }
   for (const [method, key, expected] of [
