@@ -274,6 +274,19 @@ if (!stats.structuredContent?.provenance) fail("proveniência ausente no modo es
 console.log("\nibge_sidra estatisticas: n =", bloco.distribuicao.n, "| top[0] =", JSON.stringify(bloco.top?.[0]));
 if (stats.structuredContent.registros.length !== 0) fail("registros deveriam vir vazios no modo estatísticas");
 
+// Paginação SIDRA — solicitar página posterior ao total NÃO pode repetir registros.
+const foraDaFaixa = await rpc("tools/call", {
+  name: "ibge_sidra",
+  arguments: { tabela: "9514", nivel_territorial: "6", localidades: "3509502", periodos: "2022", pagina: 2 },
+});
+if (foraDaFaixa.isError) fail("ibge_sidra com pagina=2 gerou erro inesperado");
+const pagSidra = foraDaFaixa.structuredContent?.paginacao;
+if (pagSidra?.pagina !== 2 || pagSidra?.totalPaginas !== 1 ||
+    pagSidra?.temMais !== false || foraDaFaixa.structuredContent?.registros?.length !== 0) {
+  fail("ibge_sidra pagina=2 para um resultado de uma página deveria retornar registros=[] e pagina=2");
+}
+console.log("pagina SIDRA fora do intervalo: ok (pagina=2, zero registros)");
+
 // 3) D2 — agrupado
 const agrupado = await rpc("tools/call", {
   name: "ibge_censo",
