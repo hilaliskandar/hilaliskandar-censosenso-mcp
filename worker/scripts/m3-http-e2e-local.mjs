@@ -167,6 +167,20 @@ try {
   }
   console.log("PROMPTS/GET OK (comparar e perfil)");
 
+  // Consultas invalidas nao podem ser respondidas como recursos ou prompts validos.
+  for (const [method, params] of [
+    ["resources/read", { uri: "ibge://catalogos/inexistente" }],
+    ["prompts/get", { name: "prompt-inexistente", arguments: {} }],
+    ["tools/call", { name: "ferramenta-inexistente", arguments: {} }],
+  ]) {
+    const response = await postRpc({ jsonrpc: "2.0", id: 130, method, params }, session);
+    const payload = readRpcPayload(await response.text());
+    if (!payload.error && !payload.result?.isError) {
+      throw new Error(`${method}: nome ou URI inexistente deveria produzir erro MCP`);
+    }
+  }
+  console.log("ERROS MCP OK (recurso, prompt e tool inexistentes)");
+
   // SDK MCP >=2.3: um transporte stateless nao pode ser reutilizado entre
   // requisicoes. Exigir sucesso tanto em chamadas consecutivas quanto simultaneas.
   const sequencial = await postRpc(
