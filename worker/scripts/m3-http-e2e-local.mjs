@@ -132,7 +132,7 @@ try {
   console.log("CURSORES INVALIDOS OK (-32602)");
 
   // Conferir o conteudo real dos catalogos MCP, nao apenas sua listagem.
-  for (const [name, count] of [["ufs", 27], ["regioes", 5], ["biomas", 6]]) {
+  for (const [name, count] of [["ufs", 27], ["regioes", 5], ["biomas", 6], ["niveis-territoriais", null], ["tabelas-sidra", null]]) {
     const uri = `ibge://catalogos/${name}`;
     const response = await postRpc({
       jsonrpc: "2.0", id: 110, method: "resources/read", params: { uri },
@@ -144,11 +144,11 @@ try {
       throw new Error(`resources/read ${name}: metadados invalidos`);
     }
     const catalog = JSON.parse(content.text);
-    if (!Array.isArray(catalog) || catalog.length !== count) {
+    if (!Array.isArray(catalog) || catalog.length === 0 || (count !== null && catalog.length !== count)) {
       throw new Error(`resources/read ${name}: esperado ${count} itens`);
     }
   }
-  console.log("RESOURCES/READ OK (UFs, regioes e biomas)");
+  console.log("RESOURCES/READ OK (cinco catalogos)");
 
   // Testar expansao de prompts: nomes e argumentos conferidos contra registro.
   for (const [name, args, needle] of [
@@ -181,10 +181,33 @@ try {
   }
   console.log("ERROS MCP OK (recurso, prompt e tool inexistentes)");
 
+  // O SDK deve rejeitar argumentos de tipos incompatíveis e preservar o
+  // contrato de resposta estruturada para uma chamada válida sem rede externa.
+  const invalido = await postRpc({
+    jsonrpc: "2.0", id: 140, method: "tools/call",
+    params: { name: "ibge_estados", arguments: { regiao: 12345 } },
+  }, session);
+  const invalidPayload = readRpcPayload(await invalido.text());
+  if (!invalidPayload.error && !invalidPayload.result?.isError) {
+    throw new Error("tools/call: argumento com tipo incorreto nao foi recusado");
+  }
+  const valido = await postRpc({
+    jsonrpc: "2.0", id: 141, method: "tools/call",
+    params: { name: "ibge_estados", arguments: { regiao: "SE" } },
+  }, session);
+  if (valido.status !== 200) throw new Error(`tools/call estados: HTTP ${valido.status}`);
+  const payloadValido = readRpcPayload(await valido.text()).result;
+  if (payloadValido?.isError || !payloadValido?.structuredContent?.provenance?.source_url ||
+      !Array.isArray(payloadValido?.structuredContent?.attribution) ||
+      !payloadValido?.content?.some((item) => item.type === "text")) {
+    throw new Error("tools/call estados: canais de resposta e proveniencia inconsistentes");
+  }
+  console.log("TOOLS/CALL OK (validacao de entrada e resposta estruturada)");
+
   // A bateria agora ultrapassa o burst por cliente (20 requisicoes, reposicao 5/s).
   // Repor tokens antes da prova de concorrencia evita 429 esperado por excesso
   // de chamadas no proprio teste, sem desativar a protecao do Worker.
-  await sleep(3000);
+  await sleep(5000);
 
   // SDK MCP >=2.3: um transporte stateless nao pode ser reutilizado entre
   // requisicoes. Exigir sucesso tanto em chamadas consecutivas quanto simultaneas.
