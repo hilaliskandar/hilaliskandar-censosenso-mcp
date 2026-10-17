@@ -395,7 +395,9 @@ function buildSidraResult(
   const { colunas, registros: allRegistros, totalRegistros } = sidraRecords(data);
 
   const totalPaginas = Math.max(1, Math.ceil(totalRegistros / PAGE_SIZE));
-  const page = Math.min(Math.max(1, pagina), totalPaginas);
+  // Preserve the requested page: out-of-range pages return an empty set,
+  // never duplicate the final valid page.
+  const page = Math.max(1, pagina);
   const start = (page - 1) * PAGE_SIZE;
   const registros = allRegistros.slice(start, start + PAGE_SIZE);
 
