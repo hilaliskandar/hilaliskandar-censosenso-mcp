@@ -25,8 +25,8 @@
 - [x] Atualizar `CHANGELOG.md` com data efetiva de lançamento e conferir metadados de distribuição.
 - [x] Executar `npm run check:version-sync`, `npm run gate:deploy`, `npm --prefix worker run test:http-e2e` e testes de segurança pertinentes.
 - [x] Verificar qual commit o pipeline de Workers Builds realmente empacota e confirmar `source_commit` em `/status` **depois** de implantar a candidata.
-- [x] Conferir versão, 24 ferramentas, 5 recursos, 2 prompts, proveniência v1.1 e rotas `/health`, `/status` e `/mcp`.
-- [x] Preparar rollback para versão Cloudflare anterior, registrar seu identificador e o plano de restauração.
+- [ ] Executar ensaio funcional explícito da versão publicada com 24 ferramentas, 5 recursos, 2 prompts, proveniência v1.1 e rotas `/health`, `/status` e `/mcp` (CI e smoke gerais aprovados; detalhamento do ensaio adicional pendente).
+- [ ] Formalizar exercício de rollback e comprovar tempo de recuperação; o deployment anterior identificado foi `265216d4-65f4-4ca3-8d69-d6c801914171`, mas não foi realizado rollback experimental.
 - [x] Tag `v0.7.1`, GitHub Release e notas definitivas publicadas.
 
 ## Ressalvas
