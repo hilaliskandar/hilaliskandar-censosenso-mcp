@@ -131,6 +131,42 @@ try {
   }
   console.log("CURSORES INVALIDOS OK (-32602)");
 
+  // Conferir o conteudo real dos catalogos MCP, nao apenas sua listagem.
+  for (const [name, count] of [["ufs", 27], ["regioes", 5], ["biomas", 6]]) {
+    const uri = `ibge://catalogos/${name}`;
+    const response = await postRpc({
+      jsonrpc: "2.0", id: 110, method: "resources/read", params: { uri },
+    }, session);
+    if (response.status !== 200) throw new Error(`resources/read ${name}: HTTP ${response.status}`);
+    const result = readRpcPayload(await response.text()).result;
+    const content = result?.contents?.[0];
+    if (content?.uri !== uri || content?.mimeType !== "application/json") {
+      throw new Error(`resources/read ${name}: metadados invalidos`);
+    }
+    const catalog = JSON.parse(content.text);
+    if (!Array.isArray(catalog) || catalog.length !== count) {
+      throw new Error(`resources/read ${name}: esperado ${count} itens`);
+    }
+  }
+  console.log("RESOURCES/READ OK (UFs, regioes e biomas)");
+
+  // Testar expansao de prompts: nomes e argumentos conferidos contra registro.
+  for (const [name, args, needle] of [
+    ["comparar-municipios", { localidades: "3509502,3550308", indicador: "populacao_censo" }, "ibge_comparar"],
+    ["perfil-demografico", { localidade: "Campinas" }, "ibge_censo"],
+  ]) {
+    const response = await postRpc({
+      jsonrpc: "2.0", id: 120, method: "prompts/get", params: { name, arguments: args },
+    }, session);
+    if (response.status !== 200) throw new Error(`prompts/get ${name}: HTTP ${response.status}`);
+    const result = readRpcPayload(await response.text()).result;
+    if (result?.messages?.[0]?.role !== "user" ||
+        !result.messages[0].content?.text?.includes(needle)) {
+      throw new Error(`prompts/get ${name}: mensagem ausente ou incorreta`);
+    }
+  }
+  console.log("PROMPTS/GET OK (comparar e perfil)");
+
   // SDK MCP >=2.3: um transporte stateless nao pode ser reutilizado entre
   // requisicoes. Exigir sucesso tanto em chamadas consecutivas quanto simultaneas.
   const sequencial = await postRpc(
