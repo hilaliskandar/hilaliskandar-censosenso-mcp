@@ -4,6 +4,20 @@ All notable public changes to CensoSenso MCP will be documented in this file.
 
 The public project uses the pre-1.0 policy in [docs/VERSIONAMENTO.md](docs/VERSIONAMENTO.md).
 
+## [0.7.1] - 2026-10-17
+
+### Changed
+- Updated MCP SDK runtime and concise provenance contract v1.1, including retrieval metadata.
+- Updated Worker and development dependencies and expanded HTTP end-to-end validation.
+- Added source commit identification in `GET /status` for deployments created by the official script.
+- Refined release governance, branch protection, deployment documentation and contributor instructions.
+- Public interface remains 24 tools, 5 resources and 2 prompts; baseline: `surface-stdio-0.7.1.json`.
+
+### Validated
+- CI and production smoke passed for commit `65fed02a4239efd319fe6ee67e7bcbfb9e302a44`.
+- Cloudflare /status confirmed `version=0.7.1` and matching `source_commit`.
+- GitHub release: https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/releases/tag/v0.7.1
+
 ## [0.7.0] - 2026-10-07
 
 ### Added
