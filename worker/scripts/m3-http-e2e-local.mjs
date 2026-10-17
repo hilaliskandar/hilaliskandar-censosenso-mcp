@@ -97,6 +97,40 @@ try {
 
   console.log("TOOLS/LIST OK");
 
+  // Verificacao explicita da superficie de recursos, modelos e prompts MCP.
+  // As respostas Streamable HTTP podem ser JSON simples ou eventos SSE.
+  function readRpcPayload(text) {
+    const chunks = text.split("\\n").filter((line) => line.startsWith("data:")).map((line) => line.slice(5).trim());
+    return JSON.parse(chunks.length ? chunks[chunks.length - 1] : text);
+  }
+  for (const [method, key, expected] of [
+    ["tools/list", "tools", 24],
+    ["resources/list", "resources", 5],
+    ["prompts/list", "prompts", 2],
+  ]) {
+    const response = await postRpc({ jsonrpc: "2.0", id: 40 + expected, method, params: {} }, session);
+    if (response.status !== 200) throw new Error(`${method} retornou HTTP ${response.status}`);
+    const payload = readRpcPayload(await response.text());
+    if (!Array.isArray(payload.result?.[key]) || payload.result[key].length !== expected) {
+      throw new Error(`${method}: esperado ${expected} entradas, recebido ${payload.result?.[key]?.length}`);
+    }
+    if (payload.result.nextCursor !== undefined) throw new Error(`${method}: nextCursor inesperado`);
+    console.log(`${method.toUpperCase()} OK (${expected})`);
+  }
+
+  // Nenhuma lista e paginada, portanto o cursor arbitrario deve ser recusado
+  // com JSON-RPC -32602 pela borda HTTP antes de chegar ao SDK.
+  for (const method of ["tools/list", "resources/list", "resources/templates/list", "prompts/list"]) {
+    const response = await postRpc({
+      jsonrpc: "2.0", id: 90, method, params: { cursor: "cursor-inexistente" },
+    }, session);
+    const payload = readRpcPayload(await response.text());
+    if (payload.error?.code !== -32602) {
+      throw new Error(`${method}: cursor invalido deveria retornar -32602`);
+    }
+  }
+  console.log("CURSORES INVALIDOS OK (-32602)");
+
   // SDK MCP >=2.3: um transporte stateless nao pode ser reutilizado entre
   // requisicoes. Exigir sucesso tanto em chamadas consecutivas quanto simultaneas.
   const sequencial = await postRpc(
