@@ -4,6 +4,17 @@ All notable public changes to CensoSenso MCP will be documented in this file.
 
 The public project uses the pre-1.0 policy in [docs/VERSIONAMENTO.md](docs/VERSIONAMENTO.md).
 
+## [0.7.2] - 2026-10-17
+
+### Fixed
+- SIDRA pagination preserves a requested page beyond the last available page, returning an empty record list instead of duplicating the final page.
+- Added regression assertions in unit tests and the remote MCP smoke test.
+
+### Validation pending
+- Verify CI and production smoke for the release-candidate commit.
+- Confirm production `/status.version`, `source_commit` and the active Cloudflare deployment after merge.
+- Publish tag and release only after verification.
+
 ## [0.7.1] - 2026-10-17
 
 ### Changed
