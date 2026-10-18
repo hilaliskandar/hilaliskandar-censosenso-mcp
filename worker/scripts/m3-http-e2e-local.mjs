@@ -226,6 +226,32 @@ try {
   }
   console.log("METODO JSON-RPC INEXISTENTE OK (-32601)");
 
+  // Isolar o transporte HTTP de corpos malformados: usar fetch com texto cru.
+  // A fronteira deve recusar JSON sintaticamente inválido; nao pressupor que
+  // a resposta seja necessariamente JSON quando o status HTTP e de erro.
+  await sleep(3000);
+  const malformed = await fetch(`${BASE}/mcp`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json, text/event-stream",
+      "mcp-session-id": session,
+    },
+    body: '{"jsonrpc":"2.0","id":160,"method":"tools/list",',
+  });
+  const malformedText = await malformed.text();
+  if (malformed.status < 400) {
+    let rejected = false;
+    try {
+      const payload = readRpcPayload(malformedText);
+      rejected = Boolean(payload?.error && typeof payload.error.code === "number");
+    } catch {}
+    if (!rejected) throw new Error("JSON malformado aceito sem erro de protocolo");
+  }
+  console.log("JSON MALFORMADO REJEITADO");
+
+
+
   // A negociacao deve aceitar os tipos previstos no cliente MCP Streamable HTTP.
   // Verificar somente um cabeçalho de resposta compativel, sem exigir JSON
   // quando o servidor escolhe o transporte de eventos SSE.
