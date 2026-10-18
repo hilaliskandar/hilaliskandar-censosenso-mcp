@@ -305,6 +305,27 @@ try {
   }
   console.log("ACCEPT INCOMPATIVEL REJEITADO");
 
+  // Corpo JSON correto mas Content-Type incorreto nao pode ser tratado como
+  // chamada MCP valida. 429 indica interferencia do rate limit e invalida a prova.
+  await sleep(4000);
+  const wrongType = await fetch(`${BASE}/mcp`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "text/plain",
+      Accept: "application/json, text/event-stream",
+      "mcp-session-id": session,
+    },
+    body: JSON.stringify({ jsonrpc: "2.0", id: 175, method: "tools/list", params: {} }),
+  });
+  const wrongText = await wrongType.text();
+  if (wrongType.status === 429) throw new Error("Content-Type: teste mascarado por rate limit");
+  if (wrongType.status < 400) {
+    let errorResponse = false;
+    try { errorResponse = Boolean(readRpcPayload(wrongText).error); } catch {}
+    if (!errorResponse) throw new Error("Content-Type text/plain aceito como tools/list valido");
+  }
+  console.log("CONTENT-TYPE INCORRETO REJEITADO");
+
   // A bateria agora ultrapassa o burst por cliente (20 requisicoes, reposicao 5/s).
   // Repor tokens antes da prova de concorrencia evita 429 esperado por excesso
   // de chamadas no proprio teste, sem desativar a protecao do Worker.
