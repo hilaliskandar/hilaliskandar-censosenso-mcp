@@ -78,6 +78,13 @@ try {
   }
   const initText = await initResponse.text();
   if (!initText.includes("censosenso-mcp")) throw new Error("initialize nao anunciou censosenso-mcp");
+  const initPayload = JSON.parse(initText.split("\n").filter((line) => line.startsWith("data:")).map((line) => line.slice(5).trim()).at(-1) || initText);
+  if (initPayload?.result?.protocolVersion !== "2025-11-25") {
+    throw new Error(`initialize: versao de protocolo inesperada ${initPayload?.result?.protocolVersion}`);
+  }
+  if (!initPayload.result?.serverInfo?.name || !initPayload.result?.capabilities) {
+    throw new Error("initialize: serverInfo/capabilities ausentes");
+  }
   const session = initResponse.headers.get("mcp-session-id");
   if (!session) throw new Error("initialize nao retornou mcp-session-id");
   console.log("INITIALIZE OK");
