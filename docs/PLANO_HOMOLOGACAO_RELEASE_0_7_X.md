@@ -1,3 +1,5 @@
+> **Aviso de vigência (18/10/2026):** este documento registra o plano histórico de 16/10/2026. As menções a 0.7.0, candidatura de 0.7.1 e ausência de releases refletem a situação daquela data e **não descrevem o estado atual**. A release v0.7.2 já foi publicada. Para inventário operacional, versão em produção, CI e pendências, consultar [INVENTARIO_HOMOLOGACAO_MCP_0_7_2.md](INVENTARIO_HOMOLOGACAO_MCP_0_7_2.md).
+
 # Plano de homologação e publicação da próxima versão do CensoSenso
 
 **Registro:** 16/10/2026. **Situação:** planejamento — nenhuma tag ou GitHub Release criada por este documento.  
