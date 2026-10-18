@@ -16,18 +16,18 @@ Este documento separa **versão publicada** (tag imutável), **HEAD da main** (i
 
 | PR | Efeito | Validação conhecida |
 |---|---|---|
-| [#39](../pull/39) | Corrige página SIDRA fora do intervalo, sem repetição de resultados | Gate e reteste em produção |
-| [#40](../pull/40) | Smoke remoto da regressão SIDRA | CI e smoke aprovados |
-| [#41](../pull/41) | Formalização da versão 0.7.2 | Release publicada e deployment confirmado |
-| [#42](../pull/42) | Listas MCP, contagens, cursor inválido | CI pós-merge aprovado |
-| [#43](../pull/43) | Leitura de recursos e obtenção de prompts | CI pós-merge aprovado |
-| [#44](../pull/44) | Erros de recurso, prompt, ferramenta inexistente | CI pós-merge aprovado; cuidado com 429 |
-| [#45](../pull/45) | Cinco catálogos, argumentos e structuredContent | CI pós-merge aprovado |
-| [#46](../pull/46) | Método JSON-RPC inexistente e resposta JSON/SSE | CI pós-merge aprovado |
-| [#47](../pull/47) | Negociação de initialize, versão/capabilities | CI pós-merge aprovado |
-| [#49](../pull/49) | JSON sintaticamente malformado | CI pós-merge aprovado |
-| [#50](../pull/50) | MCP-Protocol-Version e Accept incompatível | CI e smoke pós-merge aprovados |
-| [#51](../pull/51) | Content-Type text/plain rejeitado | **Aguardando gate; não integrado** |
+| [#39](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/pull/39) | Corrige página SIDRA fora do intervalo, sem repetição de resultados | Gate e reteste em produção |
+| [#40](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/pull/40) | Smoke remoto da regressão SIDRA | CI e smoke aprovados |
+| [#41](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/pull/41) | Formalização da versão 0.7.2 | Release publicada e deployment confirmado |
+| [#42](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/pull/42) | Listas MCP, contagens, cursor inválido | CI pós-merge aprovado |
+| [#43](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/pull/43) | Leitura de recursos e obtenção de prompts | CI pós-merge aprovado |
+| [#44](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/pull/44) | Erros de recurso, prompt, ferramenta inexistente | CI pós-merge aprovado; cuidado com 429 |
+| [#45](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/pull/45) | Cinco catálogos, argumentos e structuredContent | CI pós-merge aprovado |
+| [#46](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/pull/46) | Método JSON-RPC inexistente e resposta JSON/SSE | CI pós-merge aprovado |
+| [#47](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/pull/47) | Negociação de initialize, versão/capabilities | CI pós-merge aprovado |
+| [#49](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/pull/49) | JSON sintaticamente malformado | CI pós-merge aprovado |
+| [#50](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/pull/50) | MCP-Protocol-Version e Accept incompatível | CI e smoke pós-merge aprovados |
+| [#51](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/pull/51) | Content-Type text/plain rejeitado | **Aguardando gate; não integrado** |
 
 ## Matriz de cobertura
 
@@ -57,7 +57,7 @@ Registrar para cada execução: cenário, SHA sob teste, URL do Actions run, hor
 
 ## Próxima fila, por prioridade
 
-1. Resolver e integrar [PR #51](../pull/51), apenas se gate verde.
+1. Resolver e integrar [PR #51](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/pull/51), apenas se gate verde.
 2. Verificar deployment de `c4aeae55...` ou do HEAD mais recente em `/status`; registrar CI e smoke associados.
 3. Testes negativos adicionais de JSON-RPC, encerramento HTTP DELETE de sessão e rate limit Retry-After; validar contratos reais antes de fixar status esperados.
 4. Levantar matriz `24 ferramentas x entradas válidas/inválidas x fontes IBGE x estruturas e erros` para medir lacunas. Classificar explicitamente não testado.
@@ -65,8 +65,8 @@ Registrar para cada execução: cenário, SHA sob teste, URL do Actions run, hor
 
 ## Fontes e manutenção
 
-- [Issue #48](../issues/48) — checklist da homologação extensa.
-- [Histórico de CI](../actions) e [GitHub Releases](../releases).
+- [Issue #48](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/issues/48) — checklist da homologação extensa.
+- [Histórico de CI](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/actions) e [GitHub Releases](https://github.com/hilaliskandar/hilaliskandar-censosenso-mcp/releases).
 - [Plano anterior de homologação e lançamento](PLANO_HOMOLOGACAO_RELEASE_0_7_X.md) — documento histórico de **16/10/2026**, com informações sobre versão candidata que **não representam o estado atual**.
 - Diário operacional Google Drive: https://docs.google.com/document/d/1nIKXuv4yE29Pb0hmqvFmTb0wHiDX1D9UrTAqBIN-FLA/edit.
 
