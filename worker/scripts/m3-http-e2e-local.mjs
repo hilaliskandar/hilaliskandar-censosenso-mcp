@@ -265,6 +265,46 @@ try {
   }
   console.log("NEGOCIACAO CONTENT-TYPE OK");
 
+  // Verificar comportamento de cabecalhos no transporte Streamable HTTP.
+  // Delimitar a afirmacao ao que o servidor realmente retorna; sem tolerar 429.
+  await sleep(4000);
+  const requisicaoComVersao = await fetch(`${BASE}/mcp`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json, text/event-stream",
+      "mcp-session-id": session,
+      "MCP-Protocol-Version": "2025-11-25",
+    },
+    body: JSON.stringify({ jsonrpc: "2.0", id: 170, method: "tools/list", params: {} }),
+  });
+  const respostaVersao = await requisicaoComVersao.text();
+  if (requisicaoComVersao.status !== 200 ||
+      !Array.isArray(readRpcPayload(respostaVersao).result?.tools)) {
+    throw new Error(`MCP-Protocol-Version valido recusado: HTTP ${requisicaoComVersao.status}`);
+  }
+  console.log("MCP-PROTOCOL-VERSION VALIDO OK");
+
+  // Aceitar apenas JSON ou SSE no contrato; um Accept de midia nao suportada
+  // nao deve produzir um falso sucesso contendo uma lista de ferramentas.
+  const acceptInvalido = await fetch(`${BASE}/mcp`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "image/png",
+      "mcp-session-id": session,
+    },
+    body: JSON.stringify({ jsonrpc: "2.0", id: 171, method: "tools/list", params: {} }),
+  });
+  const acceptTexto = await acceptInvalido.text();
+  if (acceptInvalido.status === 429) throw new Error("Teste Accept mascarado pelo rate limit");
+  if (acceptInvalido.status < 400) {
+    let erro = false;
+    try { erro = Boolean(readRpcPayload(acceptTexto).error); } catch {}
+    if (!erro) throw new Error("Accept incompatível retornou sucesso de tools/list");
+  }
+  console.log("ACCEPT INCOMPATIVEL REJEITADO");
+
   // A bateria agora ultrapassa o burst por cliente (20 requisicoes, reposicao 5/s).
   // Repor tokens antes da prova de concorrencia evita 429 esperado por excesso
   // de chamadas no proprio teste, sem desativar a protecao do Worker.
