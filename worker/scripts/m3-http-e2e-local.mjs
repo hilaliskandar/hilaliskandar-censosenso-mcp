@@ -207,6 +207,31 @@ try {
   }
   console.log("TOOLS/CALL OK (validacao de entrada e resposta estruturada)");
 
+  // Métodos JSON-RPC desconhecidos devem produzir falha de método, não sucesso.
+  // Um descanso anterior evita falsos positivos por HTTP 429.
+  await sleep(5000);
+  const desconhecido = await postRpc({
+    jsonrpc: "2.0", id: 155, method: "censosenso/metodo-inexistente", params: {},
+  }, session);
+  const desconhecidoPayload = readRpcPayload(await desconhecido.text());
+  if (desconhecidoPayload.error?.code !== -32601) {
+    throw new Error("Metodo JSON-RPC desconhecido deveria retornar -32601");
+  }
+  console.log("METODO JSON-RPC INEXISTENTE OK (-32601)");
+
+  // A negociacao deve aceitar os tipos previstos no cliente MCP Streamable HTTP.
+  // Verificar somente um cabeçalho de resposta compativel, sem exigir JSON
+  // quando o servidor escolhe o transporte de eventos SSE.
+  const negociacao = await postRpc({
+    jsonrpc: "2.0", id: 156, method: "tools/list", params: {},
+  }, session);
+  const tipo = negociacao.headers.get("content-type") || "";
+  if (negociacao.status !== 200 ||
+      !(tipo.includes("application/json") || tipo.includes("text/event-stream"))) {
+    throw new Error(`Resposta MCP com status/tipo incompativel: ${negociacao.status} ${tipo}`);
+  }
+  console.log("NEGOCIACAO CONTENT-TYPE OK");
+
   // A bateria agora ultrapassa o burst por cliente (20 requisicoes, reposicao 5/s).
   // Repor tokens antes da prova de concorrencia evita 429 esperado por excesso
   // de chamadas no proprio teste, sem desativar a protecao do Worker.
